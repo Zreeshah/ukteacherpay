@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UK Teacher Pay
 
-## Getting Started
+Free UK teacher pay, salary and pension calculators built on the STPCD 2026/27
+pay scales and HMRC 2026/27 tax rates.
 
-First, run the development server:
+Static site: Next.js 16 (App Router, `output: "export"`), TypeScript, Tailwind CSS 4.
+All calculators run client-side — no salary data is ever transmitted.
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export to ./out
+npx tsc --noEmit # type-check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### macOS note
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Downloaded native binaries (`@next/swc`, Tailwind oxide, lightningcss) carry a
+`com.apple.quarantine` flag that Gatekeeper blocks, which causes a
+"<binary> Not Opened" popup on every build. `npm run unquarantine` strips it and
+runs automatically via `postinstall`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Architecture
 
-## Learn More
+| Path | Purpose |
+|---|---|
+| `data/tax-rates.ts` | Single source of truth for tax year figures |
+| `data/teacher-pay-scales.ts` | STPCD 2026/27 pay scales, all regions |
+| `lib/payroll.ts` | Take-home pay engine (pension → tax → NI order) |
+| `lib/pension.ts` | CARE projection, early retirement, redundancy |
+| `content/pages/*.ts` | Typed content modules, one per topical hub |
+| `content/index.ts` | Page registry + internal-link map |
+| `app/[slug]/page.tsx` | Renders every content page |
 
-To learn more about Next.js, take a look at the following resources:
+### Calculation contract
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deductions are applied in this order, verified against live payroll benchmarks:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Pension — tiered on **full-time equivalent** salary, not actual part-time pay
+2. Income tax — on `gross − pension − personal allowance`
+3. National Insurance — on **gross** pay (TPS is net-pay, not salary sacrifice)
+4. Student loan — on gross above the plan threshold
 
-## Deploy on Vercel
+## Updating for a new year
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. `data/tax-rates.ts` — thresholds, bands, TPS tiers
+2. `data/teacher-pay-scales.ts` — new STPCD figures
+3. Update `lastUpdated` / `taxYearLabel`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licence
+
+Content and code © UK Teacher Pay. Not financial advice.

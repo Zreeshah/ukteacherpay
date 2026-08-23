@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "sh ./scripts-unquarantine.sh",
+    "unquarantine": "sh ./scripts-unquarantine.sh"
   },
   "dependencies": {
     "next": "16.3.2",
