@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import type { CalculatorKind } from "@/content/types";
 import TeacherPayCalculator, { type CalcPreset } from "./calculators/TeacherPayCalculator";
 import PensionCalculator from "./calculators/PensionCalculator";

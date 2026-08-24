@@ -70,13 +70,12 @@ export function projectCarePension(input: CareInput): CareResult {
     salary = salary * (1 + salaryGrowth);
   }
 
-  // Standard TPS commutation: give up £1 of annual pension for £12 of lump sum,
-  // limited to 25% of the capital value of the benefits.
-  const maxLumpSum = (accrued * 12 * 25) / 100 / (1 - 0.25 / 1) || 0;
-  const commutationFactor = 12;
-  // Max lump sum under HMRC 25% rule: LS = 5.36 x pension (approx for 1:12 commutation)
+  // TPS commutation: give up £1 of annual pension for £12 of tax-free lump sum,
+  // capped by the HMRC 25%-of-capital-value rule. For 12:1 commutation that
+  // works out at approximately 5.36 x the annual pension.
+  const COMMUTATION_FACTOR = 12;
   const maxLump = accrued * 5.36;
-  const pensionGivenUp = maxLump / commutationFactor;
+  const pensionGivenUp = maxLump / COMMUTATION_FACTOR;
 
   return {
     accrualRate: tpsScheme.accrualRate,

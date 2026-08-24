@@ -1,6 +1,23 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://ukteacherpay.co.uk";
+/**
+ * Canonical origin. Must match the domain the site is actually served from,
+ * otherwise every canonical tag points at a domain Google cannot fetch.
+ *
+ * Set NEXT_PUBLIC_SITE_URL in Vercel when a custom domain is attached.
+ * Falls back to the Vercel production URL, then to the preview URL.
+ */
+const FALLBACK_URL = "https://ukteacherpay.vercel.app";
+
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+  if (vercel) return `https://${vercel.replace(/\/$/, "")}`;
+  return FALLBACK_URL;
+}
+
+export const SITE_URL = resolveSiteUrl();
 export const SITE_NAME = "UK Teacher Pay";
 export const SITE_TAGLINE = "Teacher Pay, Pension & Salary Calculators";
 export const THEME_COLOR = "#f8fafc";
