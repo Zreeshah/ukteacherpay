@@ -29,6 +29,11 @@ export type CalculatorKind =
   | "student-loan"
   | "part-time"
   | "pay-rise"
+  | "budget"
+  | "hourly-rate"
+  | "lump-sum"
+  | "resignation"
+  | "lgps"
   | "none";
 
 export interface SourceRef {
