@@ -142,7 +142,7 @@ export const calculatorPages: PageContent[] = [
     slug: "part-time-teacher-pay-calculator",
     hub: "calculator",
     title: "Part-Time Teacher Pay Calculator",
-    metaTitle: "Part-Time Teacher Pay Calculator UK 2026/27 — Pro Rata Salary",
+    metaTitle: "Part-Time Teacher Pay Calculator UK 2026/27 — Pro Rata",
     metaDescription:
       "Work out pro rata pay for part-time teachers. Enter your FTE fraction — 0.4, 0.5, 0.6, 0.8 — to see gross and take-home pay with the correct pension tier applied.",
     primaryKeyword: "part time teacher salary calculator",
@@ -235,7 +235,7 @@ export const calculatorPages: PageContent[] = [
     title: "Teacher Take-Home Pay After Tax",
     metaTitle: "Teacher Take-Home Pay 2026/27 — What Teachers Earn After Tax",
     metaDescription:
-      "What UK teachers actually take home after pension, tax and National Insurance in 2026/27, shown for every pay point from M1 to U3 and across all four England regions.",
+      "What UK teachers actually take home after pension, tax and National Insurance in 2026/27, shown for every pay point from M1 to U3 and across all four England.",
     primaryKeyword: "teacher take home pay",
     secondaryKeywords: [
       "teachers take home pay", "take home pay teacher", "teacher pay after tax",

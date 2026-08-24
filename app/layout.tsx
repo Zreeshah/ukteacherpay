@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: `${SITE_NAME} — Teacher Pay, Salary & Pension Calculators`,
-    template: `%s | ${SITE_NAME}`,
+    template: "%s",
   },
   description:
     "Free UK teacher pay calculators built on the STPCD 2026/27 pay scales and HMRC 2026/27 tax rates. Take-home pay, part-time pay, pay scales, pensions and retirement modelling.",

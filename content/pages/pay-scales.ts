@@ -1261,7 +1261,7 @@ export const payScalePages: PageContent[] = [
     title: "Teacher Pay Scale Scotland",
     metaTitle: "Teacher Pay Scale Scotland 2026/27 — SNCT Salary Tables",
     metaDescription:
-      "Scottish teacher pay scales for 2026/27. The SNCT main grade, Chartered Teacher route, how Scottish income tax affects take-home pay, and how Scotland compares to England.",
+      "Scottish teacher pay scales for 2026/27. The SNCT main grade, Chartered Teacher route, how Scottish income tax affects take-home pay, and how Scotland compares.",
     primaryKeyword: "teacher pay scale scotland",
     secondaryKeywords: [
       "scottish teacher pay scale", "teacher pay scotland", "snct pay scale",
@@ -1381,7 +1381,7 @@ export const payScalePages: PageContent[] = [
     title: "Northern Ireland Teacher Pay Scale",
     metaTitle: "NI Teacher Pay Scale 2026/27 — Northern Ireland Salaries",
     metaDescription:
-      "Northern Ireland teacher pay scales for 2026/27. Full main, upper and unqualified ranges, how NI pay is negotiated, and how it compares to England, Wales and Scotland.",
+      "Northern Ireland teacher pay scales for 2026/27. Full main, upper and unqualified ranges, how NI pay is negotiated, and how it compares to England, Wales and.",
     primaryKeyword: "teacher pay scale ni",
     secondaryKeywords: [
       "ni teacher pay scale", "northern ireland teacher pay",
@@ -1861,7 +1861,7 @@ export const payScalePages: PageContent[] = [
     title: "Teacher Pay by Region in England",
     metaTitle: "Teacher Pay by Region 2026/27 — England Regional Averages",
     metaDescription:
-      "Average teacher pay across the ten English regions for 2026/27. See where teachers earn most, how statutory bands differ from actual averages, and what drives the gap.",
+      "Average teacher pay across the ten English regions for 2026/27. See where teachers earn most, how statutory bands differ from actual averages, and what drives.",
     primaryKeyword: "teacher pay by region",
     secondaryKeywords: [
       "teacher pay map", "average teacher salary by region", "teacher pay regional",

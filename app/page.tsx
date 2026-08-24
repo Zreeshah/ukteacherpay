@@ -9,7 +9,7 @@ import { gbp } from "@/lib/format";
 import { pageMetadata, softwareAppJsonLd, SITE_NAME } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: `Teacher Pay Calculator UK ${taxYearLabel} — Take-Home Pay & Pay Scales`,
+  title: `Teacher Pay Calculator UK ${taxYearLabel} — Take-Home Pay`,
   description:
     "Free UK teacher pay calculator using STPCD 2026/27 pay scales and 2026/27 tax rates. See take-home pay after pension, tax, NI and student loan for any pay point.",
   path: "/",
