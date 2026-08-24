@@ -247,11 +247,13 @@ export const affinity: Record<string, string[]> = {
   "sources": ["methodology", "about"],
   "methodology": ["sources", "about"],
   "privacy": ["about", "methodology"],
-  "teaching-assistant-salary": ["supply-teacher-pay", "teacher-salary-uk"],
+  "teaching-assistant-salary": ["lgps-pension-calculator", "supply-teacher-pay", "teacher-salary-uk"],
   "private-school-teacher-salary": ["teacher-salary-uk", "teacher-pension"],
   "nursery-teacher-salary": ["teacher-starting-salary", "teacher-salary-uk"],
   "pe-teacher-salary": ["secondary-school-teacher-salary", "teacher-salary-uk"],
-  "care-vs-final-salary-pension": ["teacher-pension", "teacher-pension-age"],
+  "care-vs-final-salary-pension": ["teacher-pension", "teacher-pension-age", "lgps-pension-calculator"],
+  "lgps-pension-calculator": ["teaching-assistant-salary", "teacher-pension", "teacher-pension-scotland"],
+  "teacher-pension-scotland": ["teacher-pension", "teacher-pay-scale-scotland", "lgps-pension-calculator"],
 };
 
 /**

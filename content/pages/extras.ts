@@ -450,6 +450,8 @@ export const extraPages: PageContent[] = [
     secondaryKeywords: [
       "teacher income tax", "teacher tax code", "teachers tax calculator uk",
       "teacher pay after tax", "1257l tax code teacher",
+      "how much tax do teachers pay", "teacher income tax calculator",
+      "teacher tax code explained", "teacher salary after tax calculator",
     ],
     calculator: "take-home",
     intro:
@@ -486,7 +488,7 @@ export const extraPages: PageContent[] = [
         ["Higher rate", "£37,701 to £112,570", "40%"],
         ["Additional rate", "Above £112,570", "45%"],
       ]},
-      { kind: "p", text: "Almost all classroom teachers stay entirely within the basic rate band. A teacher would need a gross salary of roughly £54,000 before any income reached the 40% rate, once the pension deduction is taken into account. Leadership salaries do cross it — see the [leadership pay scale](/leadership-pay-scale/)." },
+      { kind: "p", text: "Almost all classroom teachers stay entirely within the basic rate band. A scheme member would need a gross salary of roughly £56,000 before any income reached the 40% rate, once the pension deduction is taken into account. Leadership salaries do cross it — see the [leadership pay scale](/leadership-pay-scale/)." },
       { kind: "p", text: "If you live in Scotland, six bands apply instead of three and the higher rate starts lower. Those figures and what they cost a teacher are set out in the [Scottish teachers' pension and tax guide](/teacher-pension-scotland/). For the resulting net figures at every pay point, see [teacher take-home pay](/teacher-take-home-pay/)." },
 
       { kind: "h2", text: "What your tax code means" },
@@ -509,7 +511,7 @@ export const extraPages: PageContent[] = [
         ["1257L (correct)", "£22,528", "£4,506", "£2,377"],
         ["1185L", "£23,248", "£4,650", "£2,365"],
         ["BR", "£35,098", "£7,020", "£2,168"],
-        ["K475", "£39,848", "£8,399", "£2,053"],
+        ["K475", "£39,848", "£7,970", "£2,088"],
       ]},
       { kind: "p", text: "A BR code applied to a main teaching job costs about £209 a month. A K code can cost considerably more. Neither is necessarily an error — a K code often reflects genuinely owed tax — but both are worth understanding rather than ignoring." },
 
@@ -557,7 +559,7 @@ export const extraPages: PageContent[] = [
     ],
     faq: [
       { question: "What tax code should a teacher be on?", answer: "Most teachers should be on 1257L, giving the full £12,570 personal allowance. If you live in Scotland it will be S1257L and if you live in Wales C1257L. Different codes are not automatically wrong, but they are worth checking, particularly BR, 0T or any K code on your main teaching job." },
-      { question: "How much income tax does a teacher pay?", answer: "A teacher on M3 earning £38,400 pays about £4,506 a year in income tax, after the pension contribution and personal allowance are deducted. On M1 at £34,068 it is roughly £3,795, and on U3 at £52,835 around £6,846. All assume the standard 1257L code and scheme membership." },
+      { question: "How much income tax does a teacher pay?", answer: "A teacher on M3 earning £38,400 pays about £4,506 a year in income tax, after the pension contribution and personal allowance are deducted. On M1 at £34,068 it is roughly £3,795, and on U3 at £52,835 around £7,039. All assume the standard 1257L code and scheme membership." },
       { question: "Is teacher pension deducted before tax?", answer: "Yes. The pension contribution comes out of gross pay before income tax is calculated, so you get full relief at your marginal rate with nothing to claim. National Insurance works differently and is charged on your full gross pay." },
       { question: "Why is my tax code BR?", answer: "BR means all income from that employment is taxed at the basic rate with no personal allowance. It is correct for a second job where your allowance is already used by your main post. If BR is on your main teaching job it is usually wrong, and typically happens when a new employer has not received your P45." },
       { question: "What does a K tax code mean for a teacher?", answer: "A K code means your deductions exceed your personal allowance, so an amount is added to your taxable pay rather than subtracted. It usually reflects unpaid tax from a previous year or a taxable benefit. Check your Personal Tax Account to see what HMRC has included." },
@@ -579,6 +581,8 @@ export const extraPages: PageContent[] = [
     secondaryKeywords: [
       "teacher pay increase calculator", "what is my pay rise worth teacher",
       "teacher pay award calculator", "teacher salary increase calculator",
+      "how much is a 3 percent raise teacher", "teacher pay rise net calculator",
+      "pay award calculator", "teacher salary rise calculator",
     ],
     calculator: "pay-rise",
     intro:
@@ -649,7 +653,17 @@ export const extraPages: PageContent[] = [
       { kind: "p", text: "The practical result is that your September payslip shows the new salary against old thresholds, and your April payslip shows the same salary against new thresholds. Both months can produce an unexpected change in net pay for reasons unrelated to each other." },
       { kind: "callout", tone: "warn", title: "Watch for backdated awards", text: "Pay awards are sometimes confirmed after 1 September and paid as arrears. A backdated lump sum can push a single month's pay into a higher tax band under PAYE. It normally corrects itself over the rest of the year, but the one payslip can look alarming." },
 
-      { kind: "h2", text: "Common mistakes when working out a pay rise" },
+      { kind: "h2", text: "How to sanity-check any percentage rise yourself" },
+    { kind: "p", text: "You can approximate the take-home effect of any gross rise with a simple rule of thumb. For a basic-rate taxpayer in the 8.6% pension tier, multiply the gross rise by roughly 0.63 — so a £2,000 gross increase is worth about £1,260 a year or £105 a month in your account." },
+    { kind: "ul", items: [
+      "**Below £34,289 (7.4% tier):** keep about 64% of the rise.",
+      "**£34,290 to £46,158 (8.6% tier):** keep about 63%.",
+      "**£46,159 to £54,729 (9.6% tier):** keep about 62%.",
+      "**Above £54,730 (10.2%+ tiers) and past the higher-rate threshold:** keep 50% to 60%, falling further as more of the rise lands in the 40% band.",
+    ]},
+    { kind: "p", text: "The rule of thumb breaks down whenever the rise crosses a tier boundary, which is exactly when you need the calculator most — the boundary effect applies the new rate to your whole salary, not just the extra pounds." },
+
+    { kind: "h2", text: "Common mistakes when working out a pay rise" },
       { kind: "ul", items: [
         "**Multiplying take-home pay by the award percentage.** Deductions do not scale evenly because allowances and thresholds are fixed amounts.",
         "**Missing a pension tier crossing.** This is what turns a 65% retention into 38%.",
@@ -661,7 +675,8 @@ export const extraPages: PageContent[] = [
       { kind: "p", text: "For the detail of how each award was set and what it covered, see [teacher pay rise 2026/27](/teacher-pay-rise-2026-27/) and the [pay rise pillar guide](/teacher-pay-rise/). To see the full deduction breakdown at your new salary, use the [teacher pay calculator](/teacher-pay-calculator/)." },
     ],
     faq: [
-      { question: "How much of a teacher pay rise do you actually keep?", answer: "Typically 60% to 70% after income tax, National Insurance and pension. If the rise crosses a pension tier boundary it can drop below 40%. An M1 teacher receiving the 3.5% award keeps only £449 of a £1,192 gross increase, because the rise pushes them into the 8.6% pension tier." },
+      { question: "How much is a 3% pay rise for a teacher after tax?", answer: "As a rough guide, a basic-rate taxpayer keeps about 63% of it, so a 3% award on a £38,400 salary adds around £1,152 gross and roughly £726 net a year, or about £61 a month. If the rise crosses a pension tier boundary, keep noticeably less." },
+    { question: "How much of a teacher pay rise do you actually keep?", answer: "Typically 60% to 70% after income tax, National Insurance and pension. If the rise crosses a pension tier boundary it can drop below 40%. An M1 teacher receiving the 3.5% award keeps only £449 of a £1,192 gross increase, because the rise pushes them into the 8.6% pension tier." },
       { question: "What was the teacher pay rise for 2026/27?", answer: "The 2026/27 STPCD applied a 3.5% uplift to all pay scales from 1 September 2026. In cash that is £1,192 on M1, £1,433 on M4 and £1,849 on U3, before deductions." },
       { question: "Why did my pay rise barely change my take-home pay?", answer: "Most likely you crossed a pension contribution tier boundary. Unlike income tax bands, the tiers are not marginal — when you cross one, the higher percentage applies to your entire salary, not just the amount above the threshold. Crossing the £34,289 boundary costs an extra 1.2% of your whole salary." },
       { question: "When do teacher pay rises take effect?", answer: "From 1 September, in line with the school year. This differs from tax and National Insurance thresholds, which change on 6 April. If an award is confirmed late it is usually backdated and paid as arrears." },

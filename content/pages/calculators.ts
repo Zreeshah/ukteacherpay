@@ -25,6 +25,7 @@ export const calculatorPages: PageContent[] = [
       "teacher salary calculator uk", "teacher wage calculator",
       "teacher pay take home calculator", "calculate teacher take home pay",
       "teacher tax calculator", "teacher pay after tax", "teacher pay scale calculator",
+      "teacher pay calculator 2026", "teacher monthly take home pay calculator",
     ],
     calculator: "take-home",
     intro:
@@ -66,7 +67,7 @@ export const calculatorPages: PageContent[] = [
       { kind: "p", text: "Scotland has its own bands with six rates rather than three, starting at 19% and reaching 48%. If you teach in Scotland the calculator applies Scottish rates automatically." },
       { kind: "h3", text: "3. National Insurance" },
       { kind: "p", text: "National Insurance is calculated on your **gross** pay, before the pension is deducted. This is the single most common mistake in DIY salary spreadsheets. The Teachers' Pension Scheme is a net-pay arrangement, not salary sacrifice, so it saves you income tax but never saves you National Insurance." },
-      { kind: "p", text: "You pay 8% on everything between £12,570 and £50,270, then 2% on anything above that." },
+      { kind: "p", text: "You pay 8% on everything between £12,570 and £50,270, then 2% on anything above that. The full tier table and why the pension never saves National Insurance are covered in the [pension contributions guide](/teacher-pension-contributions/)." },
       { kind: "h3", text: "4. Student loan" },
       { kind: "p", text: "If you have a student loan, repayments are 9% of everything you earn above your plan's threshold — or 6% for a Postgraduate Loan. Most teachers who trained recently are on Plan 2 or Plan 5. PAYE rounds each monthly deduction down to the nearest pound." },
       { kind: "table", caption: "Student loan repayment thresholds 2026/27", head: ["Plan", "Annual threshold", "Rate"], rows: [
@@ -87,7 +88,7 @@ export const calculatorPages: PageContent[] = [
         ["National Insurance", "(£34,068 − £12,570) × 8%", "−£1,719.84"],
         ["Take-home pay", "", "£26,031.74"],
       ]},
-      { kind: "p", text: "That is **£2,169.31 a month**. Notice that National Insurance is charged on the full £34,068, not on the £31,547 left after the pension came out." },
+      { kind: "p", text: "That is **£2,169.31 a month**. Notice that National Insurance is charged on the full £34,068, not on the £31,547 left after the pension came out. Every pay point from M1 to U3 is tabulated on the dedicated [teacher take-home pay](/teacher-take-home-pay/) page." },
 
       { kind: "h2", text: "Part-time and pro rata teacher pay" },
       { kind: "p", text: "Part-time teacher pay is worked out as a straight fraction of the full-time figure for your pay point. A 0.6 contract on M4 in the rest of England pays 60% of £40,940, which is £24,564." },
@@ -151,6 +152,7 @@ export const calculatorPages: PageContent[] = [
       "0.6 part time teacher salary calculator", "pro rata teacher salary calculator",
       "pro rata school salary calculator", "teachers part time pay calculator",
       "part time teacher salary", "teacher part time salary calculator",
+      "part time teacher salary uk", "part time teacher take home pay",
     ],
     calculator: "part-time",
     calculatorPreset: { fraction: 0.6 },
@@ -159,13 +161,13 @@ export const calculatorPages: PageContent[] = [
     keyTakeaways: [
       "Part-time pay is the full-time figure for your pay point multiplied by your FTE fraction.",
       "Your pension contribution tier is set by the full-time equivalent salary, so part-time teachers pay a higher percentage than their actual earnings would suggest.",
-      "A 0.6 contract on M4 outside London pays £24,564 gross, roughly £1,668 a month after deductions.",
+      "A 0.6 contract on M4 outside London pays £24,564 gross, roughly £1,626 a month after deductions.",
       "TLR and SEN allowances are pro-rated in the same proportion as your salary.",
       "Directed time, meetings and non-contact time should all be pro-rated too, not just your teaching timetable.",
     ],
     blocks: [
       { kind: "h2", text: "How part-time teacher pay is calculated" },
-      { kind: "p", text: "Every part-time teaching contract is expressed as a fraction of full time, written as an FTE (full-time equivalent) figure. Your gross salary is simply the full-time rate for your pay point multiplied by that fraction." },
+      { kind: "p", text: "Every part-time teaching contract is expressed as a fraction of full time, written as an FTE (full-time equivalent) figure. Your gross salary is simply the full-time rate for your pay point multiplied by that fraction, taken straight from the [main pay range](/main-pay-range/) for your region." },
       { kind: "p", text: "The STPCD requires the fraction to be based on the proportion of a full-timer's **directed time** you are contracted to work — not just the lessons you teach. A full-time teacher works 1,265 hours of directed time a year, so a 0.6 teacher should be directed for 759 hours." },
       { kind: "table", caption: "Standard part-time fractions", head: ["FTE", "Days per week", "Percentage", "Directed hours"], rows: [
         ["1.0", "5", "100%", "1,265"],
@@ -208,7 +210,23 @@ export const calculatorPages: PageContent[] = [
       { kind: "p", text: "TLR and SEN allowances are pro-rated in the same proportion as salary. A part-time teacher with a TLR 2 of £5,000 on a 0.6 contract receives £3,000." },
       { kind: "p", text: "This is often disputed. The STPCD is clear that TLRs are pro-rated for part-time staff, but the responsibility itself frequently is not — a common source of workload grievance. If you hold a full department responsibility on a part-time contract, that is worth raising with your line manager and union." },
 
-      { kind: "h2", text: "Common part-time pay mistakes" },
+      { kind: "h2", text: "Part-time pay and job sharing" },
+    { kind: "p", text: "Job shares are the most common way schools offer fractions below 0.8. Two teachers share one full-time post, typically at 0.5 each, and each is paid strictly on their own fraction of the pay point attached to the post. The post has one pay point — say M4 — and each sharer earns half of it. There is no bonus or penalty for sharing: the STPCD treats a job share as a part-time post for each holder." },
+    { kind: "p", text: "The detail that catches job-sharers is the pension tier, because it follows each individual's FTE salary. Two 0.5 sharers on an M4 post are both assessed on £40,940, not on their actual £20,470, so both pay the 8.6% tier rather than 7.4%. The same applies to any part-time arrangement, including days-based contracts that are not formal job shares." },
+    { kind: "table", caption: "Job share example: M4 post (£40,940), rest of England 2026/27", head: ["Sharer", "Fraction", "Actual salary", "Pension tier", "Monthly take-home"], rows: [
+      ["Teacher A", "0.5", "£20,470", "8.6% (FTE basis)", "£1,404"],
+      ["Teacher B", "0.5", "£20,470", "8.6% (FTE basis)", "£1,404"],
+    ]},
+
+    { kind: "h2", text: "How the September pay award works for part-time staff" },
+    { kind: "p", text: "Part-time teachers receive the annual pay award in exactly the same way as full-time colleagues: the award lifts every point on every scale from 1 September, and your fraction is then applied to the new figure. A 0.6 teacher on M4 received the full 3.5% uplift on the full-time rate before pro-rating, so there is no second-class treatment in percentage terms. The net effect of that award at each pay point is tabulated in the [pay rise guide](/teacher-pay-rise/)." },
+    { kind: "p", text: "Where part-time staff sometimes lose out is progression rather than the award. Pay point progression is decided on performance evidence, and part-time teachers are occasionally overlooked because they are less visible around school. Your appraisal should be conducted against the same standards as a full-timer, proportionate to your contracted duties — if you have been on the same point for more than a year without an application outcome, raise it formally." },
+    { kind: "callout", tone: "tip", title: "Check your September payslip twice", text: "Part-time payslips contain two moving parts in autumn: the new award and the pension tier assessment on the new FTE figure. If either is wrong the error compounds every month, so compare September's gross against the published scale times your fraction." },
+
+    { kind: "h2", text: "Checking a part-time offer before you accept it" },
+    { kind: "p", text: "Before signing, convert the advertised fraction into two numbers: gross annual pay and expected monthly take-home. An advert offering 0.6 FTE on M6 sounds generous until you see it means £28,163 gross and roughly £1,803 net a month outside London. Run the fraction through the calculator above, then confirm the directed time budget attached to the post covers your actual duties — the most common complaint among part-time teachers is being paid for four days while carrying five days of responsibility." },
+
+    { kind: "h2", text: "Common part-time pay mistakes" },
       { kind: "ul", items: [
         "**Being timetabled for more than your fraction.** A 0.6 teacher directed for four days is working 0.8 for 0.6 pay.",
         "**Attending all meetings and INSET regardless of fraction.** Directed time includes meetings, parents' evenings and INSET, and should be pro-rated.",
@@ -218,12 +236,14 @@ export const calculatorPages: PageContent[] = [
       ]},
     ],
     faq: [
-      { question: "How do I calculate 0.6 part-time teacher salary?", answer: "Multiply the full-time salary for your pay point by 0.6. On M4 in the rest of England that is £40,940 × 0.6 = £24,564 gross. After pension, tax and National Insurance that is roughly £1,668 a month." },
+      { question: "How do I calculate 0.6 part-time teacher salary?", answer: "Multiply the full-time salary for your pay point by 0.6. On M4 in the rest of England that is £40,940 × 0.6 = £24,564 gross. After pension, tax and National Insurance that is roughly £1,626 a month." },
       { question: "Do part-time teachers pay a lower pension rate?", answer: "No. The contribution tier is set by your full-time equivalent salary, not your actual earnings, so a part-time teacher pays the same percentage as a full-time teacher on the same pay point. The cash amount is lower because it is a percentage of your actual pay." },
       { question: "Is part-time teacher pay pro rata exactly?", answer: "Yes, gross salary is an exact fraction of the full-time rate. Take-home pay is not exactly proportional though, because the personal allowance and National Insurance thresholds are fixed amounts, so part-time teachers keep a slightly higher percentage of their gross pay." },
       { question: "Are TLR payments pro-rated for part-time teachers?", answer: "Yes. The STPCD requires TLR and SEN allowances to be pro-rated in the same proportion as salary. A £5,000 TLR 2 on a 0.6 contract is paid as £3,000." },
       { question: "Does part-time work reduce my years of pension membership?", answer: "No. Ten years at 0.5 FTE still counts as ten years of scheme membership for qualifying purposes. It produces a smaller pension because you build 1/57th of your actual pay each year, but your membership length is unaffected." },
-      { question: "How many directed hours should a 0.6 teacher work?", answer: "A full-time teacher works 1,265 directed hours a year, so 0.6 FTE is 759 hours. That includes teaching, meetings, parents' evenings and INSET — not just your timetabled lessons." },
+      { question: "Is it worth going part-time as a teacher financially?", answer: "Take-home pay falls by less than your gross does, because fixed allowances like the £12,570 personal allowance and NI thresholds stay the same. Going from full time to 0.6 on M4 cuts gross by £16,376 but take-home by roughly £10,700 a year, so you keep about 65p of each lost gross pound. Pension accrual, however, scales down fully." },
+    { question: "Do part-time teachers get PPA time?", answer: "Yes. The guaranteed 10% PPA entitlement is calculated on your own timetabled teaching time, so a 0.6 teacher receives 10% of their actual timetable, not 10% of a full-timer's. It should be timetabled, not added to your directed hours." },
+    { question: "How many directed hours should a 0.6 teacher work?", answer: "A full-time teacher works 1,265 directed hours a year, so 0.6 FTE is 759 hours. That includes teaching, meetings, parents' evenings and INSET — not just your timetabled lessons." },
     ],
     sources: SOURCES,
     updated: UPDATED,
@@ -235,11 +255,13 @@ export const calculatorPages: PageContent[] = [
     title: "Teacher Take-Home Pay After Tax",
     metaTitle: "Teacher Take-Home Pay 2026/27 — What Teachers Earn After Tax",
     metaDescription:
-      "What UK teachers actually take home after pension, tax and National Insurance in 2026/27, shown for every pay point from M1 to U3 and across all four England.",
+      "What UK teachers take home after pension, tax and National Insurance in 2026/27, shown for every pay point from M1 to U3, leadership posts and with student loans.",
     primaryKeyword: "teacher take home pay",
     secondaryKeywords: [
       "teachers take home pay", "take home pay teacher", "teacher pay after tax",
       "take home teacher pay calculator", "teacher net pay",
+      "teacher net salary calculator", "teacher monthly take home pay",
+      "how much do teachers take home a month", "teacher salary after tax uk",
     ],
     calculator: "take-home",
     intro:
@@ -265,7 +287,43 @@ export const calculatorPages: PageContent[] = [
         ["U2", "£50,955", "£4,892", "£9,728", "£3,028"],
         ["U3", "£52,835", "£5,072", "£10,106", "£3,138"],
       ]},
-      { kind: "callout", tone: "info", title: "Why the jump between M5 and M6 looks odd", text: "M6 crosses into the 8.6% pension tier at £46,158, so the pension deduction rises faster than salary at that step. The same happens again at £54,729 for the 9.6% tier." },
+      { kind: "callout", tone: "info", title: "Why the jump between M5 and M6 looks odd", text: "M6 crosses into the 9.6% pension tier at £46,158, so the pension deduction rises faster than salary at that step. The same happens again at £54,729 for the next tier." },
+
+      { kind: "h2", text: "Teacher take-home pay with a student loan" },
+      { kind: "p", text: "Student loan repayments are calculated on gross pay and collected through PAYE, so they reduce your take-home pound for pound. The plan you are on matters more than most people realise: on the same M4 salary the difference between Plan 4 and Plan 5 is over £700 a year." },
+      { kind: "table", caption: "Monthly take-home for an M4 teacher (£40,940) by student loan plan, 2026/27", head: ["Plan", "Threshold", "Annual repayment", "Monthly repayment", "Monthly take-home"], rows: [
+        ["No loan", "—", "£0", "£0", "£2,515"],
+        ["Plan 1", "£26,065", "£1,339", "£112", "£2,403"],
+        ["Plan 2", "£28,470", "£1,122", "£94", "£2,421"],
+        ["Plan 4 (Scotland)", "£32,745", "£738", "£62", "£2,454"],
+        ["Plan 5", "£25,000", "£1,435", "£120", "£2,395"],
+        ["Postgraduate Loan (on top of any plan)", "£21,000", "£1,196", "£100", "−£100"],
+      ]},
+      { kind: "p", text: "The pattern surprises people: Plan 2 costs less than Plan 1 or Plan 5 at this salary because its threshold is the highest of the undergraduate plans. Repayment terms also differ by plan — check which plan you are actually on before assuming the standard advice holds, because the write-off periods are not the same. If you are unsure what you would repay at a different salary, the [teacher tax calculator](/teacher-tax-calculator/) shows how each deduction line moves with pay." },
+
+      { kind: "h2", text: "Take-home pay on leadership salaries" },
+      { kind: "p", text: "Leadership salaries change the picture in two ways: the pension contribution tier climbs steeply, and income starts crossing into the 40% band once taxable pay passes £37,700 above the allowance — roughly £56,000 of gross for a scheme member." },
+      { kind: "table", caption: "Leadership take-home examples, rest of England, full time in pension, no student loan", head: ["Post (typical)", "Salary", "Pension", "Income tax", "NI", "Monthly take-home"], rows: [
+        ["L1 (entry assistant head)", "£53,585", "£5,144", "£7,174", "£3,082", "£3,182"],
+        ["L12 (secondary deputy)", "£70,022", "£7,142", "£12,584", "£3,411", "£3,907"],
+        ["L15 (experienced deputy)", "£75,000", "£8,775", "£13,922", "£3,511", "£4,066"],
+        ["L20+ (large school head)", "£85,063", "£9,952", "£17,476", "£3,712", "£4,494"],
+      ]},
+      { kind: "p", text: "Note how the L15 example pays £8,775 into the pension because it sits just past the £72,534 boundary where the tier jumps to 11.7%. The full spine values and role mapping are in the [leadership pay scale guide](/leadership-pay-scale/)." },
+
+      { kind: "h2", text: "Reading these figures off an actual payslip" },
+      { kind: "p", text: "Schools run payroll monthly but annual figures divide unevenly across the year, which is why some months look wrong. Pension contributions are assessed per pay period on that month's pensionable pay; tax accumulates cumulatively on most codes, so a September pay rise produces one odd payslip and then settles. If your school divides salary into twelve equal payments, the figures here should match every month apart from transition months around a pay award or pay point change." },
+      { kind: "p", text: "Three lines on the payslip map directly onto this page: gross pay, the pension deduction shown as TP or TPS, and PAYE tax. National Insurance appears as an employee NI figure. Anything else — union subscriptions, cycle schemes, childcare salary sacrifice — sits outside the calculation used here and explains most discrepancies. Part-time teachers should pro-rate these figures using the [part-time pay calculator](/part-time-teacher-pay-calculator/), and the reasoning behind each deduction rate is documented in our [methodology](/methodology/)." },
+
+      { kind: "h2", text: "Your effective hourly rate" },
+      { kind: "p", text: "Dividing take-home by contracted hours gives a more honest comparison than gross salary, particularly against non-teaching jobs advertised as annual figures. Using the 1,265 directed hours a classroom teacher is contracted for:" },
+      { kind: "table", caption: "Net hourly rate on contracted directed hours (rest of England, in pension, no loan)", head: ["Point", "Gross salary", "Annual take-home", "Net hourly rate"], rows: [
+        ["M1", "£34,068", "£26,032", "£20.58"],
+        ["M3", "£38,400", "£28,526", "£22.55"],
+        ["M6", "£46,939", "£33,711", "£26.65"],
+        ["U3", "£52,835", "£37,657", "£29.77"],
+      ]},
+      { kind: "callout", tone: "warn", title: "Directed hours understate real hours", text: "Many teachers work well beyond 1,265 hours, so the true net rate per hour worked is lower than these figures. That is an argument for protecting your directed time budget rather than ignoring the calculation — see how pro-rating works on the part-time pay guide if your fraction does not match your workload." },
 
       { kind: "h2", text: "Where the money actually goes" },
       { kind: "p", text: "For a teacher on M4 earning £40,940, the deductions break down like this." },
@@ -303,6 +361,9 @@ export const calculatorPages: PageContent[] = [
       { question: "What percentage of a teacher's salary is deducted?", answer: "Between about 24% and 29% for most classroom teachers. On M1 it is roughly 24% (pension 7.4%, tax around 11%, NI around 5%). By U3 total deductions reach about 29% as more income falls into the higher pension tier and the tax bands." },
       { question: "Do teachers pay more National Insurance than other workers?", answer: "No. Teachers pay standard Class 1 employee National Insurance at 8% between £12,570 and £50,270 and 2% above. What differs is the pension, which is a higher contribution than most private-sector schemes but comes with a guaranteed inflation-linked benefit." },
       { question: "How much more do inner London teachers take home?", answer: "An inner London M1 teacher takes home roughly £2,558 a month against £2,169 outside London — about £389 more. The gross premium is £7,660 but pension, tax and National Insurance take roughly two fifths of it." },
+      { question: "How much does a teacher take home a month with a student loan?", answer: "It depends on the plan. An M4 teacher on £40,940 takes home about £2,421 a month on Plan 2, £2,403 on Plan 1, £2,454 on Plan 4 or £2,395 on Plan 5, against £2,515 with no loan. A Postgraduate Loan deducts roughly another £100 a month on top of any undergraduate plan." },
+      { question: "Why is my take-home pay different from these figures?", answer: "The usual causes are a non-standard tax code, a student loan this page's default excludes, salary sacrifice schemes such as childcare or a cycle to work, union subscriptions, or being mid-transition after a September pay rise. Check your payslip's gross pay first: if that differs, your pay point or region is entered differently." },
+      { question: "What net hourly rate do teachers earn?", answer: "On contracted directed hours, an M1 teacher keeps about £20.58 per hour net, rising to £29.77 on U3 in the rest of England for 2026/27. Because many teachers work beyond their 1,265 contracted hours, the real rate per hour worked is usually lower." },
       { question: "Does opting out of the pension increase take-home pay?", answer: "Yes, immediately, but it is usually a poor trade. You give up an employer contribution of 28.8% of salary and a guaranteed inflation-linked pension. On M4 that employer contribution alone is worth over £11,700 a year." },
     ],
     sources: SOURCES,

@@ -127,7 +127,7 @@ export const pensionPages: PageContent[] = [
     title: "Teachers' Pension Calculator",
     metaTitle: "Teachers' Pension Calculator: Project Your TPS",
     metaDescription:
-      "Project your Teachers' Pension: enter your salary, age and pension built so far to see your annual pension at retirement, lump sum options and early retirement reductions.",
+      "Project your Teachers' Pension: salary, age and pension built so far in, annual pension out at any retirement age, with lump sum and early retirement costs.",
     primaryKeyword: "teachers pension calculator",
     secondaryKeywords: [
       "teacher pension calculator uk", "tps calculator", "tps pension calculator",
