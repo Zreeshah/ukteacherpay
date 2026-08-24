@@ -512,7 +512,7 @@ export const planningPages: PageContent[] = [
       "burgundy book resignation dates", "teacher resignation deadline 31 may",
       "headteacher resignation dates",
     ],
-    calculator: "none",
+    calculator: "resignation",
     intro:
       "Teachers cannot resign with a month's notice. National conditions of service set three fixed leaving dates a year with deadlines attached. Miss one and you normally wait until the next.",
     keyTakeaways: [
@@ -621,7 +621,7 @@ export const planningPages: PageContent[] = [
       "teacher budget", "budgeting on a teacher salary", "teacher monthly budget",
       "teacher money management", "budget planner teachers uk",
     ],
-    calculator: "none",
+    calculator: "budget",
     intro:
       "Budgeting as a teacher has two advantages most people do not have: your income is predictable to the pound, and you know a year in advance roughly when it will rise. This guide builds a working monthly budget from a real take-home figure.",
     keyTakeaways: [
@@ -745,7 +745,7 @@ export const planningPages: PageContent[] = [
       "teacher hourly pay", "how much do teachers earn per hour",
       "teacher pay per hour uk", "teacher directed time hours", "teacher hourly rate calculator",
     ],
-    calculator: "none",
+    calculator: "hourly-rate",
     intro:
       "Teachers are salaried, so there is no official hourly rate. But two figures can be calculated: pay divided by contractual directed time, and pay divided by the hours teachers actually report working. The gap between them is the honest answer to the question.",
     keyTakeaways: [
