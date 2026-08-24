@@ -1,5 +1,8 @@
 import type { PageContent } from "./types";
 import type { RelatedLink } from "@/components/RelatedContent";
+import {
+  affinity, anchorFor, bridgeTargets, chainNeighbours, hubPillar,
+} from "./taxonomy";
 
 import { calculatorPages } from "./pages/calculators";
 import { payScalePages } from "./pages/pay-scales";
@@ -42,70 +45,91 @@ export function pillarFor(hub: PageContent["hub"]): PageContent | undefined {
 }
 
 /**
- * Explicit internal-link map. Every page must resolve to at least 4 live
- * destinations so nothing is orphaned. Anything missing falls back to
- * hub siblings plus the hub pillar.
+/**
+ * Semantic related-links resolver.
+ *
+ * Composition order encodes intent. Ascent first so every spoke consolidates
+ * authority into its pillar, then sequential neighbours so families stay
+ * browsable, then deliberate cross-hub bridges, then same-topic affinity.
+ * Same-hub siblings only fill remaining slots.
  */
-export const relatedMap: Record<string, string[]> = {
-  "teacher-pay-calculator": [
-    "teacher-pay-scale", "part-time-teacher-pay-calculator",
-    "teacher-pension", "teacher-take-home-pay", "teacher-salary-uk",
-  ],
-  "teacher-pay-scale": [
-    "teacher-pay-calculator", "main-pay-range", "upper-pay-range",
-    "leadership-pay-scale", "inner-london-teacher-pay-scale", "teacher-pay-rise",
-  ],
-  "teacher-pension": [
-    "teacher-pension-calculator", "teacher-pension-contributions",
-    "teacher-avc-calculator", "teacher-early-retirement", "teacher-pay-calculator",
-  ],
-  "teacher-salary-uk": [
-    "teacher-pay-scale", "teacher-pay-calculator", "average-teacher-salary-uk",
-    "primary-school-teacher-salary", "secondary-school-teacher-salary",
-  ],
-  "teacher-pay-rise": [
-    "teacher-pay-scale", "teacher-pay-calculator", "teacher-pay-rise-2026-27",
-    "teacher-salary-uk",
-  ],
-  "leadership-pay-scale": [
-    "teacher-pay-scale", "head-teacher-salary", "deputy-head-teacher-salary",
-    "lead-practitioner-pay-scale", "teacher-pay-calculator",
-  ],
-  "teacher-financial-planning": [
-    "teacher-redundancy-calculator", "student-loan-repayment-calculator",
-    "teacher-pension", "teacher-pay-calculator",
-  ],
-};
+const MAX_RELATED = 6;
 
 export function relatedFor(slug: string): RelatedLink[] {
   const page = bySlug.get(slug);
   if (!page) return [];
 
-  const explicit = relatedMap[slug] ?? [];
-  const siblings = REGISTRY.filter(
-    (p) => p.hub === page.hub && p.slug !== slug,
-  ).map((p) => p.slug);
-  const pillar = pillarFor(page.hub);
+  const pillar = hubPillar[page.hub];
 
-  const ordered = [
-    ...explicit,
-    ...(pillar && pillar.slug !== slug ? [pillar.slug] : []),
-    ...siblings,
+  const candidates: string[] = [
+    // 1. ascent to the hub pillar
+    ...(pillar && pillar !== slug ? [pillar] : []),
+    // 2. sequential neighbours in any family this page belongs to
+    ...chainNeighbours(slug),
+    // 3. deliberate cross-hub journey bridges
+    ...bridgeTargets(slug),
+    // 4. explicit same-topic affinity
+    ...(affinity[slug] ?? []),
+    // 5. same-hub siblings as filler
+    ...REGISTRY.filter((p) => p.hub === page.hub && p.slug !== slug).map((p) => p.slug),
   ];
 
   const seen = new Set<string>([slug]);
   const out: RelatedLink[] = [];
-  for (const s of ordered) {
-    if (seen.has(s)) continue;
-    const target = bySlug.get(s);
-    if (!target) continue;
-    seen.add(s);
+  for (const target of candidates) {
+    if (seen.has(target)) continue;
+    const t = bySlug.get(target);
+    if (!t) continue;
+    seen.add(target);
     out.push({
-      slug: target.slug,
-      title: target.title,
-      blurb: target.metaDescription.slice(0, 110),
+      slug: t.slug,
+      title: anchorFor(t.slug, slug, t.title),
+      blurb: t.metaDescription.slice(0, 110),
     });
-    if (out.length >= 6) break;
+    if (out.length >= MAX_RELATED) break;
+  }
+  return out;
+}
+
+/** Every spoke in a pillar's hub, for the on-page hub index. */
+export function spokesFor(slug: string): RelatedLink[] {
+  const page = bySlug.get(slug);
+  if (!page || !page.isPillar) return [];
+  return REGISTRY.filter((p) => p.hub === page.hub && p.slug !== slug).map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    blurb: p.metaDescription.slice(0, 110),
+  }));
+}
+
+/**
+ * Two or three in-content links surfaced mid-article. Contextual body links
+ * carry more weight than a block in the footer, and rendering them from the
+ * graph guarantees every page both emits and receives them.
+ */
+export function inlineLinksFor(slug: string): RelatedLink[] {
+  const page = bySlug.get(slug);
+  if (!page) return [];
+  const pillar = hubPillar[page.hub];
+  const pool = [
+    ...bridgeTargets(slug),
+    ...(affinity[slug] ?? []),
+    ...chainNeighbours(slug),
+    ...(pillar && pillar !== slug ? [pillar] : []),
+  ];
+  const seen = new Set<string>([slug]);
+  const out: RelatedLink[] = [];
+  for (const target of pool) {
+    if (seen.has(target)) continue;
+    const t = bySlug.get(target);
+    if (!t) continue;
+    seen.add(target);
+    out.push({
+      slug: t.slug,
+      title: anchorFor(t.slug, slug + "-inline", t.title),
+      blurb: t.metaDescription.slice(0, 90),
+    });
+    if (out.length >= 3) break;
   }
   return out;
 }

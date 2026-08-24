@@ -5,8 +5,10 @@ import FaqAccordion from "@/components/FaqAccordion";
 import JsonLd from "@/components/JsonLd";
 import Prose from "@/components/Prose";
 import RelatedContent from "@/components/RelatedContent";
+import InlineLinks from "@/components/InlineLinks";
+import HubIndex from "@/components/HubIndex";
 import TableOfContents from "@/components/TableOfContents";
-import { allPages, getPage, relatedFor } from "@/content";
+import { allPages, getPage, inlineLinksFor, relatedFor, spokesFor } from "@/content";
 import { hubs } from "@/content/types";
 import { lastUpdatedLabel } from "@/data/tax-rates";
 import {
@@ -51,6 +53,15 @@ export default async function ContentPage({
       ];
 
   const related = relatedFor(page.slug);
+  const inline = inlineLinksFor(page.slug);
+  const spokes = spokesFor(page.slug);
+
+  // Split the article so contextual links land mid-content rather than
+  // being stranded at the bottom where they carry less weight.
+  const h2s = page.blocks.map((b, i) => (b.kind === "h2" ? i : -1)).filter((i) => i >= 0);
+  const splitAt = h2s.length >= 3 ? h2s[2] : -1;
+  const head = splitAt > 0 ? page.blocks.slice(0, splitAt) : page.blocks;
+  const tail = splitAt > 0 ? page.blocks.slice(splitAt) : [];
   const hasCalc = page.calculator !== "none";
 
   return (
@@ -92,8 +103,15 @@ export default async function ContentPage({
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px]">
         <article className="max-w-3xl">
-          <Prose blocks={page.blocks} />
+          <Prose blocks={head} />
+          {tail.length > 0 && (
+            <>
+              <InlineLinks items={inline} />
+              <Prose blocks={tail} />
+            </>
+          )}
           <div className="mt-10 space-y-8">
+            {page.isPillar && <HubIndex items={spokes} hubLabel={hub.label} />}
             <FaqAccordion items={page.faq} />
             {page.sources.length > 0 && (
               <section className="card p-5">

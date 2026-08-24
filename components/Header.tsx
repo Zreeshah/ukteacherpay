@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 const NAV = [
   { href: "/teacher-pay-calculator/", label: "Pay calculator" },
@@ -12,14 +13,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-ink/10 bg-paper/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2" aria-label="UK Teacher Pay — Home">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent-strong text-sm font-bold text-white">
-            TP
-          </span>
-          <span className="text-[15px] font-semibold leading-tight">
-            UK Teacher Pay
-          </span>
-        </Link>
+        <Logo />
 
         <details className="group relative lg:hidden">
           <summary className="cursor-pointer list-none rounded-lg border border-ink/15 px-3 py-1.5 text-sm font-medium">

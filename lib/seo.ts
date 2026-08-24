@@ -53,6 +53,12 @@ export function organizationJsonLd() {
     url: SITE_URL,
     description:
       "Free UK teacher pay, salary and pension calculators built on official STPCD and HMRC figures.",
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/opengraph-image.png`,
+      width: 1200,
+      height: 630,
+    },
   };
 }
 
