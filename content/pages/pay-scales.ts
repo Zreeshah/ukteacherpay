@@ -1745,8 +1745,10 @@ export const payScalePages: PageContent[] = [
       "NASUWT pay scales explained for 2026/27: what the union publishes for each UK nation, how its tables compare with statutory figures and when NASUWT advice helps.",
     primaryKeyword: "nasuwt teacher pay scales",
     secondaryKeywords: [
-      "nasuwt pay scales", "teacher pay scales", "teachers pay scale",
-      "school teacher pay scale", "pay scale teachers", "teacher pay rise 2026",
+      "nasuwt pay scales", "nasuwt salary scales", "nasuwt teachers pay scales",
+      "nasuwt teachers pay", "teacher pay scales nasuwt", "teacher pay scale nasuwt",
+      "naswut pay scales", "nasuwt pay scale", "nasuwt teacher pay scales ni",
+      "nasuwt pay scales wales", "nasuwt pay scales scotland",
     ],
     calculator: "pay-scale",
     intro:
@@ -1759,6 +1761,16 @@ export const payScalePages: PageContent[] = [
       "Membership is never required to receive statutory pay rates.",
     ],
     blocks: [
+      { kind: "h2", text: "NASUWT pay scales nation by nation" },
+      { kind: "p", text: "Because NASUWT publishes separate tables per jurisdiction, members searching for a specific nation should go straight to the right one. The core England figures above repeat across the home nations only where pay policy matches — Wales has mirrored England recently, while Scotland and Northern Ireland run their own negotiating settlements." },
+      { kind: "table", caption: "Where to find each NASUWT table and what drives its numbers", head: ["Nation", "NASUWT source", "Set by"], rows: [
+        ["England (incl. London bands)", "Pay scales England + London pages", "STRB recommendation, DfE decision"],
+        ["Wales", "Pay scales Wales page", "Independent Welsh pay review body"],
+        ["Scotland", "SNCT references via union briefings", "SNCT agreements (EIS leads negotiation)"],
+        ["Northern Ireland", "NI pay scales page", "DENI after Management Side talks"],
+      ]},
+      { kind: "p", text: "Searches for NASUWT pay scales in Northern Ireland or Scotland land on the smallest documents but the most disputes, because separate settlements mean more room for payroll drift. Verify any NI or Scottish figure against our dedicated [Wales](/teacher-pay-scale-wales/), [Scotland](/teacher-pay-scale-scotland/) and [Northern Ireland](/ni-teacher-pay-scale/) scale guides before quoting it in a query." },
+
       { kind: "h2", text: "How NASUWT organises its pay scales" },
       { kind: "p", text: "Rather than one national page, NASUWT maintains separate publications per jurisdiction: **England**, **Fringe/Outer/Inner London**, **Wales**, **Northern Ireland** and **Scotland** via SNCT references. Each uses anchored headings — Qualified Teachers, Unqualified Teachers, TLRs — so readers jump directly to relevant rows." },
       { kind: "table", caption: "Core figures across NASUWT's England tables, 2026/27", head: ["Range", "Minimum", "Maximum"], rows: [
@@ -1851,6 +1863,8 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "Habits this small feel trivial until the first contested payslip arrives, at which point they become evidence. Build them once; rely on them forever." },
     ],
     faq: [
+      { question: "What are the NASUWT pay scales in Northern Ireland?",
+answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland settlement rather than the English STPCD. Values differ from England at several points, so always quote the NI document — our own Northern Ireland scale guide restates the same figures for cross-checking." },
       { question: "What are the NASUWT pay scales for 2026/27?", answer: "Identical to statutory STPCD values: £34,068–£46,939 on the main range, £49,134–£52,835 on the upper range, with TLR 1 payments of £10,530–£17,819, published separately for England, the London bands, Wales and Northern Ireland." },
       { question: "Are NASUWT pay scales different from NEU ones?", answer: "No — both unions republish the same statutory government rates. They differ only in presentation, page structure and the surrounding advice and campaigns." },
       { question: "Does NASUWT publish scales for all four UK nations?", answer: "Yes: dedicated pages cover England, the three London bands, Wales and Northern Ireland, with Scottish coverage referencing SNCT agreements where the EIS leads negotiation." },

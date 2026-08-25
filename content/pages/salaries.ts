@@ -1584,10 +1584,11 @@ export const salaryPages: PageContent[] = [
       "PE teacher pay in 2026/27: standard scale salaries, why no shortage premium exists, TLR opportunities in sport, and coaching income that lifts total earnings.",
     primaryKeyword: "pe teacher salary uk",
     secondaryKeywords: [
-      "pe teacher salary", "how much do pe teachers earn", "physical education teacher salary",
-      "pe teacher pay", "secondary pe teacher salary uk", "sports teacher salary uk",
-      "pe teacher starting salary", "head of pe salary", "pe coach salary uk",
-      "private sports coach rates uk", "pe teacher london salary", "primary pe teacher pay",
+      "pe teacher salary", "pe teacher wage", "pe teaching salary",
+      "salary of a pe teacher uk", "pe teacher pay", "uk pe teacher salary",
+      "pe teacher uk salary", "how much do pe teachers make",
+      "how much does pe teacher earn", "physical education teacher salary",
+      "average pay for a pe teacher", "average pe teacher salary uk",
     ],
     calculator: "take-home",
     intro:
@@ -1611,6 +1612,14 @@ export const salaryPages: PageContent[] = [
         ["Head of PE (TLR 2)", "e.g. U1 + £7,000", "≈£56,000"],
         ["Director of sport (TLR 1)", "U2/U3 + £12,000", "≈£63,500+"],
       ]},
+      { kind: "h2", text: "Wage thinking: what PE pay means per hour" },
+      { kind: "p", text: "Searches framed as a PE teacher wage rather than a salary usually want an hourly answer, and directed-time rules make it counterintuitive: the 32.5-hour contracted week is only the floor of actual working hours, so effective hourly rates depend on honest workload counting." },
+      { kind: "table", caption: "Effective hourly equivalents for a PE teacher at M4 (£40,940), 2026/27", head: ["Hours assumption", "Weekly hours", "Effective hourly"], rows: [
+        ["Contracted directed time only", "32.5", "≈£24"],
+        ["Realistic term-time total", "45-50", "≈£16-£18"],
+        ["Term-time-only weeks annualised", "39 weeks", "≈£22 on realistic totals"],
+      ]},
+      { kind: "p", text: "The comparison explains why so many PE teachers build the coaching layer below — private rates of £20-£50 an hour outperform even contracted-rate classroom time, and how much do PE teachers make questions resolve very differently once side income enters the arithmetic. Run your own figures through the [take-home calculator](/teacher-pay-calculator/) to convert gross to net." },
 
       { kind: "h2", text: "Why PE has no shortage money" },
       { kind: "p", text: "Government financial incentives target subjects where recruitment fails — maths, sciences, computing. PE sits at the opposite pole: among the most applied-for ITT subjects nationally, with strong candidate pools letting training providers fill places without cash inducements. Practical consequences:" },
@@ -1713,10 +1722,11 @@ export const salaryPages: PageContent[] = [
       "What English teachers earn in 2026/27: standard scale pay, why no bursary exists, head-of-English TLR economics, tutoring demand and career-stage progression.",
     primaryKeyword: "english teacher salary uk",
     secondaryKeywords: [
-      "english teacher salary", "how much do english teachers earn", "secondary english teacher salary uk",
-      "english teacher pay scale", "english teacher starting salary", "head of english salary",
-      "private english tutor rates uk", "english teacher london salary", "gcse english tutor pay",
-      "english lecturer salary uk", "english teacher hourly rate", "literacy coordinator tlr",
+      "english teacher salary", "salary for english teacher", "salary english teacher",
+      "english teacher wage", "english teacher uk salary", "average english teacher salary uk",
+      "english literature teacher salary uk", "english teacher salary in uk per month",
+      "how much do english teachers earn", "head of english salary",
+      "private english tutor rates uk", "english teacher hourly rate",
     ],
     calculator: "take-home",
     intro:
@@ -1740,6 +1750,16 @@ export const salaryPages: PageContent[] = [
         ["Second in English (TLR 2)", "+£4,000-£7,000", "≈£53,000-£57,000"],
         ["Head of English (TLR 1)", "+£10,530+", "≈£63,400+"],
       ]},
+
+      { kind: "h2", text: "Wage framing: English teacher pay weekly and monthly" },
+      { kind: "p", text: "A slice of searchers ask about an English teacher wage or the salary per month rather than annual figures, and the conversion surprises people: annual salaries are paid in twelve equal monthly instalments even though teachers work term-time only, so August arrives as a normal payslip." },
+      { kind: "table", caption: "Monthly gross equivalents outside London, 2026/27", head: ["Pay point", "Annual", "Gross per month"], rows: [
+        ["M1 (ECT entry)", "£34,068", "≈£2,839"],
+        ["M6 (top of main range)", "£46,939", "≈£3,912"],
+        ["U3 (classroom ceiling)", "£52,835", "≈£4,403"],
+        ["Head of English, typical", "≈£63,400", "≈£5,283"],
+      ]},
+      { kind: "p", text: "Hourly framing tells the sharper story: on realistic term-time workloads an M6 point equates to roughly £20-£24 an hour before the tutoring income described below stacks on top. Convert any of these points to net figures with the [take-home calculator](/teacher-pay-calculator/)." },
 
       { kind: "h2", text: "Training without a bursary" },
       { kind: "p", text: "Like PE, history and music, English sits outside government bursary tiers because applications remain healthy. Financial planning for the PGCE year therefore matters:" },
@@ -1839,10 +1859,11 @@ export const salaryPages: PageContent[] = [
       "What art teachers earn in 2026/27: standard scale pay, small-department TLR realities, portfolio-career income from studio practice, workshops and commissions.",
     primaryKeyword: "art teacher salary uk",
     secondaryKeywords: [
-      "art teacher salary", "how much do art teachers earn", "secondary art teacher salary uk",
-      "art teacher pay scale", "art and design teacher salary", "head of art salary",
-      "art teacher london salary", "private art tutor rates uk", "art teacher hourly rate",
-      "artist teacher income", "primary art teacher pay", "art teacher jobs pay",
+      "art teacher salary", "art teacher income", "art teacher wage",
+      "art teacher pay", "art teaching salary", "art instructor salary",
+      "salary for an art teacher", "art and design teacher salary uk",
+      "head of art teacher salary uk", "art teacher employment",
+      "art teacher job", "how much do art teachers earn",
     ],
     calculator: "take-home",
     intro:
@@ -1866,6 +1887,16 @@ export const salaryPages: PageContent[] = [
         ["Head of art (TLR 2)", "+£4,000-£7,000", "≈£53,000-£57,000"],
         ["Faculty lead incl. art (TLR 1)", "+£10,530+", "≈£63,000+"],
       ]},
+
+      { kind: "h2", text: "Art teacher jobs: where the employment actually is" },
+      { kind: "p", text: "Employment searches outnumber pure salary ones for this subject, because art vacancies cluster unevenly. Understanding where art teacher jobs concentrate tells you which employers can afford the figures above:" },
+      { kind: "ul", items: [
+        "**Larger comprehensives and arts-college legacies** retain the biggest departments and the only reliable TLR structures.",
+        "**London and home-counties trusts** post the steadiest stream of art vacancies, with inner-London packages adding £6,000+ over the national scale at the top.",
+        "**Independent schools** recruit qualified art teachers year-round for smaller sets; check our [private-school comparison](/private-school-teacher-salary/) before weighing an offer.",
+        "**FE colleges** hire for GCSE and A-level art delivery on college contracts — different structure, sometimes better cash for exam-heavy timetables.",
+      ]},
+      { kind: "p", text: "Because postings are episodic, salary expectations should be anchored to the statutory scale rather than advertised ranges: every state-school art job pays the same points regardless of how the advert words it." },
 
       { kind: "h2", text: "Small departments, smaller allowances" },
       { kind: "p", text: "The honest structural reality: most secondary art departments employ two to four teachers, sometimes one. Fewer bodies means fewer allowance-bearing posts. Where maths has six TLR-holders, art might have one head-of-department payment at TLR 2 level (£3,650-£8,912). Routes around that constraint:" },

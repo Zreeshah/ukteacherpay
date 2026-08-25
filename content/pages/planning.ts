@@ -35,10 +35,10 @@ export const planningPages: PageContent[] = [
       "Financial planning for UK teachers: how your payslip works, why your pension beats most investments, and planning for maternity, redundancy and career moves.",
     primaryKeyword: "teacher financial planning",
     secondaryKeywords: [
-      "financial planning for teachers", "teacher money management", "teacher budgeting",
-      "teacher financial advice", "teachers pension financial planning", "teacher savings plan",
-      "teacher take home pay planning", "teacher career break finances", "teacher money tips",
-      "planning finances as a teacher", "teacher financial wellbeing", "teacher pay planning",
+      "teachers money", "how much money does a teacher make", "how much money do teachers get",
+      "how much do teachers make in a month", "financial planning for teachers", "teacher money management",
+      "can teachers be rich", "teacher financial advice", "teacher mortgage loans",
+      "teacher retirement age", "teacher savings plan", "teacher financial wellbeing",
     ],
     calculator: "none",
     intro:
@@ -106,6 +106,9 @@ export const planningPages: PageContent[] = [
         "**Summer:** run one deliberate scenario — part-time, promotion, or exit — so the option is priced before anyone offers it to you informally.",
       ]},
 
+      { kind: "h2", text: "Can you build wealth on a teacher's salary?" },
+      { kind: "p", text: "The most common money questions teachers search are blunt: how much do teachers actually make, and can you build anything on it? The honest answer starts with the monthly figure, not the annual one. A mid-scale M4 teacher clears roughly £2,360 a month after all deductions, rising towards £2,700 at U3, and the stability of that number is itself an asset — twelve identical payments make automation (standing orders into savings on payday) unusually reliable compared with variable-income careers. Wealth then compounds through the scheme rather than speculation: the pension contributions you barely notice are, in employer-matching terms, a 28.8% instant return no portfolio offers. See what your salary is really worth per hour in the [true hourly rate guide](/teacher-true-hourly-rate/), and remember that teachers also access ordinary tools — lifetime ISAs, fee-free index funds, and specialist teacher-friendly mortgage lenders that accept pro-rata and supply income." },
+
       { kind: "h2", text: "When to get professional advice" },
       { kind: "p", text: "Most of this page needs no paid adviser — only documents and arithmetic. But three situations genuinely justify regulated advice, and recognising them early saves both money and mistakes." },
       { kind: "p", text: "Three situations justify paying for regulated advice: pension transfers or early-access decisions involving final-salary segments, divorce settlements touching TPS benefits, and complex tax positions such as tapered allowances at senior leadership salaries. Everything else on this page is verifiable from public sources — STPCD, Burgundy Book, TPS documentation — and free tools cover the arithmetic. Beware advisers who lead by recommending you leave the Teachers' Pension Scheme; opt-out is rarely optimal for classroom salaries and the scheme's guarantees are nearly impossible to replicate privately. A useful filter: any adviser who cannot explain the 1/57th accrual rate and active revaluation in plain terms before discussing their products is not yet equipped to advise a teacher." },
@@ -120,6 +123,8 @@ export const planningPages: PageContent[] = [
       { question: "When is the best time to resign from teaching?", answer: "Contractually you must hit one of three Burgundy Book notice dates — 30 November, 30 April or 31 August in most cases — with notice submitted up to three months earlier. Financially, avoid resigning mid-year unless you have modelled the income gap." },
       { question: "What happens to my pension if I leave teaching?", answer: "Benefits stay in the scheme and grow with CPI only, instead of CPI plus 1.6% while actively contributing. You can rejoin later and deferred benefits remain yours." },
       { question: "Do I need a financial adviser as a teacher?", answer: "Only for specific events: transfers involving final-salary service, divorce settlements, or senior salaries nearing tax taper territory. Routine budgeting, pension monitoring and scenario planning are all well served by free tools like ours plus the published documents cited at the foot of each guide." },
+      { question: "How much do teachers make a month after deductions?", answer: "It depends on scale, location and loans, but typical 2026/27 figures are roughly £2,360 net per month at M4 (£40,940) and around £2,680 at U3 (£52,835) outside London, after tax, National Insurance, pension contributions and any Plan 2 loan. Calculate your own exact figure rather than relying on averages — tier cliffs move individuals significantly." },
+      { question: "Can teachers be rich?", answer: "Teaching will not make anyone wealthy quickly, but it reliably builds six-figure pension entitlements over a full career, pays twelve stable months a year for disciplined saving and investing, and offers leadership pay up to £99,000+ for those who pursue it. The realistic path is pension-first wealth plus steady ISA investing, not windfalls." },
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -140,12 +145,11 @@ export const planningPages: PageContent[] = [
       "Calculate teacher redundancy pay: the statutory formula, age-weighted weeks, the £780 cap, worked examples at real salaries, and how enhancements above statute work.",
     primaryKeyword: "teachers redundancy pay calculator",
     secondaryKeywords: [
-      "teacher redundancy pay", "teacher redundancy calculator uk",
-      "teachers redundancy pay calculator gov uk", "how much is teacher redundancy pay",
-      "do teachers get redundancy pay", "teachers voluntary redundancy pay calculator",
-      "teacher redundancy pay wales", "teachers severance payments",
-      "redundancy pay for teachers england", "school redundancy pay calculator",
-      "teachers statutory redundancy", "redundancy notice pay teachers",
+      "teacher redundancy pay", "redundancy pay teachers", "teacher redundancy payments",
+      "redundancy for teachers", "teacher redundancy calculator uk", "redundant teachers",
+      "teacher voluntary redundancy", "can teachers be made redundant",
+      "redundancy tax calculator", "tax on redundancy pay calculator",
+      "redundancy payment calculator uk", "teachers redundancy pay calculator gov uk",
     ],
     calculator: "redundancy",
     intro:
@@ -216,6 +220,17 @@ export const planningPages: PageContent[] = [
       ]},
       { kind: "callout", tone: "warn", title: "Check the tax treatment", text: "Statutory redundancy pay is tax-free up to £30,000 of termination overall, but notice pay and holiday pay count as earnings. Enhanced packages can push total termination payments past the threshold, at which point tax applies to the excess. Get payroll's calculation in writing before signing anything." },
 
+      { kind: "h2", text: "The tax treatment: what is tax-free and what is not" },
+      { kind: "p", text: "Redundancy money gets unusually generous tax treatment, which surprises most people comparing it with normal earnings. The first **£30,000 of termination pay** is entirely free of income tax, and genuine redundancy compensation does not attract National Insurance either. The exemption covers statutory redundancy pay plus any contractual enhancement combined — so a £9,360 statutory payment sits far below the threshold untouched, while an enhanced package of £35,000 would see only the final £5,000 taxed as additional earnings." },
+      { kind: "table", caption: "How each element of a termination package is taxed", head: ["Element", "Tax treatment"], rows: [
+        ["Statutory redundancy pay", "Counts toward the £30,000 tax-free exemption; no National Insurance"],
+        ["Enhancements above statute (ex-gratia)", "Also count toward the same £30,000 exemption"],
+        ["Notice pay / PILON", "Normal earnings: income tax and National Insurance in full"],
+        ["Untaken holiday pay", "Normal earnings: income tax and National Insurance in full"],
+        ["Anything above £30,000 total", "Income tax at your marginal rate; no National Insurance"],
+      ]},
+      { kind: "p", text: "Two practical warnings follow. First, because notice and holiday pay count as earnings, they do not benefit from the exemption — payroll must separate them out correctly, so check the payslip breakdown rather than one blended figure. Second, if you are a higher-rate taxpayer in the year of exit, tax on the exempt-excess can push you across bands unexpectedly; asking HMRC or payroll for a PAYE calculation before spending anything avoids an unexpected bill later." },
+
       { kind: "h2", text: "Voluntary redundancy and restructuring reality" },
       { kind: "p", text: "Schools facing falling rolls or deficit budgets increasingly open voluntary registers before compulsory selection. Voluntary terms sometimes enhance the statutory package to encourage uptake — search interest in a teachers voluntary redundancy pay calculator spikes whenever a trust announces a register. Before volunteering: price your pension position, confirm whether the enhancement beats waiting for compulsory process, and check re-employment rules that can claw back payments if you return to the same employer within a set period. If you are weighing exit altogether, our [leaving teaching guide](/leaving-teaching/) compares resignation versus redundancy outcomes side by side." },
     ],
@@ -251,11 +266,12 @@ export const planningPages: PageContent[] = [
       "See exactly what each student loan plan costs a UK teacher in 2026/27: Plan 1, 2, 4, 5 and postgraduate loan thresholds, monthly deductions and combined repayments.",
     primaryKeyword: "postgraduate loan repayment calculator",
     secondaryKeywords: [
-      "student loan repayment calculator uk", "plan 2 student loan repayment calculator",
-      "plan 2 repayment threshold", "student loan repayment teachers", "pgce loan repayment",
-      "masters loan repayment calculator", "plan 5 student loan", "plan 1 repayment threshold",
-      "plan 4 student loan scotland", "student loan monthly repayment",
-      "combined student loan repayment", "when does my student loan get written off",
+      "postgraduate loan repayment", "masters loan repayment", "postgraduate loan repayments",
+      "postgraduate student loan repayment calculator", "how much is student loan repayment",
+      "how does student loan repayment work", "when do you repay student loan",
+      "how are student loan repayments calculated", "plan 2 repayment threshold",
+      "student loan repayment teachers", "combined student loan repayment",
+      "when does my student loan get written off",
     ],
     calculator: "student-loan",
     intro:
@@ -295,6 +311,16 @@ export const planningPages: PageContent[] = [
       { kind: "p", text: "This is the scenario most PGCE graduates search for, and the one generic calculators handle worst. The two loans run independently: 9% above £28,470 for the degree, 6% above £21,000 for the master's component, both calculated on the same gross salary with no interaction between them." },
       { kind: "p", text: "Career changers who completed a salaried or fee-funded PGCE frequently hold Plan 2 plus PGL simultaneously. The two run independently: 9% above £28,470 for the degree, 6% above £21,000 for the master's component, calculated on the same gross salary. Because neither threshold offsets the other, combined repayments feel punitive early in teaching careers — but they also burn balances faster, which matters given the write-off clocks discussed below. If you are weighing whether a master's pays back at all, remember the question splits in two: the qualification's salary effect versus the loan levy attached to it. For most classroom teachers the write-off clock answers the second part before retirement." },
 
+      { kind: "h2", text: "How the repayment is actually calculated" },
+      { kind: "p", text: "Every plan uses the same three-line calculation, which explains why debt size never appears in it. Take your gross pay for the pay period, subtract that plan's annual threshold divided across the period, then apply the percentage to what remains." },
+      { kind: "table", caption: "Worked line-by-line: Plan 2 teacher on £3,411.67 gross per month (M4 £40,940)", head: ["Step", "Arithmetic", "Result"], rows: [
+        ["1. Monthly threshold allowance", "£28,470 ÷ 12", "£2,372.50"],
+        ["2. Income above threshold", "£3,411.67 − £2,372.50", "£1,039.17"],
+        ["3. Apply 9% rate", "£1,039.17 × 0.09", "£93.53 this month"],
+        ["PGL line (if held)", "(£3,411.67 − £1,750) × 0.06", "£99.70 this month"],
+      ]},
+      { kind: "p", text: "Two consequences follow from this structure. Repayments flex automatically with overtime, TLR changes and part-time working because each payslip is assessed independently; and no payment is ever due in a month where gross pay falls below the threshold — there is nothing to catch up later. The same arithmetic runs annually for self-assessment taxpayers." },
+
       { kind: "h2", text: "Write-off rules decide everything" },
       { kind: "p", text: "For most classroom teachers the interesting number is not the monthly payment but whether the balance outlives the obligation to pay it." },
       { kind: "table", caption: "When each plan is written off", head: ["Plan", "Written off"], rows: [
@@ -333,6 +359,7 @@ export const planningPages: PageContent[] = [
       { question: "Why was I repaid on the wrong plan?", answer: "Payroll relies on HMRC notification, which lags course completion and plan changes. Compare your payslip deduction against the correct threshold calculation and reclaim misdeductions from the Student Loans Company." },
       { question: "Does my pension contribution reduce my student loan repayment?", answer: "Yes indirectly — repayment uses gross salary after pension contributions are deducted, so higher pension saving lowers the income assessed. Salary-sacrifice arrangements maximise this effect." },
       { question: "Do Scottish teachers use different plans?", answer: "Scottish-domiciled students may hold Plan 4 with its higher £32,745 threshold. Where you work later does not change the plan — a Plan 4 holder teaching in England keeps Plan 4 terms." },
+      { question: "When do I start repaying my student loan as a teacher?", answer: "From the first payslip after your course ends where gross earnings for the period exceed your plan's threshold — typically the start of your NQT/ECT year for PGCE graduates. The formal obligation begins the April after you leave the course, and deductions only apply while income sits above the line." },
     ],
     sources: [
       { label: "GOV.UK — Repaying your student loan", url: "https://www.gov.uk/repaying-your-student-loan" },
@@ -353,10 +380,11 @@ export const planningPages: PageContent[] = [
       "Leaving teaching? What happens to your Teachers' Pension, notice dates, holiday pay and references — plus the real cost of exit calculated before you resign.",
     primaryKeyword: "leaving teaching",
     secondaryKeywords: [
-      "leaving teaching uk", "leaving teaching for a new career", "quitting teaching job",
-      "leaving teaching at 50", "leaving teaching after 1 year", "what to do after leaving teaching",
-      "careers after teaching", "resigning from teaching mid year", "leaving the teaching profession",
-      "teachers pension when leaving teaching", "is leaving teaching a good idea", "exit teaching profession",
+      "jobs for ex teachers", "careers after teaching", "alternative careers for teachers",
+      "alternative jobs for teachers", "jobs for former teachers", "jobs ex teachers uk",
+      "professions after teaching", "jobs for teachers leaving education",
+      "work from home jobs for ex teachers uk", "companies looking for ex teachers uk",
+      "leaving teaching uk", "leaving the teaching profession",
     ],
     calculator: "none",
     intro:
@@ -414,7 +442,16 @@ export const planningPages: PageContent[] = [
       { kind: "callout", tone: "tip", title: "Never resign before checking redundancy status", text: "If restructuring is underway and your post might disappear, resigning converts a potential redundancy payment into nothing. Take union advice first; the sequencing matters legally and financially." },
 
       { kind: "h2", text: "Where leavers actually go" },
-      { kind: "p", text: "Destination data and countless forum threads converge on a familiar set: corporate training and instructional design, civil service and local government policy, edtech and education publishing, tutoring and assessment work, plus full retraining routes like nursing or accountancy. Skills translation matters less than candidates assume — employers read teaching as evidence of presentation, management and resilience — while pension absence matters more than they price in. When comparing offers, convert everything to total compensation using the [take-home pay calculator](/teacher-take-home-pay/) on the teaching side and equivalent modelling on the other." },
+      { kind: "table", caption: "The most-searched ex-teacher destinations and what transfers", head: ["Destination", "Why teachers land there"], rows: [
+        ["Corporate training / L&D", "Presentation, curriculum design and group management map directly onto the role"],
+        ["Civil service and local government", "Policy, delivery and grading structures reward organised communicators; pay bands are published like scales"],
+        ["Edtech and education publishing", "Subject expertise plus classroom credibility; often remote-friendly"],
+        ["Tutoring and assessment (examiner work)", "Immediate income bridge using existing marking skills while you transition"],
+        ["NHS roles (incl. nursing retraining)", "Structured progression and a pension comparable to TPS in spirit"],
+        ["Finance and accountancy retraining", "Numerate graduates; AAT-to-ACA routes accept career changers"],
+      ]},
+      { kind: "p", text: "Skills translation matters less than candidates assume — employers read teaching as evidence of presentation, management and resilience — while pension absence matters more than they price in. When comparing offers, convert everything to total compensation using the [take-home pay calculator](/teacher-take-home-pay/) on the teaching side and equivalent modelling on the other." },
+      { kind: "callout", tone: "info", title: "Companies actively recruit ex-teachers", text: "A whole recruitment segment exists specifically for leavers: tutoring agencies, edtech customer-education teams, exam boards recruiting examiners, civil service fast streams, and corporate L&D departments that treat QTS as a proxy for training skill. Searching 'companies looking for ex teachers UK' surfaces current schemes; the honest caveat is that these roles compete on flexibility and values-fit, not usually on matching a leadership-scale salary." },
 
       { kind: "h2", text: "Is leaving teaching a good idea?" },
       { kind: "p", text: "The honest answer is conditional. Leaving solves workload, behaviour and accountability problems immediately; it creates income-smoothing, pension-gap and identity problems gradually. People who plan the exit — six to twelve months of runway, a destination secured, pension position documented — report better outcomes than impulsive resigners across every forum study of the question. If the driver is burnout rather than the profession, note that [part-time working](/part-time-teacher-pay-calculator/), a transfer between schools, or a sabbatical resolves many cases at far lower financial cost. And if you are within sight of retirement, our [early retirement options](/teacher-early-retirement/) may beat resignation outright." },
@@ -457,12 +494,13 @@ export const planningPages: PageContent[] = [
     metaTitle: "Teacher Resignation Deadlines & Notice Dates 2026/27",
     metaDescription:
       "Every teacher resignation deadline for 2026/27: the three exit dates, notice by 31 October, end of February or 31 May, plus leadership roles and academy variations.",
-    primaryKeyword: "teacher resignation deadlines",
+    primaryKeyword: "teacher resignation dates",
     secondaryKeywords: [
-      "teacher resignation dates", "teacher notice period uk", "when can teachers hand in notice",
-      "resigning from teaching", "teacher resignation letter deadline", "leaving teaching at christmas",
-      "leave teaching at easter", "quitting teaching mid year", "teacher notice period summer term",
-      "headteacher notice period", "how much notice do teachers give", "teacher resignation dates 2026 27",
+      "teacher notice period", "notice period for teachers", "notice period teachers",
+      "how much notice do teachers have to give", "resignation dates for teachers",
+      "teacher resignation dates 2026", "teachers notice period uk", "headteacher notice period",
+      "period of notice for teachers", "teacher resignation deadlines",
+      "deadline for teacher resignations", "resignation deadline for teachers",
     ],
     calculator: "resignation",
     intro:
@@ -544,6 +582,7 @@ export const planningPages: PageContent[] = [
       { question: "Do academies use the same resignation dates?", answer: "Trusts that adopted national terms follow the same dates. Trusts that never did can set their own notice periods, so always check your specific contract first." },
       { question: "Can I withdraw my resignation after handing it in?", answer: "Only with your employer's consent. Once valid notice is accepted, withdrawal is a negotiation, and schools mid-recruitment sometimes decline." },
       { question: "When should headteachers hand in notice?", answer: "Three months ahead of the same exit dates: 31 October to leave 31 January, 31 January to leave 30 April, and 31 May to leave 31 August." },
+      { question: "What should a teacher's resignation letter say?", answer: "Keep it minimal: your name, your post, an unambiguous statement of resignation, and the exact termination date permitted by your contract (one of the three Burgundy Book dates, or an agreed earlier release). Reasons are optional. Hand it in written, keep a dated copy, and ask for written acknowledgement so the notice clock is provable." },
       { question: "Does my salary stop on the exit date?", answer: "Yes — pay, pension contributions and benefits run to your final day. A 31 August leaver receives no August payment covering the summer, unlike colleagues still employed." },
     ],
     sources: [
@@ -567,8 +606,8 @@ export const planningPages: PageContent[] = [
     secondaryKeywords: [
       "teacher budget", "teacher budget template", "budgeting on a teacher salary",
       "first year teacher budget", "how to budget as a teacher", "teacher monthly budget",
-      "teacher take home budget", "saving money as a teacher", "teacher money management",
-      "budget planner teachers uk", "living on a teacher salary", "teacher spending plan",
+      "budget planner uk", "free online budget planner uk", "budget calculator uk",
+      "saving money as a teacher", "living on a teacher salary", "teacher spending plan",
     ],
     calculator: "budget",
     intro:
@@ -594,6 +633,16 @@ export const planningPages: PageContent[] = [
 
       { kind: "h2", text: "Use the planner" },
       { kind: "p", text: "Enter your net monthly income and your fixed costs, and the planner splits what remains into committed spending, flexible spending and savings targets using a structure designed around the school year rather than the tax year. Re-run it each September when your pay point changes, and after any allowance, loan or pension tier change — budgets are living documents, not one-time exercises." },
+
+      { kind: "h2", text: "A percentage framework that survives term-time costs" },
+      { kind: "p", text: "Percentage budgets like 50/30/20 fail teachers only when applied to gross salary or spread evenly across a year that is not evenly expensive. Applied to verified net pay and paired with a sinking fund for the three known spikes (September uniform and resources, December, summer childcare), the split works well." },
+      { kind: "table", caption: "Example split on M4 net pay of about £2,360 per month", head: ["Bucket", "Share", "On ≈£2,360 net"], rows: [
+        ["Fixed essentials (rent/mortgage, bills, food, transport)", "50–55%", "≈£1,180–£1,300"],
+        ["Sinking fund for term-start and holiday spikes", "10%", "≈£236"],
+        ["Savings and pension AVCs", "5–10%", "≈£120–£236"],
+        ["Flexible spending, guilt-free", "25–30%", "≈£590–£700"],
+      ]},
+      { kind: "p", text: "The sinking-fund line is what makes the framework teacher-proof: money for known September costs accrues monthly from October onward instead of arriving as an annual shock. Run the exact figures through the [take-home pay calculator](/teacher-take-home-pay/) first so percentages apply to real numbers rather than estimates." },
 
       { kind: "h2", text: "The teacher spending calendar" },
       { kind: "p", text: "Teaching's costs are lumpy in predictable ways. Mapping them turns surprises into line items you funded months earlier." },
@@ -666,8 +715,8 @@ export const planningPages: PageContent[] = [
     secondaryKeywords: [
       "teacher hourly rate uk", "how much do teachers earn per hour", "teacher hourly wage",
       "teacher daily rate", "supply teacher hourly rate uk", "teacher salary divided by hours",
-      "teacher pay per hour", "unqualified teacher hourly rate uk", "teaching hourly rate",
-      "teacher overtime unpaid hours", "hourly rate vs salary teacher", "teacher workload hours",
+      "teacher pay per hour", "how much do teachers get paid per hour", "teaching hourly rate",
+      "teacher overtime unpaid hours", "hourly rate vs salary teacher", "how to calculate teachers hourly rate",
     ],
     calculator: "hourly-rate",
     intro:
