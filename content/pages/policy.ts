@@ -32,8 +32,9 @@ export const policyPages: PageContent[] = [
       "when does the teacher pay rise start", "teacher pay rise september 2026",
       "when will teacher pay rise be announced", "dfe teacher pay rise",
       "school teachers pay award", "teacher pay increase", "teacher pay rise england",
-      "uk teacher pay rise", "what month does the teacher pay rise start",
+      "teacher pay rise announcement 2026", "what month does the teacher pay rise start",
       "teacher pay rise wales", "will there be a teacher pay rise in 2026",
+      "how much is the teacher pay rise",
     ],
     calculator: "pay-rise",
     intro:
@@ -125,6 +126,7 @@ export const policyPages: PageContent[] = [
       { question: "Do academies have to give the pay rise?", answer: "Not legally. Academies are exempt from the STPCD's pay provisions, but most trusts adopt the national award voluntarily and many reference it in employment contracts. Check your trust's pay policy." },
       { question: "Does the pay rise apply in Wales, Scotland and Northern Ireland?", answer: "Wales usually mirrors the England award through its own negotiating body. Scotland and Northern Ireland negotiate separately through their own bodies, so awards and dates differ. Always check the relevant national agreement." },
       { question: "Is the pay rise applied before or after tax?", answer: "Before. The award lifts your gross salary, and income tax, National Insurance and pension contributions are calculated on the new figure. Use a take-home calculator to see the net effect." },
+      { question: "How much is the teacher pay rise per month after tax?", answer: "A mid-scale M4 teacher gains roughly £1,384 gross a year from the 2026/27 award, which is about £80–£90 extra take-home per month once tax, National Insurance and pension contributions are applied. The exact figure depends on your pension tier and student loan plan, so model your own position rather than relying on averages." },
       { question: "Do supply teachers get the pay rise?", answer: "Yes, where pay is linked to the national scale. Daily-rate supply cover calculated from the STPCD rises with the award, though agencies may take time to update their rates." },
     ],
     sources: [
@@ -149,7 +151,7 @@ export const policyPages: PageContent[] = [
       "teachers pay rise 2026", "teacher pay scale 2026", "teacher pay scale 2026-27",
       "teacher pay scale 26 27", "teacher pay rise 2026 latest news",
       "teacher pay rise 2026 when will it be paid", "what is the teacher pay rise for 2026",
-      "teacher pay award 2026", "new teacher pay scale 2026",
+      "teacher pay award 2026", "new teacher pay scale 2026", "teachers pay rise 2026 uk",
     ],
     calculator: "pay-rise",
     intro:
@@ -233,6 +235,7 @@ export const policyPages: PageContent[] = [
       { question: "Did TLR and SEN allowances increase in 2026?", answer: "The published ranges were uplifted: TLR1 runs £10,530 to £17,819 and SEN allowances £2,885 to £5,689. Your individual payment depends on your school's pay policy within those ranges." },
       { question: "Why is my pay rise bigger than 3.5%?", answer: "Because progression adds on top. Moving up a main scale point while receiving the award typically produces a total rise of 6% to 7%." },
       { question: "Does the 2026 pay rise apply in Scotland?", answer: "No. Scotland negotiates separately through the SNCT, so Scottish salaries follow a different agreement and timetable." },
+      { question: "What if my school has not applied the 2026 pay rise?", answer: "Maintained schools must apply the STPCD rates from 1 September 2026. If your payslip still shows 2025/26 figures, ask payroll in writing which point you have been placed on and when arrears will land. Academy trusts that mirror the STPCD should honour it too, so check your trust's pay policy before escalating." },
       { question: "Do part-time teachers get the full 3.5%?", answer: "Yes, proportionally. Part-time pay is calculated pro-rata from the scale point, so the percentage uplift applies to your full-time equivalent rate exactly as it does for full-time staff." },
     ],
     sources: [
@@ -259,6 +262,7 @@ export const policyPages: PageContent[] = [
       "teacher pay scales 25/26", "teacher pay rise 2025 leadership scale",
       "teacher pay rise 2025 tlr", "scottish teacher pay rise 2025",
       "teacher pay rise 2025 when will it be paid", "teacher pay award 2025",
+      "teacher pay rise 2025 wales", "what is the teacher pay rise for 2025",
     ],
     calculator: "none",
     intro:
@@ -346,6 +350,7 @@ export const policyPages: PageContent[] = [
       { question: "Was the 2025 award above inflation?", answer: "Yes, marginally. With CPI near 2% to 3% during 2025, a 4% award produced a small real-terms gain, the second consecutive year of real recovery." },
       { question: "Did academies apply the 2025 award?", answer: "Not automatically. Academies are exempt from the STPCD's pay provisions, though most trusts mirrored the 4% voluntarily." },
       { question: "How does the 2025 award compare with 2026?", answer: "2025/26 paid 4%; 2026/27 pays 3.5% as the first part of a two-year deal worth about 6.6% overall." },
+      { question: "Was the 2025 teacher pay rise the same in Wales?", answer: "Yes on the headline figure. Wales applied the same 4% uplift to its scale through the Welsh Negotiating Committee, so the published values matched England's, though Welsh terms of service can differ in other respects." },
       { question: "How do I check my P60 against the 2025 scale?", answer: "Find your pay point as of September 2025 in the table above and compare the annual gross figure with your P60 for 2025/26. Small differences come from allowances, overtime-adjacent payments or part-time fractions; large ones are worth querying with payroll." },
     ],
     sources: [
@@ -371,7 +376,8 @@ export const policyPages: PageContent[] = [
       "teaching salary uk", "teachers pay scales uk", "uk teacher salary",
       "do teachers get paid in the summer", "how much do teachers earn uk",
       "teacher pay uk 2026", "teacher pay london", "teacher pay after tax",
-      "qualified teacher salary uk",
+      "qualified teacher salary uk", "average teacher salary uk", "teacher salary in uk per month",
+      "teachers salary uk", "uk teacher salary",
     ],
     calculator: "take-home",
     intro:
@@ -479,7 +485,7 @@ export const policyPages: PageContent[] = [
       "teacher maternity pay changes", "teacher maternity pay scotland",
       "burgundy book maternity pay", "teacher maternity leave uk",
       "do teachers get full maternity pay", "teacher maternity pay ni",
-      "supply teacher maternity pay",
+      "supply teacher maternity pay", "teachers maternity pay", "maternity leave for teachers",
     ],
     calculator: "none",
     intro:
@@ -556,6 +562,7 @@ export const policyPages: PageContent[] = [
       { question: "Is teacher maternity pay different in Scotland?", answer: "Yes. Scottish terms come from the SNCT rather than the Burgundy Book. The structure is broadly similar but administered separately, so check the Scottish scheme directly." },
       { question: "Do I pay tax on teacher maternity pay?", answer: "Yes. Both occupational and statutory maternity pay are treated as earnings, with income tax and National Insurance deducted as normal while they last." },
       { question: "Does my pension continue during maternity leave?", answer: "Contributions continue into the TPS while you receive maternity pay, calculated on the lower pay, and your pensionable service is unaffected. Scale progression also continues during leave." },
+      { question: "Do teaching assistants get the same maternity pay?", answer: "Not usually. Teaching assistants are employed under local government Green Book terms rather than the Burgundy Book, so their occupational maternity schemes differ and are often less generous. The statutory maternity pay floor applies to both groups in the same way." },
       { question: "Can my school make me repay maternity pay?", answer: "Only the occupational half-pay element, and only if you fail to return for the required 13 weeks. Employers have discretion to waive repayment where circumstances were outside your control." },
     ],
     sources: [
@@ -581,6 +588,7 @@ export const policyPages: PageContent[] = [
       "burgundy book sick pay", "occupational sick pay teachers", "teacher sick leave",
       "do teachers get paid sick leave", "teacher sick pay calculator", "supply teacher sick pay",
       "statutory sick pay teachers", "teacher sick pay half pay", "long term sick teacher",
+      "sick pay for teachers", "teacher sick pay entitlement uk", "how long can a teacher be off sick on full pay",
     ],
     calculator: "none",
     intro:
@@ -652,6 +660,7 @@ export const policyPages: PageContent[] = [
       { question: "Is teacher sick pay different in academies?", answer: "It can be. Academies and independent schools may set their own schemes, though many mirror the Burgundy Book. Check your trust's sick pay policy and your contract." },
       { question: "What happens if I am injured at work as a teacher?", answer: "Absence caused by a work accident, injury or assault carries a separate entitlement of full pay for up to six calendar months, independent of the ordinary sliding scale." },
       { question: "Does moving schools affect my teacher sick pay?", answer: "No. Aggregated teaching service across local authorities determines your place on the scale, so changing schools does not reset your entitlement." },
+      { question: "How long can a teacher be off sick on full pay?", answer: "It depends on aggregated service: 25 working days of full pay in your first year, rising to 100 working days after four years. Only school working days count, so calendar coverage stretches across several months, and holidays on sick pay consume nothing." },
       { question: "Do I need a fit note for teacher sick pay?", answer: "From the eighth calendar day of absence onward. Before that, a self-certification form covers the absence when you return." },
     ],
     sources: [
@@ -677,6 +686,7 @@ export const policyPages: PageContent[] = [
       "strb teacher pay recommendation", "strb remit letter", "strb teacher pay 2026",
       "teachers pay review body", "strb pay award", "what is the strb",
       "strb evidence", "strb recommendation accepted", "teacher pay body",
+      "strb teacher pay 2026", "school teachers review body 36th report",
     ],
     calculator: "none",
     intro:
@@ -731,7 +741,7 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "For teachers, the practical effect is predictability rather than process. Knowing roughly what September 2027 brings makes medium-term decisions — mortgage applications, training commitments, promotion timings — easier to model a year ahead, because the second-year figure is signposted even before the STRB convenes. The trade-off, union critics argue, is that pre-agreed deals remove the annual moment of public pressure where recruitment evidence historically moved ministers." },
 
       { kind: "h2", text: "Where to find STRB documents" },
-      { kind: "p", text: "Everything is published on GOV.UK under the School Teachers' Review Body: the remit letters, the union and employer evidence, oral evidence transcripts, the final reports, and the government's responses. Reading the response letter is often more revealing than the report itself, because it states explicitly whether each element was accepted and why. For the downstream effect on your own salary, our [2026/27 award breakdown](/teacher-pay-rise-2026-27/) translates the latest recommendation into figures at every pay point, and the archived [2025 round](/teacher-pay-rise-2025/) does the same for last year's 4%." },
+      { kind: "p", text: "Everything is published on GOV.UK under the School Teachers' Review Body: the remit letters, the union and employer evidence, oral evidence transcripts, the final reports, and the government's responses. Reports are numbered sequentially — the round covering 2026/27 is the **36th report**, so citing \"School Teachers' Review Body 36th Report: 2026\" finds it directly even when the blog coverage does not link it. Reading the response letter is often more revealing than the report itself, because it states explicitly whether each element was accepted and why. For the downstream effect on your own salary, our [2026/27 award breakdown](/teacher-pay-rise-2026-27/) translates the latest recommendation into figures at every pay point, and the archived [2025 round](/teacher-pay-rise-2025/) does the same for last year's 4%." },
 
       { kind: "h2", text: "How teachers can influence the process" },
       { kind: "p", text: "Individual teachers cannot submit directly, but union membership feeds the evidence base: pay surveys, workload data and resignation statistics submitted by NEU, NASUWT, ASCL and NAHT form the core of the retention argument each round. Headteacher associations' evidence carries particular weight on leadership spine issues — see our [leadership pay scale guide](/leadership-pay-scale/) for what those arguments are about — and local authority employers contribute the budget-side view. The most effective individual contribution remains completing union pay surveys accurately: vacancy and exit data drive more recommendations than anecdote ever will." },

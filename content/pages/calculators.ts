@@ -149,9 +149,10 @@ export const calculatorPages: PageContent[] = [
     primaryKeyword: "part time teacher salary calculator",
     secondaryKeywords: [
       "part time teacher pay calculator", "teacher part time pay calculator",
-      "0.6 part time teacher salary calculator", "pro rata teacher salary calculator",
+      "part time teacher salary", "0.6 part time teacher salary calculator",
+      "0.8 teacher salary calculator",
+      "pro rata teacher salary calculator",
       "pro rata school salary calculator", "teachers part time pay calculator",
-      "part time teacher salary", "teacher part time salary calculator",
       "part time teacher salary uk", "part time teacher take home pay",
     ],
     calculator: "part-time",
@@ -191,6 +192,17 @@ export const calculatorPages: PageContent[] = [
         ["U2", "£50,955", "£40,764", "£30,573", "£25,478", "£20,382"],
         ["U3", "£52,835", "£42,268", "£31,701", "£26,418", "£21,134"],
       ]},
+
+      { kind: "h2", text: "Part-time take-home pay at common fractions" },
+      { kind: "p", text: "Gross is only half the answer — most people want the monthly net figure. The table below shows both for an M4 teacher in the rest of England, calculated through the standard deduction order: pension tier set on the £40,940 FTE figure, income tax on gross minus pension minus the personal allowance, and National Insurance on the full gross." },
+      { kind: "table", caption: "M4 (£40,940 FTE) part-time pay, rest of England 2026/27 (calculated)", head: ["FTE", "Gross annual", "Monthly take-home"], rows: [
+        ["1.0", "£40,940", "£2,515"],
+        ["0.8", "£32,752", "£2,071"],
+        ["0.6", "£24,564", "£1,626"],
+        ["0.5", "£20,470", "£1,404"],
+        ["0.4", "£16,376", "£1,182"],
+      ]},
+      { kind: "p", text: "Notice that dropping from full time to 0.8 cuts gross by £8,188 but take-home by only about £5,332 a year. Fixed elements — the personal allowance and the NI threshold — do not shrink with your hours, so each part-time pound you give up costs you less net than gross. The same logic in reverse is why allowances such as TLRs are worth slightly more net on a part-time contract than their headline pro-rated figure suggests." },
 
       { kind: "h2", text: "The pension tier trap for part-time teachers" },
       { kind: "p", text: "This is the single biggest source of confusion on part-time payslips. Your Teachers' Pension contribution rate is determined by your **full-time equivalent** salary, not your actual pay." },
@@ -258,8 +270,9 @@ export const calculatorPages: PageContent[] = [
       "What UK teachers take home after pension, tax and National Insurance in 2026/27, shown for every pay point from M1 to U3, leadership posts and with student loans.",
     primaryKeyword: "teacher take home pay",
     secondaryKeywords: [
-      "teachers take home pay", "take home pay teacher", "teacher pay after tax",
-      "take home teacher pay calculator", "teacher net pay",
+      "take home pay calculator teacher", "teachers take home pay",
+      "take home pay teacher", "teacher pay after tax",
+      "teacher salary after tax", "teacher net pay",
       "teacher net salary calculator", "teacher monthly take home pay",
       "how much do teachers take home a month", "teacher salary after tax uk",
     ],
@@ -311,6 +324,17 @@ export const calculatorPages: PageContent[] = [
       ]},
       { kind: "p", text: "Note how the L15 example pays £8,775 into the pension because it sits just past the £72,534 boundary where the tier jumps to 11.7%. The full spine values and role mapping are in the [leadership pay scale guide](/leadership-pay-scale/)." },
 
+      { kind: "h2", text: "Take-home pay across the regions" },
+      { kind: "p", text: "The same pay point produces different net figures depending on where you teach, because the gross salary differs while the deduction structure stays similar. Scotland also applies its own income tax bands with a slightly lower higher-rate threshold." },
+      { kind: "table", caption: "Monthly take-home at M4 by region, 2026/27, full time in pension (calculated)", head: ["Region", "Gross salary", "Monthly take-home"], rows: [
+        ["Rest of England / Wales", "£40,940", "£2,515"],
+        ["London Fringe", "£42,513", "£2,600"],
+        ["Outer London", "£45,672", "£2,772"],
+        ["Inner London", "£47,961", "£2,864"],
+        ["Scotland (M4 on SNCT scale)", "£42,336", "£2,584"],
+      ]},
+      { kind: "p", text: "The inner London M4 premium is £7,021 of gross but about £349 of extra net each month — roughly 60% survives deductions, as with any taxed uplift. A Scottish teacher on the equivalent point keeps slightly more of their salary than the raw tax bands suggest because Scottish thresholds differ in both directions; the full Scottish picture is in the [Scottish guide](/teacher-pension-scotland/)." },
+
       { kind: "h2", text: "Reading these figures off an actual payslip" },
       { kind: "p", text: "Schools run payroll monthly but annual figures divide unevenly across the year, which is why some months look wrong. Pension contributions are assessed per pay period on that month's pensionable pay; tax accumulates cumulatively on most codes, so a September pay rise produces one odd payslip and then settles. If your school divides salary into twelve equal payments, the figures here should match every month apart from transition months around a pay award or pay point change." },
       { kind: "p", text: "Three lines on the payslip map directly onto this page: gross pay, the pension deduction shown as TP or TPS, and PAYE tax. National Insurance appears as an employee NI figure. Anything else — union subscriptions, cycle schemes, childcare salary sacrifice — sits outside the calculation used here and explains most discrepancies. Part-time teachers should pro-rate these figures using the [part-time pay calculator](/part-time-teacher-pay-calculator/), and the reasoning behind each deduction rate is documented in our [methodology](/methodology/)." },
@@ -357,7 +381,8 @@ export const calculatorPages: PageContent[] = [
       { kind: "callout", tone: "warn", title: "Think hard before opting out of the pension", text: "Leaving the Teachers' Pension Scheme gives up an employer contribution worth 28.8% of your salary. On M4 that is over £11,700 a year of value handed back. It is almost never the right call for a short-term cash-flow problem." },
     ],
     faq: [
-      { question: "How much does a teacher take home after tax?", answer: "A teacher on M1 outside London takes home about £2,169 a month from a £34,068 salary. On M6 (£46,939) it is roughly £2,809, and on U3 (£52,835) about £3,138. Deductions run at 24% to 29% of gross depending on the pay point." },
+      { question: "How much does take-home pay vary by region?", answer: "At M4, a rest-of-England or Wales teacher takes home about £2,515 a month, rising to £2,600 on the London fringe, £2,772 in outer London and £2,864 in inner London for 2026/27. The gross premium is always larger than the net gain because the uplift is taxed and attracts pension contributions like any other pay." },
+    { question: "How much does a teacher take home after tax?", answer: "A teacher on M1 outside London takes home about £2,169 a month from a £34,068 salary. On M6 (£46,939) it is roughly £2,809, and on U3 (£52,835) about £3,138. Deductions run at 24% to 29% of gross depending on the pay point." },
       { question: "What percentage of a teacher's salary is deducted?", answer: "Between about 24% and 29% for most classroom teachers. On M1 it is roughly 24% (pension 7.4%, tax around 11%, NI around 5%). By U3 total deductions reach about 29% as more income falls into the higher pension tier and the tax bands." },
       { question: "Do teachers pay more National Insurance than other workers?", answer: "No. Teachers pay standard Class 1 employee National Insurance at 8% between £12,570 and £50,270 and 2% above. What differs is the pension, which is a higher contribution than most private-sector schemes but comes with a guaranteed inflation-linked benefit." },
       { question: "How much more do inner London teachers take home?", answer: "An inner London M1 teacher takes home roughly £2,558 a month against £2,169 outside London — about £389 more. The gross premium is £7,660 but pension, tax and National Insurance take roughly two fifths of it." },

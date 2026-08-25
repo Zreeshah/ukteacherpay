@@ -430,11 +430,15 @@ const assistantHeadPage: PageContent = {
   secondaryKeywords: [
     "assistant head teacher salary uk", "assistant headteacher salary",
     "average assistant head teacher salary uk",
+    "primary school assistant head teacher salary",
     "assistant head teacher salary primary uk",
+    "assistant head teacher salary secondary",
+    "assistant head teacher salary london",
+    "assistant deputy head teacher salary",
+    "assistant head teacher salary wales",
     "assistant head pay scale", "assistant headteacher pay",
     "what does an assistant head teacher earn",
     "assistant head vs deputy head salary",
-    "assistant head salary uk", "assistant head teacher pay",
   ],
   calculator: "pay-scale",
   calculatorPreset: { scale: "leadership" },
@@ -469,6 +473,15 @@ const assistantHeadPage: PageContent = {
       ["L12", "£70,022", "£71,624", "£74,625", "£80,933"],
       ["L14", "£73,513", "£75,132", "£78,165", "£84,532"],
     ]},
+
+    { kind: "h2", text: "Assistant head teacher salaries in London and Wales" },
+    { kind: "p", text: "Location changes the range more than almost anything else except school size. An inner London primary typically advertises its assistant headship between L6 and L12, which is worth £71,029 to £80,933 — roughly £13,000 more than the equivalent rest-of-England post. Outer London sits between the two, and Wales pays the same spine values as the rest of England." },
+    { kind: "table", caption: "Typical London and Wales assistant head ranges, 2026/27", head: ["Setting", "Typical ISR", "Inner London value", "Outer London value"], rows: [
+      ["Primary (L6 – L10)", "L6 – L10", "£71,029 – £77,487", "£64,940 – £71,246"],
+      ["Secondary (L8 – L14)", "L8 – L14", "£74,188 – £84,532", "£68,020 – £78,165"],
+      ["Wales (L4 – L10)", "L4 – L10", "—", "—"],
+    ]},
+    { kind: "p", text: "Wales sets its own leadership arrangements through the Welsh Government, but the published values currently mirror the rest-of-England spine. Check the employer's own pay policy, because Welsh schools are not bound by the English STPCD. Recruitment listings dominate the London results because so many posts are advertised there — the DfE's [Teaching Vacancies service](https://teaching-vacancies.service.gov.uk/) carries most of them." },
 
     { kind: "h2", text: "Is the step into leadership worth it?" },
     { kind: "p", text: "This is the single most important financial question for anyone considering an assistant headship, and the answer is genuinely not always yes." },
@@ -532,6 +545,7 @@ const assistantHeadPage: PageContent = {
     { kind: "p", text: "Because the [Teachers' Pension Scheme](/teacher-pension/) is career average, every year at a higher salary permanently increases your retirement income, so the timing of the step up matters more than it would under a final-salary scheme. Guidance on securing progression is in the guide to [moving up the leadership pay scale](/how-to-move-up-leadership-pay-scale/)." },
   ],
   faq: [
+    { question: "How much does an assistant head teacher earn in London?", answer: "An inner London assistant head typically earns between £71,029 and £84,532 depending on whether the post is primary (usually L6 to L10) or secondary (usually L8 to L14). Outer London posts pay roughly £64,940 to £78,165 at the same points. The premium over the rest of England is around £10,000 to £11,000 gross at each point." },
     { question: "How much does an assistant head teacher earn?", answer: "Most assistant headteachers earn between £57,641 and £73,513 in the rest of England for 2026/27. Primary AHTs typically sit between L4 and L10, and secondary AHTs between L6 and L14 on the leadership spine. Inner London adds roughly £10,000 to £11,000." },
     { question: "What L point is an assistant head teacher?", answer: "There is no fixed point. Typical individual school ranges start around L3 to L6 and top out between L10 and L16, depending on school size and the scope of the portfolio. Larger secondary schools tend to set higher ranges than small primaries." },
     { question: "Is assistant head better paid than a head of department?", answer: "Not always. A head of department on U3 with a mid-range TLR 1 earns around £67,010, which is more than an assistant head on L10 (£66,698). Compare the total package including allowances before assuming leadership pays more." },
@@ -554,11 +568,12 @@ const leadPractitionerPage: PageContent = {
     "The lead practitioner pay range for 2026/27: £53,847 to £81,860 outside London. What the role is, how the range is set, and how it compares with leadership pay.",
   primaryKeyword: "lead practitioner pay scale",
   secondaryKeywords: [
-    "lead practitioner scale", "what is a lead practitioner",
-    "lead practitioner teacher salary", "lead practitioner salary",
-    "lead practitioner pay", "advanced skills teacher pay",
-    "lead practitioner pay range", "excellent teacher scheme",
-    "lead practitioner jobs salary", "how much do lead practitioners earn",
+    "lead practitioner", "lead practitioner teacher",
+    "what is a lead practitioner", "how to become a lead practitioner",
+    "lead practitioner scale", "lead practitioner teacher salary",
+    "lead practitioner salary", "lead practitioner pay",
+    "lead practitioner pay range", "advanced skills teacher pay",
+    "how much do lead practitioners earn", "leading practitioner",
   ],
   calculator: "pay-scale",
   calculatorPreset: { scale: "lead-practitioner" },
@@ -611,6 +626,16 @@ const leadPractitionerPage: PageContent = {
     ]},
     { kind: "p", text: "A lead practitioner at the top of the range earns £81,860 — more than most primary headteachers and comparable with a deputy head in a large secondary. Details of the classroom route below it are on the [upper pay range page](/upper-pay-range/)." },
 
+    { kind: "h2", text: "How to become a lead practitioner" },
+    { kind: "p", text: "There is no application route or qualification that leads to lead practitioner status — it is an appointment to a post, exactly like leadership. Schools create LP posts when they want to invest in teaching quality across the institution, and they recruit into them through normal advert and interview processes." },
+    { kind: "ul", items: [
+      "**Build evidence of impact on other teachers.** Coaching records, CPD you have designed and delivered, measurable changes in colleagues' practice.",
+      "**Hold or work towards a substantial TLR post.** Most successful candidates come from head of department, head of year or teaching-and-learning lead roles.",
+      "**Consider an NPQ in Leading Teaching or Leading Teacher Development.** Not mandatory, but directly aligned with the role's purpose.",
+      "**Watch trust-wide vacancies.** Single-school LP posts are scarce; multi-school trusts advertise them more often because the development brief spans sites.",
+    ]},
+    { kind: "p", text: "Some schools use the title \u201cleading practitioner\u201d for essentially the same role. If you are comparing adverts, check whether the post sits on the lead practitioner range or is actually a TLR-carrying classroom post dressed up with a similar title — the difference in ceiling is tens of thousands of pounds." },
+
     { kind: "h2", text: "Lead practitioner versus leadership" },
     { kind: "p", text: "The two ranges overlap substantially. A lead practitioner at LP9 (£66,392) earns roughly the same as an assistant head at L10 (£66,698). The difference is in the nature of the job rather than the money." },
     { kind: "table", caption: "Comparing the two routes", head: ["Factor", "Lead practitioner", "Leadership group"], rows: [
@@ -653,6 +678,7 @@ const leadPractitionerPage: PageContent = {
     { kind: "p", text: "The main drawbacks are that posts are relatively scarce, the role is often less clearly defined than a leadership post, and in some schools it can become a catch-all for improvement work without the authority to deliver it. Ask hard questions about the brief and the range before accepting. Broader context on career routes is in the [UK teacher salary guide](/teacher-salary-uk/)." },
   ],
   faq: [
+    { question: "How do you become a lead practitioner?", answer: "You apply for an advertised lead practitioner post — there is no separate qualification or route. Successful candidates typically arrive from a substantial TLR role such as head of department with strong evidence of improving other teachers' practice. An NPQ in Leading Teaching or Leading Teacher Development helps but is not required." },
     { question: "What is the lead practitioner pay scale for 2026/27?", answer: "The national range is £53,847 to £81,860 in the rest of England and Wales, £55,331 to £83,346 in the London fringe, £58,119 to £86,136 in outer London, and £64,023 to £92,043 in inner London. Schools set an individual range within those boundaries." },
     { question: "What is a lead practitioner in a school?", answer: "A lead practitioner is a teacher whose main purpose is modelling and leading improvement in teaching across a school or group of schools. The role keeps a substantial teaching commitment and focuses on coaching, CPD and curriculum development rather than line management." },
     { question: "Is lead practitioner higher than UPS3?", answer: "Yes. The lead practitioner minimum of £53,847 is just above the U3 figure of £52,835, and the range extends to £81,860 — nearly £29,000 above the top of the upper pay range." },
@@ -745,6 +771,10 @@ const progressionPage: PageContent = {
     { kind: "p", text: "You are entitled to be told the decision in writing and to understand the reasons. Every school pay policy must include an appeals procedure, and the usual window is ten working days from written notification." },
     { kind: "p", text: "An appeal is normally heard by a different committee of governors. Bring your union representative — NAHT and ASCL both represent school leaders on pay matters and have seen far more of these cases than you have. Appeals succeed most often where the school has failed to follow its own policy, applied criteria inconsistently between postholders, or failed to give reasons." },
 
+    { kind: "h2", text: "Acting-up arrangements and temporary higher duties" },
+    { kind: "p", text: "A route most guides skip: if you temporarily cover a higher leadership post — a deputy leaving mid-year while a replacement is recruited, or a headteacher's extended absence — the school can place you on \u201cacting up\u201d pay. This is not automatic. It must be agreed in writing, it should specify the spine point or range you are paid on during the period, and it should have a defined review date." },
+    { kind: "p", text: "Acting-up pay is worth securing properly for two reasons beyond the immediate salary. First, the higher pensionable pay increases your career average pension for every month it runs. Second, documented successful coverage of a senior role is among the strongest evidence you can present at the next pay review or in an application for a permanent promotion. If you are asked to cover without a written arrangement, request one — a verbal promise is difficult to enforce later." },
+
     { kind: "h2", text: "Common mistakes that block progression" },
     { kind: "ul", items: [
       "**Vague objectives.** If your objectives are not measurable, you cannot evidence meeting them.",
@@ -767,6 +797,7 @@ const progressionPage: PageContent = {
     { kind: "p", text: "Each point also adds permanently to your pension, because the scheme is career average. A point gained at 45 continues paying into every subsequent year of accrual, which is why early progression is worth disproportionately more than late progression." },
   ],
   faq: [
+    { question: "Do I get paid more for acting up as a head of department or deputy?", answer: "Only if the school agrees an acting-up arrangement in writing. There is no statutory entitlement, but where you temporarily cover a higher post it is good practice to be paid on that post's range for the duration. Get the point, the review date and the end date specified, because the higher pensionable pay also increases your career average pension." },
     { question: "How do you move up the leadership pay scale?", answer: "There are two routes. You progress within your seven-point individual school range by demonstrating sustained high performance against your objectives, usually over two consecutive review cycles. To go beyond your range, the range itself must be re-evaluated because the post has grown in size or complexity, or you must move to a new post." },
     { question: "Is leadership pay progression automatic each year?", answer: "No. Unlike the main pay range, where progression is normally annual subject to satisfactory performance, leadership progression requires sustained high quality performance. Many schools expect two consecutive successful years before awarding a point, and your school's pay policy sets the exact criteria." },
     { question: "Who decides leadership pay progression?", answer: "The pay committee of the governing body makes the decision, based on a recommendation from your reviewer. For headteachers the review is conducted by a governor panel, usually with an external adviser. The decision must be confirmed to you in writing." },
