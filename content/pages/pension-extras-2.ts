@@ -18,7 +18,7 @@ export const pensionExtras2Pages: PageContent[] = [
     title: "Teachers' Pension Phased Retirement Explained",
     metaTitle: "Teachers' Pension Phased Retirement Calculator",
     metaDescription:
-      "How phased retirement works in the Teachers' Pension Scheme: reduce your role, draw part of your pension, keep working and accruing. Free calculator and full guide.",
+      "How phased retirement works in the Teachers' Pension Scheme: reduce your role, draw part of your pension, keep accruing. Free calculator and guide.",
     primaryKeyword: "teachers pension phased retirement",
     secondaryKeywords: [
       "teachers pensions phased retirement", "teachers pension phased retirement lump sum",
@@ -139,7 +139,7 @@ export const pensionExtras2Pages: PageContent[] = [
     title: "Deferred Teachers' Pension: What Happens If You Leave",
     metaTitle: "Deferred Teachers' Pension Calculator & Guide",
     metaDescription:
-      "What happens to your teachers' pension if you leave teaching: deferred benefits, CPI revaluation, drawing early, lump sum options. Free calculator and full guide.",
+      "What happens to your teachers' pension if you leave teaching: deferred benefits, CPI revaluation, drawing early and lump sum options. Free calculator.",
     primaryKeyword: "teachers pension deferred benefits",
     secondaryKeywords: [
       "deferred teacher pension", "deferred pension teaching",
@@ -243,7 +243,7 @@ export const pensionExtras2Pages: PageContent[] = [
     title: "How a Career Break Affects Your Teachers' Pension",
     metaTitle: "Career Break & Teachers' Pension: Impact Guide",
     metaDescription:
-      "How a career break affects your teachers' pension: lost accrual, deferred revaluation during the gap, rejoining rules, maternity leave and unpaid leave. Free calculator.",
+      "How a career break affects your teachers' pension: lost accrual, deferred revaluation, rejoining rules, maternity and unpaid leave. Free calculator.",
     primaryKeyword: "teacher pension career break",
     secondaryKeywords: [
       "career break teaching pension", "maternity leave teacher pension",

@@ -320,7 +320,7 @@ const deputyHeadPage: PageContent = {
   title: "Deputy Head Teacher Salary UK 2026/27",
   metaTitle: "Deputy Head Teacher Salary 2026/27 — Primary & Secondary",
   metaDescription:
-    "Deputy headteacher pay for 2026/27. Typical leadership spine points for primary and secondary deputies, regional figures, and how the range relates to the head's.",
+    "Deputy headteacher pay for 2026/27. Typical leadership spine points for primary and secondary deputies, regional figures and how the range works.",
   primaryKeyword: "deputy head teacher salary",
   secondaryKeywords: [
     "deputy head teacher salary uk", "deputy head teacher salary primary uk",

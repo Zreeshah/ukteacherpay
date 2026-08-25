@@ -454,7 +454,7 @@ export const pensionPages: PageContent[] = [
     title: "Teacher Early Retirement",
     metaTitle: "Teacher Early Retirement: TPS Reductions & Costs",
     metaDescription:
-      "Taking your Teachers' Pension early: actuarial reductions by year, the cost of retiring at 55, 57 or 60, flexible retirement options and the 2028 minimum age change.",
+      "Taking your Teachers' Pension early: actuarial reductions by year, the cost of retiring at 55, 57 or 60, and the 2028 minimum pension age change.",
     primaryKeyword: "teachers pension early retirement",
     secondaryKeywords: [
       "teacher pension early retirement", "early retirement teachers pension",
@@ -795,7 +795,7 @@ export const pensionPages: PageContent[] = [
     title: "Is the Teachers' Pension Any Good?",
     metaTitle: "Is the Teachers' Pension Good? An Honest Assessment",
     metaDescription:
-      "An honest assessment of the Teachers' Pension: where it genuinely beats private pensions, the fair criticisms, and the cases where opting out almost makes sense.",
+      "An honest assessment of the Teachers' Pension: where it beats private pensions, the fair criticisms, and when opting out almost makes sense.",
     primaryKeyword: "are teachers pensions good",
     secondaryKeywords: [
       "is teacher pension good", "is a teachers pension good",

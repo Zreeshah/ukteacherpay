@@ -369,7 +369,7 @@ export const policyPages: PageContent[] = [
     title: "Teacher Pay UK: How the Four Nations Compare",
     metaTitle: "Teacher Pay UK: Four Nations Compared (2026/27)",
     metaDescription:
-      "Teacher pay across the UK compared for 2026/27: England's STPCD scale, London weightings, and how Wales, Scotland and Northern Ireland differ, with real figures.",
+      "Teacher pay across the UK for 2026/27: England's STPCD scale, London weightings, and how Wales, Scotland and Northern Ireland differ with real figures.",
     primaryKeyword: "teacher pay uk",
     secondaryKeywords: [
       "teacher salary uk", "teachers pay uk", "how much do teachers get paid uk",
