@@ -7,7 +7,7 @@ import type { Metadata } from "next";
  * Set NEXT_PUBLIC_SITE_URL in Vercel when a custom domain is attached.
  * Falls back to the Vercel production URL, then to the preview URL.
  */
-const FALLBACK_URL = "https://ukteacherpay.vercel.app";
+const FALLBACK_URL = "https://uk-teacherpaycalculator.co.uk";
 
 function resolveSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
