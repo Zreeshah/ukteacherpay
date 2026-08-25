@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
   description:
     "Free UK teacher pay calculators built on the STPCD 2026/27 pay scales and HMRC 2026/27 tax rates. Take-home pay, part-time pay, pay scales, pensions and retirement modelling.",
+  verification: {
+    google: "EQe3aKxuIMZzx5-sDopVSAgI4vzVH-j7ENREVEEDdEg",
+  },
 };
 
 export const viewport: Viewport = { themeColor: THEME_COLOR };
