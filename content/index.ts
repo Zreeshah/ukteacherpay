@@ -13,6 +13,7 @@ import { policyPages } from "./pages/policy";
 import { planningPages } from "./pages/planning";
 import { utilityPages } from "./pages/utility";
 import { extraPages } from "./pages/extras";
+import { pensionExtras2Pages } from "./pages/pension-extras-2";
 
 const REGISTRY: PageContent[] = [
   ...calculatorPages,
@@ -24,6 +25,7 @@ const REGISTRY: PageContent[] = [
   ...planningPages,
   ...utilityPages,
   ...extraPages,
+  ...pensionExtras2Pages,
 ];
 
 const bySlug = new Map(REGISTRY.map((p) => [p.slug, p]));

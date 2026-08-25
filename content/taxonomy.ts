@@ -82,8 +82,15 @@ export const chains: Record<string, string[]> = {
     "care-vs-final-salary-pension",
     "teacher-pension-age",
     "teacher-early-retirement",
+    "teacher-phased-retirement",
     "teacher-pension-lump-sum",
     "teacher-pension-death-in-service",
+  ],
+  // Leaving and return journey
+  pensionLeaving: [
+    "teacher-deferred-pension",
+    "teacher-pension-career-break",
+    "leaving-teaching",
   ],
   // Topping up your pension
   pensionTopUp: [
@@ -207,6 +214,24 @@ export const bridges: Bridge[] = [
     to: "teacher-early-retirement",
     reason: "What happens to your pension if you go early",
   },
+  // Early retirement -> phased alternative
+  {
+    from: ["teacher-early-retirement", "teacher-pension-age", "teacher-pension-lump-sum"],
+    to: "teacher-phased-retirement",
+    reason: "Consider phased retirement as an alternative to stopping completely",
+  },
+  // Leaving -> deferred pension
+  {
+    from: ["leaving-teaching", "teacher-resignation-deadlines", "teacher-redundancy-calculator"],
+    to: "teacher-deferred-pension",
+    reason: "What happens to your pension when you leave teaching",
+  },
+  // Career break awareness
+  {
+    from: ["teacher-maternity-pay", "teacher-sick-pay", "teacher-deferred-pension"],
+    to: "teacher-pension-career-break",
+    reason: "How a break from teaching affects your pension",
+  },
   // Scotland cluster
   {
     from: ["teacher-pay-scale-scotland"],
@@ -252,6 +277,9 @@ export const affinity: Record<string, string[]> = {
   "nursery-teacher-salary": ["teacher-starting-salary", "teacher-salary-uk"],
   "pe-teacher-salary": ["secondary-school-teacher-salary", "teacher-salary-uk"],
   "care-vs-final-salary-pension": ["teacher-pension", "teacher-pension-age", "lgps-pension-calculator"],
+  "teacher-phased-retirement": ["teacher-early-retirement", "teacher-pension-lump-sum", "part-time-teacher-pay-calculator"],
+  "teacher-deferred-pension": ["teacher-pension-career-break", "teacher-pension-advice", "leaving-teaching"],
+  "teacher-pension-career-break": ["teacher-deferred-pension", "teacher-maternity-pay", "teacher-avc-calculator"],
   "lgps-pension-calculator": ["teaching-assistant-salary", "teacher-pension", "teacher-pension-scotland"],
   "teacher-pension-scotland": ["teacher-pension", "teacher-pay-scale-scotland", "lgps-pension-calculator"],
 };

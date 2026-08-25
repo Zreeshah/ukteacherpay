@@ -9,6 +9,9 @@ import HourlyRateCalculator from "./calculators/HourlyRateCalculator";
 import LumpSumCalculator from "./calculators/LumpSumCalculator";
 import ResignationDeadline from "./calculators/ResignationDeadline";
 import LgpsCalculator from "./calculators/LgpsCalculator";
+import PhasedRetirementCalculator from "./calculators/PhasedRetirementCalculator";
+import DeferredPensionCalculator from "./calculators/DeferredPensionCalculator";
+import CareerBreakCalculator from "./calculators/CareerBreakCalculator";
 
 export default function CalculatorSlot({
   kind,
@@ -42,6 +45,12 @@ export default function CalculatorSlot({
       return <ResignationDeadline />;
     case "lgps":
       return <LgpsCalculator />;
+    case "phased-retirement":
+      return <PhasedRetirementCalculator />;
+    case "deferred-pension":
+      return <DeferredPensionCalculator />;
+    case "career-break":
+      return <CareerBreakCalculator />;
     default:
       return null;
   }

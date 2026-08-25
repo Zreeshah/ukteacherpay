@@ -34,6 +34,9 @@ export type CalculatorKind =
   | "lump-sum"
   | "resignation"
   | "lgps"
+  | "phased-retirement"
+  | "deferred-pension"
+  | "career-break"
   | "none";
 
 export interface SourceRef {
