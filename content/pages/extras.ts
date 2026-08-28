@@ -31,6 +31,7 @@ export const extraPages: PageContent[] = [
       "scottish teachers pension calculator", "teachers pension scotland vs england",
     ],
     calculator: "pension-care",
+    calculatorPreset: { region: "scotland" },
     intro:
       "Scottish teachers are not in the Teachers' Pension Scheme at all. The Scottish Teachers' Superannuation Scheme is a separate CARE scheme run by SPPA, with its own contribution structure, its own rules and the same 1/57th core. Here is what differs and what does not.",
     keyTakeaways: [
