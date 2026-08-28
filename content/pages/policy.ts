@@ -1,21 +1,5 @@
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
-
-const SOURCES = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-  { label: "School Teachers' Review Body (STRB) — reports and remit letters", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
-  { label: "Burgundy Book — Conditions of Service for School Teachers in England and Wales (NEU)", url: "https://neu.org.uk/advice/your-rights-work/pay/burgundy-book" },
-  { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-];
-
-const MATERNITY_SOURCES = [
-  { label: "Burgundy Book — Conditions of Service for School Teachers in England and Wales (NEU)", url: "https://neu.org.uk/advice/your-rights-work/pay/burgundy-book" },
-  { label: "GOV.UK — Statutory Maternity Pay and Leave: employer guide", url: "https://www.gov.uk/employers-maternity-pay-leave" },
-  { label: "GOV.UK — Maternity pay and leave", url: "https://www.gov.uk/maternity-pay-leave" },
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-];
-
 export const policyPages: PageContent[] = [
   // ---------------------------------------------------------------- PILLAR
   {

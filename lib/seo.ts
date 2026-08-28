@@ -135,9 +135,16 @@ export function articleJsonLd({
     headline,
     description,
     url: `${SITE_URL}${path}`,
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    inLanguage: "en-GB",
     dateModified: updated,
-    author: { "@type": "Organization", name: SITE_NAME },
-    publisher: { "@type": "Organization", name: SITE_NAME },
+    author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/opengraph-image.png` },
+    },
   };
 }
 

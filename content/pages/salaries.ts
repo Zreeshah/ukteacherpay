@@ -1,7 +1,5 @@
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
-
 const SOURCES = [
   { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
   { label: "DfE — School Workforce in England statistics", url: "https://explore-education-statistics.service.gov.uk/find-statistics/school-workforce-in-england" },

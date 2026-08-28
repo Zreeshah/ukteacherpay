@@ -1,28 +1,5 @@
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
-
-const SOURCES = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-  { label: "Burgundy Book — Conditions of Service for School Teachers in England and Wales (NEU)", url: "https://neu.org.uk/advice/your-rights-work/pay/burgundy-book" },
-  { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-  { label: "Teachers' Pensions — member guidance", url: "https://www.teacherspensions.co.uk/" },
-];
-
-const REDUNDANCY_SOURCES = [
-  { label: "GOV.UK — Redundancy: your rights", url: "https://www.gov.uk/redundancy-your-rights" },
-  { label: "GOV.UK — Calculate your statutory redundancy pay", url: "https://www.gov.uk/calculate-your-redundancy-pay" },
-  { label: "Acas — Redundancy", url: "https://www.acas.org.uk/redundancy" },
-  { label: "Burgundy Book — Conditions of Service for School Teachers in England and Wales (NEU)", url: "https://neu.org.uk/advice/your-rights-work/pay/burgundy-book" },
-];
-
-const LOAN_SOURCES = [
-  { label: "GOV.UK — Repaying your student loan: what you pay", url: "https://www.gov.uk/repaying-your-student-loan/what-you-pay" },
-  { label: "GOV.UK — Which repayment plan you are on", url: "https://www.gov.uk/repaying-your-student-loan/which-repayment-plan-you-are-on" },
-  { label: "Student Loans Company", url: "https://www.gov.uk/government/organisations/student-loans-company" },
-  { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-];
-
 export const planningPages: PageContent[] = [
   // ---------------------------------------------------------------- PILLAR
   {

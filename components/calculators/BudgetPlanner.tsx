@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { calculateTakeHome, tpsRate } from "@/lib/payroll";
-import { mainRange, upperRange, type Region } from "@/data/teacher-pay-scales";
+import { calculateTakeHome } from "@/lib/payroll";
+import { mainRange, upperRange } from "@/data/teacher-pay-scales";
 import { gbp } from "@/lib/format";
 
 const POINTS: { id: string; label: string; salary: number }[] = [

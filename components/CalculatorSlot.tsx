@@ -28,7 +28,7 @@ export default function CalculatorSlot({
       return <TeacherPayCalculator preset={preset} />;
     case "pension-care":
     case "early-retirement":
-      return <PensionCalculator />;
+      return <PensionCalculator region={preset?.region} />;
     case "avc":
       return <AvcCalculator />;
     case "redundancy":

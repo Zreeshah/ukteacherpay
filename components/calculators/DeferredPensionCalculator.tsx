@@ -34,7 +34,7 @@ export default function DeferredPensionCalculator() {
     const yearsAlreadyDeferred = Math.max(0, currentYear - left);
 
     // Revalue from the year they left to now
-    let revalued = pension * Math.pow(1 + cpiRate, yearsAlreadyDeferred);
+    const revalued = pension * Math.pow(1 + cpiRate, yearsAlreadyDeferred);
 
     // Project forward to draw date
     const yearsForward = Math.max(0, yearsToDraw - 0); // from now

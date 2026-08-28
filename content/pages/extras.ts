@@ -9,13 +9,6 @@ const SOURCES = [
   { label: "NEU — Teachers' Pension Scheme advice", url: "https://neu.org.uk/advice/your-rights-work/pensions/teachers-pension-scheme" },
 ];
 
-const PENSION_SOURCES = [
-  { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/working-life/paying-in/contribution-tiers.aspx" },
-  { label: "SPPA — Scottish Teachers' Pension Scheme", url: "https://pensions.gov.scot/teachers" },
-  { label: "Teachers' Pension Scheme Regulations 2014", url: "https://www.legislation.gov.uk/uksi/2014/512/contents/made" },
-  { label: "MoneyHelper — free and impartial pension guidance", url: "https://www.moneyhelper.org.uk/en/pensions-and-retirement" },
-];
-
 const TAX_SOURCES = [
   { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
   { label: "HMRC — Tax codes explained", url: "https://www.gov.uk/tax-codes" },

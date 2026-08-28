@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { Region } from "@/data/teacher-pay-scales";
 import { projectCarePension, earlyRetirementFactor } from "@/lib/pension";
 import { gbp, pct } from "@/lib/format";
 
-export default function PensionCalculator() {
+export default function PensionCalculator({ region = "england" }: { region?: Region }) {
+  const isScotland = region === "scotland";
   const [salary, setSalary] = useState("46939");
   const [age, setAge] = useState("40");
   const [npa, setNpa] = useState("67");
@@ -62,6 +64,7 @@ export default function PensionCalculator() {
         <p className="mt-4 text-xs text-ink/55">
           Your annual benefit statement shows the pension you have already built
           up. Enter that in &ldquo;pension already built up&rdquo;.
+          {isScotland && " This projection uses shared CARE mechanics; Scottish contribution bands are not modelled."}
         </p>
       </form>
 
@@ -122,16 +125,27 @@ export default function PensionCalculator() {
           </ul>
         </div>
 
-        <div className="card p-5">
-          <h3 className="text-sm font-semibold">What you and your employer pay in</h3>
-          <ul className="mt-2 space-y-1 text-sm text-ink/75">
-            <li>Your contributions over {years} years: <strong>{gbp(result.totalContributions)}</strong></li>
-            <li>Employer contributions at 28.8%: <strong>{gbp(result.employerContributions)}</strong></li>
-          </ul>
-        </div>
+        {isScotland ? (
+          <div className="card p-5">
+            <h3 className="text-sm font-semibold">Scottish contribution note</h3>
+            <p className="mt-2 text-sm text-ink/75">
+              This tool projects the shared CARE accrual and revaluation mechanics.
+              It does not estimate Scottish Teachers&apos; Pension Scheme contribution
+              bands or employer rates. Check SPPA for those figures.
+            </p>
+          </div>
+        ) : (
+          <div className="card p-5">
+            <h3 className="text-sm font-semibold">What you and your employer pay in</h3>
+            <ul className="mt-2 space-y-1 text-sm text-ink/75">
+              <li>Your contributions over {years} years: <strong>{gbp(result.totalContributions)}</strong></li>
+              <li>Employer contributions at 28.8%: <strong>{gbp(result.employerContributions)}</strong></li>
+            </ul>
+          </div>
+        )}
 
         <p className="text-xs text-ink/55">
-          Projection only. The Teachers&apos; Pension Scheme publishes the
+          Projection only. {isScotland ? "SPPA" : "Teachers' Pensions"} publishes the
           official actuarial factors and your benefit statement is definitive.
           Assumes continuous membership and the CARE scheme.
         </p>

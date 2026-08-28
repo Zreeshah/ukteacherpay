@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { statutoryRedundancy, STAT_WEEKLY_CAP } from "@/lib/pension";
+import { STAT_WEEKLY_CAP } from "@/lib/pension";
 import { gbp, gbp2 } from "@/lib/format";
 
 export default function RedundancyCalculator() {

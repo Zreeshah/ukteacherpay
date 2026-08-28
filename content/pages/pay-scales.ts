@@ -2,20 +2,6 @@ import type { PageContent } from "../types";
 
 const UPDATED = "2026-08-23";
 
-const SOURCES = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-  { label: "STRB — School Teachers' Review Body reports", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
-  { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-  { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/working-life/paying-in/contribution-tiers.aspx" },
-];
-
-const SOURCES_DEVOLVED = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-  { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
-  { label: "Department of Education Northern Ireland — teachers' pay", url: "https://www.education-ni.gov.uk/articles/teachers-pay-and-conditions-service" },
-  { label: "Welsh Government — school teachers' pay and conditions", url: "https://www.gov.wales/school-teachers-pay-and-conditions" },
-];
-
 export const payScalePages: PageContent[] = [
   // ─────────────────────────────────────────────────────────────────────────
   // 1. PILLAR
