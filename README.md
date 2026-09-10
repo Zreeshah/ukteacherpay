@@ -26,6 +26,14 @@ runs automatically via `postinstall`.
 
 | Path | Purpose |
 |---|---|
+
+## Live Site
+
+https://uk-teacherpaycalculator.co.uk/
+
+
+
+
 | `data/tax-rates.ts` | Single source of truth for tax year figures |
 | `data/teacher-pay-scales.ts` | STPCD 2026/27 pay scales, all regions |
 | `lib/payroll.ts` | Take-home pay engine (pension → tax → NI order) |
