@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Headteacher pay: how school group size shapes indicative salary ranges in England, 2026/27</title>
+  <desc id="desc">A flow diagram showing pupil numbers weighted by age, total unit score, school group and indicative headteacher individual school ranges. It compares Groups 1, 3, 5 and 8 in the rest of England.</desc>
+  <metadata>SEO title: Headteacher Pay by School Group 2026/27 | UK Teacher Pay Calculator. Source: https://uk-teacherpaycalculator.co.uk/head-teacher-salary/</metadata>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#F5F8FC"/><stop offset="1" stop-color="#E8F4F1"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B2545" flood-opacity=".12"/></filter>
+    <style>
+      .title{font:700 48px Arial,sans-serif;fill:#0B2545}.sub{font:400 22px Arial,sans-serif;fill:#466075}.step{font:700 23px Arial,sans-serif;fill:#0B2545}.small{font:400 18px Arial,sans-serif;fill:#466075}.cardtitle{font:700 22px Arial,sans-serif;fill:#0B2545}.salary{font:700 28px Arial,sans-serif;fill:#0B2545}.white{font:700 22px Arial,sans-serif;fill:#fff}.foot{font:400 16px Arial,sans-serif;fill:#466075}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="64" y="54" width="12" height="84" rx="6" fill="#1F8A70"/>
+  <text x="100" y="92" class="title">How school size shapes headteacher pay</text>
+  <text x="100" y="126" class="sub">Rest of England · indicative individual school ranges · 2026/27</text>
+  <g filter="url(#shadow)">
+    <rect x="100" y="202" width="276" height="148" rx="18" fill="#fff"/>
+    <rect x="454" y="202" width="276" height="148" rx="18" fill="#fff"/>
+    <rect x="808" y="202" width="276" height="148" rx="18" fill="#fff"/>
+    <rect x="1162" y="202" width="276" height="148" rx="18" fill="#0B2545"/>
+  </g>
+  <text x="238" y="256" text-anchor="middle" class="step">Pupil numbers</text><text x="238" y="288" text-anchor="middle" class="small">weighted by age</text><text x="238" y="318" text-anchor="middle" class="small">7 · 9 · 13 units</text>
+  <text x="592" y="256" text-anchor="middle" class="step">Total unit score</text><text x="592" y="288" text-anchor="middle" class="small">adds the weighted</text><text x="592" y="318" text-anchor="middle" class="small">pupil numbers</text>
+  <text x="946" y="256" text-anchor="middle" class="step">School group</text><text x="946" y="288" text-anchor="middle" class="small">Group 1 through</text><text x="946" y="318" text-anchor="middle" class="small">to Group 8</text>
+  <text x="1300" y="256" text-anchor="middle" class="white">Indicative ISR</text><text x="1300" y="288" text-anchor="middle" style="font:400 18px Arial,sans-serif;fill:#BFD8D1">sets a typical</text><text x="1300" y="318" text-anchor="middle" style="font:400 18px Arial,sans-serif;fill:#BFD8D1">headteacher range</text>
+  <g fill="none" stroke="#1F8A70" stroke-width="8" stroke-linecap="round"><path d="M390 276H428"/><path d="M744 276H782"/><path d="M1098 276H1136"/></g>
+  <g fill="#1F8A70"><path d="M426 263l25 13-25 13z"/><path d="M780 263l25 13-25 13z"/><path d="M1134 263l25 13-25 13z"/></g>
+  <text x="100" y="427" class="step">Illustrative salary ranges by school group</text>
+  <text x="100" y="458" class="small">The governing body sets the actual individual school range; these examples show the progression that group size can create.</text>
+  <g filter="url(#shadow)">
+    <rect x="100" y="500" width="316" height="218" rx="18" fill="#fff"/><rect x="442" y="500" width="316" height="218" rx="18" fill="#fff"/><rect x="784" y="500" width="316" height="218" rx="18" fill="#fff"/><rect x="1126" y="500" width="316" height="218" rx="18" fill="#fff"/>
+  </g>
+  <g>
+    <rect x="124" y="524" width="84" height="36" rx="18" fill="#D9F0E8"/><text x="166" y="549" text-anchor="middle" class="cardtitle">GROUP 1</text><text x="124" y="600" class="small">Typical ISR · L6–L12</text><text x="124" y="644" class="salary">£60,514–£70,022</text><text x="124" y="681" class="small">Very small primary</text>
+    <rect x="466" y="524" width="84" height="36" rx="18" fill="#D9F0E8"/><text x="508" y="549" text-anchor="middle" class="cardtitle">GROUP 3</text><text x="466" y="600" class="small">Typical ISR · L11–L17</text><text x="466" y="644" class="salary">£68,340–£79,077</text><text x="466" y="681" class="small">Average to large primary</text>
+    <rect x="808" y="524" width="84" height="36" rx="18" fill="#D9F0E8"/><text x="850" y="549" text-anchor="middle" class="cardtitle">GROUP 5</text><text x="808" y="600" class="small">Typical ISR · L18–L24</text><text x="808" y="644" class="salary">£81,024–£93,754</text><text x="808" y="681" class="small">Small secondary</text>
+    <rect x="1150" y="524" width="84" height="36" rx="18" fill="#D9F0E8"/><text x="1192" y="549" text-anchor="middle" class="cardtitle">GROUP 8</text><text x="1150" y="600" class="small">Typical ISR · L28–L34</text><text x="1150" y="644" class="salary">£103,334–£119,570</text><text x="1150" y="681" class="small">Very large / all-through</text>
+  </g>
+  <line x1="100" y1="786" x2="1500" y2="786" stroke="#BFD8D1"/>
+  <text x="100" y="826" class="foot">Source: UK Teacher Pay Calculator, “Head Teacher Salary UK 2026/27” · STPCD 2026/27 figures</text>
+  <text x="100" y="856" class="foot">uk-teacherpaycalculator.co.uk/head-teacher-salary/</text>
+</svg>

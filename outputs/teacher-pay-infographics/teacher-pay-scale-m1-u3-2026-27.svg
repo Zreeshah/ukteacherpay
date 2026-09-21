@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">England teacher pay scale M1 to U3, rest of England, 2026/27</title>
+  <desc id="desc">A labelled progression chart showing the rest-of-England teacher pay scale from M1 at £34,068 through U3 at £52,835, with London comparisons.</desc>
+  <metadata>SEO title: Teacher Pay Scale M1 to U3 2026/27. Source: https://uk-teacherpaycalculator.co.uk/teacher-pay-scale/</metadata>
+  <defs><linearGradient id="b" x1="0" x2="1"><stop stop-color="#F6F3FF"/><stop offset="1" stop-color="#EFF8F6"/></linearGradient><style>.title{font:700 48px Arial,sans-serif;fill:#0B2545}.sub{font:400 22px Arial,sans-serif;fill:#466075}.label{font:700 20px Arial,sans-serif;fill:#0B2545}.money{font:700 22px Arial,sans-serif;fill:#0B2545}.small{font:400 17px Arial,sans-serif;fill:#466075}.foot{font:400 16px Arial,sans-serif;fill:#466075}</style></defs>
+  <rect width="1600" height="900" fill="url(#b)"/>
+  <rect x="64" y="54" width="12" height="84" rx="6" fill="#6C4CCF"/>
+  <text x="100" y="92" class="title">Teacher pay scale: M1 to U3</text>
+  <text x="100" y="126" class="sub">Rest of England · gross annual salary · 2026/27</text>
+  <g transform="translate(100 236)">
+    <text x="0" y="-32" class="label">MAIN PAY RANGE</text><text x="905" y="-32" class="label" fill="#6C4CCF">UPPER PAY RANGE</text>
+    <line x1="40" y1="170" x2="1330" y2="170" stroke="#C8D6E5" stroke-width="14" stroke-linecap="round"/>
+    <line x1="40" y1="170" x2="898" y2="170" stroke="#1F8A70" stroke-width="14" stroke-linecap="round"/>
+    <line x1="968" y1="170" x2="1330" y2="170" stroke="#6C4CCF" stroke-width="14" stroke-linecap="round"/>
+    <g fill="#1F8A70" stroke="#fff" stroke-width="5"><circle cx="40" cy="170" r="20"/><circle cx="208" cy="170" r="20"/><circle cx="376" cy="170" r="20"/><circle cx="544" cy="170" r="20"/><circle cx="712" cy="170" r="20"/><circle cx="880" cy="170" r="20"/></g>
+    <g fill="#6C4CCF" stroke="#fff" stroke-width="5"><circle cx="968" cy="170" r="20"/><circle cx="1149" cy="170" r="20"/><circle cx="1330" cy="170" r="20"/></g>
+    <g text-anchor="middle"><text x="40" y="230" class="label">M1</text><text x="40" y="260" class="money">£34,068</text><text x="208" y="230" class="label">M2</text><text x="208" y="260" class="money">£36,042</text><text x="376" y="230" class="label">M3</text><text x="376" y="260" class="money">£38,400</text><text x="544" y="230" class="label">M4</text><text x="544" y="260" class="money">£40,940</text><text x="712" y="230" class="label">M5</text><text x="712" y="260" class="money">£43,529</text><text x="880" y="230" class="label">M6</text><text x="880" y="260" class="money">£46,939</text><text x="968" y="230" class="label">U1</text><text x="968" y="260" class="money">£49,134</text><text x="1149" y="230" class="label">U2</text><text x="1149" y="260" class="money">£50,955</text><text x="1330" y="230" class="label">U3</text><text x="1330" y="260" class="money">£52,835</text></g>
+  </g>
+  <g>
+    <rect x="100" y="620" width="430" height="126" rx="18" fill="#fff"/><text x="128" y="662" class="label">London changes the scale</text><text x="128" y="700" class="small">M1: £35,602 Fringe · £39,195 Outer · £41,728 Inner</text><text x="128" y="730" class="small">U3: £54,327 Fringe · £58,119 Outer · £64,683 Inner</text>
+    <rect x="584" y="620" width="430" height="126" rx="18" fill="#fff"/><text x="612" y="662" class="label">Key transition</text><text x="612" y="700" class="small">M1 to M6 increases annual gross pay by £12,871.</text><text x="612" y="730" class="small">Moving to U1 requires a threshold application.</text>
+    <rect x="1068" y="620" width="430" height="126" rx="18" fill="#fff"/><text x="1096" y="662" class="label">Read this correctly</text><text x="1096" y="700" class="small">These are full-time gross salaries before deductions.</text><text x="1096" y="730" class="small">Actual progression remains subject to pay policy.</text>
+  </g>
+  <line x1="100" y1="792" x2="1500" y2="792" stroke="#C8D6E5"/><text x="100" y="832" class="foot">Source: UK Teacher Pay Calculator, “Teacher Pay Scale” · STPCD 2026/27 figures</text><text x="100" y="862" class="foot">uk-teacherpaycalculator.co.uk/teacher-pay-scale/</text>
+</svg>
