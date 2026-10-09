@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "node scripts/verify-teacher-pay.mjs",
     "postinstall": "sh ./scripts-unquarantine.sh",
     "unquarantine": "sh ./scripts-unquarantine.sh",
     "link-audit": "node scripts/link-audit.mjs"

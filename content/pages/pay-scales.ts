@@ -1,3 +1,4 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
 const UPDATED = "2026-08-23";
@@ -51,7 +52,7 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "What changed for 2026/27" },
       { kind: "p", text: "The School Teachers' Review Body recommended, and the government accepted, a **3.5% pay award** applied to every point from 1 September 2026. Because the award was percentage-based, the cash value differs sharply by region: an inner London M1 rose far more in pounds than a rest-of-England M1, because the starting base was already higher." },
       { kind: "p", text: "For context across recent years, the pattern has been large awards in 2023 and 2024 followed by smaller ones, so a teacher who started in 2021 has seen their scale point rise materially faster than inflation over some stretches and fall behind over others. Our [teacher pay rise guide](/teacher-pay-rise/) tracks the full history and the arithmetic behind each award." },
-      { kind: "callout", tone: "info", title: "Wales currently mirrors the STPCD", text: "Wales negotiates through the Independent Welsh Pay Review Body, but its current recommendation matches the STPCD figures exactly. If that ever diverges, we update the Wales page separately." },
+      { kind: "callout", tone: "info", title: "Use a Wales-specific table", text: "Wales negotiates through the Independent Welsh Pay Review Body and publishes distinct 2026/27 advisory points, including a main range labelled M2–M6. Use the [Wales pay-scale guide](/teacher-pay-scale-wales/) rather than England's table." },
 
       { kind: "h2", text: "Main Pay Range 2026/27: all regions" },
       { kind: "p", text: "The main pay range is where nearly every qualified teacher starts. Progression is normally automatic, one point per year based on performance management, so most teachers reach M6 within six years." },
@@ -137,8 +138,8 @@ export const payScalePages: PageContent[] = [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "STRB — School Teachers' Review Body reports", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
       { label: "NEU — Pay scales England", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales/pay-scales-england" },
-      { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
-      { label: "Department of Education Northern Ireland — teachers' pay", url: "https://www.education-ni.gov.uk/articles/teachers-pay-and-conditions-service" },
+      { label: "SNCT — Scottish Negotiating Committee for Teachers", url: "https://www.snct.org.uk/" },
+      { label: "Department of Education NI — pay circulars", url: "https://www.education-ni.gov.uk/articles/pay-circulars" },
     ],
     updated: PAY_AWARD_REVIEWED,
   },
@@ -177,7 +178,7 @@ export const payScalePages: PageContent[] = [
       "The rest-of-England main range now runs £34,069 (M1) to £46,940 (M6).",
       "Inner London tops out at £64,684 for U3 classroom teachers — £11,848 above the same point in the rest of England.",
       "The cash value of 3.5% grows with seniority: about £1,152 at M1 but £1,804 at U3 in the rest of England.",
-      "Wales currently mirrors the STPCD figures; Scotland and Northern Ireland run separate settlements.",
+      "Wales publishes a separate 2026/27 advisory scale; Scotland and Northern Ireland run separate settlements.",
     ],
     blocks: [
       { kind: "h2", text: "What the 2026/27 award actually is" },
@@ -226,7 +227,7 @@ export const payScalePages: PageContent[] = [
 
       { kind: "h2", text: "Scotland, Wales and NI: different settlements" },
       { kind: "ul", items: [
-        "**Wales** negotiates through the IWPRB but currently mirrors the STPCD figures, so the tables above apply.",
+        "**Wales** negotiates through the IWPRB and publishes separate advisory points; see the [Wales table](/teacher-pay-scale-wales/).",
         "**Scotland** runs the SNCT negotiating machinery with its own spine: the main scale runs £34,539 to £48,516, with Chartered Teacher at £52,539.",
         "**Northern Ireland** remains lowest: £32,188 at the bottom of the main range rising to £44,342 at the top, with an upper range of £46,589 to £50,085.",
       ]},
@@ -259,7 +260,7 @@ export const payScalePages: PageContent[] = [
       { kind: "callout", tone: "tip", title: "Keep every September payslip", text: "A folder of annual payslips reconstructs your entire salary history for mortgages, references and pension reconciliation. Digital copies suffice; consistency does not." },
     ],
     faq: [
-      { question: "What is the teacher pay scale for 26/27?", answer: "The 2026/27 STPCD main pay range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, with inner London at £41,729 to £54,131. The upper range runs £49,134 to £52,835 outside London. The government-accepted advisory award is 3.5% from September 2026, except for a 5% Rest-of-England UQ1 increase; the Pay Order is due in October." },
+      { question: "What is the teacher pay scale for 26/27?", answer: "England's published 2026/27 advisory main range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, with inner London at £41,729 to £54,131. The upper range runs £49,134 to £52,835 outside London. The government accepted a 3.5% award from September 2026, except for a 5% Rest-of-England UQ1 increase; the points remain advisory until the relevant Pay Order is in force." },
       { question: "How much is the teacher pay rise for 2026?", answer: "The award is 3.5%. In cash that is roughly £1,152 a year at M1, £1,587 at M6 and £1,787 at U3 in the rest of England, with proportionally larger gains in London. Previous-year comparisons shown alongside are derived by dividing by 1.035." },
       { question: "When will the 2026/27 teacher pay rise be paid?", answer: "It takes effect on 1 September 2026. Most teachers see it in their September or October payslip depending on the payroll cycle. Any delay must be backdated to September — the entitlement does not lapse." },
       { question: "Does the 3.5% award apply to Wales?", answer: "Yes in practice: the Independent Welsh Pay Review Body's current recommendation mirrors the STPCD figures exactly, so Welsh teachers are on identical points. Scotland and Northern Ireland negotiate separate settlements and their scales differ." },
@@ -318,7 +319,7 @@ export const payScalePages: PageContent[] = [
         ["M5", "£43,529", "£45,070", "£48,438", "£50,666", "£43,529", "£41,109"],
         ["M6", "£46,940", "£48,479", "£52,241", "£54,131", "£46,940", "£44,342"],
       ]},
-      { kind: "p", text: "Scotland negotiates separately through the SNCT; its nearest equivalents run £34,539 to £48,516. Wales currently mirrors the England & Wales figures exactly." },
+      { kind: "p", text: "Scotland negotiates separately through the SNCT; its nearest equivalents run £34,539 to £48,516. Wales also publishes a separate advisory scale; see the [Wales pay table](/teacher-pay-scale-wales/)." },
 
       { kind: "h2", text: "What each step from M1 to M6 is worth" },
       { kind: "p", text: "This is where the main range quietly outperforms most careers' early earnings. Annual progression steps are worth two to three times the typical cost-of-living award:" },
@@ -393,7 +394,7 @@ export const payScalePages: PageContent[] = [
       { kind: "callout", tone: "tip", title: "One sentence worth sending", text: "'Could you confirm in writing my pay-point placement and band under the STPCD before I accept?' Costs nothing, prevents almost everything." },
     ],
     faq: [
-      { question: "What is the main pay range for teachers in 2026/27?", answer: "Six points from M1 at £34,069 to M6 at £46,940 in the rest of England, rising to £41,729–£54,131 in inner London. Wales mirrors these figures; Scotland and Northern Ireland negotiate separate scales." },
+      { question: "What is the main pay range for teachers in 2026/27?", answer: "In England, six points run from M1 at £34,069 to M6 at £46,940 in the rest of England, rising to £41,729–£54,131 in inner London. Wales, Scotland and Northern Ireland publish separate scales." },
       { question: "How much does an M6 teacher earn?", answer: "A full-time M6 teacher earns £46,940 in the rest of England for 2026/27, £52,241 in outer London and £54,131 in inner London. Monthly gross pay at the rest-of-England rate is roughly £3,912 before tax, pension and NI." },
       { question: "Do teachers automatically move up the main pay range?", answer: "Normally yes, one point per year following a satisfactory appraisal, since 2013 schools formally may withhold progression if standards are not met. Full-time teachers who complete the year and meet objectives almost always progress." },
       { question: "Can a school refuse my M-point increment?", answer: "It can, but only by applying its published pay policy criteria after appraisal. A refusal must follow due process — evidence, moderation and the right to appeal to the pay committee — not just a head's discretion." },
@@ -406,7 +407,7 @@ export const payScalePages: PageContent[] = [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "STRB — School Teachers' Review Body reports", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
       { label: "Get Into Teaching — teacher pay (DfE)", url: "https://getintoteaching.education.gov.uk/life-as-a-teacher/pay-and-benefits/teacher-pay" },
-      { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
+      { label: "SNCT — Scottish Negotiating Committee for Teachers", url: "https://www.snct.org.uk/" },
     ],
     updated: PAY_AWARD_REVIEWED,
   },
@@ -533,7 +534,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "Survey commentary aside, three uses dominate anecdotally among threshold-crossed teachers, and each carries planning value. Pension top-ups: some redirect part of the rise into additional voluntary contributions, compounding the scheme advantage — model whether AVCs or commutation suits you better with the [pension calculator](/teacher-pension-calculator/). Mortgage capacity: the step-change in verified salary unlocks borrowing bands that M6 alone misses, which is why lenders see upper-range applications as qualitatively different files. Career optionality: sustained UPR income funds part-time working patterns later, letting experienced teachers downshift fractionally while holding status. None of this appears in threshold guidance, yet all three explain why the fight for fair upper-range treatment matters beyond the immediate £2,000-odd rise. Treat crossing the threshold as infrastructure for your fifties, not a bonus for your thirties." },
     ],
     faq: [
-      { question: "What is the UPS teacher pay scale for 2026/27?", answer: "Three points: U1 £49,134, U2 £50,956 and U3 £52,835 in the rest of England, rising to £59,650–£64,684 in inner London. All figures rose 3.5% on 1 September 2026. Wales mirrors them; Scotland has no equivalent range." },
+      { question: "What is the UPS teacher pay scale for 2026/27?", answer: "In England, the three points are U1 £49,134, U2 £50,956 and U3 £52,835 in the rest of England, rising to £59,650–£64,684 in inner London. Wales uses a separate £49,995–£53,760 upper range; Scotland has no equivalent range." },
       { question: "What is a UPS3 teacher salary?", answer: "A full-time UPS3 teacher earns £52,835 in the rest of England, £58,120 in outer London and £64,684 in inner London for 2026/27. TLR payments stack on top and are pensionable." },
       { question: "How do I move from M6 to the upper pay range?", answer: "Apply through your school's threshold round, normally after six years. You must show sustained high-quality teaching against published criteria — usually two successful appraisal cycles of evidence. Success moves you to U1 with an immediate pay rise of roughly £2,200 outside London." },
       { question: "Do teachers automatically progress from U1 to U3?", answer: "No. Unlike the main range, all upper-range progression is discretionary and performance-based. Many teachers remain on one point for years; moving schools is the most common trigger for a fresh assessment." },
@@ -546,7 +547,7 @@ export const payScalePages: PageContent[] = [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "STRB — School Teachers' Review Body reports", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
       { label: "NEU — Pay scales England", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales/pay-scales-england" },
-      { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
+      { label: "SNCT — Scottish Negotiating Committee for Teachers", url: "https://www.snct.org.uk/" },
     ],
     updated: PAY_AWARD_REVIEWED,
   },
@@ -663,7 +664,7 @@ export const payScalePages: PageContent[] = [
       { question: "What is the salary of an unqualified teacher in 2026/27?", answer: "Between £23,732 (UQ1) and £36,494 (UQ6) in the rest of England, £27,727–£40,831 in outer London and £29,336–£42,429 in inner London. Where you start within the six points depends on the school's assessment of your experience." },
       { question: "Can an unqualified teacher earn more than a qualified one?", answer: "At the start of careers, yes: UQ6 pays £36,494 against £34,069 for a first-year qualified teacher in the rest of England. But the qualified ceiling is far higher — upper range teachers reach £52,835 and beyond." },
       { question: "Do unqualified teachers get annual pay rises?", answer: "Not automatically in the way qualified teachers do. Schools set initial placement and then review progression annually under their pay policy. Movement up the six points depends on appraisal rather than simple length of service." },
-      { question: "Is the unqualified teacher pay scale different in Wales?", answer: "No — Wales currently mirrors the England & Wales figures exactly, so the range runs £23,732 to £36,494 there too. Scotland uses its own structure and Northern Ireland's equivalent range is lower, at £22,478 to £34,565." },
+      { question: "Is the unqualified teacher pay scale different in Wales?", answer: "Yes. Wales's 2026/27 advisory unqualified range is £23,820 to £37,669. Scotland uses its own structure and Northern Ireland's equivalent range is lower, at £22,478 to £34,565." },
       { question: "Are unqualified teachers in the Teachers' Pension Scheme?", answer: "When employed as teachers on the unqualified range, yes — membership applies just as for qualified staff. Cover supervisors or teaching assistants paid on support-staff scales are instead usually enrolled in the Local Government Pension Scheme." },
       { question: "What happens to my pay when I gain QTS?", answer: "Your school must transfer you to the main pay range at a point at least equal to your previous salary. An UQ6 teacher therefore normally lands on M2 or M3 rather than absorbing a cut down to M1." },
       { question: "How much does an unqualified teacher earn in inner London?", answer: "Between £29,336 (UQ1) and £42,429 (UQ6) for 2026/27. Outer London runs £27,727 to £40,831, and the fringe £24,909 to £38,004 — always check which band the school's postcode falls into." },
@@ -673,7 +674,7 @@ export const payScalePages: PageContent[] = [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "NEU — Pay scales England", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales/pay-scales-england" },
       { label: "Get Into Teaching — teacher pay (DfE)", url: "https://getintoteaching.education.gov.uk/life-as-a-teacher/pay-and-benefits/teacher-pay" },
-      { label: "Department of Education Northern Ireland — teachers' pay", url: "https://www.education-ni.gov.uk/articles/teachers-pay-and-conditions-service" },
+      { label: "Department of Education NI — pay circulars", url: "https://www.education-ni.gov.uk/articles/pay-circulars" },
     ],
     updated: PAY_AWARD_REVIEWED,
   },
@@ -698,7 +699,7 @@ export const payScalePages: PageContent[] = [
     calculator: "pay-scale",
     calculatorPreset: { region: "inner-london" },
     intro:
-      "Inner London pays UK classroom teachers their highest statutory rates: £41,729 to £54,131 on the main range and up to £64,684 at U3 for 2026/27. This page lists every point, explains exactly which boroughs trigger the higher band, and puts the premium in context against the city's costs.",
+      "Inner London has England's highest published 2026/27 advisory classroom points: £41,729 to £54,131 on the main range and up to £64,684 at U3. This page lists every point, explains which boroughs trigger the higher band, and puts the premium in context against the city's costs.",
     keyTakeaways: [
       "Inner London main range 2026/27: £41,729 (M1) to £54,131 (M6).",
       "Upper range tops out at £64,684 (U3) — the highest standard classroom rate in the UK.",
@@ -803,7 +804,7 @@ export const payScalePages: PageContent[] = [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "NEU — Pay scales (fringe, outer London and inner London)", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales" },
       { label: "NASUWT — Pay Scales (Fringe, Outer London and Inner London)", url: "https://www.nasuwt.org.uk/advice/pay-pensions/pay-scales/pay-scales-fringe-outer-london-and-inner-london.html" },
-      { label: "Teachers' Pensions — member guides", url: "https://www.teacherspensions.co.uk/members.htm" },
+      { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/new-starter/understand-how-much-youll-pay.aspx" },
     ],
     updated: PAY_AWARD_REVIEWED,
   },
@@ -1214,7 +1215,7 @@ export const payScalePages: PageContent[] = [
     title: "Teacher Pay Scale Wales 2026/27: Full Tables",
     metaTitle: "Teacher Pay Scale Wales 2026/27: All Salary Points",
     metaDescription:
-      "The Welsh teacher pay scale for 2026/27: every M1–M6 and U1–U3 point, how IWPRB negotiations work and what makes Welsh teaching pay genuinely distinct.",
+      "The Welsh teacher pay scale for 2026/27: M2–M6, U1–U3, unqualified, lead-practitioner and leadership points, with the current IWPRB advisory figures.",
     primaryKeyword: "teacher pay scale wales",
     secondaryKeywords: [
       "wales teacher pay scale", "welsh teacher salary", "unqualified teacher salary wales",
@@ -1224,43 +1225,42 @@ export const payScalePages: PageContent[] = [
     calculator: "pay-scale",
     calculatorPreset: { region: "wales" },
     intro:
-      "Welsh teachers currently earn exactly what the England & Wales STPCD specifies: £34,069 to £46,940 on the main range for 2026/27. But Wales is not simply a copy of England — it runs its own negotiating body, its own appraisal reforms and its own professional standards. This page gives you every figure plus the Welsh specifics that actually matter.",
+      "Welsh teachers follow a separate IWPRB-negotiated advisory scale for 2026/27. The main range runs from £34,912 at M2 to £48,226 at M6, with distinct upper, unqualified, lead-practitioner and leadership values. This page gives the published Welsh figures and explains what differs from England.",
     keyTakeaways: [
-      "Welsh main range 2026/27 mirrors the STPCD: £34,069 (M1) to £46,940 (M6).",
-      "Upper range matches too: £49,134 to £52,835, threshold mechanics included.",
+      "Welsh main range 2026/27 runs from £34,912 (M2) to £48,226 (M6).",
+      "Upper range runs from £49,995 to £53,760.",
       "Wales negotiates through the Independent Welsh Pay Review Body (IWPRB), not England's STRB.",
       "No London bands exist in Wales — one national scale covers the whole country.",
-      "Leadership endpoints reach £148,829 (L43); lead practitioner £81,861.",
+      "Leadership endpoints run from £54,524 (L1) to £151,434 (L43); lead-practitioner point 18 is £83,295.",
     ],
     blocks: [
       { kind: "h2", text: "How Welsh teacher pay is decided" },
-      { kind: "p", text: "Since devolution of teachers' pay powers, Wales sets its own framework through the **Independent Welsh Pay Review Body**, which recommends annual awards to the Welsh Government. Crucially, its current recommendation mirrors the STPCD values — so the familiar England & Wales figures apply throughout Wales. Divergence remains possible in future rounds because the processes are separate." },
+      { kind: "p", text: "Wales sets its own framework through the **Independent Welsh Pay Review Body**, which recommends annual awards to the Welsh Government. For 2026/27, the Welsh Government implemented a 3.5% uplift. The published values are advisory pending the statutory document, so check your employer's pay policy as well as the current Wales table." },
       { kind: "p", text: "For context on how the wider award cycle works across Britain, our [pay rise guide](/teacher-pay-rise/) tracks each year's settlement." },
 
       { kind: "h2", text: "Main pay range in Wales 2026/27" },
-      { kind: "table", caption: "Main Pay Range — Wales 2026/27", head: ["Point", "Salary", "Compared with rest of England"], rows: [
-        ["M1", "£34,069", "identical"],
-        ["M2", "£36,042", "identical"],
-        ["M3", "£38,400", "identical"],
-        ["M4", "£40,941", "identical"],
-        ["M5", "£43,529", "identical"],
-        ["M6", "£46,940", "identical"],
+      { kind: "table", caption: "Main Pay Range — Wales 2026/27 advisory points", head: ["Point", "Salary"], rows: [
+        ["M2 (minimum)", "£34,912"],
+        ["M3", "£37,717"],
+        ["M4", "£40,623"],
+        ["M5", "£43,821"],
+        ["M6 (maximum)", "£48,226"],
       ]},
-      { kind: "p", text: "A newly qualified teacher in Cardiff or Wrexham starts at the same £34,069 as one in Liverpool or Leeds — unlike Scotland (£34,539) or Northern Ireland (£32,188)." },
+      { kind: "p", text: "The Welsh qualified-teacher table begins at M2. Compare the published Welsh point named in your contract rather than assuming England's M1–M6 labels or values apply." },
 
       { kind: "h2", text: "Upper, unqualified and leadership ranges" },
-      { kind: "table", caption: "All Welsh ranges 2026/27", head: ["Range", "Minimum", "Maximum"], rows: [
-        ["Unqualified (UQ1–UQ6)", "£23,732", "£36,494"],
-        ["Main (M1–M6)", "£34,069", "£46,940"],
-        ["Upper (U1–U3)", "£49,134", "£52,835"],
-        ["Lead Practitioner", "£53,847", "£81,861"],
-        ["Leadership Group (L1–L43)", "£53,586", "£148,829"],
+      { kind: "table", caption: "All Welsh ranges 2026/27 advisory points", head: ["Range", "Minimum", "Maximum"], rows: [
+        ["Unqualified (UQ1–UQ6)", "£23,820", "£37,669"],
+        ["Main (M2–M6)", "£34,912", "£48,226"],
+        ["Upper (U1–U3)", "£49,995", "£53,760"],
+        ["Lead Practitioner (LP1–LP18)", "£54,792", "£83,295"],
+        ["Leadership Group (L1–L43)", "£54,524", "£151,434"],
       ]},
-      { kind: "p", text: "Threshold progression from M6 to U1 adds **£2,195** immediately, exactly as in England — the [upper pay range rules](/upper-pay-range/) apply unchanged." },
+      { kind: "p", text: "Progression from M6 to U1 is £1,769. Welsh appraisal and threshold processes are set under Welsh arrangements, so use your employer's policy for an individual decision." },
 
       { kind: "h2", text: "What genuinely differs in Wales" },
       { kind: "ul", items: [
-        "**Negotiating machinery** — the IWPRB can recommend different awards than the STRB; identical outcomes so far are coincidence of policy, not obligation.",
+        "**Negotiating machinery** — the IWPRB can recommend different awards and point structures from England's STRB process.",
         "**Appraisal and standards** — Wales runs its own professional standards and induction arrangements, which feed pay decisions.",
         "**No regional banding** — no London-style zones; Anglesey and Monmouthshire pay identically.",
         "**Curriculum-driven roles** — new curriculum implementation has shifted some TLR usage patterns in Welsh schools.",
@@ -1268,31 +1268,31 @@ export const payScalePages: PageContent[] = [
       { kind: "callout", tone: "info", title: "Watch future IWPRB rounds", text: "Because recommendations are made separately, a future year could see Wales diverge. When that happens, this page updates independently of the English tables." },
 
       { kind: "h2", text: "Cost-of-living reality check" },
-      { kind: "p", text: "Identical gross pay stretches differently across the border: Welsh average rents sit well below most English regions, meaning real-terms take-home value is higher in much of Wales. A teacher on M4 keeps more after housing in Swansea than an identically paid peer in most English cities — though rural transport costs offset part of that in some counties." },
+      { kind: "p", text: "Pay and living costs both need a Wales-specific comparison. Welsh point values differ from England's, and housing, transport and household circumstances vary sharply by location. Compare your actual Welsh point with local costs rather than assume a rest-of-England equivalent." },
 
       { kind: "h2", text: "Common mistakes about the Welsh pay scale" },
       { kind: "ul", items: [
-        "**Assuming Wales follows whatever England does automatically** — separate body, separate decision, coincidentally aligned outcome.",
+        "**Assuming Wales follows whatever England does automatically** — Wales has a separate body, separate point structure and separate decision.",
         "**Applying London banding logic** — none exists in Wales; national rates apply everywhere in the country.",
         "**Mixing up Scottish comparisons** — Scotland's SNCT structure differs fundamentally, including Chartered Teacher instead of UPS.",
         "**Reading English-only union pages** — several unions publish separate Welsh tables; check the document's scope before quoting figures.",
       ]},
 
       { kind: "h2", text: "Practitioner and leadership pay in Wales" },
-      { kind: "table", caption: "Beyond-the-classroom ranges, Wales 2026/27", head: ["Range", "Minimum", "Maximum"], rows: [
-        ["Lead Practitioner", "£53,847", "£81,861"],
-        ["Leadership Group (L1–L43)", "£53,586", "£148,829"],
-        ["TLR 1", "£10,531", "£17,819"],
-        ["SEN allowance", "£2,885", "£5,690"],
+      { kind: "table", caption: "Beyond-the-classroom ranges, Wales 2026/27 advisory points", head: ["Range", "Minimum", "Maximum"], rows: [
+        ["Lead Practitioner (LP1–LP18)", "£54,792", "£83,295"],
+        ["Leadership Group (L1–L43)", "£54,524", "£151,434"],
+        ["TLR 1", "£10,717", "£18,132"],
+        ["ALN allowance", "£2,938", "£5,791"],
       ]},
-      { kind: "p", text: "These mirror England because the underlying framework is shared even as the negotiating machinery diverges. Our [leadership pay guide](/leadership-pay-scale/) unpacks how the 43-point spine translates into actual headship salaries." },
+      { kind: "p", text: "These are Welsh advisory figures, not England's values. The [leadership pay guide](/leadership-pay-scale/) lets you select Wales to view the published Welsh L-spine." },
       { kind: "h2", text: "Cardiff, Swansea and rural Wales: same pay, different lives" },
       { kind: "p", text: "One national scale means geographic arbitrage within Wales runs purely through living costs. Cardiff rents approach English regional-city levels, eroding the advantage locally; Swansea and the valleys restore it; Powys and Gwynedd flip the calculus again with cheap housing but real transport costs and thinner school choice. Teachers prioritising property typically find mid and north Wales stretch an M4 salary furthest, while those needing dual-career households gravitate to the Cardiff-Newport corridor despite the squeeze. Neither pattern changes your payslip — both change what it buys." },
       { kind: "h2", text: "Induction and professional standards: the Welsh differences that touch pay" },
       { kind: "p", text: "Wales runs its own induction arrangements and professional standards framework, and its curriculum reform has shifted how schools deploy TLR payments for curriculum leadership. None of this alters statutory points, but it shapes the advisory landscape: Welsh union branches publish Wales-specific guidance, appraisal documentation differs, and pay-policy disputes resolve through Welsh frameworks. If you trained in England and are moving west, expect familiar numbers wrapped in unfamiliar paperwork — budget an afternoon for the administrative transition and lean on your new school's business manager, who will have processed exactly this migration before." },
 
       { kind: "h2", text: "How Welsh pay rounds actually unfold" },
-      { kind: "p", text: "The annual rhythm runs: IWPRB evidence gathering through autumn and winter, recommendations to ministers in spring, Welsh Government response ahead of September implementation. Union consultations punctuate each phase, and because Wales watches English settlements closely, political pressure tends to converge outcomes — as this year's mirrored figures demonstrate. Teachers tracking negotiations should follow the Welsh Government's pay pages directly rather than inferring from English announcements; premature assumptions have embarrassed commentators in years when timelines diverged." },
+      { kind: "p", text: "The annual rhythm runs: IWPRB evidence gathering through autumn and winter, recommendations to ministers in spring, then Welsh Government response and implementation. Teachers tracking negotiations should follow Welsh Government and Wales-specific union pages directly rather than infer figures from England." },
       { kind: "h2", text: "Welsh-medium and rural dimensions" },
       { kind: "p", text: "Welsh-medium schools face persistent recruitment competition, and some employers respond with market-facing supplements within their discretion — though nothing national mirrors London banding. Rural geography cuts differently: Powys and Gwynedd posts pair cheap housing with genuine isolation costs, long drives and thinner specialist provision. Neither dynamic changes statutory points; both change effective compensation. Candidates weighing a move west should price fuel and childcare as seriously as rent, then compare the result against English alternatives in the [regional map](/teacher-pay-map/)." },
       { kind: "h2", text: "Paperwork when moving from England to Wales" },
@@ -1302,45 +1302,43 @@ export const payScalePages: PageContent[] = [
         "**Re-read induction obligations** if newly qualified — Welsh induction differs structurally from English ECT arrangements.",
         "**Update union branch** — Welsh-specific advice materials replace English equivalents, including separate pay-policy guidance.",
       ]},
-      { kind: "p", text: "Administratively lighter than a Scotland move precisely because pensions and statutory framework remain shared — the figures match, and so does the machinery underneath them. Our [Scotland guide](/teacher-pay-scale-scotland/) contrasts the heavier crossing." },
+      { kind: "p", text: "A move from England to Wales keeps Teachers' Pension Scheme membership, but it does not preserve identical pay points or labels. Check the Welsh table and the receiving school's policy. Our [Scotland guide](/teacher-pay-scale-scotland/) explains the separate Scottish framework." },
 
       { kind: "h2", text: "Reading Welsh payslips against English habits" },
-      { kind: "p", text: "Transplanted English teachers expect Welsh payslips to mirror home formats and occasionally misread them. Look instead for these specifics: pensionable-pay lines that should include any TLR exactly as England treats them; contribution tiers using annualised actual pensionable earnings for each eligible employment; and local variations in how schools label scale codes, which vary by payroll provider more than by nation. Nothing here changes entitlements — Wales shares the statutory framework — but payroll software differences generate queries that look like errors and resolve as formatting. Before raising a discrepancy, compare two consecutive months: genuine errors persist identically, formatting artefacts fluctuate with payment timing. Persistent mismatches deserve formal query through the school's payroll route, citing your contract letter and the current [scale tables](/teacher-pay-scale/) together; the combination resolves nearly every first-pass dispute without escalation." },
+      { kind: "p", text: "Transplanted English teachers should check the Welsh point named in their contract, pensionable-pay lines that include any applicable TLR or ALN allowance, and contribution tiers using annualised actual pensionable earnings for each eligible employment. Payroll providers may label the scale differently, but a persistent mismatch should be raised through the school's payroll route with your contract letter and the current Wales table." },
 
       { kind: "h2", text: "Welsh pay myths, retired efficiently" },
       { kind: "ul", items: [
-        "**'Wales follows England automatically'** — separate body, separate decision, currently matching outcome. Watch IWPRB rounds directly.",
-        "**'Welsh teachers earn less'** — statutory figures match; only living-cost arithmetic differs, usually in Wales's favour outside Cardiff.",
+        "**'Wales follows England automatically'** — it does not. Use the current IWPRB advisory table and Welsh Government implementation updates.",
+        "**'Welsh teachers earn the same as England'** — the 2026/27 point values and labels differ, so compare the named point rather than an endpoint.",
         "**'There must be a Cardiff weighting'** — there is none; one scale serves Brecon and Bangor identically.",
-        "**'Union tables differ between nations'** — they restow the same shared framework wherever jurisdictions overlap.",
+        "**'Union tables differ between nations'** — they may reflect different statutory documents, point labels and allowance ranges, so use the table for the relevant jurisdiction."
       ]},
 
       { kind: "h2", text: "Wales quick answers" },
       { kind: "ul", items: [
-        "**Same scale as England — really?** Really. IWPRB recommendations currently mirror STPCD values point for point.",
+        "**Same scale as England — really?** No. Wales has separately published 2026/27 advisory values and a main range labelled M2–M6.",
         "**Do Welsh schools pay recruitment supplements?** Some do within their discretion, especially for Welsh-medium and shortage-subject posts.",
         "**What breaks if I move mid-year?** Nothing structural; scale history transfers and pension continuity is automatic under the shared scheme.",
         "**Where do updates land first?** The Welsh Government pay pages, ahead of union restatements — check there each spring.",
       ]},
-      { kind: "callout", tone: "tip", title: "One habit covers both nations", text: "Because figures currently match, teachers who move between England and Wales rarely need new tables - they need updated district knowledge and refreshed pay-policy documents instead. Verify both each September against the current publications." },
+      { kind: "callout", tone: "tip", title: "Use the jurisdiction-specific table", text: "Teachers moving between England and Wales should check the named point, current advisory status and receiving employer's pay policy. Verify each jurisdiction separately every year." },
     ],
     faq: [
-      { question: "What is the teacher pay scale in Wales for 2026/27?", answer: "Identical to the England & Wales STPCD: £34,069 to £46,940 on the main range and £49,134 to £52,835 on the upper range. Unqualified teachers earn £23,732 to £36,494." },
-      { question: "Is Welsh teacher pay the same as England?", answer: "Currently yes, point for point. But the amounts are set by Wales's own Independent Welsh Pay Review Body, whose current recommendation happens to mirror the STPCD — future divergence is possible." },
+      { question: "What is the teacher pay scale in Wales for 2026/27?", answer: "The published advisory main range is £34,912 at M2 to £48,226 at M6; the upper range is £49,995 to £53,760. Unqualified teachers earn £23,820 to £37,669." },
+      { question: "Is Welsh teacher pay the same as England?", answer: "No. Wales has its own IWPRB-negotiated advisory scale. For 2026/27, its values and main-range labels differ from England's, so use the Wales-specific table." },
       { question: "Who decides teacher pay rises in Wales?", answer: "The Independent Welsh Pay Review Body recommends awards to the Welsh Government, which decides the final settlement. This is separate from England's STRB process even though recent outcomes have matched." },
       { question: "Do Welsh schools pay London weighting?", answer: "No. Wales has a single national scale with no regional banding, so a teacher in Cardiff earns the same as one in Caernarfon at the same point." },
-      { question: "What does an experienced teacher earn in Wales?", answer: "UPS3 classroom teachers earn £52,835. Lead practitioner roles reach up to £81,861, and the leadership spine tops out at £148,829 for the largest headship posts." },
-      { question: "How does Welsh teacher pay compare with Scotland?", answer: "Scotland's nearest main-range equivalents run slightly higher (£34,539–£48,516 versus £34,069–£46,940) and include a Chartered Teacher grade at £52,539 in place of Wales's upper range structure." },
-      { question: "Do unqualified teachers in Wales use the same range?", answer: "Yes — £23,732 (UQ1) to £36,494 (UQ6), mirroring the England & Wales figures, with placement and progression governed by school pay policies." },
-      { question: "Are TLR payments different in Wales?", answer: "The statutory allowance ranges match England: TLR 1 pays £10,531–£17,819, TLR 2 £3,651–£8,913, TLR 3 £727–£3,600 and SEN allowances £2,885–£5,690, all pensionable." },
+      { question: "What does an experienced teacher earn in Wales?", answer: "U3 is £53,760. Lead-practitioner point 18 is £83,295, and the Welsh leadership spine reaches £151,434 at L43." },
+      { question: "How does Welsh teacher pay compare with Scotland?", answer: "Wales's advisory main range is £34,912–£48,226 across M2–M6, while Scotland uses a separate SNCT framework. Compare the relevant published scale rather than treating the points as equivalent." },
+      { question: "Do unqualified teachers in Wales use the same range?", answer: "No. Wales's published advisory unqualified range is £23,820 (UQ1) to £37,669 (UQ6), with placement and progression governed by school pay policies." },
+      { question: "Are TLR payments different in Wales?", answer: "Yes. The Welsh advisory ranges are TLR 1 £10,717–£18,132, TLR 2 £3,716–£9,071, TLR 3 £739–£3,664 and ALN allowance £2,938–£5,791." },
     ],
     sources: [
-      { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-      { label: "Welsh Government — school teachers' pay and conditions", url: "https://www.gov.wales/school-teachers-pay-and-conditions" },
-      { label: "NASUWT — Pay Scales (Wales)", url: "https://www.nasuwt.org.uk/advice/pay-pensions/pay-scales/pay-scales-wales.html" },
-      { label: "SNCT — Scottish Negotiating Committee for Teachers handbook (comparison)", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
+      teacherPaySources.nasuwtWales,
+      teacherPaySources.snct,
     ],
-    updated: UPDATED,
+    updated: PAY_AWARD_REVIEWED,
   },
  // ─────────────────────────────────────────────────────────────────────────
   {
@@ -1450,7 +1448,7 @@ export const payScalePages: PageContent[] = [
       { question: "Does the Scottish scale include leadership pay?", answer: "Yes — Scottish headship and depute posts sit on separate SNCT salary arrangements outside the classroom spine, structured differently from England's 43-point leadership group. Check the SNCT Handbook for current ranges." },
     ],
     sources: [
-      { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
+      { label: "SNCT — Scottish Negotiating Committee for Teachers", url: "https://www.snct.org.uk/" },
       { label: "EIS — Current Salary Scales", url: "https://www.eis.org.uk/pay-and-conditions-of-service/salary-scales" },
       { label: "SSTA — Salary Scales", url: "https://ssta.org.uk/salaryscales/" },
       { label: "STPCD 2026 (comparison figures)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -1575,7 +1573,7 @@ export const payScalePages: PageContent[] = [
       { question: "Are there London-style regional payments in Northern Ireland?", answer: "No. The scale is national — a teacher in Derry earns exactly what a teacher in Bangor earns at the same point, with no urban or remote-area supplements." },
     ],
     sources: [
-      { label: "Department of Education Northern Ireland — teachers' pay and conditions", url: "https://www.education-ni.gov.uk/articles/teachers-pay-and-conditions-service" },
+      { label: "Department of Education NI — pay circulars", url: "https://www.education-ni.gov.uk/articles/pay-circulars" },
       { label: "Department of Education NI — pay circulars", url: "https://www.education-ni.gov.uk/articles/pay-circulars" },
       { label: "NASUWT — Pay Scales (Northern Ireland)", url: "https://www.nasuwt.org.uk/advice/pay-pensions/pay-scales/pay-scales-northern-ireland.html" },
       { label: "STPCD 2026 (comparison figures)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -1742,7 +1740,7 @@ export const payScalePages: PageContent[] = [
     intro:
       "NASUWT publishes some of the most detailed pay scale tables in UK education, with dedicated pages for England, London bands, Wales, Scotland and Northern Ireland. This guide unpacks what those tables contain for 2026/27, how they relate to the statutory STPCD figures, and where NASUWT's pay advice earns its keep.",
     keyTakeaways: [
-      "NASUWT tables restate the statutory STPCD points — £34,069 to £46,940 on the main range for 2026/27.",
+      "NASUWT tables restate the published England advisory points — £34,069 to £46,940 on the main range for 2026/27.",
       "Separate NASUWT pages cover England, the three London bands, Wales, Northern Ireland and Scotland.",
       "Union advice adds value on pay disputes, not on the numbers, which are public statutory values.",
       "Anchored sections let members jump straight to qualified, unqualified or TLR rates.",
@@ -1750,7 +1748,7 @@ export const payScalePages: PageContent[] = [
     ],
     blocks: [
       { kind: "h2", text: "NASUWT pay scales nation by nation" },
-      { kind: "p", text: "Because NASUWT publishes separate tables per jurisdiction, members searching for a specific nation should go straight to the right one. The core England figures above repeat across the home nations only where pay policy matches — Wales has mirrored England recently, while Scotland and Northern Ireland run their own negotiating settlements." },
+      { kind: "p", text: "Because NASUWT publishes separate tables per jurisdiction, members searching for a specific nation should go straight to the right one. Wales, Scotland and Northern Ireland each have their own current table and negotiating process." },
       { kind: "table", caption: "Where to find each NASUWT table and what drives its numbers", head: ["Nation", "NASUWT source", "Set by"], rows: [
         ["England (incl. London bands)", "Pay scales England + London pages", "STRB recommendation, DfE decision"],
         ["Wales", "Pay scales Wales page", "Independent Welsh pay review body"],
@@ -1952,7 +1950,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
         ["M6", "≈£45,352", "≈£46,839", "≈£50,473", "≈£52,301", "≈£42,843"],
         ["U3", "≈£51,048", "≈£52,490", "≈£56,153", "≈£62,496", "≈£48,392"],
       ]},
-      { kind: "callout", tone: "warn", title: "Scotland and Wales caveat", text: "Wales mirrors the England derivation. Scotland settles independently, so its 2025/26 SNCT points cannot be reconstructed from current values with any confidence — consult SNCT archives instead." },
+      { kind: "callout", tone: "warn", title: "Scotland and Wales caveat", text: "Wales and Scotland publish separate scales. Do not reconstruct either jurisdiction's points from England; use the current Wales or SNCT table." },
       { kind: "h2", text: "Reconciling a lagging pension statement" },
       { kind: "p", text: "Benefit statements trail reality by up to 18 months, quoting salaries from earlier rate years. Reconcile in three passes: locate the statement's reference period, pull the matching historical rates (the derived tables above serve for 2025/26), then verify the 1/57th build — pensionable pay divided by 57 — against the accrued figure. Discrepancies most often trace to non-pensionable payments mistakenly included or TLR changes landing mid-period. Errors found late still get corrected, but statements drive member decisions, so flag problems the week you spot them. The [pension calculator](/teacher-pension-calculator/) rebuilds the projection once your inputs are clean." },
       { kind: "h2", text: "Running a backdated pay claim" },
@@ -2019,7 +2017,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "STRB — School Teachers' Review Body reports", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
-      { label: "Teachers' Pensions — member guides", url: "https://www.teacherspensions.co.uk/members.htm" },
+      { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/new-starter/understand-how-much-youll-pay.aspx" },
       { label: "NEU — Pay scales England", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales/pay-scales-england" },
     ],
     updated: UPDATED,
@@ -2052,7 +2050,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
     ],
     blocks: [
       { kind: "h2", text: "The four pay systems behind the map" },
-      { kind: "p", text: "The UK runs three negotiating systems across four visible bands. England and Wales share the STPCD, with Wales currently mirroring English values through its own IWPRB process. Scotland negotiates separately via the [SNCT](/teacher-pay-scale-scotland/), and Northern Ireland sets its own settlement through the Department of Education. Within England, the STPCD itself splits into four regional bands." },
+      { kind: "p", text: "The UK runs separate pay-setting systems. England has four regional bands; Wales publishes its own IWPRB-negotiated advisory scale; Scotland negotiates through the [SNCT](/teacher-pay-scale-scotland/); and Northern Ireland sets its own settlement through the Department of Education." },
 
       { kind: "h2", text: "Starting salaries across the UK" },
       { kind: "table", caption: "Newly qualified (M1-equivalent) pay by region, 2026/27", head: ["Rank", "Region", "Starting salary"], rows: [
@@ -2090,7 +2088,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
       { kind: "ul", items: [
         "**Inner London:** highest gross, weakest real-terms position for solo renters in central zones.",
         "**Fringe:** modest premium (£1,500ish) but commuting-belt housing keeps effective value competitive.",
-        "**Wales:** identical gross to rest-of-England with materially lower average rents — strong real-terms value.",
+        "**Wales:** a separate advisory scale, so compare the named Welsh point and local living costs rather than a rest-of-England equivalent.",
         "**Northern Ireland:** lowest gross but the cheapest major-housing market in these comparisons partially offsets it.",
       ]},
       { kind: "callout", tone: "tip", title: "Move early, bank the base", text: "Because pensions, maternity pay and redundancy entitlements all derive from regional salary history, early-career years in higher-paying regions leave permanent financial residue even after you move somewhere cheaper." },
@@ -2152,9 +2150,9 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-      { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
-      { label: "Department of Education Northern Ireland — teachers' pay", url: "https://www.education-ni.gov.uk/articles/teachers-pay-and-conditions-service" },
-      { label: "Welsh Government — school teachers' pay and conditions", url: "https://www.gov.wales/school-teachers-pay-and-conditions" },
+      { label: "SNCT — Scottish Negotiating Committee for Teachers", url: "https://www.snct.org.uk/" },
+      { label: "Department of Education NI — pay circulars", url: "https://www.education-ni.gov.uk/articles/pay-circulars" },
+      { label: "NASUWT — Pay Scales Wales", url: "https://www.nasuwt.org.uk/advice/pay-pensions/pay-scales/pay-scales-wales.html" },
     ],
     updated: UPDATED,
   },

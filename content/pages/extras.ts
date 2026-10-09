@@ -3,7 +3,7 @@ import type { PageContent } from "../types";
 const UPDATED = "2026-08-23";
 
 const SOURCES = [
-  { label: "Teachers' Pensions — member guides and contribution tiers", url: "https://www.teacherspensions.co.uk/members.htm" },
+  { label: "Teachers' Pensions — member guides and contribution tiers", url: "https://www.teacherspensions.co.uk/" },
   { label: "Teachers' Pension Scheme Regulations 2014 (CARE rules)", url: "https://www.legislation.gov.uk/uksi/2014/876" },
   { label: "MoneyHelper — pensions guidance for teachers", url: "https://www.moneyhelper.org.uk/en/pensions-and-retirement" },
   { label: "NEU — Teachers' Pension Scheme advice", url: "https://neu.org.uk/advice/your-rights-work/pensions/teachers-pension-scheme" },
@@ -98,7 +98,7 @@ export const extraPages: PageContent[] = [
     sources: [
       { label: "Scottish Public Pensions Agency — teachers' scheme", url: "https://www.gov.scot/policies/public-sector-pensions/" },
       { label: "SNCT Handbook — Scottish teachers' pay and conditions", url: "https://www.snct.org.uk/" },
-      { label: "Teachers' Pensions — for comparison with the E&W scheme", url: "https://www.teacherspensions.co.uk/members.htm" },
+      { label: "Teachers' Pensions — for comparison with the E&W scheme", url: "https://www.teacherspensions.co.uk/" },
     ],
     updated: UPDATED,
   },

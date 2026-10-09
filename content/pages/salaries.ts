@@ -1,15 +1,16 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
 const SOURCES = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
+  teacherPaySources.stpcd,
   { label: "DfE — School Workforce in England statistics", url: "https://explore-education-statistics.service.gov.uk/find-statistics/school-workforce-in-england" },
   { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-  { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/working-life/paying-in/contribution-tiers.aspx" },
+  teacherPaySources.tpsMemberContributions2026,
 ];
 
 const SOURCES_WITH_SNCT = [
   ...SOURCES,
-  { label: "SNCT — Scottish Negotiating Committee for Teachers handbook", url: "https://www.snct.org.uk/wiki/index.php?title=Main_Page" },
+  teacherPaySources.snct,
 ];
 
 const SOURCES_WITH_NJC = [
@@ -42,7 +43,7 @@ export const salaryPages: PageContent[] = [
       "Scotland pays more at the start (£34,539) and tops the main grade at £48,516, with Chartered Teacher status worth £52,539.",
       "Northern Ireland pays the least of the four nations, starting at £32,188 and topping out at £50,085.",
       "The average classroom teacher earns around £45,000, but that headline hides a gap of more than £7,000 between inner London and much of the rest of England.",
-      "Allowances change lives: a TLR 1 adds £10,530 to £17,819, SEN allowances add up to £5,689, and an M6 teacher with a mid-range TLR 1 out-earns many assistant heads.",
+      "Allowances change lives: a TLR 1 adds £10,531 to £17,819, SEN allowances add up to £5,690, and an M6 teacher with a mid-range TLR 1 out-earns many assistant heads.",
       "Take-home is roughly 76% of gross on M1, falling to about 71% by U3 as pension tiers and higher-rate tax bite.",
     ],
     blocks: [
@@ -96,10 +97,10 @@ export const salaryPages: PageContent[] = [
 
       { kind: "h2", text: "Allowances on top of base salary" },
       { kind: "table", caption: "STPCD allowances 2026/27", head: ["Allowance", "Range", "Typically for"], rows: [
-        ["TLR 1", "£10,530 – £17,819", "Head of large department or faculty"],
-        ["TLR 2", "£3,650 – £8,912", "Head of smaller subject, head of year"],
+        ["TLR 1", "£10,531 – £17,819", "Head of large department or faculty"],
+        ["TLR 2", "£3,651 – £8,913", "Head of smaller subject, head of year"],
         ["TLR 3", "£727 – £3,600", "Fixed-term project work"],
-        ["SEN allowance", "£2,885 – £5,689", "Designated SEN posts and special schools"],
+        ["SEN allowance", "£2,885 – £5,690", "Designated SEN posts and special schools"],
       ]},
       { kind: "callout", tone: "tip", title: "A TLR often beats a promotion", text: "An M6 teacher with a £14,000 TLR 1 earns £60,939 — more than many junior leadership posts, with none of the whole-school accountability. All four allowances are pensionable, so they build retirement benefits too." },
 
@@ -124,16 +125,16 @@ export const salaryPages: PageContent[] = [
       { kind: "p", text: "If you are weighing teaching against another career, count the pension alongside the salary: the [teachers' pension guide](/teacher-pension/) shows how 1/57th of pay accrues every year, inflation-linked, which few private-sector packages match." },
     ],
     faq: [
-      { question: "What is the average teacher salary in the UK?", answer: "Classroom teachers in England earn between £34,069 and £52,835 on the statutory scales outside London in 2026/27, with the average sitting near £45,000. Inner London runs £41,729 to £64,683. Job-board averages differ because they mix roles and include allowances inconsistently." },
+      { question: "What is the average teacher salary in the UK?", answer: "England's published 2026/27 advisory classroom points run from £34,069 to £52,835 outside London, with the average near £45,000. Inner London runs £41,729 to £64,683. Job-board averages differ because they mix roles and include allowances inconsistently." },
       { question: "How much does a teacher earn per month in the UK?", answer: "Roughly £2,169 net per month on M1 outside London, £2,809 on M6, and £3,138 on U3, assuming full-time work and membership of the Teachers' Pension Scheme. Inner London adds several hundred pounds a month at every point." },
       { question: "What is an M6 teacher salary?", answer: "£46,940 outside London in 2026/27 — the top of the Main Pay Range, normally reached after about six years. Inner London pays £54,131 at M6, outer London £52,241. M6 matters because moving to the Upper Pay Range requires a threshold application from there." },
       { question: "Do private school teachers earn more than state school teachers?", answer: "Sometimes, but not reliably. Independent schools set their own pay, and leading schools pay well above state scales, while smaller ones pay similar or less. They also frequently offer smaller class sizes and accommodation instead of headline salary. There is no statutory scale to compare against." },
-      { question: "Is teacher pay different in Scotland, Wales and Northern Ireland?", answer: "Yes. Wales currently mirrors the English STPCD figures. Scotland starts higher (£34,539) but caps the main grade lower (£48,516, £52,539 for Chartered Teachers). Northern Ireland starts lowest at £32,188 and tops out at £50,085." },
+      { question: "Is teacher pay different in Scotland, Wales and Northern Ireland?", answer: "Yes. Wales publishes its own 2026/27 advisory scale, with £34,912 at M2 to £48,226 at M6. Scotland and Northern Ireland use separate scales and negotiating systems." },
       { question: "What is the highest a classroom teacher can earn without leadership?", answer: "In England, £52,835 (U3) outside London and £64,683 in inner London. Lead Practitioner roles extend that to £81,860 outside London for teachers who stay classroom-based, and TLRs add £727 to £17,819 on top of any point." },
       { question: "Do teachers get paid during the summer holidays?", answer: "Salaried classroom teachers are paid a monthly twelfth all year, so yes — holiday periods are paid as normal. Supply teachers engaged day-to-day are not: they only earn for days worked, which is why their effective annual income varies enormously." },
       { question: "Is the unqualified teacher salary different?", answer: "Yes. Unqualified teachers earned £23,732 to £36,494 outside London in 2026/27 on a six-point range. Many academies pay above this, and unqualified staff who gain QTS move straight onto the main range." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -174,7 +175,7 @@ export const salaryPages: PageContent[] = [
         ["Outer London", "≈£48,000", "Second-highest weighting band"],
         ["London Fringe", "≈£45,500", "Modest premium over rest of England"],
         ["Rest of England", "≈£44,000 – £45,000", "National STPCD scale"],
-        ["Wales", "≈£44,000", "Mirrors England's scale"],
+        ["Wales", "≈£44,000", "Separate IWPRB scale"],
         ["Scotland", "≈£43,000", "Higher start, lower main-grade ceiling"],
         ["Northern Ireland", "≈£41,000", "Lowest scale of the four nations"],
       ]},
@@ -195,7 +196,7 @@ export const salaryPages: PageContent[] = [
         "**ECT (year 1):** £34,069 outside London — the [starting salary](/teacher-starting-salary/) is now just below the wider graduate median.",
         "**M6 after six years:** £46,940 outside London, £54,131 inner London.",
         "**Top of classroom scale (U3):** £52,835 outside London, £64,683 inner London.",
-        "**With middle leadership:** add a TLR of £3,650 to £17,819 on top of your pay point.",
+        "**With middle leadership:** add a TLR of £3,651 to £17,819 on top of your pay point.",
         "**Headteacher:** anywhere from about £55,000 at a small primary to well into six figures at a large secondary.",
       ]},
       { kind: "p", text: "That staircase explains why the average feels slippery: two teachers with the same number of years' service can legitimately sit £15,000 apart depending on threshold applications, TLRs and region." },
@@ -243,7 +244,7 @@ export const salaryPages: PageContent[] = [
       { question: "Does the average include allowances like TLRs?", answer: "Official averages count all taxable pay including allowances, since TLR recipients report them as salary. That lifts the average slightly: roughly a third of classroom teachers receive a TLR or SEN allowance at any given time." },
       { question: "Which country of the UK pays teachers the most on average?", answer: "England, driven by London weighting. Inner London's scale tops out at £64,683 for classroom teachers against £52,839 in Scotland and £50,085 in Northern Ireland. Scotland starts higher but caps lower, so career-stage changes who wins the comparison." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -269,7 +270,7 @@ export const salaryPages: PageContent[] = [
       "Primary teachers are paid on the same STPCD scales as everyone else: £34,069 to £52,835 outside London in 2026/27.",
       "Inner London primary teachers start at £41,729 and can reach £64,683 without leaving the classroom.",
       "The average primary classroom teacher sits near £44,000-£45,000, slightly below secondary averages because of composition, not rate.",
-      "TLRs are scarcer and smaller in primaries: most schools offer one or two, typically £3,650 to £8,912.",
+      "TLRs are scarcer and smaller in primaries: most schools offer one or two, typically £3,651 to £8,913.",
       "Roughly a third of primary teachers work part-time; their pay point is pro-rated but progression rights are identical.",
       "Primary headteachers often earn less than secondary deputies — leadership pay follows school size, not effort.",
     ],
@@ -289,9 +290,9 @@ export const salaryPages: PageContent[] = [
       { kind: "p", text: "This is the real divergence. A secondary school running ten departments might support six or seven TLR posts; a typical one-form-entry primary supports perhaps two — usually a maths or English lead and a SENDCo. Consequences:" },
       { kind: "ul", items: [
         "Fewer than a quarter of primary classroom teachers hold a TLR, against roughly a third-plus in secondaries.",
-        "Primary TLRs cluster at the lower end: £3,650–£8,912 (TLR 2), with TLR 1 payments (£10,530+) reserved for deputy-head-sized roles or large schools.",
+        "Primary TLRs cluster at the lower end: £3,651–£8,913 (TLR 2), with TLR 1 payments (£10,531+) reserved for deputy-head-sized roles or large schools.",
         "Phase-leader and KS1/KS2 coordinator roles that once carried management allowances now carry discretionary TLRs — check whether your school's is permanent and pensionable.",
-        "SEN allowances (£2,885–£5,689) attach to designated SENDCo posts, which are more commonly held by primary staff than any other group.",
+        "SEN allowances (£2,885–£5,690) attach to designated SENDCo posts, which are more commonly held by primary staff than any other group.",
       ]},
       { kind: "callout", tone: "tip", title: "Ask about the allowance before accepting", text: "Two primary jobs advertised at the same salary can differ by £5,000+ depending on attached responsibilities. A reception teacher salary and a Key Stage 2 teacher salary are identical on paper — what separates offers is whether a TLR comes with them." },
 
@@ -310,7 +311,7 @@ export const salaryPages: PageContent[] = [
         ["M6", "£46,940", "£48,479", "£52,241", "£54,131"],
         ["Top classroom (U3)", "£52,835", "£54,327", "£58,119", "£64,683"],
       ]},
-      { kind: "p", text: "Wales mirrors the English figures exactly, so a primary school teacher salary in Wales matches rest-of-England rates — useful context given Welsh-language incentives occasionally add separate bursaries. Scotland pays its main grade up to £48,516, and Northern Ireland tops out at £50,085." },
+      { kind: "p", text: "Wales has its own IWPRB-negotiated advisory scale, so use the Wales table rather than a rest-of-England point when comparing a primary teaching salary. Scotland and Northern Ireland also use separate systems." },
 
       { kind: "h2", text: "The average primary teacher salary, decoded" },
       { kind: "p", text: "Average primary school teacher salary searches return figures around £44,000-£45,000, marginally below secondary. Three compositional effects explain it: higher part-time share lowers FTE-weighted averages, thinner TLR distribution removes allowance income, and the primary workforce skews slightly younger in many trusts. None of this means primary teachers are paid less per point — they are not." },
@@ -357,16 +358,16 @@ export const salaryPages: PageContent[] = [
 { kind: "p", text: "One structural point closes most primary pay confusion: every figure in this guide describes full-time equivalents, and primary teaching contains more part-time practice than any other phase. When comparing your situation against published averages, convert honestly — your M4 point is worth £40,941 whether you work it across five days or three, and no comparison is meaningful until FTE adjustments are applied on both sides." },
     ],
     faq: [
-      { question: "How much does a primary school teacher earn in the UK?", answer: "Between £34,069 (starting) and £52,835 (top classroom point) outside London in 2026/27, with inner London paying £41,729 to £64,683. Add-ons like TLRs of £3,650 to £17,819 sit on top for teachers holding responsibility posts." },
+      { question: "How much does a primary school teacher earn in the UK?", answer: "Between £34,069 (starting) and £52,835 (top classroom point) outside London in 2026/27, with inner London paying £41,729 to £64,683. Add-ons like TLRs of £3,651 to £17,819 sit on top for teachers holding responsibility posts." },
       { question: "Do primary teachers earn less than secondary teachers?", answer: "No — both phases use identical national scales. Secondary average earnings run slightly higher only because more TLR and leadership posts exist per teacher there, and fewer primary staff work full-time." },
       { question: "What is the starting salary for a primary school teacher?", answer: "£34,069 outside London, £41,729 in inner London, paid from day one of the ECT induction year. Wales matches England's figures; Scotland starts at £34,539 on its own scale." },
       { question: "Can a primary teacher earn over £50,000?", answer: "Yes. Reaching U3 gives £52,835 outside London and £58,119+ in London without any management duties. With a TLR 1 or a leadership post, £60,000-£75,000+ is achievable while remaining school-based." },
       { question: "Is a reception teacher paid differently?", answer: "No. Reception is taught by teachers on the same pay scale as Year 6 staff. Some schools attach TLRs to early years leadership, but the base salary is identical." },
       { question: "How does part-time primary pay work?", answer: "Your pay point is multiplied by your FTE fraction. A 0.6 FTE teacher on M4 receives £24,564. Progression, threshold access and pension accrual all continue proportionally without penalty." },
       { question: "What do primary headteachers earn?", answer: "Anywhere from about £55,000 at a very small school to £90,000+ at a large primary, set within the £53,586-£148,829 leadership spine according to school size and the governing body's chosen range." },
-      { question: "Do primary teachers in Wales and Scotland earn differently?", answer: "Wales currently mirrors England's STPCD figures exactly. Scotland uses the SNCT scale: £34,539 start, £48,516 top of main grade, £52,539 for Chartered Teachers. Northern Ireland starts lowest at £32,188." },
+      { question: "Do primary teachers in Wales and Scotland earn differently?", answer: "Yes. Wales's 2026/27 advisory main range is £34,912 at M2 to £48,226 at M6. Scotland uses a separate SNCT scale, and Northern Ireland has its own settlement." }
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -389,7 +390,7 @@ export const salaryPages: PageContent[] = [
       "Secondary teachers start on exactly the same national scale as every other state-school teacher — but their earning ceiling is the most flexible in teaching. Dense TLR structures, sixth-form responsibilities and shortage-subject premiums mean an experienced secondary classroom teacher can legitimately earn more than some assistant heads. Here is what that looks like across 2026/27.",
     keyTakeaways: [
       "Base pay runs £34,069 to £52,835 outside London and £41,729 to £64,683 inner London — identical to all phases.",
-      "TLRs are far denser in secondaries: heads of department commonly hold TLR 1s worth £10,530 to £17,819.",
+      "TLRs are far denser in secondaries: heads of department commonly hold TLR 1s worth £10,531 to £17,819.",
       "An M6 teacher with a mid TLR 1 earns around £60,000 while remaining classroom-based.",
       "Shortage subjects (maths, physics, computing, chemistry) increasingly attract recruitment and retention premiums on top of scale.",
       "Sixth-form teaching adds no separate rate; it is part of the standard contract.",
@@ -397,21 +398,21 @@ export const salaryPages: PageContent[] = [
     ],
     blocks: [
       { kind: "h2", text: "How much do secondary school teachers earn?" },
-      { kind: "p", text: "On the statutory scales, a secondary school teacher earns **£34,069 at entry rising to £52,835** at the top of the classroom range outside London in 2026/27. That base is identical to primary. What differs is everything stacked above it: secondary timetables generate more responsibility posts per hundred students, so allowances flow more freely." },
+      { kind: "p", text: "On England's published 2026/27 advisory scale, a secondary school teacher earns **£34,069 at entry rising to £52,835** at the top of the classroom range outside London. That base is identical to primary. What differs is everything stacked above it: secondary timetables generate more responsibility posts per hundred students, so allowances flow more freely." },
       { kind: "table", caption: "Secondary teacher salary by career stage, rest of England 2026/27", head: ["Stage", "Pay point", "Salary"], rows: [
         ["ECT year 1", "M1", "£34,069"],
         ["ECT year 2", "M2", "£36,042"],
         ["Years 3-6", "M3-M6", "£38,400 – £46,940"],
         ["Post-threshold", "U1-U3", "£49,134 – £52,835"],
-        ["Head of year (typical TLR 2)", "+£5,000 – £8,912", "≈£54,500 – £61,700"],
-        ["Head of department (typical TLR 1)", "+£10,530 – £14,000", "≈£63,400 – £66,800"],
+        ["Head of year (typical TLR 2)", "+£5,000 – £8,913", "≈£54,500 – £61,700"],
+        ["Head of department (typical TLR 1)", "+£10,531 – £14,000", "≈£63,400 – £66,800"],
       ]},
 
       { kind: "h2", text: "The TLR ladder: where secondary careers pull ahead" },
       { kind: "p", text: "A typical 11-16 or 11-18 comprehensive supports a dozen-plus allowance-bearing posts: heads of English, maths and science faculties on TLR 1s; second-in-department and heads of smaller subjects on TLR 2s; heads of year, SENCOs and behaviour leads alongside. This creates a genuine middle tier of earnings that primaries largely lack." },
       { kind: "ul", items: [
-        "**Second in department** usually means a TLR 2 of £3,650–£8,912 on top of your pay point.",
-        "**Head of department / faculty** typically carries a TLR 1 of £10,530–£17,819 depending on faculty size.",
+        "**Second in department** usually means a TLR 2 of £3,651–£8,913 on top of your pay point.",
+        "**Head of department / faculty** typically carries a TLR 1 of £10,531–£17,819 depending on faculty size.",
         "**Head of year or head of KS3/KS4** posts sit anywhere between, school-dependent.",
         "All TLRs are pensionable, so they compound into retirement benefits as well as monthly pay.",
       ]},
@@ -475,15 +476,15 @@ export const salaryPages: PageContent[] = [
     ],
     faq: [
       { question: "What is the average secondary school teacher salary in the UK?", answer: "Around £45,000-£46,000 full-time including allowances, versus a £34,069-£52,835 base range outside London. Secondary averages edge above primary because of denser TLR distribution rather than any rate difference." },
-      { question: "Can secondary teachers earn over £60,000 without leadership?", answer: "Yes. U3 (£52,835) plus a mid-range TLR 1 (£10,530+) clears £63,000 outside London while staying classroom-based. Inner London equivalents reach the mid-seventies." },
+      { question: "Can secondary teachers earn over £60,000 without leadership?", answer: "Yes. U3 (£52,835) plus a mid-range TLR 1 (£10,531+) clears £63,000 outside London while staying classroom-based. Inner London equivalents reach the mid-seventies." },
       { question: "Do maths and science teachers get paid more?", answer: "Not on the national scale — everyone earns the same points. But trusts increasingly add one-off recruitment and retention payments worth thousands to maths, physics, computing and chemistry staff, and shortage subjects see faster progression in practice." },
       { question: "Is there a different rate for sixth form teaching?", answer: "No. A-level teaching sits inside the normal contract. Schools often reward sixth-form coordination roles through TLRs instead." },
-      { question: "What does a head of department earn?", answer: "Their scale point plus a TLR 1. An M6 head of department outside London earns roughly £57,500-£64,800 depending on the allowance size set by the school within the £10,530-£17,819 band." },
+      { question: "What does a head of department earn?", answer: "Their scale point plus a TLR 1. An M6 head of department outside London earns roughly £57,500-£64,800 depending on the allowance size set by the school within the £10,531-£17,819 band." },
       { question: "Is secondary teacher pay higher in London?", answer: "By scale yes: inner London pays £41,729 at entry against £34,069 elsewhere, widening to an £11,848 gap at U3. Whether it outpaces London living costs is a separate judgement covered in our regional comparisons." },
       { question: "How quickly does a secondary teacher progress up the scale?", answer: "Main range progression is normally annual subject to performance appraisal — six years from M1 to M6. Moving to the upper range then requires a threshold application judged against the post-threshold standards." },
       { question: "Do supply and agency secondary teachers earn the same?", answer: "Daily rates often match or exceed pro-rated scale pay, but without holiday retention, sick pay or pension contributions unless arranged separately. Day-to-day supply income varies hugely across the year." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -604,7 +605,7 @@ export const salaryPages: PageContent[] = [
       { question: "When does the starting salary increase?", answer: "Movement from M1 to M2 normally happens after year one subject to satisfactory induction, and progression continues annually to M6. Every September also brings the national pay award percentage on top of point movement." },
       { question: "Do supply teachers starting out earn the same?", answer: "Day-to-day supply is paid a daily rate, often 1/195th of scale or an agency rate. A newly qualified teacher doing regular long-term supply should be paid on the appropriate scale point for the role's duration." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -677,7 +678,7 @@ export const salaryPages: PageContent[] = [
       { kind: "p", text: "Schools increasingly book unqualified cover supervisors at £90–£130 a day to deliver pre-set work. The roles look similar from the corridor but differ fundamentally in pay floor and progression: cover supervisors have no QTS requirement, no scale entitlement, and no route into the qualified rates described above without gaining QTS." },
 
       { kind: "h2", text: "Scotland, Wales and Northern Ireland" },
-      { kind: "p", text: "Scotland's supply system uses its own day rates tied to SNCT points, historically reformed after supply-pay disputes left teachers unpaid during COVID closures; current arrangements pay supply teachers on the applicable point of the scale for days worked. Wales mirrors English mechanics through its own guidance. Northern Ireland's scheme pays per-session rates below GB equivalents. Searches for supply teacher pay scotland reflect genuine confusion here — Scottish supply pay genuinely works differently, not just at different numbers." },
+      { kind: "p", text: "Scotland's supply system uses its own day rates tied to SNCT points, historically reformed after supply-pay disputes left teachers unpaid during COVID closures; current arrangements pay supply teachers on the applicable point of the scale for days worked. Wales applies its own guidance and published scale. Northern Ireland's scheme pays per-session rates below GB equivalents. Searches for supply teacher pay scotland reflect genuine confusion here — Scottish supply pay genuinely works differently, not just at different numbers." },
 
       { kind: "h2", text: "Common mistakes supply teachers make" },
       { kind: "ul", items: [
@@ -715,7 +716,7 @@ export const salaryPages: PageContent[] = [
       { question: "Does long-term supply pay better than short-term?", answer: "Usually yes once AWR parity applies, and shortage-subject long-term placements frequently exceed equivalent scale-day rates. But the trade-off is losing the variety premium of day-to-day work and taking on planning and marking without guaranteed contract security." },
       { question: "What happens if a school cancels my booking?", answer: "Agency terms vary. Some pay cancellation fees for late cancellations, others pay nothing — read your agency agreement before registering. Direct engagements cancelled last-minute customarily honour half or full pay depending on local arrangement." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES_WITH_SNCT,
   },
 
@@ -836,7 +837,7 @@ export const salaryPages: PageContent[] = [
       { question: "Can a teaching assistant become a teacher, and how does pay change?", answer: "Yes, via degree-plus-ITT routes or the apprenticeship path while employed. Qualified teacher status moves you onto the STPCD, where starting pay of £34,069 exceeds most TA actual salaries immediately." },
       { question: "Are TA wages rising?", answer: "Bottom NJC spine points have received proportionally larger recent uplifts than mid-spine points, so entry-level TA pay has grown faster in percentage terms than teacher pay — though from a much lower base." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES_WITH_NJC,
   },
 
@@ -960,7 +961,7 @@ export const salaryPages: PageContent[] = [
       { question: "How much do prep school teachers earn?", answer: "Typically £26,000-£38,000, often below state equivalents. Prep posts appeal through age-group preference, class sizes and culture rather than headline pay." },
       { question: "Do private school teachers work fewer hours?", answer: "Teaching hours are lower thanks to timetables built around smaller classes, but duties like games, societies and boarding responsibilities can reclaim evenings. Total workload varies more by school than by sector." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1078,7 +1079,7 @@ export const salaryPages: PageContent[] = [
       { question: "What is an advanced teaching practitioner salary?", answer: "Roughly £42,000-£50,000+ in FE colleges — a classroom-focused senior role analogous to lead practitioner posts in schools, without full management duties." },
       { question: "Do FE lecturers get paid holidays?", answer: "Yes, on salaried contracts: typically 35-45 days plus bank holidays, paid evenly across the year. Hourly-paid lecturers receive holiday accrual under working-time rules but effectively only earn when teaching." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1197,7 +1198,7 @@ export const salaryPages: PageContent[] = [
       { question: "How do I move from a nursery to school pay?", answer: "Graduates pursue assessment-only QTS or fee-funded ITT; non-graduates apply for school-based practitioner or HLTA-track roles. Each route moves you onto structures covered in our school pay guides rather than the private-sector market." },
       { question: "Are nursery wages improving?", answer: "Recent funding uplifts for free entitlements have enabled some wage growth, and minimum-wage rises lift the floor mechanically. But the structural gap versus school pay persists because it originates in per-child funding rates." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1235,7 +1236,7 @@ export const salaryPages: PageContent[] = [
         ["Mid-career", "M4-M5", "£40,941 – £43,529"],
         ["Top of main range", "M6", "£46,940"],
         ["Post-threshold ceiling", "U3", "£52,835"],
-        ["Head of maths (with TLR 1)", "U2/U3 + £10,530+", "≈£62,000+"],
+        ["Head of maths (with TLR 1)", "U2/U3 + £10,531+", "≈£62,000+"],
       ]},
 
       { kind: "h2", text: "The £29,000 training bursary" },
@@ -1313,10 +1314,10 @@ export const salaryPages: PageContent[] = [
       { question: "How much do private maths tutors earn per hour?", answer: "Typically £20-£35 online at GCSE level and £40-£60 for A-level or Further Maths in person. Independent tutors keep the whole fee; platform-based tutors lose 15-30% commission." },
       { question: "Can maths teachers earn over £60,000?", answer: "Yes — U3 (£52,835) plus a mid-range TLR 1 for heading the department clears £63,000 outside London, and inner-London equivalents approach £75,000." },
       { question: "Do maths teachers get retention payments?", answer: "Government schemes have repeatedly targeted maths and science ECTs with multi-thousand-pound retention payments tied to staying in eligible state schools. Terms change between policy rounds, so check current eligibility before counting on them." },
-      { question: "What does a head of maths earn?", answer: "Their scale point plus a TLR 1 set within £10,530-£17,819. An U3 head of maths outside London typically earns £63,000-£70,700 including the allowance." },
+      { question: "What does a head of maths earn?", answer: "Their scale point plus a TLR 1 set within £10,531-£17,819. An U3 head of maths outside London typically earns £63,000-£70,700 including the allowance." },
       { question: "Is maths teaching worth it financially compared to using my degree elsewhere?", answer: "Starting cash trails finance or engineering roles, but the bursary de-risks retraining, the pension's 28.68% employer contribution adds enormous unpriced value, and tutoring lets maths graduates monetise their subject at premium rates alongside salaried work." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1326,7 +1327,7 @@ export const salaryPages: PageContent[] = [
     title: "SEN Teacher Salary UK",
     metaTitle: "SEN Teacher Salary UK 2026/27: Allowances Explained",
     metaDescription:
-      "What SEN teachers earn in 2026/27: base scale pay, the £2,885-£5,689 SEN allowance, special school realities, SENDCo progression and why demand keeps rising.",
+      "What SEN teachers earn in 2026/27: base scale pay, the £2,885-£5,690 SEN allowance, special school realities, SENDCo progression and why demand keeps rising.",
     primaryKeyword: "sen teacher salary uk",
     secondaryKeywords: [
       "sen teacher salary", "special educational needs teacher salary", "how much do sen teachers earn",
@@ -1336,10 +1337,10 @@ export const salaryPages: PageContent[] = [
     ],
     calculator: "take-home",
     intro:
-      "SEN teachers are paid on exactly the same national scale as everyone else — but they are among the few classroom teachers who routinely collect a statutory allowance on top. Designated SEN posts carry £2,885 to £5,689 extra, special schools layer in responsibility points, and the SENDCo route leads into leadership. With EHCP demand at record levels, here is what SEN teaching pays and where its premium genuinely sits.",
+      "SEN teachers are paid on exactly the same national scale as everyone else — but they are among the few classroom teachers who routinely collect a statutory allowance on top. Designated SEN posts carry £2,885 to £5,690 extra, special schools layer in responsibility points, and the SENDCo route leads into leadership. With EHCP demand at record levels, here is what SEN teaching pays and where its premium genuinely sits.",
     keyTakeaways: [
       "Base pay matches all teachers: £34,069-£52,835 outside London in 2026/27.",
-      "The mandatory SEN allowance for designated posts adds £2,885-£5,689 — pensionable and reviewed annually.",
+      "The mandatory SEN allowance for designated posts adds £2,885-£5,690 — pensionable and reviewed annually.",
       "Special schools often pay above their published range point for scarce expertise, using discretionary flexibility.",
       "SENDCo roles combine the allowance with TLRs and are the standard bridge into senior leadership.",
       "Demand context: record EHCP volumes keep vacancy pressure and negotiating leverage unusually high.",
@@ -1357,7 +1358,7 @@ export const salaryPages: PageContent[] = [
       ]},
 
       { kind: "h2", text: "The SEN allowance explained" },
-      { kind: "p", text: "The STPCD obliges schools to pay an SEN allowance of **£2,885 to £5,689** to teachers holding designated SEN posts — set locally within that band according to the role's demands. Three details matter:" },
+      { kind: "p", text: "The STPCD obliges schools to pay an SEN allowance of **£2,885 to £5,690** to teachers holding designated SEN posts — set locally within that band according to the role's demands. Three details matter:" },
       { kind: "ul", items: [
         "**It attaches to the post, not the person:** move out of the designation and it stops, so check whether vacancies include it before applying.",
         "**It is pensionable,** quietly building retirement benefits as well as monthly pay.",
@@ -1375,7 +1376,7 @@ export const salaryPages: PageContent[] = [
       { kind: "callout", tone: "info", title: "Experience counts differently here", text: "Teachers arriving from health, social care or therapy backgrounds often negotiate above M1 because their behavioural and multi-agency expertise maps directly onto special-school needs. Bring evidence of that experience to interview." },
 
       { kind: "h2", text: "The SENDCo route" },
-      { kind: "p", text: "Special Educational Needs Coordination is teaching's most structured SEN leadership path. The National Award for SEN Coordination (a masters-level qualification, government-funded for eligible newcomers) is required within three years of appointment. Economically, SENDCos typically hold their scale point plus a TLR (£3,650-£8,912) plus the SEN allowance, producing packages around £55,000-£60,000 outside London — frequently out-paying assistant head roles at small schools." },
+      { kind: "p", text: "Special Educational Needs Coordination is teaching's most structured SEN leadership path. The National Award for SEN Coordination (a masters-level qualification, government-funded for eligible newcomers) is required within three years of appointment. Economically, SENDCos typically hold their scale point plus a TLR (£3,651-£8,913) plus the SEN allowance, producing packages around £55,000-£60,000 outside London — frequently out-paying assistant head roles at small schools." },
 
       { kind: "h2", text: "Why demand shifts leverage towards SEN teachers" },
       { kind: "p", text: "EHCP applications and approvals have risen year on year, special-school place planning lags population need, and specialist-vacancy durations now run far longer than mainstream equivalents. Practical consequences for pay:" },
@@ -1393,7 +1394,7 @@ export const salaryPages: PageContent[] = [
         ["Outer London", "£39,196", "≈£62,100"],
         ["Inner London", "£41,729", "≈£68,700"],
       ]},
-      { kind: "p", text: "Wales mirrors English figures; Scotland's SNCT structure includes its own additional-support-needs arrangements rather than the English allowance mechanism." },
+      { kind: "p", text: "Wales publishes its own advisory pay and allowance figures; Scotland's SNCT structure includes its own additional-support-needs arrangements rather than the English allowance mechanism." },
 
       { kind: "h2", text: "Common mistakes SEN teachers make with pay" },
       { kind: "ul", items: [
@@ -1408,7 +1409,7 @@ export const salaryPages: PageContent[] = [
       { kind: "table", caption: "Twelve-year SEN career with allowance stacking", head: ["Years", "Role composition", "Gross package"], rows: [
         ["1-2", "Class teacher, special school (M1-M2)", "£34,069 – £36,042"],
         ["3-5", "M3-M5 + SEN allowance (£3,500)", "£41,900 – £47,000"],
-        ["6-7", "M6 + top SEN allowance (£5,689)", "≈£52,600"],
+        ["6-7", "M6 + top SEN allowance (£5,690)", "≈£52,600"],
         ["8", "Threshold application → U1", "≈£55,000 incl. allowance"],
         ["10+", "U2-U3 + SENDCo TLR 2 (£7,000) + allowance", "≈£62,800 – £65,500"],
       ]},
@@ -1431,22 +1432,22 @@ export const salaryPages: PageContent[] = [
         ["New free special schools opening", "Founding-team packages above incumbent scales"],
         ["PRU federations", "Discretionary complexity points increasingly common"],
       ]},
-      { kind: "p", text: "Unlike mainstream subjects where national scales flatten geography, SEN's allowance banding gives local negotiation real range. The same designated post legitimately pays £2,885 in one authority and £5,689 in another, and candidates who ask why the lower figure applies — armed with role-demand evidence — frequently close part of the gap before accepting." },
+      { kind: "p", text: "Unlike mainstream subjects where national scales flatten geography, SEN's allowance banding gives local negotiation real range. The same designated post legitimately pays £2,885 in one authority and £5,690 in another, and candidates who ask why the lower figure applies — armed with role-demand evidence — frequently close part of the gap before accepting." },
       { kind: "p", text: "Specialist qualifications compound this leverage: autism-specific credentials, sensory-impairment mandatory qualifications and positive-behaviour-support certification each narrow the eligible candidate pool measurably. Employers fund several of these for existing staff, meaning strategic CPD choices convert directly into future negotiating positions rather than costing personal money. Verify every allowance outcome lands in contract paperwork, then confirm pension treatment through the [TPS guide](/teacher-pension/) so the stacking survives into retirement." },
 { kind: "h3", text: "Protecting allowance stacking through job changes" },
       { kind: "p", text: "SEN packages built from stacked allowances unwind quietly during school moves unless each element is re-negotiated individually. Before resigning, itemise your current package — scale point, SEN allowance position within its band, SENDCo or subject TLRs, discretionary points — into a single schedule document. Present it at interview stage rather than acceptance, framed as the total you are being asked to walk away from. Special-school leaders accustomed to recruiting scarce specialists respond to documented packages far better than to salary expectations expressed as round numbers." },
     ],
     faq: [
-      { question: "How much do SEN teachers earn in the UK?", answer: "Base pay matches all teachers at £34,069-£52,835 outside London in 2026/27. Designated SEN posts add a mandatory allowance of £2,885-£5,689, taking many experienced SEN teachers past £55,000, and SENDCo packages commonly reach £55,000-£60,000." },
+      { question: "How much do SEN teachers earn in the UK?", answer: "Base pay matches all teachers at £34,069-£52,835 outside London in 2026/27. Designated SEN posts add a mandatory allowance of £2,885-£5,690, taking many experienced SEN teachers past £55,000, and SENDCo packages commonly reach £55,000-£60,000." },
       { question: "Do SEN teachers get paid more than mainstream teachers?", answer: "Usually yes, by £3,000-£10,000, through the SEN allowance and additional responsibility points common in special schools — though the base scale itself is identical everywhere." },
       { question: "Is the SEN allowance permanent?", answer: "It belongs to the designated post. While you hold a designated SEN role the allowance must be paid; if the role ends, so does the payment. Confirm the designation is written into your contract." },
-      { question: "What does a SENDCo earn?", answer: "Typically their scale point plus a TLR of £3,650-£8,912 plus the SEN allowance. An U1 SENDCo outside London earns roughly £57,000-£62,000 depending on allowance sizes." },
+      { question: "What does a SENDCo earn?", answer: "Typically their scale point plus a TLR of £3,651-£8,913 plus the SEN allowance. An U1 SENDCo outside London earns roughly £57,000-£62,000 depending on allowance sizes." },
       { question: "Do special schools pay more?", answer: "Their structures mirror the national scale but discretionary flexibility is used more aggressively for scarce expertise, and agency rates for SEN long-term cover run higher than mainstream equivalents." },
       { question: "Can you be an SEN teacher without QTS?", answer: "Support roles yes, teacher roles no in maintained settings. Independent special schools sometimes employ unqualified teachers, paying below qualified rates without scale protections." },
       { question: "Is there funding to become a SENDCo?", answer: "Yes — the National Award for SEN Coordination has been government-funded for newly appointed SENDCos in eligible schools; check current eligibility when appointed." },
       { question: "Are SEN teacher jobs hard to fill?", answer: "Consistently among education's hardest-to-fill vacancies due to EHCP volume growth and specialist training requirements — which translates directly into stronger negotiating positions and faster promotion for those in the field." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1477,7 +1478,7 @@ export const salaryPages: PageContent[] = [
     ],
     blocks: [
       { kind: "h2", text: "How much do school music teachers earn?" },
-      { kind: "p", text: "A qualified music teacher in a state secondary earns on the [national scale](/teacher-pay-scale/): **£34,069 at M1 rising to £52,835 at U3** outside London, up to £64,683 inner London. Music departments are small, so TLRs are fewer than in maths or English, but head-of-music posts still carry TLR 2s (£3,650-£8,912) and occasionally TLR 1s in larger schools." },
+      { kind: "p", text: "A qualified music teacher in a state secondary earns on the [national scale](/teacher-pay-scale/): **£34,069 at M1 rising to £52,835 at U3** outside London, up to £64,683 inner London. Music departments are small, so TLRs are fewer than in maths or English, but head-of-music posts still carry TLR 2s (£3,651-£8,913) and occasionally TLR 1s in larger schools." },
       { kind: "table", caption: "Classroom music teacher salary by stage, rest of England 2026/27", head: ["Stage", "Pay point", "Salary"], rows: [
         ["ECT year 1", "M1", "£34,069"],
         ["ECT year 2", "M2", "£36,042"],
@@ -1569,7 +1570,7 @@ export const salaryPages: PageContent[] = [
       { question: "How do I set my teaching rate?", answer: "Start from Musicians' Union recommended rates, adjust for location and qualification level, then review yearly. Existing pupils expect incremental rises, not decade freezes." },
       { question: "Is full-time private teaching sustainable income-wise?", answer: "It can be, but model it honestly: 30 weekly term-time lessons at £35 is about £31,500 gross with no benefits. Most sustainers combine school contracts with private pupils rather than relying on one stream." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1594,7 +1595,7 @@ export const salaryPages: PageContent[] = [
     keyTakeaways: [
       "Scale pay is identical to all teachers: £34,069-£52,835 outside London in 2026/27.",
       "No training bursary exists for PE — one of the most oversubscribed ITT subjects.",
-      "Head of PE posts carry solid TLR 2s (£3,650-£8,912) given department size and extracurricular load.",
+      "Head of PE posts carry solid TLR 2s (£3,651-£8,913) given department size and extracurricular load.",
       "Coaching qualifications convert directly into paid work: school holiday camps pay £250-£450 a week.",
       "Private sports coaching runs £20-£50 an hour depending on sport and level.",
       "Competition means negotiation leverage is low at entry but improves sharply with exam-PE results records.",
@@ -1630,7 +1631,7 @@ export const salaryPages: PageContent[] = [
       { kind: "h2", text: "Leadership routes in sport" },
       { kind: "p", text: "PE departments typically run large staffing teams across many activities, generating real allowance opportunities despite the flat base market:" },
       { kind: "ul", items: [
-        "**Second in PE / school games organiser:** commonly TLR 2 territory, £3,650-£8,912.",
+        "**Second in PE / school games organiser:** commonly TLR 2 territory, £3,651-£8,913.",
         "**Head of PE:** TLR 2 at minimum in most comprehensives; larger departments push towards TLR 1s.",
         "**Director of sport** (especially independent schools): negotiated packages sometimes exceeding TLR 1 bands plus fixture-season expectations.",
         "**Pastoral crossover:** heads of year posts frequently go to PE staff, adding further allowance income — see the [leadership guide](/leadership-pay-scale/).",
@@ -1698,16 +1699,16 @@ export const salaryPages: PageContent[] = [
 { kind: "p", text: "The honest summary of PE economics: base pay is flat by design, so total earnings become a function of decisions rather than market forces. Every lever described here — prompt threshold applications, documented evidence for allowances, credentialed coaching, seasonal camps, exam-board work — operates independently of any employer's generosity. PE teachers who assemble three or four levers simultaneously earn comparably to shortage-subject colleagues despite starting without their advantages; those who wait for the payslip alone to grow spend entire careers explaining why it has not." },
     ],
     faq: [
-      { question: "How much do PE teachers earn in the UK?", answer: "Between £34,069 (starting) and £52,835 (top classroom point) outside London in 2026/27, identical to every other secondary subject. Head-of-PE allowances add £3,650-£17,819, and coaching income can add thousands more annually." },
+      { question: "How much do PE teachers earn in the UK?", answer: "Between £34,069 (starting) and £52,835 (top classroom point) outside London in 2026/27, identical to every other secondary subject. Head-of-PE allowances add £3,651-£17,819, and coaching income can add thousands more annually." },
       { question: "Is there a bursary for PE teacher training?", answer: "No. PE is heavily oversubscribed so it attracts no government bursary tiers, unlike maths, sciences or computing." },
       { question: "Do PE teachers earn less than other teachers?", answer: "On scale, identically. In practice PE can trail subjects with premiums unless you capture leadership allowances or supplement income through coaching, camps and exam-board work." },
-      { question: "What does a head of PE earn?", answer: "Their scale point plus an allowance usually within TLR 2 bands (£3,650-£8,912), though larger departments and director-of-sport roles reach TLR 1 levels above £10,530." },
+      { question: "What does a head of PE earn?", answer: "Their scale point plus an allowance usually within TLR 2 bands (£3,651-£8,913), though larger departments and director-of-sport roles reach TLR 1 levels above £10,531." },
       { question: "How much do private sports coaches earn per hour?", answer: "£20-£50 hourly depending on sport, qualification level and region; qualified coaches in tennis, swimming and football sit toward the upper end." },
       { question: "Do PE teachers get paid for running clubs and fixtures?", answer: "No separately — extracurricular commitment forms part of directed-time expectations under the STPCD, which is why workload-aware candidates weigh it when comparing offers." },
       { question: "Can PE teachers make money during holidays?", answer: "Yes — holiday camp lead-coach weeks pay roughly £250-£450 each, and six weeks of camps can meaningfully offset the lower earning ceiling early in a PE career." },
       { question: "Is PE teaching competitive to get into?", answer: "Very, relative to shortage subjects. Differentiate with exam-PE delivery evidence, multi-sport coaching qualifications and pastoral involvement rather than relying on playing history." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1732,7 +1733,7 @@ export const salaryPages: PageContent[] = [
     keyTakeaways: [
       "Scale pay matches all subjects: £34,069-£52,835 outside London in 2026/27.",
       "No ITT bursary applies to English; salaried routes matter for training-year finances.",
-      "Head of English typically holds one of the school's biggest TLR 1s (£10,530+), reflecting the department's size.",
+      "Head of English typically holds one of the school's biggest TLR 1s (£10,531+), reflecting the department's size.",
       "GCSE English resit economy creates year-round intervention and tutoring demand at £20-£45 an hour.",
       "Literacy coordination roles add TLR 2s across whole-school strategy work.",
       "Second-in-English posts are the most common first TLR in many comprehensives.",
@@ -1746,7 +1747,7 @@ export const salaryPages: PageContent[] = [
         ["Top of main range", "M6", "£46,940"],
         ["Post-threshold ceiling", "U3", "£52,835"],
         ["Second in English (TLR 2)", "+£4,000-£7,000", "≈£53,000-£57,000"],
-        ["Head of English (TLR 1)", "+£10,530+", "≈£63,400+"],
+        ["Head of English (TLR 1)", "+£10,531+", "≈£63,400+"],
       ]},
 
       { kind: "h2", text: "Wage framing: English teacher pay weekly and monthly" },
@@ -1770,10 +1771,10 @@ export const salaryPages: PageContent[] = [
       { kind: "h2", text: "The head-of-English economics" },
       { kind: "p", text: "English departments are usually a secondary school's largest, staffed by ten-plus teachers handling double-weighted GCSE entries (both language and literature count in accountability measures). That structural weight translates into money:" },
       { kind: "table", caption: "English leadership allowances in practice", head: ["Role", "Typical allowance", "Why it pays"], rows: [
-        ["Second in department", "TLR 2: £3,650 – £8,912", "KS4 coordination, cover management"],
+        ["Second in department", "TLR 2: £3,651 – £8,913", "KS4 coordination, cover management"],
         ["Literacy across curriculum lead", "TLR 2", "Whole-school strategy role"],
         ["Head of KS3 English", "TLR 2 lower half", "Large cohort management"],
-        ["Head of English", "TLR 1: £10,530 – £17,819", "Full departmental accountability"],
+        ["Head of English", "TLR 1: £10,531 – £17,819", "Full departmental accountability"],
       ]},
       { kind: "callout", tone: "info", title: "Resit responsibility drives allowances up", text: "Sixth forms and colleges running November GCSE resits push significant coordination workload onto English teams. Where that workload persists, persistent schools formalise it into permanent, pensionable TLRs — ask directly about resit coordination when interviewing." },
 
@@ -1835,16 +1836,16 @@ export const salaryPages: PageContent[] = [
 { kind: "p", text: "Where English teachers concentrate geographically also shapes outcomes more than most subjects acknowledge. London weighting plus persistent vacancies produce the fastest early-career salary growth in the country; coastal and rural trusts counter with retention incentives and accelerated leadership paths to hold staff they cannot replace. Neither market dominates universally — but each rewards different strategies, and teachers who match their mobility window (typically the first decade) to the right regional market capture gains unavailable to those who drift into whichever vacancy appeared nearest." },
     ],
     faq: [
-      { question: "How much do English teachers earn in the UK?", answer: "£34,069-£52,835 outside London on the national scales in 2026/27, identical to other subjects. Head-of-English TLRs add £10,530-£17,819, taking experienced leaders past £63,000." },
+      { question: "How much do English teachers earn in the UK?", answer: "£34,069-£52,835 outside London on the national scales in 2026/27, identical to other subjects. Head-of-English TLRs add £10,531-£17,819, taking experienced leaders past £63,000." },
       { question: "Is there a bursary for English teacher training?", answer: "No. English attracts sufficient applicants to sit outside bursary tiers. Salaried School Direct routes are the main financed alternative." },
       { question: "Do English teachers get paid more than other subjects?", answer: "Base pay never varies by subject. English departments' size means their leadership allowances are often among a school's largest, so mid-career English earnings frequently outpace smaller subjects." },
-      { question: "What does a head of English earn?", answer: "Their scale point plus a TLR 1 of £10,530-£17,819. An U3 head of English outside London typically earns £63,400-£70,700 total." },
+      { question: "What does a head of English earn?", answer: "Their scale point plus a TLR 1 of £10,531-£17,819. An U3 head of English outside London typically earns £63,400-£70,700 total." },
       { question: "How much do private English tutors charge?", answer: "Typically £18-£30 hourly at KS3 online, £25-£40 for GCSE, and £35-£55 for A-level, with premium pricing around November resit season." },
       { question: "Is English teaching oversubscribed?", answer: "Moderately. Applications remain healthy enough that no financial incentives apply, though vacancies persist in London and coastal regions where retention struggles affect every subject." },
       { question: "Can English teachers earn over £60,000?", answer: "Yes through leadership: U3 plus a substantial TLR 1 clears £63,000 outside London, and inner-London heads of English can approach £80,000." },
       { question: "What's the difference between an English teacher and English lecturer salary?", answer: "School teachers follow STPCD scales; FE college lecturers sit on college-set ranges (typically £26,000-£42,000); university lecturers start higher near £37,000+ but require doctoral qualifications." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 
@@ -1883,7 +1884,7 @@ export const salaryPages: PageContent[] = [
         ["Top of main range", "M6", "£46,940"],
         ["Post-threshold ceiling", "U3", "£52,835"],
         ["Head of art (TLR 2)", "+£4,000-£7,000", "≈£53,000-£57,000"],
-        ["Faculty lead incl. art (TLR 1)", "+£10,530+", "≈£63,000+"],
+        ["Faculty lead incl. art (TLR 1)", "+£10,531+", "≈£63,000+"],
       ]},
 
       { kind: "h2", text: "Art teacher jobs: where the employment actually is" },
@@ -1897,7 +1898,7 @@ export const salaryPages: PageContent[] = [
       { kind: "p", text: "Because postings are episodic, salary expectations should be anchored to the statutory scale rather than advertised ranges: every state-school art job pays the same points regardless of how the advert words it." },
 
       { kind: "h2", text: "Small departments, smaller allowances" },
-      { kind: "p", text: "The honest structural reality: most secondary art departments employ two to four teachers, sometimes one. Fewer bodies means fewer allowance-bearing posts. Where maths has six TLR-holders, art might have one head-of-department payment at TLR 2 level (£3,650-£8,912). Routes around that constraint:" },
+      { kind: "p", text: "The honest structural reality: most secondary art departments employ two to four teachers, sometimes one. Fewer bodies means fewer allowance-bearing posts. Where maths has six TLR-holders, art might have one head-of-department payment at TLR 2 level (£3,651-£8,913). Routes around that constraint:" },
       { kind: "ul", items: [
         "**Cross-cutting roles:** whole-school display, enrichment or careers-strategy responsibilities can be formalised into discretionary TLRs.",
         "**Faculty structures:** joining a creative-arts faculty leadership line eventually reaches TLR 1 territory.",
@@ -1983,16 +1984,16 @@ export const salaryPages: PageContent[] = [
 { kind: "p", text: "Above all, audit the combined picture yearly rather than assuming either stream is performing. Add salary, studio profit after materials, tutoring and workshop revenue; divide by realistic hours including unpaid administration; compare against last year's figures and against the alternative uses of those hours. Art careers reward exactly this kind of honest accounting precisely because their income arrives fragmented — the teacher who knows which stream earns what per hour reallocates effort rationally each September, while equally skilled colleagues wonder years later where the time went." },
     ],
     faq: [
-      { question: "How much do art teachers earn in the UK?", answer: "Between £34,069 starting and £52,835 top classroom point outside London in 2026/27 — identical to all subjects. Head-of-art allowances usually sit at TLR 2 levels (£3,650-£8,912) given typical department sizes." },
+      { question: "How much do art teachers earn in the UK?", answer: "Between £34,069 starting and £52,835 top classroom point outside London in 2026/27 — identical to all subjects. Head-of-art allowances usually sit at TLR 2 levels (£3,651-£8,913) given typical department sizes." },
       { question: "Is there a bursary for art teacher training?", answer: "No. Art and design sits outside government bursary tiers, so candidates rely on student finance, savings or competitive salaried routes." },
       { question: "Do art teachers earn less than other teachers?", answer: "On scale, identically. Structurally, small departments mean fewer allowance opportunities, so mid-career art earnings often trail large-subject colleagues unless supplemented by studio income." },
       { question: "Can art teachers sell their own work?", answer: "Yes — outside employment clauses rarely prevent external artistic practice provided it avoids your own pupils and conflicts. Many artist-teachers earn £2,000-£10,000+ annually from sales, commissions and exhibitions." },
       { question: "What do private art lessons cost?", answer: "Children's lessons typically run £15-£30 hourly; adult workshops charge £15-£40 per place. Qualified-teacher status supports pricing toward the upper ends." },
-      { question: "What does a head of art earn?", answer: "Their scale point plus usually a TLR 2 (£3,650-£8,912); only larger faculties reach TLR 1 bands above £10,530." },
+      { question: "What does a head of art earn?", answer: "Their scale point plus usually a TLR 2 (£3,651-£8,913); only larger faculties reach TLR 1 bands above £10,531." },
       { question: "Is art teaching competitive to enter?", answer: "Yes at popular urban providers, though overall ITT fill-rates are healthier than shortage subjects' desperation suggests. Portfolio quality matters most at interview." },
       { question: "How can an art teacher increase earnings beyond scale?", answer: "Four levers: threshold application (about £2,200 over M6), formalised cross-school responsibilities, priced workshop and club delivery during holidays, and disciplined studio-practice revenue." },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
     sources: SOURCES,
   },
 ];

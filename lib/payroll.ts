@@ -4,6 +4,7 @@ import {
   rukBands,
   scotlandBands,
   studentLoanPlans,
+  tpsScheme,
   tpsTiers,
   type Band,
   type StudentLoanPlan,
@@ -127,8 +128,10 @@ export function calculateTakeHome(input: TakeHomeInput): TakeHomeResult {
   // Allowances are pro-rated alongside salary for part-time staff.
   const grossAnnual = (fteSalary + allowances) * fraction;
 
-  const rate = inPension ? tpsRate(fteSalary + allowances) : 0;
   const pensionableEarnings = grossAnnual;
+  // TPS tiers use the actual annual salary rate for this eligible employment,
+  // not its full-time equivalent salary.
+  const rate = inPension ? tpsRate(pensionableEarnings) : 0;
   const pensionContribution = pensionableEarnings * rate;
 
   // Pension and AVC come out before income tax but after NI is assessed.
@@ -178,6 +181,6 @@ export function calculateTakeHome(input: TakeHomeInput): TakeHomeResult {
     netWeekly: netAnnual / 52,
     grossMonthly: grossAnnual / 12,
     effectiveTaxRate: grossAnnual > 0 ? totalDeductions / grossAnnual : 0,
-    employerPension: inPension ? pensionableEarnings * 0.288 : 0,
+    employerPension: inPension ? pensionableEarnings * tpsScheme.employerContribution : 0,
   };
 }

@@ -1,3 +1,4 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
 export const policyPages: PageContent[] = [
@@ -91,7 +92,7 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "If November arrives and your salary still matches the old scale, chase it formally. Maintained schools have no discretion to postpone the award, and academy trusts that claim to follow the STPCD should honour it too. A quick comparison using the current [pay scale tables](/teacher-pay-scale/) is usually enough evidence to get it fixed." },
 
       { kind: "h2", text: "Wales, Scotland and Northern Ireland" },
-      { kind: "p", text: "The STRB process covers England and Wales jointly for some purposes, but the devolved governments now make their own decisions. Wales has generally mirrored English awards in recent years while running its own negotiations through the Welsh Negotiating Committee. Scotland sits outside this system entirely: teacher pay there is negotiated between the Scottish Government and councils through the SNCT and COSLA machinery, and the Scottish teacher pay rise timetable differs. Northern Ireland negotiates separately again, and its scale remains the lowest of the four nations." },
+      { kind: "p", text: "England's STRB process and Wales's IWPRB process are separate. Wales publishes its own advisory values and implementation updates, so do not infer Welsh pay from the England award. Scotland and Northern Ireland also negotiate separately through their own systems." },
       { kind: "p", text: "Practically, this means a 'UK teacher pay rise' headline is always really four stories. If you teach in England, only the STPCD figure matters for your contract if you work in a maintained school." },
 
       { kind: "h2", text: "Academies: bound in practice, not in law" },
@@ -108,7 +109,7 @@ export const policyPages: PageContent[] = [
       { question: "Will there be a teacher pay rise in 2027?", answer: "Yes. The 2026 settlement was a two-year deal worth around 6.6% across both years, which implies a further award of roughly 3% in September 2027. The exact figure will be confirmed in the 2027/28 STPCD." },
       { question: "Why is my pay rise bigger than 3.5%?", answer: "Because scale progression stacks on top of the award. A teacher moving up one point on the main pay range in the same September receives the 3.5% award plus the point increase — typically 6% to 7% in total." },
       { question: "Do academies have to give the pay rise?", answer: "Not legally. Academies are exempt from the STPCD's pay provisions, but most trusts adopt the national award voluntarily and many reference it in employment contracts. Check your trust's pay policy." },
-      { question: "Does the pay rise apply in Wales, Scotland and Northern Ireland?", answer: "Wales usually mirrors the England award through its own negotiating body. Scotland and Northern Ireland negotiate separately through their own bodies, so awards and dates differ. Always check the relevant national agreement." },
+      { question: "Does the pay rise apply in Wales, Scotland and Northern Ireland?", answer: "Each nation has its own process. Wales's 2026/27 advisory figures come through the IWPRB and Welsh Government; Scotland and Northern Ireland also negotiate separately. Always check the relevant national publication." },
       { question: "Is the pay rise applied before or after tax?", answer: "Before. The award lifts your gross salary, and income tax, National Insurance and pension contributions are calculated on the new figure. Use a take-home calculator to see the net effect." },
       { question: "How much is the teacher pay rise per month after tax?", answer: "A mid-scale M4 teacher gains roughly £1,384 gross a year from the 2026/27 award, which is about £80–£90 extra take-home per month once tax, National Insurance and pension contributions are applied. The exact figure depends on your pension tier and student loan plan, so model your own position rather than relying on averages." },
       { question: "Do supply teachers get the pay rise?", answer: "Yes, where pay is linked to the national scale. Daily-rate supply cover calculated from the STPCD rises with the award, though agencies may take time to update their rates." },
@@ -196,7 +197,7 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "Wales, Scotland and Northern Ireland each have separate pay-setting processes. Do not treat the English government-accepted advisory points as their scales. If you work across borders or are comparing offers, compare against each nation's own published scale rather than assuming the English figures travel." },
 
       { kind: "h2", text: "Does the 2026 award change allowances?" },
-      { kind: "p", text: "Yes. The published ranges for teaching and learning responsibility (TLR) payments and SEN allowances were uplifted with the award: TLR1 now spans £10,530 to £17,819 and SEN allowances run from £2,885 to £5,689. Whether your personal allowance rises depends on your school applying the uplift within the range — the specific payment sits inside those boundaries and is set by the pay policy, not automatically." },
+      { kind: "p", text: "Yes. The published ranges for teaching and learning responsibility (TLR) payments and SEN allowances were uplifted with the award: TLR1 now spans £10,531 to £17,819 and SEN allowances run from £2,885 to £5,690. Whether your personal allowance rises depends on your school applying the uplift within the range — the specific payment sits inside those boundaries and is set by the pay policy, not automatically." },
 
       { kind: "h2", text: "How 3.5% compares with inflation" },
       { kind: "p", text: "Whether 3.5% feels like a real pay rise depends on prices. With CPI running near 2%, a 3.5% award is a genuine real-terms gain for the second year running, which reverses the pattern of 2022 and 2023 when awards trailed double-digit inflation and teacher pay fell sharply in real terms even as headline percentages hit records. Stacked across the recent rounds — 5.5%, then 4%, then 3.5% — cumulative pay has roughly kept pace with cumulative inflation since 2024, while remaining well below its 2010 level in real terms." },
@@ -210,22 +211,22 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "With a multi-year deal in place, the 2027/28 figure is largely signposted rather than open. That makes this a good year to plan promotion moves deliberately: crossing into the upper pay range or the leadership spine compounds every future award. Our [financial planning hub](/teacher-financial-planning/) sets out how the pieces fit together, and the [leadership pay scale guide](/leadership-pay-scale/) shows what the L-spine pays." },
     ],
     faq: [
-      { question: "What is the teacher pay rise for 2026?", answer: "3.5%, applied to every pay point from 1 September 2026 under the 2026/27 STPCD. On the rest-of-England main scale, M1 becomes £34,069 and M6 becomes £46,940." },
+      { question: "What is the teacher pay rise for 2026?", answer: "The Government accepted a 3.5% award for England from 1 September 2026. The published England points are advisory until the relevant Pay Order is in force. On the rest-of-England main scale, M1 is £34,069 and M6 is £46,940." },
       { question: "When will the teacher pay rise be paid?", answer: "It takes effect from 1 September 2026. Some schools applied it to September payslips directly; others paid arrears in October or November depending on payroll cut-off dates." },
       { question: "Is there a teacher pay rise calculator for 2026/27?", answer: "Yes. Use the pay rise calculator on this site to see the 3.5% uplift applied to any pay point, including the effect on take-home pay after tax, National Insurance and pension contributions." },
       { question: "How much is M4 after the 2026 pay rise?", answer: "£40,941 in England outside London, up £1,384 from £39,556. Fringe, outer London and inner London figures are higher." },
       { question: "Will there be another pay rise in 2027?", answer: "The 2026 settlement was a two-year deal worth about 6.6% overall, implying roughly 3% for 2027/28. The exact figure will be confirmed in the next STPCD." },
       { question: "Do academies have to pay the 2026 rise?", answer: "Not legally. Academy trusts set their own pay policies, but most adopt the STPCD rates voluntarily. Check your trust's policy if your salary has not moved." },
-      { question: "Did TLR and SEN allowances increase in 2026?", answer: "The published ranges were uplifted: TLR1 runs £10,530 to £17,819 and SEN allowances £2,885 to £5,689. Your individual payment depends on your school's pay policy within those ranges." },
+      { question: "Did TLR and SEN allowances increase in 2026?", answer: "The published advisory ranges were uplifted: TLR1 runs £10,531 to £17,819 and SEN allowances £2,885 to £5,690. Your individual payment depends on your school's pay policy within those ranges." },
       { question: "Why is my pay rise bigger than 3.5%?", answer: "Because progression adds on top. Moving up a main scale point while receiving the award typically produces a total rise of 6% to 7%." },
       { question: "Does the 2026 pay rise apply in Scotland?", answer: "No. Scotland negotiates separately through the SNCT, so Scottish salaries follow a different agreement and timetable." },
-      { question: "What if my school has not applied the 2026 pay rise?", answer: "Maintained schools must apply the STPCD rates from 1 September 2026. If your payslip still shows 2025/26 figures, ask payroll in writing which point you have been placed on and when arrears will land. Academy trusts that mirror the STPCD should honour it too, so check your trust's pay policy before escalating." },
+      { question: "What if my school has not applied the 2026 pay rise?", answer: "Ask payroll in writing which point you have been placed on, whether the 2026 award has been implemented under the school's pay policy, and when any arrears will be paid. Academy trusts set their own policies, so check the trust policy before escalating." },
       { question: "Do part-time teachers get the full 3.5%?", answer: "Yes, proportionally. Part-time pay is calculated pro-rata from the scale point, so the percentage uplift applies to your full-time equivalent rate exactly as it does for full-time staff." },
     ],
     sources: [
-      { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-      { label: "GOV.UK — Teachers to benefit from multi-year pay deal", url: "https://www.gov.uk/government/news/teachers-to-benefit-from-multi-year-pay-deal" },
-      { label: "DfE Education Hub — teacher pay explained", url: "https://educationhub.blog.gov.uk/2026/07/teacher-pay-everything-you-need-to-know-about-the-latest-multi-year-pay-deal" },
+      teacherPaySources.stpcd,
+      teacherPaySources.governmentResponse2026,
+      teacherPaySources.neuEngland2026,
       { label: "LGA — School teachers' pay 2026/27 and 2027/28", url: "https://www.local.gov.uk/our-support/workforce-and-hr-support/education-and-young-people/school-teachers-pay-2026-27-and-2027-28" },
     ],
     updated: "2026-10-09",
@@ -395,7 +396,7 @@ export const policyPages: PageContent[] = [
 
       { kind: "h2", text: "Scotland, Wales and Northern Ireland" },
       { kind: "p", text: "Scottish teacher pay is negotiated between the Scottish Government and COSLA through the Scottish Negotiating Committee for Teachers. Progression there moves automatically through six main grade points, and the Chartered Teacher route provides classroom-based progression beyond the main scale without moving into management." },
-      { kind: "p", text: "Wales has mirrored England's percentages since devolution of pay powers, keeping its scale identical in cash terms while running distinct negotiation machinery through the Welsh Negotiating Committee for School Teachers. Northern Ireland's employers negotiate separately and have historically settled later and lower; cross-border commuters from Donegal or border counties often weigh this directly." },
+      { kind: "p", text: "Wales has its own pay-setting process and publishes a distinct scale, so cross-border comparisons should use the current Wales table rather than apply an England percentage. Northern Ireland's employers negotiate separately." },
 
       { kind: "h2", text: "Do teachers get paid in the summer?" },
       { kind: "p", text: "Yes. Salaried teachers are paid a single annual amount divided into twelve equal monthly instalments, so holiday months — including the long summer break — are paid exactly like teaching months. The common misconception arises because supply teachers paid daily genuinely do not earn during holidays, and because part-year contract variations exist in some private settings. For salaried staff the only summer surprise should be normal." },
@@ -439,7 +440,7 @@ export const policyPages: PageContent[] = [
       { question: "Which UK nation pays teachers the most?", answer: "Inner London pays the highest headline salaries, followed by outer London and the fringe. Scotland's scale edges out equivalent non-London England points at the top of the main range." },
       { question: "How much is a qualified teacher's salary after tax?", answer: "An M1 teacher on £34,069 keeps roughly £2,180 a month after tax, National Insurance and pension contributions. Higher points and student loans shift the figure; use a take-home calculator for precision." },
       { question: "Is Scottish teacher pay different from England?", answer: "Yes. Scotland negotiates through the SNCT with automatic progression through main grade points and a Chartered Teacher route, separate from England's performance-related system." },
-      { question: "Do teachers in Wales earn the same as England?", answer: "The Welsh scale has matched England's cash values in recent years, though Wales negotiates separately through its own committee and could diverge in future." },
+      { question: "Do teachers in Wales earn the same as England?", answer: "No. Wales has its own IWPRB-negotiated advisory scale. For 2026/27, the Wales values and main-range labels differ from England's." },
       { question: "What is the highest teacher salary in the UK?", answer: "Classroom teachers top out around £52,835 to £64,683 depending on region. Leadership posts extend to £148,829 at L43 in England, with inner London heads reaching higher still." },
       { question: "Are teachers paid weekly or monthly?", answer: "Almost universally monthly, typically on the same date each month. Supply teachers engaged daily are the main exception, being paid per session worked." },
       { question: "Does the London weighting apply to pensions?", answer: "Yes. Regional weighting forms part of pensionable salary, so inner London teachers build slightly larger TPS benefits for the same service length." },

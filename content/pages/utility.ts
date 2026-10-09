@@ -1,6 +1,7 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
+const UPDATED = "2026-10-09";
 
 export const utilityPages: PageContent[] = [
   {
@@ -53,9 +54,9 @@ export const utilityPages: PageContent[] = [
       { question: "How often is the data updated?", answer: "Pay scales are updated each September when the new STPCD is published, and tax rates each April at the start of the tax year." },
     ],
     sources: [
-      { label: "STPCD 2026 (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
+      teacherPaySources.stpcd,
       { label: "HMRC rates and thresholds 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-      { label: "Teachers' Pensions contribution tiers", url: "https://www.teacherspensions.co.uk/members/working-life/paying-in/contribution-tiers.aspx" },
+      teacherPaySources.tpsMemberContributions2026,
     ],
     updated: UPDATED,
   },

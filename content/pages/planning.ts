@@ -105,7 +105,7 @@ export const planningPages: PageContent[] = [
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-      { label: "Teachers' Pension Scheme — member guides", url: "https://www.teacherspensions.co.uk/members.htm" },
+      { label: "Teachers' Pension Scheme — member guides", url: "https://www.teacherspensions.co.uk/" },
       { label: "NEU — Burgundy Book conditions of service", url: "https://neu.org.uk/advice/your-rights-work/pay/burgundy-book" },
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
     ],
@@ -456,7 +456,7 @@ export const planningPages: PageContent[] = [
     ],
     sources: [
       { label: "NEU — Notice periods and resignation", url: "https://neu.org.uk/advice/your-rights-work/contracts" },
-      { label: "Teachers' Pension Scheme — leaving or retiring", url: "https://www.teacherspensions.co.uk/members.htm" },
+      { label: "Teachers' Pension Scheme — leaving or retiring", url: "https://www.teacherspensions.co.uk/" },
       { label: "GOV.UK — Redundancy pay and rights", url: "https://www.gov.uk/redundancy-your-rights" },
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
     ],
@@ -675,7 +675,7 @@ export const planningPages: PageContent[] = [
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
       { label: "Student Loans Company — repayment thresholds", url: "https://www.slc.co.uk/" },
-      { label: "Teachers' Pension Scheme — contribution tiers", url: "https://www.teacherspensions.co.uk/members.htm" },
+      { label: "Teachers' Pension Scheme — contribution tiers", url: "https://www.teacherspensions.co.uk/" },
     ],
     updated: "2026-08-23",
   },

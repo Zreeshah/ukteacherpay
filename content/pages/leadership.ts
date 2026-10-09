@@ -1,14 +1,39 @@
+import { leadershipSpine, type Region } from "@/data/teacher-pay-scales";
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
+import { gbp, pct } from "@/lib/format";
+import { calculateTakeHome } from "@/lib/payroll";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
 const PAY_AWARD_REVIEWED = "2026-10-09";
 
 const SOURCES = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-  { label: "STRB — School Teachers' Review Body reports", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
+  teacherPaySources.stpcd,
+  teacherPaySources.neuEngland2026,
   { label: "NAHT — leadership pay guidance", url: "https://www.naht.org.uk/Advice-Support/Pay-and-conditions" },
-  { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/working-life/paying-in/contribution-tiers.aspx" },
+  teacherPaySources.tpsMemberContributions2026,
 ];
+
+const englandLeadershipRegions = ["england", "fringe", "outer-london", "inner-london"] as const;
+
+function leadershipSalary(region: Region, point: number): number {
+  const salary = leadershipSpine(region)[point - 1];
+  if (salary === undefined) throw new Error(`Missing leadership point L${point} for ${region}`);
+  return salary;
+}
+
+const assistantHeadRegionalRows = [4, 6, 8, 10, 12, 14].map((point) => [
+  `L${point}`,
+  ...englandLeadershipRegions.map((region) => gbp(leadershipSalary(region, point))),
+]);
+
+const assistantHeadTakeHomeRows = [4, 6, 8, 10, 12, 14].map((point) => {
+  const salary = leadershipSalary("england", point);
+  const result = calculateTakeHome({ fteSalary: salary });
+  return [`L${point}`, gbp(salary), pct(result.pensionRate), gbp(result.netMonthly)];
+});
+
+const l12NetMonthly = calculateTakeHome({ fteSalary: leadershipSalary("england", 12) }).netMonthly;
+const l14NetMonthly = calculateTakeHome({ fteSalary: leadershipSalary("england", 14) }).netMonthly;
 
 const leadershipPillar: PageContent = {
   slug: "leadership-pay-scale",
@@ -131,7 +156,7 @@ const leadershipPillar: PageContent = {
       ["L12", "£70,275", "+£17,187"],
     ]},
     { kind: "p", text: "Moving from U3 to L1 is a gross increase of £750 a year, which after tax and a higher pension tier is worth roughly £30 a month. That is the reality of the bottom of the spine, and it is why very few leadership posts are actually advertised at L1. A teacher at the top of the [upper pay range](/upper-pay-range/) who also holds a TLR 1 may well be earning more than an assistant head on a low ISR." },
-    { kind: "callout", tone: "tip", title: "Compare total package, not headline salary", text: "A U3 teacher with a £10,530 TLR 1 earns £63,365 — more than an assistant head on L7. Before accepting a leadership post, work out what you currently earn including allowances and put both figures through the [teacher pay calculator](/teacher-pay-calculator/)." },
+    { kind: "callout", tone: "tip", title: "Compare total package, not headline salary", text: "A U3 teacher with a £10,531 TLR 1 earns £63,365 — more than an assistant head on L7. Before accepting a leadership post, work out what you currently earn including allowances and put both figures through the [teacher pay calculator](/teacher-pay-calculator/)." },
 
     { kind: "h2", text: "London weighting on the leadership scale" },
     { kind: "p", text: "London weighting on the leadership spine works the same way as on the classroom scales: it is baked into a higher spine rather than paid as a separate allowance. The premium is proportionally largest at the bottom of the spine." },
@@ -159,7 +184,7 @@ const leadershipPillar: PageContent = {
 
     { kind: "h2", text: "Senior and school leadership pay scale variations" },
     { kind: "p", text: "Searches for a senior leadership pay scale or a school leadership pay scale usually mean the same spine. Senior leadership team posts — assistant heads, deputies, the head and any executive or trust-level roles — are all paid on this single 43-point framework, with the differences coming from where each governing body sets the ISR. There is no separate senior leader scale in England." },
-    { kind: "p", text: "Two genuine exceptions are worth knowing. In Wales, leaders in maintained schools follow the IWPRB-negotiated scale, which currently mirrors the STPCD endpoints of £53,586 to £148,829 but is reviewed independently, so future awards can diverge. And in academies, the trust can depart from the spine entirely — many use it as a reference, but some set their own leadership bands, particularly for multi-school executives." },
+    { kind: "p", text: "Two genuine exceptions are worth knowing. In Wales, maintained-school leaders follow an IWPRB-negotiated advisory scale, currently £54,524 at L1 to £151,434 at L43 for 2026/27, rather than England's spine. And in academies, the trust can depart from the spine entirely — many use it as a reference, but some set their own leadership bands, particularly for multi-school executives." },
 
     { kind: "h2", text: "Common mistakes with leadership pay" },
     { kind: "ul", items: [
@@ -179,17 +204,17 @@ const leadershipPillar: PageContent = {
   faq: [
     { question: "What is the leadership pay scale for 2026/27?", answer: "The leadership spine runs from £53,586 at L1 to £148,829 at L43 in the rest of England, following the 3.5% STPCD award from 1 September 2026. Inner London runs from £63,709 to £158,863, outer London from £57,837 to £153,042, and the London fringe from £55,060 to £150,301." },
     { question: "How much is L9 on the teacher leadership scale?", answer: "L9 is £65,278 in the rest of England, £66,758 in the fringe, £69,529 in outer London and £75,409 in inner London for 2026/27. The actual leadership range for a post is set in the school's pay policy." },
-    { question: "What is L12 on the leadership scale?", answer: "L12 is around £70,275 in the rest of England and £80,933 in inner London for 2026/27. It is a common point for deputy headteachers in secondary schools and experienced deputies in large primaries." },
+    { question: "What is L12 on the leadership scale?", answer: "L12 is £70,275 in the rest of England, £71,759 in the fringe, £74,530 in outer London and £80,411 in inner London for 2026/27. It is a common point for deputy headteachers in secondary schools and experienced deputies in large primaries." },
     { question: "What is an individual school range?", answer: "An individual school range, or ISR, is the seven-point slice of the 43-point leadership spine that a governing body assigns to a specific leadership post. You are appointed somewhere within that range and progress through it as your performance is reviewed. Different schools set different ISRs for similar jobs." },
     { question: "Is leadership pay progression automatic?", answer: "No. Unlike the main pay range, where progression is normally annual subject to satisfactory performance, leadership progression requires sustained high performance against your objectives. Most schools expect two consecutive successful years before awarding a point, and you cannot progress beyond the top of your ISR." },
     { question: "Do assistant heads and deputies get paid on the same scale as headteachers?", answer: "They use the same 43-point leadership spine, but their individual school ranges should not normally overlap with the headteacher's range. In practice assistant heads sit lowest on the spine, deputies above them, and the headteacher above both." },
     { question: "Is it worth moving from UPS3 to leadership?", answer: "Financially, only if the ISR is high enough. U3 pays £52,835 and L1 pays £53,586 — a gross difference of £750, worth roughly £30 a month after deductions. A teacher on U3 with a TLR 1 can earn more than an assistant head on a low leadership point, so compare total packages rather than headline scale names." },
-    { question: "Is there a different school leadership pay scale in Wales?", answer: "Welsh maintained-school leaders are paid on an IWPRB-negotiated scale rather than the STPCD. For 2026/27 it runs from £53,585 to £148,829, so the figures on this page apply, but future Welsh awards are set independently and can diverge from England." },
+    { question: "Is there a different school leadership pay scale in Wales?", answer: "Yes. Welsh maintained-school leaders follow an IWPRB-negotiated advisory scale rather than England's STPCD spine. For 2026/27 it runs from £54,524 at L1 to £151,434 at L43, so use the Wales selection in the calculator rather than England's figures." },
     { question: "Do academies have to use the leadership pay scale?", answer: "No. Academy trusts set their own pay policies and can create their own leadership bands, although most use the STPCD spine as a reference point. Check the trust's pay policy before comparing an academy leadership salary with a maintained-school ISR, because the same job title can sit outside the national framework entirely." },
     { question: "How does London weighting work on the leadership scale?", answer: "It is built into a higher spine rather than paid as a separate allowance. The inner London premium is roughly £10,000 to £11,000 in cash across the whole spine, which is nearly 19% at L1 but under 7% at L43." },
   ],
   sources: SOURCES,
-  updated: UPDATED,
+  updated: PAY_AWARD_REVIEWED,
 };
 
 const headTeacherPage: PageContent = {
@@ -222,7 +247,7 @@ const headTeacherPage: PageContent = {
   blocks: [
     { kind: "h2", text: "How much do headteachers earn in 2026/27?" },
     { kind: "p", text: "There is no single headteacher salary. Pay depends almost entirely on the size and complexity of the school, and the spread is enormous — a head of a small rural primary and the head of a large London secondary are both on the leadership spine, but they can be more than £80,000 apart." },
-    { kind: "p", text: "The statutory floor for any headteacher post is L1, £53,586 in the rest of England for 2026/27. The statutory ceiling is L43, £148,829. Between those two figures, the group size framework does most of the work." },
+    { kind: "p", text: "The published 2026/27 advisory floor for an England headteacher post is L1, £53,586 in the rest of England, and the top published point is L43, £148,829. The group-size framework does most of the work between them." },
     { kind: "table", caption: "Headteacher pay boundaries 2026/27", head: ["Region", "Minimum (L1)", "Maximum (L43)"], rows: [
       ["Rest of England", "£53,586", "£148,829"],
       ["London Fringe", "£55,060", "£150,301"],
@@ -293,7 +318,7 @@ const headTeacherPage: PageContent = {
     { kind: "p", text: "Above £100,000 the personal allowance tapers away at £1 for every £2 earned, creating an effective 60% marginal rate between £100,000 and £125,140. A head moving from L26 to L28 crosses straight into that band. Run your own figures through the [teacher pay calculator](/teacher-pay-calculator/) to see the real net effect." },
 
     { kind: "h2", text: "Middle leaders versus the leadership group" },
-    { kind: "p", text: "Head of year and head of department salaries are a frequent source of confusion. Neither role is part of the leadership group. A head of year or head of department in England is normally a classroom teacher on the main or upper pay range who receives a teaching and learning responsibility payment on top — typically £3,650 to £8,912 for TLR 2 or £10,530 to £17,819 for TLR 1 in 2026/27." },
+    { kind: "p", text: "Head of year and head of department salaries are a frequent source of confusion. Neither role is part of the leadership group. A head of year or head of department in England is normally a classroom teacher on the main or upper pay range who receives a teaching and learning responsibility payment on top — typically £3,651 to £8,913 for TLR 2 or £10,531 to £17,819 for TLR 1 in 2026/27." },
     { kind: "p", text: "So a U3 teacher with a TLR 1 earns up to £63,365 — more than some assistant heads. The distinction matters when comparing vacancies: a post advertised with an L-point range is a leadership group post on the [leadership pay scale](/leadership-pay-scale/), while a post advertised as salary plus TLR is a middle-leadership role. Both are legitimate career routes, but they are paid from entirely different frameworks." },
 
     { kind: "h2", text: "Common questions about the route to headship" },
@@ -308,8 +333,8 @@ const headTeacherPage: PageContent = {
     { question: "How much does a secondary head teacher earn?", answer: "Secondary schools usually fall in Groups 5 to 8. Typical ranges run from around £81,457 for a small secondary to £120,532 at the top of a very large school range in the rest of England, with inner London schools paying roughly £11,000 more." },
     { question: "Can a headteacher be paid more than the top of their range?", answer: "Yes, but with limits. Governors can make discretionary payments for additional responsibilities such as leading a federation, though total salary should not normally exceed 25% above the ISR maximum. Going beyond that requires external independent advice and a documented rationale." },
     { question: "Do academy headteachers get paid on the same scale?", answer: "Academies and free schools are not bound by the STPCD and can set their own pay. In practice most benchmark against the leadership spine, but multi-academy trust executive salaries can be considerably higher and are subject to scrutiny from the ESFA and in published accounts." },
-    { question: "What does a head of year or head of department earn compared with a headteacher?", answer: "Heads of year and departments are not on the leadership spine. They are classroom teachers paid on the main or upper pay range plus a TLR of £3,650 to £17,819 depending on level, so a typical total is £40,000 to £65,000. That is well below primary headteacher pay but can exceed an assistant head on a low ISR." },
-    { question: "What is the highest a headteacher can be paid?", answer: "The statutory maximum on the leadership spine is L43, which is £148,829 in the rest of England and £158,863 in inner London for 2026/27. Executive heads and MAT chief executives can be paid more, particularly outside the STPCD framework, though such packages attract regulatory scrutiny." }
+    { question: "What does a head of year or head of department earn compared with a headteacher?", answer: "Heads of year and departments are not on the leadership spine. They are classroom teachers paid on the main or upper pay range plus a TLR of £3,651 to £17,819 depending on level, so a typical total is £40,000 to £65,000. That is well below primary headteacher pay but can exceed an assistant head on a low ISR." },
+    { question: "What is the highest a headteacher can be paid?", answer: "The top published England advisory leadership point for 2026/27 is L43: £148,829 in the rest of England and £158,863 in inner London. Executive heads and MAT chief executives can be paid more, particularly outside the STPCD framework, though such packages attract regulatory scrutiny." }
   ],
   sources: SOURCES,
   updated: PAY_AWARD_REVIEWED,
@@ -393,8 +418,8 @@ const deputyHeadPage: PageContent = {
     { kind: "p", text: "A deputy on £75,664 builds around £1,321 of annual pension for that single year, compared with roughly £927 for a teacher on U3. Over a ten-year deputy headship, that difference compounds into a materially larger retirement income." },
 
     { kind: "h2", text: "Deputy head pay in Scotland, Wales and London" },
-    { kind: "p", text: "The figures above are England and Wales. Deputy head teacher salaries in Scotland are set by the Scottish Negotiating Committee for Teachers on a separate depute head scale, and the numbers are not interchangeable with the English leadership spine — a Scottish depute head is paid from a different framework with different progression rules. Northern Ireland similarly runs its own leadership arrangements." },
-    { kind: "p", text: "In Wales, deputies in maintained schools are paid on the IWPRB-negotiated version of the leadership spine, which currently matches the English endpoints. A deputy head teacher salary in inner London works exactly as the regional table shows: the same spine points simply carry higher values, so an L12 deputy earns £80,933 in inner London against £70,275 in the rest of England — a premium of nearly £10,900 for the identical point." },
+    { kind: "p", text: "The figures above are for England. Deputy head teacher salaries in Scotland are set by the Scottish Negotiating Committee for Teachers on a separate depute head scale, and the numbers are not interchangeable with the English leadership spine — a Scottish depute head is paid from a different framework with different progression rules. Northern Ireland similarly runs its own leadership arrangements." },
+    { kind: "p", text: "In Wales, deputies in maintained schools use the IWPRB-negotiated advisory spine: L12 is £71,507 for 2026/27. In England, an L12 deputy earns £80,411 in inner London against £70,275 in the rest of England — a premium of £10,136 for the identical point." },
 
     { kind: "h2", text: "Common mistakes when taking a deputy post" },
     { kind: "ul", items: [
@@ -402,7 +427,7 @@ const deputyHeadPage: PageContent = {
       "**Assuming the range is negotiable after appointment.** Starting point is much easier to negotiate before you accept.",
       "**Giving up a TLR 1 without checking the maths.** A U3 teacher with a £15,000 TLR 1 earns £67,835, more than many primary deputies.",
       "**Overlooking the loss of directed time protections.** Leadership hours are not capped.",
-      "**Ignoring the pension tier boundary at £76,572.99.** Crossing it costs 1.5 percentage points on your entire salary.",
+      "**Ignoring the pension tier boundary at £76,572.99.** Crossing it increases the rate by 1.1 percentage points on your entire pensionable salary.",
       "**Not checking whether the post is one of two deputies.** A sole deputy in a large school carries far more than the pay difference suggests.",
     ]},
   ],
@@ -412,12 +437,12 @@ const deputyHeadPage: PageContent = {
     { question: "Can a deputy head be paid more than the headteacher?", answer: "It should not normally happen. The STPCD expects deputy and assistant head ranges not to overlap with the headteacher's individual school range. In rare cases an experienced deputy at the top of their range in a large school might out-earn a new head of a very small school, but not within the same school." },
     { question: "How much more do deputy heads earn than assistant heads?", answer: "Typically four to six spine points, which is around £6,000 to £10,000 gross. Moving from L9 to L15 in the rest of England is an increase of £10,227 gross, worth roughly £386 a month after tax, National Insurance and the higher pension tier." },
     { question: "Do deputy heads get PPA time?", answer: "Not as a statutory entitlement. Guaranteed PPA time and the 1,265-hour directed time limit apply to classroom teachers, not to the leadership group. Most deputies negotiate a reduced teaching commitment, but there is no statutory protection on leadership hours." },
-    { question: "What is L12 for a deputy head?", answer: "L12 is approximately £70,275 in the rest of England, £71,624 in the fringe, £74,625 in outer London and £80,933 in inner London for 2026/27. It is a very common point for secondary deputy headteachers and experienced primary deputies." },
+    { question: "What is L12 for a deputy head?", answer: "L12 is £70,275 in the rest of England, £71,759 in the fringe, £74,530 in outer London, £80,411 in inner London and £71,507 in Wales for 2026/27. It is a common point for secondary deputy headteachers and experienced primary deputies." },
     { question: "What is the average deputy head teacher salary in the UK?", answer: "Across primary and secondary settings, most UK deputy heads earn between roughly £63,500 and £89,300 in the rest of England for 2026/27, with inner London adding around £10,700 to £11,200. Scotland and Northern Ireland use separate negotiating frameworks with their own depute head scales." },
     { question: "Is deputy headship worth it financially?", answer: "It depends what you are giving up. If you currently hold a large TLR 1 on U3 you may be earning £63,000 to £68,000 already, which overlaps the bottom of many deputy ranges. Compare the total package including allowances, and factor in the loss of directed time protections." },
   ],
   sources: SOURCES,
-  updated: UPDATED,
+  updated: PAY_AWARD_REVIEWED,
 };
 
 const assistantHeadPage: PageContent = {
@@ -466,30 +491,22 @@ const assistantHeadPage: PageContent = {
     { kind: "p", text: "These are observed patterns across the sector, not statutory figures. The definitive range for any post is published in the advert and in the school's pay policy. Full spine values for all four England regions are on the [leadership pay scale page](/leadership-pay-scale/)." },
 
     { kind: "h2", text: "Assistant head pay across the regions" },
-    { kind: "table", caption: "Common assistant-head spine points by region, 2026/27", head: ["Point", "Rest of England", "Fringe", "Outer London", "Inner London"], rows: [
-      ["L4", "£57,699", "£59,155", "£62,000", "£68,005"],
-      ["L6", "£60,619", "£62,052", "£64,940", "£71,029"],
-      ["L8", "£63,688", "£65,091", "£68,020", "£74,188"],
-      ["L10", "£66,956", "£68,280", "£71,246", "£77,487"],
-      ["L12", "£70,275", "£71,624", "£74,625", "£80,933"],
-      ["L14", "£73,827", "£75,132", "£78,165", "£84,532"],
-    ]},
+    { kind: "table", caption: "Common assistant-head spine points by region, 2026/27", head: ["Point", "Rest of England", "Fringe", "Outer London", "Inner London"], rows: assistantHeadRegionalRows },
 
     { kind: "h2", text: "Assistant head teacher salaries in London and Wales" },
-    { kind: "p", text: "Location changes the range more than almost anything else except school size. An inner London primary typically advertises its assistant headship between L6 and L12, which is worth £71,029 to £80,933 — roughly £13,000 more than the equivalent rest-of-England post. Outer London sits between the two, and Wales pays the same spine values as the rest of England." },
-    { kind: "table", caption: "Typical London and Wales assistant head ranges, 2026/27", head: ["Setting", "Typical ISR", "Inner London value", "Outer London value"], rows: [
-      ["Primary (L6 – L10)", "L6 – L10", "£71,029 – £77,487", "£64,940 – £71,246"],
-      ["Secondary (L8 – L14)", "L8 – L14", "£74,188 – £84,532", "£68,020 – £78,165"],
-      ["Wales (L4 – L10)", "L4 – L10", "—", "—"],
+    { kind: "p", text: "Location changes the range more than almost anything else except school size. An inner London primary typically advertises its assistant headship between L6 and L12, which is worth £70,754 to £80,411 — about £10,100 more than the equivalent rest-of-England post. Outer London sits between the two. Wales uses its own IWPRB-negotiated advisory spine." },
+    { kind: "table", caption: "Typical assistant head ranges by jurisdiction, 2026/27", head: ["Setting", "Typical ISR", "Inner London value", "Outer London value", "Wales advisory value"], rows: [
+      ["Primary (L6 – L10)", "L6 – L10", "£70,754 – £77,086", "£64,871 – £71,207", "£61,683 – £68,126"],
+      ["Secondary (L8 – L14)", "L8 – L14", "£73,824 – £83,960", "£67,940 – £78,074", "£64,804 – £75,120"],
     ]},
-    { kind: "p", text: "Wales sets its own leadership arrangements through the Welsh Government, but the published values currently mirror the rest-of-England spine. Check the employer's own pay policy, because Welsh schools are not bound by the English STPCD. Recruitment listings dominate the London results because so many posts are advertised there — the DfE's [Teaching Vacancies service](https://teaching-vacancies.service.gov.uk/) carries most of them." },
+    { kind: "p", text: "Wales sets its own leadership arrangements through the IWPRB. The published 2026/27 figures are advisory pending the statutory document, so check the employer's pay policy before comparing an offer. Recruitment listings dominate the London results because so many posts are advertised there — the DfE's [Teaching Vacancies service](https://teaching-vacancies.service.gov.uk/) carries most of them." },
 
     { kind: "h2", text: "Is the step into leadership worth it?" },
     { kind: "p", text: "This is the single most important financial question for anyone considering an assistant headship, and the answer is genuinely not always yes." },
-    { kind: "p", text: "The top of the [upper pay range](/upper-pay-range/) is £52,835. A TLR 2 adds between £3,650 and £8,912; a TLR 1 adds between £10,530 and £17,819. A head of department on U3 with a mid-range TLR 1 is therefore earning around £66,000 — comfortably more than an assistant head on L8." },
+    { kind: "p", text: "The top of the [upper pay range](/upper-pay-range/) is £52,835. A TLR 2 adds between £3,651 and £8,913; a TLR 1 adds between £10,531 and £17,819. A head of department on U3 with a mid-range TLR 1 is therefore earning around £66,000 — comfortably more than an assistant head on L8." },
     { kind: "table", caption: "Comparing a middle leader with an assistant head, rest of England 2026/27", head: ["Position", "Base", "Allowance", "Total gross"], rows: [
       ["U3 + TLR 2 (mid)", "£52,835", "£6,281", "£59,116"],
-      ["U3 + TLR 1 (min)", "£52,835", "£10,530", "£63,365"],
+      ["U3 + TLR 1 (min)", "£52,835", "£10,531", "£63,365"],
       ["U3 + TLR 1 (mid)", "£52,835", "£14,175", "£67,010"],
       ["Assistant head L6", "£60,619", "—", "£60,619"],
       ["Assistant head L10", "£66,956", "—", "£66,956"],
@@ -512,16 +529,9 @@ const assistantHeadPage: PageContent = {
     { kind: "p", text: "A portfolio carrying statutory responsibility — designated safeguarding lead in particular — generally supports a higher range than a purely developmental brief." },
 
     { kind: "h2", text: "What assistant head pay is worth after deductions" },
-    { kind: "p", text: "Leadership salaries sit in the 10.5% and 11.6% pension tiers and take a large slice of income into the 40% tax band, so the net figure moves much more slowly than the gross." },
-    { kind: "table", caption: "Indicative monthly take-home, assistant head points, rest of England 2026/27", head: ["Point", "Salary", "Pension tier", "Approx. monthly take-home"], rows: [
-      ["L4", "£57,699", "10.5%", "£3,372"],
-      ["L6", "£60,619", "10.5%", "£3,496"],
-      ["L8", "£63,688", "10.5%", "£3,626"],
-      ["L10", "£66,956", "10.5%", "£3,763"],
-      ["L12", "£70,275", "10.5%", "£3,907"],
-      ["L14", "£73,827", "11.6%", "£4,003"],
-    ]},
-    { kind: "p", text: "Look closely at the last row. Moving from L12 to L14 is a gross rise of £3,491, but the net gain is only £96 a month. Crossing £76,572.99 shifts you from the 10.5% pension tier to 11.6%, and that 1.5 percentage point increase applies to your entire salary, not just the part above the threshold." },
+    { kind: "p", text: "Leadership salaries span the 9.9%, 10.5% and 11.6% pension tiers and take a large slice of income into the 40% tax band, so the net figure moves more slowly than the gross." },
+    { kind: "table", caption: "Indicative monthly take-home, assistant head points, rest of England 2026/27", head: ["Point", "Salary", "Pension tier", "Approx. monthly take-home"], rows: assistantHeadTakeHomeRows },
+    { kind: "p", text: `Moving from L12 to L14 is a gross rise of £3,552 and a net gain of about ${gbp(l14NetMonthly - l12NetMonthly)} a month. Both points remain in the 10.5% pension tier. Crossing £76,572.99 at L16 shifts a full-time member to 11.6%, and that 1.1 percentage point increase applies to the entire pensionable salary, not just the part above the threshold.` },
     { kind: "callout", tone: "warn", title: "The tier boundary at £76,572.99 is the sharpest step on the spine", text: "A promotion that lands just above this figure delivers noticeably less than the gross increase suggests. If you are negotiating a starting point near the boundary, one extra point below it can be worth more per pound than one point above it." },
     { kind: "p", text: "It is worth putting the comparison the other way round too. A head of department on U3 with a mid-range TLR 1 takes home about £3,777 a month — more than an assistant head at L10 on £3,763, despite the leadership title." },
 
@@ -546,18 +556,18 @@ const assistantHeadPage: PageContent = {
     { kind: "p", text: "Because the [Teachers' Pension Scheme](/teacher-pension/) is career average, every year at a higher salary permanently increases your retirement income, so the timing of the step up matters more than it would under a final-salary scheme. Guidance on securing progression is in the guide to [moving up the leadership pay scale](/how-to-move-up-leadership-pay-scale/)." },
   ],
   faq: [
-    { question: "How much does an assistant head teacher earn in London?", answer: "An inner London assistant head typically earns between £71,029 and £84,532 depending on whether the post is primary (usually L6 to L10) or secondary (usually L8 to L14). Outer London posts pay roughly £64,940 to £78,165 at the same points. The premium over the rest of England is around £10,000 to £11,000 gross at each point." },
+    { question: "How much does an assistant head teacher earn in London?", answer: "An inner London assistant head typically earns between £70,754 and £83,960 depending on whether the post is primary (usually L6 to L10) or secondary (usually L8 to L14). Outer London posts pay roughly £64,871 to £78,074 at the same points. The premium over the rest of England is around £10,100 gross at each point." },
     { question: "How much does an assistant head teacher earn?", answer: "Most assistant headteachers earn between £57,699 and £73,827 in the rest of England for 2026/27. Primary AHTs typically sit between L4 and L10, and secondary AHTs between L6 and L14 on the leadership spine. Inner London adds roughly £10,000 to £11,000." },
     { question: "What L point is an assistant head teacher?", answer: "There is no fixed point. Typical individual school ranges start around L3 to L6 and top out between L10 and L16, depending on school size and the scope of the portfolio. Larger secondary schools tend to set higher ranges than small primaries." },
     { question: "Is assistant head better paid than a head of department?", answer: "Not always. A head of department on U3 with a mid-range TLR 1 earns around £67,010, which is more than an assistant head on L10 (£66,956). Compare the total package including allowances before assuming leadership pays more." },
     { question: "Do assistant heads still teach?", answer: "Almost always, yes. Most assistant headteachers retain a substantial teaching timetable, particularly in primary schools where an AHT may still be a full-time class teacher with a leadership allowance built into their range." },
     { question: "Do assistant heads get PPA time?", answer: "Not as a statutory entitlement. Guaranteed PPA and the 1,265-hour directed time limit apply to classroom teachers only. Leadership group members negotiate non-contact time with their headteacher, but it is not legally protected." },
-    { question: "What is the average assistant head teacher salary in the UK?", answer: "Most UK assistant heads earn between £57,699 and £73,827 in the rest of England for 2026/27, with typical primary AHTs on L4 to L10 and secondary AHTs on L6 to L14. Inner London ranges add roughly £10,000 to £11,200 at the same spine points." },
+    { question: "What is the average assistant head teacher salary in the UK?", answer: "Most assistant heads in England earn between £57,699 and £73,827 in the rest of England for 2026/27, with typical primary AHTs on L4 to L10 and secondary AHTs on L6 to L14. Inner London adds about £10,100 at the same spine points. Wales, Scotland and Northern Ireland use separate arrangements." },
     { question: "Is an assistant head higher than a head of year?", answer: "In pay terms not necessarily. A head of year is a middle leader paid on the main or upper range plus a TLR, while an assistant head is on the leadership spine. A U3 head of year with a large TLR 1 can out-earn an assistant head on a low point, but the assistant head role carries whole-school accountability and leadership group conditions." },
     { question: "How do you get promoted from assistant to deputy head?", answer: "Usually by applying for a deputy post, often at a different school. Internal promotion happens but is less common because it requires a vacancy. The step is typically four to six spine points, worth around £6,000 to £10,000 gross." },
   ],
   sources: SOURCES,
-  updated: UPDATED,
+  updated: PAY_AWARD_REVIEWED,
 };
 
 const leadPractitionerPage: PageContent = {
@@ -685,12 +695,12 @@ const leadPractitionerPage: PageContent = {
     { question: "Is lead practitioner higher than UPS3?", answer: "Yes. The lead practitioner minimum of £53,847 is just above the U3 figure of £52,835, and the range extends to £81,860 — nearly £29,000 above the top of the upper pay range." },
     { question: "Is a lead practitioner part of the leadership team?", answer: "Not necessarily. Lead practitioners are paid on a separate range and remain classroom teachers for conditions of service purposes, keeping directed time protections and guaranteed PPA. Some schools include them in wider leadership meetings, but they are not part of the leadership group." },
     { question: "Do lead practitioners keep their PPA time?", answer: "Yes. Because they remain classroom teachers under the STPCD, lead practitioners keep guaranteed PPA time and the 1,265-hour directed time limit. Leadership group members lose both protections." },
-    { question: "How much do lead practitioners earn compared with head of year roles?", answer: "A head of year typically earns U3 plus a TLR of roughly £3,650 to £8,912, giving around £56,500 to £61,750. Lead practitioners start above U3 at £53,847 and commonly reach the high £60,000s to low £70,000s, with top-of-range posts paying up to £81,860 in the rest of England." },
+    { question: "How much do lead practitioners earn compared with head of year roles?", answer: "A head of year typically earns U3 plus a TLR of roughly £3,651 to £8,913, giving around £56,500 to £61,750. Lead practitioners start above U3 at £53,847 and commonly reach the high £60,000s to low £70,000s, with top-of-range posts paying up to £81,860 in the rest of England." },
     { question: "What happened to Advanced Skills Teachers?", answer: "The Advanced Skills Teacher and Excellent Teacher schemes were abolished in 2013 and replaced by the single lead practitioner range. Teachers on the old scales were generally transitioned onto lead practitioner ranges or protected arrangements." },
     { question: "How does lead practitioner pay compare with an assistant head?", answer: "They overlap closely. A lead practitioner at around £66,392 is on a similar salary to an assistant head at L10 (£66,956). The lead practitioner keeps classroom teacher conditions; the assistant head takes on whole-school accountability with no directed time limit." },
   ],
   sources: SOURCES,
-  updated: UPDATED,
+  updated: PAY_AWARD_REVIEWED,
 };
 
 const progressionPage: PageContent = {
@@ -809,7 +819,7 @@ const progressionPage: PageContent = {
     { question: "When are leadership pay decisions made?", answer: "Most schools make leadership pay decisions in the autumn term. For headteachers the STPCD expects the review to be completed by 31 October and the pay determination by 31 December. Submit any pay review request well before those dates." },
   ],
   sources: SOURCES,
-  updated: UPDATED,
+  updated: PAY_AWARD_REVIEWED,
 };
 
 export const leadershipPages: PageContent[] = [

@@ -1,11 +1,12 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
+const UPDATED = "2026-10-09";
 
 const SOURCES = [
-  { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
+  teacherPaySources.stpcd,
   { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
-  { label: "Teachers' Pensions — member contribution tiers", url: "https://www.teacherspensions.co.uk/members/working-life/paying-in/contribution-tiers.aspx" },
+  teacherPaySources.tpsMemberContributions2026,
   { label: "Student Loans Company — repayment thresholds", url: "https://www.gov.uk/repaying-your-student-loan/what-you-pay" },
 ];
 
@@ -129,11 +130,11 @@ export const calculatorPages: PageContent[] = [
       { question: "How much does a teacher take home a month in 2026/27?", answer: "A teacher on M1 outside London (£34,069) takes home about £2,169 a month after pension, tax and National Insurance. On M6 (£46,940) it is roughly £2,809 a month, and on U3 (£52,835) about £3,138 a month. Inner London figures are higher because of London weighting." },
       { question: "Is the Teachers' Pension taken before or after tax?", answer: "Before tax. Your pension contribution is deducted from gross pay and income tax is charged on what is left, so you get full tax relief at your marginal rate. National Insurance, however, is still charged on the full gross figure because the scheme is a net-pay arrangement rather than salary sacrifice." },
       { question: "Why is my pension contribution higher than I expected?", answer: "The contribution tier uses annualised actual pensionable earnings for each eligible employment. A part-time teacher’s rate can therefore be lower than a full-time colleague’s on the same FTE point." },
-      { question: "Does this calculator work for Scotland, Wales and Northern Ireland?", answer: "Yes. Wales currently mirrors the STPCD figures. Scotland uses the separate SNCT pay scale and Scottish income tax rates, both of which the calculator applies automatically. Northern Ireland has its own pay scale and uses rUK tax rates." },
+      { question: "Does this calculator work for Scotland, Wales and Northern Ireland?", answer: "Yes. Wales uses its own 2026/27 advisory scale, which the calculator applies. Scotland uses the separate SNCT pay scale and Scottish income tax rates, while Northern Ireland has its own pay scale and uses rUK tax rates." },
       { question: "How do I work out 0.6 part-time teacher pay?", answer: "Multiply the full-time figure for your pay point by 0.6. On M4 in the rest of England that is £40,941 × 0.6 = £24,564 gross. Set the FTE field to 60 in the calculator to see the take-home figure with all deductions applied." },
       { question: "Are TLR payments pensionable?", answer: "Yes. TLR 1, TLR 2 and SEN allowances all count as pensionable pay, so they increase the pension you build up as well as your salary. TLR 3 is pensionable while you receive it but is fixed-term by design." },
       { question: "What tax code do most teachers have?", answer: "1257L is the standard code, giving the full £12,570 personal allowance. If you have a different code — because of a company benefit, underpaid tax from a previous year, or a second job — your take-home pay will differ from this estimate." },
-      { question: "When do teacher pay rises take effect?", answer: "Teacher pay awards run from 1 September, in line with the school year, rather than from the April start of the tax year. The 2026/27 STPCD applied a 3.5% uplift from 1 September 2026." },
+      { question: "When do teacher pay rises take effect?", answer: "Teacher pay awards normally run from 1 September, in line with the school year. For England, the Government accepted a 3.5% 2026/27 award from 1 September 2026; the published points remain advisory until the relevant Pay Order is in force." }
     ],
     sources: SOURCES,
     updated: UPDATED,
