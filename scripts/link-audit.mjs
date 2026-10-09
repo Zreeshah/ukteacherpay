@@ -19,7 +19,12 @@ function walk(dir) {
   return found;
 }
 
-const IGNORE = new Set(["404", "_not-found"]);
+// Legal and trust routes are intentionally discoverable through the global footer,
+// which this audit strips before measuring contextual editorial links.
+const IGNORE = new Set([
+  "404", "_not-found", "contact", "corrections", "disclaimer",
+  "editorial-policy", "privacy", "terms",
+]);
 const files = walk(OUT);
 const slugOf = (f) => f.replace(/^out\/?/, "").replace(/index\.html$/, "").replace(/\/$/, "") || "/";
 

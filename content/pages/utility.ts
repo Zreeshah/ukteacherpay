@@ -154,34 +154,4 @@ export const utilityPages: PageContent[] = [
     ],
     updated: UPDATED,
   },
-  {
-    slug: "privacy",
-    hub: "calculator",
-    title: "Privacy Policy",
-    metaTitle: "Privacy Policy",
-    metaDescription:
-      "How this site handles data. Calculators run entirely in your browser and no salary information is collected, transmitted or stored.",
-    primaryKeyword: "privacy policy",
-    secondaryKeywords: [],
-    calculator: "none",
-    intro: "Short version: calculators run in your browser and we do not collect what you type.",
-    keyTakeaways: [
-      "No accounts, no logins, no salary data collected.",
-      "All calculations happen locally in your browser.",
-    ],
-    blocks: [
-      { kind: "h2", text: "What we collect" },
-      { kind: "p", text: "Nothing you enter into a calculator. Every calculation runs client-side in your browser and the values never leave your device." },
-      { kind: "h2", text: "Analytics and advertising" },
-      { kind: "p", text: "We may use privacy-respecting analytics to understand which pages are useful, and advertising partners may set cookies. These never receive the figures you type into calculators." },
-      { kind: "h2", text: "Your rights" },
-      { kind: "p", text: "Because we do not hold personal data about you, there is nothing to request, correct or delete. You can block cookies in your browser settings at any time." },
-    ],
-    faq: [
-      { question: "Do you store my salary?", answer: "No. Calculator inputs stay in your browser and are never transmitted to us." },
-      { question: "Do you use cookies?", answer: "Analytics and advertising partners may set cookies. Calculator inputs are never included in that data." },
-    ],
-    sources: [],
-    updated: UPDATED,
-  },
 ];

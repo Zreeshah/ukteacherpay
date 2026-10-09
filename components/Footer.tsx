@@ -38,6 +38,11 @@ export default function Footer() {
             <Link href="/methodology/" className="hover:text-ink">How we calculate</Link>
             <Link href="/sources/" className="hover:text-ink">Sources</Link>
             <Link href="/privacy/" className="hover:text-ink">Privacy</Link>
+            <Link href="/contact/" className="hover:text-ink">Contact</Link>
+            <Link href="/editorial-policy/" className="hover:text-ink">Editorial policy</Link>
+            <Link href="/disclaimer/" className="hover:text-ink">Disclaimer</Link>
+            <Link href="/terms/" className="hover:text-ink">Terms</Link>
+            <Link href="/corrections/" className="hover:text-ink">Corrections</Link>
             <span>© {new Date().getFullYear()} {SITE_NAME}</span>
           </div>
         </div>
