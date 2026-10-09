@@ -27,13 +27,13 @@ export const payScalePages: PageContent[] = [
     ],
     calculator: "pay-scale",
     intro:
-      "Every statutory point on the UK teacher pay scale for 2026/27, in one place. These are the STPCD figures that took effect on 1 September 2026 after the 3.5% award, alongside the separate Scottish SNCT scale and Northern Ireland's own ranges. Pick your region below, or run any pay point through the calculator to see take-home pay.",
+      "England's government-accepted 2026/27 advisory points are shown here alongside the separate Scottish SNCT scale and Northern Ireland's own ranges. The STPCD 2026 Pay Order is due in October 2026, so the England points are not described here as in force before it is laid. Pick your region below, or run any pay point through the calculator to see take-home pay.",
     keyTakeaways: [
-      "The 2026/27 STPCD applied a 3.5% uplift to every pay point from 1 September 2026.",
+      "The government accepted a 3.5% September 2026 advisory award for all points other than Rest-of-England UQ1, which has a 5% increase; the Pay Order is due in October.",
       "Classroom teacher pay in England runs from £34,069 (M1, rest of England) to £64,684 (U3, inner London).",
       "England has four pay bands: rest of England, London fringe, outer London and inner London — worth up to £7,660 more at M1.",
       "Scotland uses the separate SNCT scale (£34,539 to £48,516 on the main scale) with no upper pay range; Northern Ireland runs lower at £32,188 to £44,342.",
-      "Academies can set their own pay scales, but most still track the statutory STPCD points.",
+      "Academies can set their own pay scales, but many track the government-accepted advisory points.",
     ],
     blocks: [
       { kind: "h2", text: "How the teacher pay scale is structured" },
@@ -45,7 +45,7 @@ export const payScalePages: PageContent[] = [
         "**Lead Practitioner Range** — for teachers who stay in the classroom but take on whole-school teaching expertise.",
         "**Leadership Group (L1–L43)** — heads, deputies and assistant heads, on a 43-point spine.",
       ]},
-      { kind: "p", text: "Every range has regional versions. England & Wales statutory rates apply outside London, then three London bands sit on top. Scotland and Northern Ireland negotiate entirely separate scales. This guide covers them all; the deep dives are on our pages for the [main pay range](/main-pay-range/), [upper pay range](/upper-pay-range/) and each London band." },
+      { kind: "p", text: "Every range has regional versions. England's advisory points apply outside London, then three London bands sit on top. Scotland and Northern Ireland negotiate entirely separate scales. This guide covers them all; the deep dives are on our pages for the [main pay range](/main-pay-range/), [upper pay range](/upper-pay-range/) and each London band." },
 
       { kind: "h2", text: "What changed for 2026/27" },
       { kind: "p", text: "The School Teachers' Review Body recommended, and the government accepted, a **3.5% pay award** applied to every point from 1 September 2026. Because the award was percentage-based, the cash value differs sharply by region: an inner London M1 rose far more in pounds than a rest-of-England M1, because the starting base was already higher." },
@@ -56,10 +56,10 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "The main pay range is where nearly every qualified teacher starts. Progression is normally automatic, one point per year based on performance management, so most teachers reach M6 within six years." },
       { kind: "table", caption: "Main Pay Range (M1–M6) 2026/27 by region", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London", "Scotland*", "N. Ireland"], rows: [
         ["M1", "£34,069", "£35,602", "£39,196", "£41,729", "£34,539", "£32,188"],
-        ["M2", "£36,042", "£37,646", "£41,246", "£43,712", "£36,426", "£34,037"],
-        ["M3", "£38,400", "£39,979", "£43,403", "£45,786", "£38,361", "£36,271"],
+        ["M2", "£36,042", "£37,647", "£41,246", "£43,713", "£36,426", "£34,037"],
+        ["M3", "£38,400", "£39,979", "£43,403", "£45,787", "£38,361", "£36,271"],
         ["M4", "£40,941", "£42,513", "£45,673", "£47,961", "£42,336", "£38,669"],
-        ["M5", "£43,529", "£45,069", "£48,438", "£50,665", "£45,468", "£41,109"],
+        ["M5", "£43,529", "£45,070", "£48,438", "£50,666", "£45,468", "£41,109"],
         ["M6", "£46,940", "£48,479", "£52,241", "£54,131", "£48,516", "£44,342"],
       ]},
       { kind: "p", text: "*Scotland's points are the nearest SNCT equivalents; the Scottish spine is negotiated separately and has its own structure. A full-time **M6 teacher salary is £46,940** in the rest of England — the figure most people mean by the top of the \"ordinary\" classroom scale. What that turns into after tax is covered in our take-home pay breakdowns." },
@@ -69,7 +69,7 @@ export const payScalePages: PageContent[] = [
       { kind: "table", caption: "Upper Pay Range (U1–U3) 2026/27 by region", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London", "N. Ireland"], rows: [
         ["U1", "£49,134", "£50,625", "£54,047", "£59,650", "£46,589"],
         ["U2", "£50,956", "£52,442", "£56,047", "£62,581", "£48,303"],
-        ["U3", "£52,835", "£54,328", "£58,119", "£64,684", "£50,085"],
+        ["U3", "£52,835", "£54,328", "£58,120", "£64,684", "£50,085"],
       ]},
       { kind: "p", text: "Scotland has no upper pay range; experienced teachers progress instead towards the Chartered Teacher grade at **£52,539**. The mechanics of crossing the threshold, and how schools justify refusing applications, are on the [upper pay range page](/upper-pay-range/)." },
 
@@ -79,13 +79,13 @@ export const payScalePages: PageContent[] = [
         ["Unqualified (UQ1–UQ6)", "£23,732", "£36,494"],
         ["Main (M1–M6)", "£34,069", "£46,940"],
         ["Upper (U1–U3)", "£49,134", "£52,835"],
-        ["Lead Practitioner", "£53,847", "£81,860"],
-        ["Leadership Group (L1–L43)", "£53,585", "£148,829"],
+        ["Lead Practitioner", "£53,847", "£81,861"],
+        ["Leadership Group (L1–L43)", "£53,586", "£148,829"],
       ]},
       { kind: "p", text: "The leadership endpoints span an enormous distance because a two-form entry primary head and the head of a large secondary sit on the same national spine — each school publishes its own individual range within it. We map that in the [leadership pay scale guide](/leadership-pay-scale/)." },
 
       { kind: "h2", text: "Why London has four different teacher pay scales" },
-      { kind: "p", text: "England's statutory scale is split into four areas to reflect the cost of living. At M1 the gap between the lowest and highest band is **£7,660 a year**; at U3 it widens to **£11,848**. The bands are defined by postcode, not by school type, so two schools a mile apart can pay differently." },
+      { kind: "p", text: "England's advisory scale is split into four areas to reflect the cost of living. At M1 the gap between the lowest and highest band is **£7,660 a year**; at U3 it widens to **£11,848**. The bands are defined by postcode, not by school type, so two schools a mile apart can pay differently." },
       { kind: "ul", items: [
         "**Inner London** — most central boroughs, the highest rates (£41,729 M1 start).",
         "**Outer London** — suburban boroughs (£39,196 M1 start).",
@@ -98,7 +98,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "Basic scale pay is rarely the whole story. Teaching and Learning Responsibility payments reward extra duties such as leading a subject or a key stage, and SEN allowances compensate for special educational needs work. Both are pensionable." },
       { kind: "table", caption: "Allowances 2026/27 (all England regions)", head: ["Allowance", "Minimum", "Maximum"], rows: [
         ["TLR 1 (significant sustained responsibility)", "£10,531", "£17,819"],
-        ["TLR 2 (defined responsibility)", "£3,650", "£8,913"],
+        ["TLR 2 (defined responsibility)", "£3,651", "£8,913"],
         ["TLR 3 (fixed-term focus)", "£727", "£3,600"],
         ["SEN allowance", "£2,885", "£5,690"],
       ]},
@@ -187,10 +187,10 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "Every confirmed main pay range point for 2026/27" },
       { kind: "table", caption: "Main Pay Range 2026/27 — England and Wales", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London"], rows: [
         ["M1", "£34,069", "£35,602", "£39,196", "£41,729"],
-        ["M2", "£36,042", "£37,646", "£41,246", "£43,712"],
-        ["M3", "£38,400", "£39,979", "£43,403", "£45,786"],
+        ["M2", "£36,042", "£37,647", "£41,246", "£43,713"],
+        ["M3", "£38,400", "£39,979", "£43,403", "£45,787"],
         ["M4", "£40,941", "£42,513", "£45,673", "£47,961"],
-        ["M5", "£43,529", "£45,069", "£48,438", "£50,665"],
+        ["M5", "£43,529", "£45,070", "£48,438", "£50,666"],
         ["M6", "£46,940", "£48,479", "£52,241", "£54,131"],
       ]},
       { kind: "p", text: "These are the figures most searches for the \"new teacher pay scale\" are really asking about. A full-time newly qualified teacher in Birmingham or Manchester starts at **£34,069**; the same role in Hackney starts at **£41,729**." },
@@ -210,9 +210,9 @@ export const payScalePages: PageContent[] = [
       { kind: "table", caption: "Upper Pay Range 2026/27 — England", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London"], rows: [
         ["U1", "£49,134", "£50,625", "£54,047", "£59,650"],
         ["U2", "£50,956", "£52,442", "£56,047", "£62,581"],
-        ["U3", "£52,835", "£54,328", "£58,119", "£64,684"],
+        ["U3", "£52,835", "£54,328", "£58,120", "£64,684"],
       ]},
-      { kind: "p", text: "Allowances rose on the same basis. TLR 1 payments now span **£10,531 to £17,819**, TLR 2 spans **£3,650 to £8,913**, and SEN allowances run **£2,885 to £5,690**. If you hold a fixed TLR amount written into your contract, check whether your school applied the percentage to your actual payment or merely updated the permitted range." },
+      { kind: "p", text: "Allowances rose on the same basis. TLR 1 payments now span **£10,531 to £17,819**, TLR 2 spans **£3,651 to £8,913**, and SEN allowances run **£2,885 to £5,690**. If you hold a fixed TLR amount written into your contract, check whether your school applied the percentage to your actual payment or merely updated the permitted range." },
 
       { kind: "h2", text: "When does the 2026/27 pay rise hit your payslip?" },
       { kind: "ol", items: [
@@ -262,7 +262,7 @@ export const payScalePages: PageContent[] = [
       { question: "How much is the teacher pay rise for 2026?", answer: "The award is 3.5%. In cash that is roughly £1,152 a year at M1, £1,587 at M6 and £1,787 at U3 in the rest of England, with proportionally larger gains in London. Previous-year comparisons shown alongside are derived by dividing by 1.035." },
       { question: "When will the 2026/27 teacher pay rise be paid?", answer: "It takes effect on 1 September 2026. Most teachers see it in their September or October payslip depending on the payroll cycle. Any delay must be backdated to September — the entitlement does not lapse." },
       { question: "Does the 3.5% award apply to Wales?", answer: "Yes in practice: the Independent Welsh Pay Review Body's current recommendation mirrors the STPCD figures exactly, so Welsh teachers are on identical points. Scotland and Northern Ireland negotiate separate settlements and their scales differ." },
-      { question: "Do leadership pay ranges rise with the 2026/27 award?", answer: "Yes. The whole leadership group spine — L1 to L43 — was uprated 3.5%, so the England spine now runs from £53,585 to £148,829, with higher endpoints in each London band. Lead practitioner ranges rose on the same basis." },
+      { question: "Do leadership pay ranges rise with the 2026/27 award?", answer: "Yes. The whole leadership group spine — L1 to L43 — was uprated 3.5%, so the England spine now runs from £53,586 to £148,829, with higher endpoints in each London band. Lead practitioner ranges rose on the same basis." },
       { question: "Is the new teacher pay scale the same in academies?", answer: "Not necessarily. Academies set their own pay policies, so the STPCD is a reference point rather than an obligation. Most trusts continue to track the statutory points, but your contract and trust policy govern what you are actually paid." },
       { question: "How much does an NQT or new teacher earn in 2026/27?", answer: "A full-time newly qualified teacher on M1 earns £34,069 in the rest of England, £35,602 on the fringe, £39,196 in outer London and £41,729 in inner London. Progression to M2 follows successful appraisal, normally after a year." },
       { question: "What was the teacher pay scale in 25/26 compared with now?", answer: "Every current point divided by 1.035 gives the 2025/26 figure: M1 was approximately £32,916 and M6 approximately £45,352 in the rest of England. Our dedicated 2025/26 page keeps the full archived tables for reference." },
@@ -311,10 +311,10 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "The 2026/27 main pay range by region" },
       { kind: "table", caption: "Main Pay Range 2026/27 — every region", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London", "Wales", "N. Ireland"], rows: [
         ["M1", "£34,069", "£35,602", "£39,196", "£41,729", "£34,069", "£32,188"],
-        ["M2", "£36,042", "£37,646", "£41,246", "£43,712", "£36,042", "£34,037"],
-        ["M3", "£38,400", "£39,979", "£43,403", "£45,786", "£38,400", "£36,271"],
+        ["M2", "£36,042", "£37,647", "£41,246", "£43,713", "£36,042", "£34,037"],
+        ["M3", "£38,400", "£39,979", "£43,403", "£45,787", "£38,400", "£36,271"],
         ["M4", "£40,941", "£42,513", "£45,673", "£47,961", "£40,941", "£38,669"],
-        ["M5", "£43,529", "£45,069", "£48,438", "£50,665", "£43,529", "£41,109"],
+        ["M5", "£43,529", "£45,070", "£48,438", "£50,666", "£43,529", "£41,109"],
         ["M6", "£46,940", "£48,479", "£52,241", "£54,131", "£46,940", "£44,342"],
       ]},
       { kind: "p", text: "Scotland negotiates separately through the SNCT; its nearest equivalents run £34,539 to £48,516. Wales currently mirrors the England & Wales figures exactly." },
@@ -399,7 +399,7 @@ export const payScalePages: PageContent[] = [
       { question: "Does part-time work affect progression through the main range?", answer: "No. You progress a point each year like anyone else; only your pay is pro-rated by your FTE fraction. A 0.6 FTE teacher on M4 earns £24,564 (derived from the £40,941 full-time point)." },
       { question: "How long do teachers stay on the main pay range?", answer: "Most reach M6 within six years of qualifying. From M6 you either remain a classroom teacher, apply to cross the threshold onto the upper range, or take on TLR or leadership responsibilities that raise pay further." },
       { question: "Is the main pay range different in Scotland?", answer: "Yes. Scotland uses the SNCT scale with nearest-equivalent points from £34,539 to £48,516, plus a Chartered Teacher grade at £52,539 instead of England's upper pay range structure." },
-      { question: "Do TLR payments stack onto main range salary?", answer: "Yes. TLR 2 payments (£3,650–£8,913) and TLR 1 payments (£10,531–£17,819) are paid on top of your scale point and count as pensionable pay in the Teachers' Pension Scheme." },
+      { question: "Do TLR payments stack onto main range salary?", answer: "Yes. TLR 2 payments (£3,651–£8,913) and TLR 1 payments (£10,531–£17,819) are paid on top of your scale point and count as pensionable pay in the Teachers' Pension Scheme." },
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -446,7 +446,7 @@ export const payScalePages: PageContent[] = [
       { kind: "table", caption: "Upper Pay Range 2026/27 — England and Northern Ireland", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London", "N. Ireland"], rows: [
         ["U1", "£49,134", "£50,625", "£54,047", "£59,650", "£46,589"],
         ["U2", "£50,956", "£52,442", "£56,047", "£62,581", "£48,303"],
-        ["U3", "£52,835", "£54,328", "£58,119", "£64,684", "£50,085"],
+        ["U3", "£52,835", "£54,328", "£58,120", "£64,684", "£50,085"],
       ]},
       { kind: "p", text: "Wales currently matches the England figures. Scotland has no upper range at all — its experienced teachers progress towards the SNCT Chartered Teacher grade of £52,539 instead, which sits between England's U2 and U3 outside London." },
 
@@ -464,7 +464,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "**UPS3 is £52,835** in the rest of England for 2026/27 — the figure behind most \"ups 3 teacher salary\" searches. Region by region:" },
       { kind: "ul", items: [
         "**Inner London:** £64,684",
-        "**Outer London:** £58,119",
+        "**Outer London:** £58,120",
         "**London fringe:** £54,328",
         "**Rest of England:** £52,835",
         "**Northern Ireland:** £50,085",
@@ -533,13 +533,13 @@ export const payScalePages: PageContent[] = [
     ],
     faq: [
       { question: "What is the UPS teacher pay scale for 2026/27?", answer: "Three points: U1 £49,134, U2 £50,956 and U3 £52,835 in the rest of England, rising to £59,650–£64,684 in inner London. All figures rose 3.5% on 1 September 2026. Wales mirrors them; Scotland has no equivalent range." },
-      { question: "What is a UPS3 teacher salary?", answer: "A full-time UPS3 teacher earns £52,835 in the rest of England, £58,119 in outer London and £64,684 in inner London for 2026/27. TLR payments stack on top and are pensionable." },
+      { question: "What is a UPS3 teacher salary?", answer: "A full-time UPS3 teacher earns £52,835 in the rest of England, £58,120 in outer London and £64,684 in inner London for 2026/27. TLR payments stack on top and are pensionable." },
       { question: "How do I move from M6 to the upper pay range?", answer: "Apply through your school's threshold round, normally after six years. You must show sustained high-quality teaching against published criteria — usually two successful appraisal cycles of evidence. Success moves you to U1 with an immediate pay rise of roughly £2,200 outside London." },
       { question: "Do teachers automatically progress from U1 to U3?", answer: "No. Unlike the main range, all upper-range progression is discretionary and performance-based. Many teachers remain on one point for years; moving schools is the most common trigger for a fresh assessment." },
       { question: "Can my school refuse my upper pay range application?", answer: "Yes, if you don't meet its published criteria, but the refusal must be evidence-based, linked to the pay policy, and open to appeal. Indefinite deferrals without reasons are challengeable via grievance." },
       { question: "Is there an upper pay range in Scotland?", answer: "No. Scotland's SNCT structure has no UPS. Experienced teachers instead work towards Chartered Teacher status, which pays £52,539 in 2026/27 — between England's U2 and U3 rates outside London." },
       { question: "Does part-time work affect the upper pay range?", answer: "Your UPR status is unaffected and you apply like anyone else. Salary is simply the relevant point multiplied by your FTE fraction, and progression decisions use the same appraisal standards." },
-      { question: "Is UPS3 more than some leadership jobs pay?", answer: "Often yes at entry level. The leadership spine begins at £53,585 in the rest of England — barely above U3 — so experienced classroom teachers with a TLR 1 can out-earn assistant heads on lower leadership points." },
+      { question: "Is UPS3 more than some leadership jobs pay?", answer: "Often yes at entry level. The leadership spine begins at £53,586 in the rest of England — barely above U3 — so experienced classroom teachers with a TLR 1 can out-earn assistant heads on lower leadership points." },
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -593,10 +593,10 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "Unqualified teacher pay scale 2026/27 by region" },
       { kind: "table", caption: "Unqualified Teacher Range 2026/27 — every region", head: ["Point", "Rest of England", "London Fringe", "Outer London", "Inner London", "Wales", "N. Ireland"], rows: [
         ["UQ1", "£23,732", "£24,909", "£27,727", "£29,336", "£23,732", "£22,478"],
-        ["UQ2", "£26,075", "£27,589", "£30,411", "£32,018", "£26,075", "£24,698"],
-        ["UQ3", "£28,757", "£30,272", "£33,093", "£34,702", "£28,757", "£27,239"],
-        ["UQ4", "£31,124", "£32,636", "£35,464", "£37,068", "£31,124", "£29,480"],
-        ["UQ5", "£33,810", "£35,321", "£38,146", "£39,747", "£33,810", "£32,023"],
+        ["UQ2", "£26,075", "£27,589", "£30,412", "£32,018", "£26,075", "£24,698"],
+        ["UQ3", "£28,758", "£30,272", "£33,094", "£34,702", "£28,758", "£27,239"],
+        ["UQ4", "£31,124", "£32,636", "£35,465", "£37,068", "£31,124", "£29,480"],
+        ["UQ5", "£33,811", "£35,321", "£38,146", "£39,747", "£33,811", "£32,023"],
         ["UQ6", "£36,494", "£38,004", "£40,831", "£42,429", "£36,494", "£34,565"],
       ]},
       { kind: "p", text: "Scotland has no separate unqualified range in the same form; provisional registrants are paid on the main Scottish scale. The figures above answer the standard \"what is the salary of an unqualified teacher\" question for each part of the UK." },
@@ -634,7 +634,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "Directors of finance and agencies often quote day rates. Using the standard 195 teaching days, rest-of-England values convert approximately as follows (derived):" },
       { kind: "table", caption: "Approximate daily equivalents, rest of England (annual ÷ 195, derived)", head: ["Point", "Annual", "Roughly per day"], rows: [
         ["UQ1", "£23,732", "≈£122"],
-        ["UQ3", "£28,757", "≈£147"],
+        ["UQ3", "£28,758", "≈£147"],
         ["UQ6", "£36,494", "≈£187"],
         ["M1 (comparison)", "£34,069", "≈£175"],
       ]},
@@ -712,10 +712,10 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "Inner London main pay range 2026/27" },
       { kind: "table", caption: "Main Pay Range — inner London 2026/27 vs rest of England", head: ["Point", "Inner London", "Rest of England", "Premium"], rows: [
         ["M1", "£41,729", "£34,069", "+£7,660"],
-        ["M2", "£43,712", "£36,042", "+£7,670"],
-        ["M3", "£45,786", "£38,400", "+£7,386"],
+        ["M2", "£43,713", "£36,042", "+£7,670"],
+        ["M3", "£45,787", "£38,400", "+£7,386"],
         ["M4", "£47,961", "£40,941", "+£7,021"],
-        ["M5", "£50,665", "£43,529", "+£7,136"],
+        ["M5", "£50,666", "£43,529", "+£7,136"],
         ["M6", "£54,131", "£46,940", "+£7,192"],
       ]},
       { kind: "p", text: "A newly qualified teacher starting in Tower Hamlets earns over £7,600 more than an identically qualified peer in Manchester — roughly £638 extra gross every month." },
@@ -766,13 +766,13 @@ export const payScalePages: PageContent[] = [
 
       { kind: "h2", text: "Three inner London careers, three different ledgers" },
       { kind: "ul", items: [
-        "**The solo renter, M2 in Southwark:** £43,712 gross against zone-2 rents consumes most of the premium; the residual is lifestyle, not savings.",
+        "**The solo renter, M2 in Southwark:** £43,713 gross against zone-2 rents consumes most of the premium; the residual is lifestyle, not savings.",
         "**The flatshare, M1 in Hackney:** shared housing flips the maths — premium largely banked, deposit accelerating visibly.",
         "**The commuter from Barking, M5 in Islington:** outer-borough rents plus inner-band salary capture nearly the entire £7,100 gap after modest transport costs.",
       ]},
       { kind: "p", text: "Same scale, same effort, radically different outcomes — housing tenure dominates every other variable in whether London pays." },
       { kind: "h2", text: "Stacking allowances in London schools" },
-      { kind: "p", text: "London's dense sixth-form and special-school provision creates allowance opportunities thinner elsewhere: TLR 2 payments for intervention leads, SEN allowances attached to designated units, and exam-season responsibility payments negotiated locally within statutory ranges. Because TLR and SEN ranges are national (£3,650–£8,913 and £2,885–£5,690 respectively for their tiers), their relative weight feels smaller against London bases — a £5,000 TLR 2 stretches further in Leeds than Lambeth. That argues for treating allowances as negotiation targets early rather than accepting whatever the job description lists. Full national allowance tables sit in our [UK pay scale guide](/teacher-pay-scale/)." },
+      { kind: "p", text: "London's dense sixth-form and special-school provision creates allowance opportunities thinner elsewhere: TLR 2 payments for intervention leads, SEN allowances attached to designated units, and exam-season responsibility payments negotiated locally within statutory ranges. Because TLR and SEN ranges are national (£3,651–£8,913 and £2,885–£5,690 respectively for their tiers), their relative weight feels smaller against London bases — a £5,000 TLR 2 stretches further in Leeds than Lambeth. That argues for treating allowances as negotiation targets early rather than accepting whatever the job description lists. Full national allowance tables sit in our [UK pay scale guide](/teacher-pay-scale/)." },
       { kind: "h2", text: "When inner London is genuinely the wrong choice" },
       { kind: "p", text: "Honesty requires the counter-case: car-dependent lives, significant caring responsibilities needing space, health conditions aggravated by commuting density, or dual-teacher households unable to synchronise two inner-London timetables. For those profiles, [outer London's](/outer-london-teacher-pay-scale/) £5,100 premium with family housing frequently beats the inner figure after all variables resolve. The map rewards matching band to circumstances, never chasing the top line blindly — and the [regional comparison page](/teacher-pay-map/) widens the frame beyond the capital when the capital keeps losing the arithmetic." },
 
@@ -826,10 +826,10 @@ export const payScalePages: PageContent[] = [
     calculator: "pay-scale",
     calculatorPreset: { region: "outer-london" },
     intro:
-      "Outer London sits between the capital's two extremes: £39,196 to £52,241 on the main range for 2026/27, with U3 reaching £58,119. This page lists every point, maps out which boroughs fall in the band, and shows where the outer-London premium is genuinely worth more than its inner sibling once housing costs enter the picture.",
+      "Outer London sits between the capital's two extremes: £39,196 to £52,241 on the main range for 2026/27, with U3 reaching £58,120. This page lists every point, maps out which boroughs fall in the band, and shows where the outer-London premium is genuinely worth more than its inner sibling once housing costs enter the picture.",
     keyTakeaways: [
       "Outer London main range 2026/27: £39,196 (M1) to £52,241 (M6).",
-      "Upper range runs £54,047 (U1) to £58,119 (U3).",
+      "Upper range runs £54,047 (U1) to £58,120 (U3).",
       "The premium over the rest of England is roughly £5,100 at M1 and £5,300 at M6.",
       "Outer London trails inner London by £2,533 to £6,564 depending on the point.",
       "Unqualified teachers earn £27,727 to £40,831; leadership endpoints reach £153,041.",
@@ -841,10 +841,10 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "Outer London main pay range 2026/27" },
       { kind: "table", caption: "Main Pay Range — outer London vs neighbours, 2026/27", head: ["Point", "Outer London", "Inner London", "Fringe"], rows: [
         ["M1", "£39,196", "£41,729", "£35,602"],
-        ["M2", "£41,246", "£43,712", "£37,646"],
-        ["M3", "£43,403", "£45,786", "£39,979"],
+        ["M2", "£41,246", "£43,713", "£37,647"],
+        ["M3", "£43,403", "£45,787", "£39,979"],
         ["M4", "£45,673", "£47,961", "£42,513"],
-        ["M5", "£48,438", "£50,665", "£45,069"],
+        ["M5", "£48,438", "£50,666", "£45,070"],
         ["M6", "£52,241", "£54,131", "£48,479"],
       ]},
       { kind: "p", text: "Against the rest of England (£34,069–£46,940), the outer-London premium runs from £5,127 at M1 to £5,302 at M6." },
@@ -853,11 +853,11 @@ export const payScalePages: PageContent[] = [
       { kind: "table", caption: "All outer London ranges 2026/27", head: ["Range", "Minimum", "Maximum"], rows: [
         ["Unqualified (UQ1–UQ6)", "£27,727", "£40,831"],
         ["Main (M1–M6)", "£39,196", "£52,241"],
-        ["Upper (U1–U3)", "£54,047", "£58,119"],
-        ["Lead Practitioner", "£58,119", "£86,136"],
+        ["Upper (U1–U3)", "£54,047", "£58,120"],
+        ["Lead Practitioner", "£58,120", "£86,136"],
         ["Leadership Group (L1–L43)", "£57,837", "£153,041"],
       ]},
-      { kind: "p", text: "Note the overlap at £58,119: the top of the upper range equals the bottom of lead practitioner — a natural next step for classroom teachers who want progression without management. The [leadership spine](/leadership-pay-scale/) starts just below it." },
+      { kind: "p", text: "Note the overlap at £58,120: the top of the upper range equals the bottom of lead practitioner — a natural next step for classroom teachers who want progression without management. The [leadership spine](/leadership-pay-scale/) starts just below it." },
 
       { kind: "h2", text: "The value case versus inner London" },
       { kind: "p", text: "Outer London pays up to £6,564 less than inner London (at U3), but rents in boroughs like Bexley, Sutton or Havering often undercut central zones by far more than that. For many teachers the outer band is the sweet spot:" },
@@ -884,7 +884,7 @@ export const payScalePages: PageContent[] = [
         ["M1", "£39,196", "≈£3,266"],
         ["M4", "£45,673", "≈£3,806"],
         ["M6", "£52,241", "≈£4,353"],
-        ["U3", "£58,119", "≈£4,843"],
+        ["U3", "£58,120", "≈£4,843"],
       ]},
       { kind: "h2", text: "Comparing two offers: a worked example" },
       { kind: "p", text: "Take an M4 teacher choosing between a Sutton school (outer London, £45,673) and an Islington school (inner London, £47,961). The gross gap is £2,289. Outer-borough one-bed rents typically undercut Islington by substantially more than that annually, so the Sutton post wins on pure cash — until you price the commute, the catchment of opportunities, and inner London's larger threshold jump five years later (£5,518 there versus £1,806). The rational comparison spans a decade, not a year: our [inner London guide](/inner-london-teacher-pay-scale/) quantifies the other side of that trade." },
@@ -911,11 +911,11 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "Three situations generate disproportionate confusion. All-through schools spanning borough boundaries inherit one band from their main site; check which building anchors your contract. Split-site secondaries with distant annexes occasionally trigger internal placement debates — your contract's named base settles it, so read that clause before assuming. And teachers transferring from fringe schools frequently misreport their own history, quoting fringe rates as outer rates in applications; payroll cross-checks catch this eventually, but self-auditing first spares everyone the awkward correction letter. None of these alter entitlements — they merely delay them when documents go unread. The remedy costs five minutes: keep your original placement letters scanned, confirm your current band annually against the STPCD lists, and treat any unexplained payslip drift as a query rather than a rounding story." },
     ],
     faq: [
-      { question: "What is the outer London teacher pay scale for 2026/27?", answer: "The main range runs £39,196 (M1) to £52,241 (M6), the upper range £54,047 to £58,119, and unqualified points run £27,727 to £40,831. All figures include the 3.5% award effective 1 September 2026." },
+      { question: "What is the outer London teacher pay scale for 2026/27?", answer: "The main range runs £39,196 (M1) to £52,241 (M6), the upper range £54,047 to £58,120, and unqualified points run £27,727 to £40,831. All figures include the 3.5% award effective 1 September 2026." },
       { question: "How much do outer London teachers earn compared to elsewhere?", answer: "Between roughly £5,100 and £5,300 more than rest-of-England equivalents on the main range, but £2,400 to £2,600 less than inner London. The fringe band sits another £3,400 or so below outer London." },
       { question: "Which boroughs count as outer London?", answer: "The suburban ring including Barnet, Brent, Bromley, Croydon, Ealing, Enfield, Greenwich, Harrow, Havering, Hillingdon, Hounslow, Kingston, Merton, Redbridge, Richmond, Sutton and Waltham Forest. Always verify against current STPCD definitions before accepting a post." },
       { question: "Is outer London teaching pay worth it compared to inner London?", answer: "Often yes after housing. You sacrifice up to £6,564 gross against inner London, but outer-borough rents typically undercut central ones by more than that, especially for family-sized homes." },
-      { question: "What does a UPS3 teacher earn in outer London?", answer: "£58,119 for 2026/27 — the highest standard classroom rate outside inner London, and identical to the lead practitioner range minimum in this band." },
+      { question: "What does a UPS3 teacher earn in outer London?", answer: "£58,120 for 2026/27 — the highest standard classroom rate outside inner London, and identical to the lead practitioner range minimum in this band." },
       { question: "Does the outer London weighting apply if I live outside London?", answer: "Yes. Only the school's location matters. Teaching in an outer London borough while living in Kent or Essex still entitles you to the full outer London rate." },
       { question: "Do allowances rise with the London band?", answer: "TLR and SEN allowance minimums and maximums are national values, not regional. A TLR 1 pays between £10,531 and £17,819 anywhere in England — schools choose where within that span your payment sits." },
       { question: "What happens if my school changes band?", answer: "Your rate follows the school's current band. Boundary redefinitions are rare, but academy conversions and relocations can effectively change which scale applies — check your contract's variation clause." },
@@ -972,10 +972,10 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "Fringe main pay range 2026/27" },
       { kind: "table", caption: "Main Pay Range — fringe vs rest of England, 2026/27", head: ["Point", "Fringe", "Rest of England", "Premium"], rows: [
         ["M1", "£35,602", "£34,069", "+£1,534"],
-        ["M2", "£37,646", "£36,042", "+£1,604"],
+        ["M2", "£37,647", "£36,042", "+£1,604"],
         ["M3", "£39,979", "£38,400", "+£1,579"],
         ["M4", "£42,513", "£40,941", "+£1,573"],
-        ["M5", "£45,069", "£43,529", "+£1,540"],
+        ["M5", "£45,070", "£43,529", "+£1,540"],
         ["M6", "£48,479", "£46,940", "+£1,539"],
       ]},
       { kind: "p", text: "The premium is deliberately small — around £1,500 — reflecting locations where commuting to London is possible but housing is not yet priced at capital levels. Compare that with [outer London's](/outer-london-teacher-pay-scale/) £5,100+ or [inner London's](/inner-london-teacher-pay-scale/) £7,600+." },
@@ -1006,9 +1006,9 @@ export const payScalePages: PageContent[] = [
       ]},
 
       { kind: "h2", text: "Three offers, three bands: a concrete comparison" },
-      { kind: "p", text: "Consider identical M2 teachers in Gravesham (fringe, £37,646), Bexley (outer London, £41,246) and Leeds (rest of England, £36,042):" },
+      { kind: "p", text: "Consider identical M2 teachers in Gravesham (fringe, £37,647), Bexley (outer London, £41,246) and Leeds (rest of England, £36,042):" },
       { kind: "table", caption: "Same teacher, three locations (M2, 2026/27)", head: ["Location", "Band", "Salary", "vs Leeds"], rows: [
-        ["Gravesham, Kent", "Fringe", "£37,646", "+£1,604"],
+        ["Gravesham, Kent", "Fringe", "£37,647", "+£1,604"],
         ["Leeds", "Rest of England", "£36,042", "—"],
         ["Bexley, London", "Outer London", "£41,246", "+£5,204"],
       ]},
@@ -1046,7 +1046,7 @@ export const payScalePages: PageContent[] = [
       { question: "Where does the London fringe pay band apply?", answer: "To listed commuting-belt districts outside inner and outer London — including much of Essex and Hertfordshire, Dartford and Gravesham in Kent, Slough, Spelthorne, Crawley and other named districts in the STPCD. District boundaries, not postcodes or the M25, decide inclusion." },
       { question: "How much is the fringe premium?", answer: "About £1,500 a year across the main range — £1,534 at M1 rising to £1,539 at M6 over rest-of-England rates. Outer London pays roughly £3,600 more than the fringe at the bottom of the range." },
       { question: "Is Dartford in the London fringe for teacher pay?", answer: "Yes. Dartford and Gravesham are the two Kent districts in the fringe band, which is why searches about Gravesend's status appear so often. Neighbouring Kent districts remain on the national rates." },
-      { question: "What does a UPS3 teacher earn on the fringe?", answer: "£54,328 for 2026/27 — above the rest-of-England figure of £52,835 but well below outer London's £58,119." },
+      { question: "What does a UPS3 teacher earn on the fringe?", answer: "£54,328 for 2026/27 — above the rest-of-England figure of £52,835 but well below outer London's £58,120." },
       { question: "Do I get fringe pay if I live in Essex but teach elsewhere?", answer: "No. Your rate follows the school's location, not your home. Teaching in a non-fringe area while living in Basildon pays national rates; teaching in a fringe district while living anywhere pays fringe rates." },
       { question: "Can my school pay me outside the fringe range?", answer: "Maintained schools must use the statutory ranges but can place you flexibly within them and add recruitment or retention payments. Academies have wider freedom, though nearly all track the statutory points." },
       { question: "How close is fringe pay to outer London?", answer: "Noticeably below: £3,593 separates the bands at M1 and £3,763 at M6. That gap is the practical price of moving one band outward toward the capital." },
@@ -1091,16 +1091,16 @@ export const payScalePages: PageContent[] = [
       { kind: "h2", text: "The three London bands side by side" },
       { kind: "table", caption: "Teacher pay scale London 2026/27 — main range by band", head: ["Point", "Inner London", "Outer London", "Fringe"], rows: [
         ["M1", "£41,729", "£39,196", "£35,602"],
-        ["M2", "£43,712", "£41,246", "£37,646"],
-        ["M3", "£45,786", "£43,403", "£39,979"],
+        ["M2", "£43,713", "£41,246", "£37,647"],
+        ["M3", "£45,787", "£43,403", "£39,979"],
         ["M4", "£47,961", "£45,673", "£42,513"],
-        ["M5", "£50,665", "£48,438", "£45,069"],
+        ["M5", "£50,666", "£48,438", "£45,070"],
         ["M6", "£54,131", "£52,241", "£48,479"],
       ]},
       { kind: "table", caption: "Upper range by band, 2026/27", head: ["Point", "Inner London", "Outer London", "Fringe"], rows: [
         ["U1", "£59,650", "£54,047", "£50,625"],
         ["U2", "£62,581", "£56,047", "£52,442"],
-        ["U3", "£64,684", "£58,119", "£54,328"],
+        ["U3", "£64,684", "£58,120", "£54,328"],
       ]},
       { kind: "p", text: "For comparison, the rest of England runs £34,069–£46,940 on the main range — details in our national [teacher pay scale guide](/teacher-pay-scale/)." },
 
@@ -1229,7 +1229,7 @@ export const payScalePages: PageContent[] = [
       "Upper range matches too: £49,134 to £52,835, threshold mechanics included.",
       "Wales negotiates through the Independent Welsh Pay Review Body (IWPRB), not England's STRB.",
       "No London bands exist in Wales — one national scale covers the whole country.",
-      "Leadership endpoints reach £148,829 (L43); lead practitioner £81,860.",
+      "Leadership endpoints reach £148,829 (L43); lead practitioner £81,861.",
     ],
     blocks: [
       { kind: "h2", text: "How Welsh teacher pay is decided" },
@@ -1252,8 +1252,8 @@ export const payScalePages: PageContent[] = [
         ["Unqualified (UQ1–UQ6)", "£23,732", "£36,494"],
         ["Main (M1–M6)", "£34,069", "£46,940"],
         ["Upper (U1–U3)", "£49,134", "£52,835"],
-        ["Lead Practitioner", "£53,847", "£81,860"],
-        ["Leadership Group (L1–L43)", "£53,585", "£148,829"],
+        ["Lead Practitioner", "£53,847", "£81,861"],
+        ["Leadership Group (L1–L43)", "£53,586", "£148,829"],
       ]},
       { kind: "p", text: "Threshold progression from M6 to U1 adds **£2,195** immediately, exactly as in England — the [upper pay range rules](/upper-pay-range/) apply unchanged." },
 
@@ -1279,8 +1279,8 @@ export const payScalePages: PageContent[] = [
 
       { kind: "h2", text: "Practitioner and leadership pay in Wales" },
       { kind: "table", caption: "Beyond-the-classroom ranges, Wales 2026/27", head: ["Range", "Minimum", "Maximum"], rows: [
-        ["Lead Practitioner", "£53,847", "£81,860"],
-        ["Leadership Group (L1–L43)", "£53,585", "£148,829"],
+        ["Lead Practitioner", "£53,847", "£81,861"],
+        ["Leadership Group (L1–L43)", "£53,586", "£148,829"],
         ["TLR 1", "£10,531", "£17,819"],
         ["SEN allowance", "£2,885", "£5,690"],
       ]},
@@ -1328,10 +1328,10 @@ export const payScalePages: PageContent[] = [
       { question: "Is Welsh teacher pay the same as England?", answer: "Currently yes, point for point. But the amounts are set by Wales's own Independent Welsh Pay Review Body, whose current recommendation happens to mirror the STPCD — future divergence is possible." },
       { question: "Who decides teacher pay rises in Wales?", answer: "The Independent Welsh Pay Review Body recommends awards to the Welsh Government, which decides the final settlement. This is separate from England's STRB process even though recent outcomes have matched." },
       { question: "Do Welsh schools pay London weighting?", answer: "No. Wales has a single national scale with no regional banding, so a teacher in Cardiff earns the same as one in Caernarfon at the same point." },
-      { question: "What does an experienced teacher earn in Wales?", answer: "UPS3 classroom teachers earn £52,835. Lead practitioner roles reach up to £81,860, and the leadership spine tops out at £148,829 for the largest headship posts." },
+      { question: "What does an experienced teacher earn in Wales?", answer: "UPS3 classroom teachers earn £52,835. Lead practitioner roles reach up to £81,861, and the leadership spine tops out at £148,829 for the largest headship posts." },
       { question: "How does Welsh teacher pay compare with Scotland?", answer: "Scotland's nearest main-range equivalents run slightly higher (£34,539–£48,516 versus £34,069–£46,940) and include a Chartered Teacher grade at £52,539 in place of Wales's upper range structure." },
       { question: "Do unqualified teachers in Wales use the same range?", answer: "Yes — £23,732 (UQ1) to £36,494 (UQ6), mirroring the England & Wales figures, with placement and progression governed by school pay policies." },
-      { question: "Are TLR payments different in Wales?", answer: "The statutory allowance ranges match England: TLR 1 pays £10,531–£17,819, TLR 2 £3,650–£8,913, TLR 3 £727–£3,600 and SEN allowances £2,885–£5,690, all pensionable." },
+      { question: "Are TLR payments different in Wales?", answer: "The statutory allowance ranges match England: TLR 1 pays £10,531–£17,819, TLR 2 £3,651–£8,913, TLR 3 £727–£3,600 and SEN allowances £2,885–£5,690, all pensionable." },
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -1601,7 +1601,7 @@ export const payScalePages: PageContent[] = [
     intro:
       "The National Education Union publishes the most-used pay scale tables in English teaching — its 'Pay scales – England' page draws tens of thousands of visits every autumn. This guide explains what the NEU actually publishes, why its figures match the STPCD, and where union pay advice adds value beyond raw numbers.",
     keyTakeaways: [
-      "NEU pay scale figures mirror the statutory STPCD points — £34,069 to £46,940 on the main range for 2026/27.",
+      "NEU pay scale figures mirror the government-accepted advisory points — £34,069 to £46,940 on the main range for 2026/27.",
       "The union republishes tables after each STRB settlement, typically around September.",
       "NEU pay advice extends beyond tables into progression disputes, threshold appeals and pay policy reviews.",
       "Union membership is not required to be paid statutory rates — they apply regardless.",
@@ -1614,8 +1614,8 @@ export const payScalePages: PageContent[] = [
         ["Main (M1–M6)", "£34,069", "£46,940"],
         ["Upper (U1–U3)", "£49,134", "£52,835"],
         ["Unqualified (UQ1–UQ6)", "£23,732", "£36,494"],
-        ["Lead Practitioner", "£53,847", "£81,860"],
-        ["Leadership (L1–L43)", "£53,585", "£148,829"],
+        ["Lead Practitioner", "£53,847", "£81,861"],
+        ["Leadership (L1–L43)", "£53,586", "£148,829"],
       ]},
       { kind: "p", text: "These match our [full UK pay scale](/teacher-pay-scale/) exactly because both derive from the same statutory document — the union is restating STPCD values, not setting independent rates." },
 
@@ -1641,7 +1641,7 @@ export const payScalePages: PageContent[] = [
         ["M1", "≈£32,916", "£34,069", "+3.5%"],
         ["M6", "≈£45,352", "£46,940", "+3.5%"],
         ["U3", "≈£51,048", "£52,835", "+3.5%"],
-        ["TLR 2 minimum", "≈£3,527", "£3,650", "+3.5%"],
+        ["TLR 2 minimum", "≈£3,527", "£3,651", "+3.5%"],
       ]},
       { kind: "p", text: "Every line moved by the uniform 3.5%, confirming the union simply uprated statutory values rather than negotiating separate amounts." },
 
@@ -1994,7 +1994,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
       { kind: "p", text: "Each answer depends on the same foundation — knowing precisely which rate applied when — which is exactly what this archive preserves. Bookmark it alongside the [current-year tables](/teacher-pay-scale-2026-27/) and the audit habits from our pillar [scale guide](/teacher-pay-scale/), and historical salary questions stop being archaeology." },
 
       { kind: "h2", text: "A worked reconciliation, start to finish" },
-      { kind: "p", text: "Consider a concrete case: an M5 fringe teacher during the transition year. Their 2026 statement quotes pensionable pay of £45,069 — matching the derived 2025/26 fringe M5 value almost exactly once rounding settles, confirming the statement used prior-year rates correctly. Dividing by fifty-seven gives roughly £791 of annual pension built that year. Cross-checking the payslips shows twelve monthly contributions consistent with the applicable tier percentage applied to that same figure. Everything reconciles in fifteen minutes because each document was matched to its correct year's table. Now invert the failure mode: had the teacher compared against current-year rates, every line would look wrong and none would be. Matching document to date first, numbers second, is the entire discipline this archive exists to support." },
+      { kind: "p", text: "Consider a concrete case: an M5 fringe teacher during the transition year. Their 2026 statement quotes pensionable pay of £45,070 — matching the derived 2025/26 fringe M5 value almost exactly once rounding settles, confirming the statement used prior-year rates correctly. Dividing by fifty-seven gives roughly £791 of annual pension built that year. Cross-checking the payslips shows twelve monthly contributions consistent with the applicable tier percentage applied to that same figure. Everything reconciles in fifteen minutes because each document was matched to its correct year's table. Now invert the failure mode: had the teacher compared against current-year rates, every line would look wrong and none would be. Matching document to date first, numbers second, is the entire discipline this archive exists to support." },
 
       { kind: "h2", text: "Who still needs this page" },
       { kind: "ul", items: [
@@ -2067,7 +2067,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
       { kind: "h2", text: "Where experienced classroom teachers earn most" },
       { kind: "table", caption: "Top of the standard classroom route by region, 2026/27", head: ["Region", "Top main point", "Experienced ceiling"], rows: [
         ["Inner London", "£54,131 (M6)", "£64,684 (U3)"],
-        ["Outer London", "£52,241 (M6)", "£58,119 (U3)"],
+        ["Outer London", "£52,241 (M6)", "£58,120 (U3)"],
         ["London Fringe", "£48,479 (M6)", "£54,328 (U3)"],
         ["Scotland", "£48,516 (pt 6)", "£52,539 (Chartered Teacher)"],
         ["Rest of England & Wales", "£46,940 (M6)", "£52,835 (U3)"],
@@ -2080,7 +2080,7 @@ answer: "NASUWT publishes a dedicated NI table reflecting the Northern Ireland s
         ["Inner London", "£63,708", "£158,862"],
         ["Outer London", "£57,837", "£153,041"],
         ["London Fringe", "£55,060", "£150,301"],
-        ["England (rest of) & Wales", "£53,585", "£148,829"],
+        ["England (rest of) & Wales", "£53,586", "£148,829"],
       ]},
       { kind: "p", text: "Scotland and Northern Ireland run separate leadership arrangements outside this spine, structured around school size rather than a single national ladder — see our [leadership pay guide](/leadership-pay-scale/) for the England & Wales detail." },
 

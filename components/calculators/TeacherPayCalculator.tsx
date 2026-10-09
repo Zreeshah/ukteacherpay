@@ -205,7 +205,7 @@ export default function TeacherPayCalculator({
               id="tp-tlr"
               className="field-input"
               inputMode="decimal"
-              placeholder="e.g. 3650"
+              placeholder="e.g. 3651"
               value={tlr}
               onChange={(e) => setTlr(e.target.value)}
             />
