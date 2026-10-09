@@ -12,6 +12,7 @@ import LgpsCalculator from "./calculators/LgpsCalculator";
 import PhasedRetirementCalculator from "./calculators/PhasedRetirementCalculator";
 import DeferredPensionCalculator from "./calculators/DeferredPensionCalculator";
 import CareerBreakCalculator from "./calculators/CareerBreakCalculator";
+import MaternityPayCalculator from "./calculators/MaternityPayCalculator";
 
 export default function CalculatorSlot({
   kind,
@@ -51,6 +52,8 @@ export default function CalculatorSlot({
       return <DeferredPensionCalculator />;
     case "career-break":
       return <CareerBreakCalculator />;
+    case "maternity":
+      return <MaternityPayCalculator />;
     default:
       return null;
   }

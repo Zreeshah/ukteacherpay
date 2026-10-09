@@ -32,7 +32,9 @@ require.extensions[".ts"] = function compileTypeScript(module, filename) {
 const { leadershipSpine, pointsForScale } = require(path.join(root, "data/teacher-pay-scales.ts"));
 const { tpsScheme } = require(path.join(root, "data/tax-rates.ts"));
 const { calculateTakeHome, tpsRate } = require(path.join(root, "lib/payroll.ts"));
+const { calculateMaternityPay, SMP_STANDARD_WEEKLY_2026 } = require(path.join(root, "lib/maternity.ts"));
 const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts"));
+const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
 
 const rateCases = [
   [36198.99, 0.074], [36199, 0.089], [48727.99, 0.089], [48728, 0.099],
@@ -75,6 +77,39 @@ assert.deepEqual(
 assert.equal(pointsForScale("leadership", "wales")[11]?.salary, 71507, "Wales L12");
 assert.equal(pointsForScale("lead-practitioner", "wales")[17]?.salary, 83295, "Wales LP18");
 
+assert.equal(SMP_STANDARD_WEEKLY_2026, 194.32, "2026/27 SMP standard weekly rate");
+const maternityFull = calculateMaternityPay({
+  annualSalary: 40941,
+  burgundyBookApplies: true,
+  hasOneYearTeachingService: true,
+  has26WeeksCurrentEmployment: true,
+});
+assert.equal(maternityFull.route, "full-burgundy-smp", "full Burgundy Book route");
+assert.equal(maternityFull.periods.length, 4, "full route period count");
+assert.equal(maternityFull.periods[2].weeklyAmount, 587.98, "half pay plus SMP capped below full pay");
+assert.equal(maternityFull.potentialHalfPayRepayment, 4723.96, "half-pay repayment estimate");
+
+const maternitySmpOnly = calculateMaternityPay({
+  annualSalary: 40941,
+  burgundyBookApplies: true,
+  hasOneYearTeachingService: false,
+  has26WeeksCurrentEmployment: true,
+});
+assert.equal(maternitySmpOnly.route, "smp-only", "SMP-only route");
+assert.equal(maternitySmpOnly.periods[0].weeklyAmount, 708.59, "first six SMP weeks at 90%");
+
+const maternityMa = calculateMaternityPay({
+  annualSalary: 40941,
+  burgundyBookApplies: false,
+  hasOneYearTeachingService: false,
+  has26WeeksCurrentEmployment: false,
+});
+assert.equal(maternityMa.route, "ma-only", "Maternity Allowance route");
+assert.equal(maternityMa.estimatedTotal, undefined, "do not guess Maternity Allowance");
+
+const maternityPage = policyPages.find((page) => page.slug === "teacher-maternity-pay");
+assert.equal(maternityPage?.calculator, "maternity", "maternity guide must retain the calculator on its existing URL");
+
 const assistantHead = leadershipPages.find((page) => page.slug === "assistant-head-teacher-salary");
 assert.ok(assistantHead, "assistant-head page exists");
 const regionalTable = assistantHead.blocks.find(
@@ -89,4 +124,4 @@ assert.deepEqual(regionalTable?.rows, [
   ["L14", "£73,827", "£75,310", "£78,074", "£83,960"],
 ], "assistant-head regional table must match source data");
 
-console.log("Teacher-pay verification passed.");
+console.log("Teacher-pay and maternity verification passed.");

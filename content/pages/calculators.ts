@@ -110,7 +110,17 @@ export const calculatorPages: PageContent[] = [
         ["TLR 3 (fixed term)", "£727", "£3,600"],
         ["SEN allowance", "£2,885", "£5,690"],
       ]},
-      { kind: "callout", tone: "warn", title: "TLR 3 is not pensionable in the same way", text: "TLR 3 payments are fixed-term and time-limited. They count for pension while you receive them but they stop when the project ends, so do not build long-term plans around one." },
+      { kind: "callout", tone: "warn", title: "TLR 3 is temporary", text: "TLR 3 payments are fixed-term and time-limited. They count for pension while you receive them but stop when the project ends, so do not build long-term plans around one." },
+
+      { kind: "h2", text: "Teacher salary calculator: four scenarios worth checking" },
+      { kind: "p", text: "A headline salary rarely answers the practical question. Before a September pay change, reduced timetable, responsibility post or loan repayment starts, run the two situations side by side. The difference in take-home pay is not simply the difference in gross salary because the pension tier, income-tax bands, National Insurance and loan thresholds can all move." },
+      { kind: "table", caption: "How to model the common teacher salary decisions", head: ["If you are deciding…", "Set in the calculator", "Check in the result"], rows: [
+        ["Whether to go part time", "Keep the same region, scale and point; change employment to 80, 60 or 50 FTE", "Gross annual pay, the TPS tier based on actual earnings, and the monthly figure you need to replace"],
+        ["Whether a TLR is worth it", "Add the annual TLR amount while keeping your normal FTE", "The net monthly gain, not just the headline TLR; it also changes pensionable earnings"],
+        ["How a new loan plan affects a promotion", "Keep the proposed salary and select your Student Loan and Postgraduate Loan where relevant", "Repayments triggered above the plan threshold, alongside the higher-rate tax position"],
+        ["What a September pay-point move changes", "Compare the current point with the next point on the same scale", "Annual and monthly take-home difference, then budget for it only from the pay date your school confirms"],
+      ]},
+      { kind: "p", text: "For a clean comparison, change one assumption at a time and save the annual as well as monthly result. The calculator estimates a steady full-year position. A real mid-year change can produce a different first payslip because PAYE, arrears and payroll timing are cumulative." },
 
       { kind: "h2", text: "Common mistakes when working out teacher take-home pay" },
       { kind: "ul", items: [
@@ -134,7 +144,8 @@ export const calculatorPages: PageContent[] = [
       { question: "How do I work out 0.6 part-time teacher pay?", answer: "Multiply the full-time figure for your pay point by 0.6. On M4 in the rest of England that is £40,941 × 0.6 = £24,564 gross. Set the FTE field to 60 in the calculator to see the take-home figure with all deductions applied." },
       { question: "Are TLR payments pensionable?", answer: "Yes. TLR 1, TLR 2 and SEN allowances all count as pensionable pay, so they increase the pension you build up as well as your salary. TLR 3 is pensionable while you receive it but is fixed-term by design." },
       { question: "What tax code do most teachers have?", answer: "1257L is the standard code, giving the full £12,570 personal allowance. If you have a different code — because of a company benefit, underpaid tax from a previous year, or a second job — your take-home pay will differ from this estimate." },
-      { question: "When do teacher pay rises take effect?", answer: "Teacher pay awards normally run from 1 September, in line with the school year. For England, the Government accepted a 3.5% 2026/27 award from 1 September 2026; the published points remain advisory until the relevant Pay Order is in force." }
+      { question: "When do teacher pay rises take effect?", answer: "Teacher pay awards normally run from 1 September, in line with the school year. For England, the Government accepted a 3.5% 2026/27 award from 1 September 2026; the published points remain advisory until the relevant Pay Order is in force." },
+      { question: "How do I compare a TLR, promotion or part-time change?", answer: "Run the current position first, then change only one input: FTE, pay point, TLR, SEN payment or loan. Compare the annual and monthly take-home figures, not gross salary alone. A real first payslip after a mid-year change can differ because PAYE and arrears are cumulative." }
     ],
     sources: SOURCES,
     updated: UPDATED,

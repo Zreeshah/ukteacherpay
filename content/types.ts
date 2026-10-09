@@ -35,6 +35,7 @@ export type CalculatorKind =
   | "phased-retirement"
   | "deferred-pension"
   | "career-break"
+  | "maternity"
   | "none";
 
 export interface SourceRef {
