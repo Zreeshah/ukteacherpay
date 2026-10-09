@@ -24,7 +24,7 @@ export const policyPages: PageContent[] = [
     intro:
       "A teacher pay rise does not arrive by accident or negotiation. It follows a fixed annual cycle: an independent review body takes evidence and recommends, the Secretary of State decides, and the new figures are published in the School Teachers' Pay and Conditions Document (STPCD), effective from 1 September. For 2026/27 that award was **3.5%**, applied to every pay point on the national scale. This guide explains who decides what, when the money actually lands in your payslip, why your personal increase is often bigger than the headline percentage, and what the award means in cash at each point of the [teacher pay scale](/teacher-pay-scale/).",
     keyTakeaways: [
-      "The 2026/27 STPCD award was 3.5%, applied to every pay point from 1 September 2026.",
+      "The government accepted a 3.5% September 2026 award for advisory pay points, except for a 5% Rest-of-England UQ1 increase; the Pay Order is due in October 2026.",
       "Teacher pay awards run with the school year (1 September), not with the April tax year.",
       "Your own increase is usually larger than the headline figure because scale progression is applied on top of the award.",
       "The School Teachers' Review Body (STRB) recommends, but the Secretary of State makes the final decision and can depart from it.",
@@ -54,11 +54,11 @@ export const policyPages: PageContent[] = [
       { kind: "callout", tone: "info", title: "School year, not tax year", text: "Unlike almost every other public sector award, teacher pay rises take effect on 1 September rather than 1 April. That means the award crosses two financial years, and your P60 for any given tax year blends two different salaries." },
 
       { kind: "h2", text: "The 2026/27 award: 3.5% from 1 September" },
-      { kind: "p", text: "For 2026/27 the government accepted the STRB's recommendation of **3.5%** and applied it to every point of every range — main, upper, unqualified, lead practitioner and leadership. Because the award is percentage-based, the cash value grows as you move up the scale. Here is what it means at the points most teachers occupy." },
+      { kind: "p", text: "For 2026/27 the government accepted the STRB's recommendation of **3.5%** for all advisory points other than Rest-of-England UQ1, which receives **5%**. The Pay Order is due in October 2026, so these are government-accepted advisory points, not described here as in force before it is laid. Because the award is percentage-based, the cash value grows as you move up the scale. Here is what it means at the points most teachers occupy." },
       { kind: "table", caption: "What the 3.5% award is worth in cash (England, excluding London)", head: ["Pay point", "2025/26 salary", "2026/27 salary", "Cash increase"], rows: [
-        ["M1", "£32,916", "£34,068", "+£1,152"],
-        ["M4", "£39,556", "£40,940", "+£1,384"],
-        ["M6", "£45,352", "£46,939", "+£1,587"],
+        ["M1", "£32,916", "£34,069", "+£1,152"],
+        ["M4", "£39,556", "£40,941", "+£1,384"],
+        ["M6", "£45,352", "£46,940", "+£1,587"],
         ["U3", "£51,058", "£52,835", "+£1,777"],
         ["L12 (indicative)", "≈£72,468", "≈£75,000", "+£2,500 approx"],
       ]},
@@ -67,7 +67,7 @@ export const policyPages: PageContent[] = [
 
       { kind: "h2", text: "Why your rise is bigger than the headline" },
       { kind: "p", text: "Most teachers receive two increases in the same September: the national award **and** movement up the scale. Teachers on the main pay range normally progress one point each year until they reach M6, subject to performance arrangements in the school's pay policy. The two stack multiplicatively." },
-      { kind: "p", text: "Take a teacher moving from M3 to M4 in September 2026. M3 was £38,400 after last year's award; applying 3.5% gives £39,744, and the move to the new M4 point takes them to £40,940. Their actual rise is about **6.6%**, not 3.5%. This stacking effect is why many teachers feel the headline number understates their own experience — and why teachers already at the top of the upper pay range feel the opposite, since they get the flat award only unless they successfully apply for UPS progression or a leadership role." },
+      { kind: "p", text: "Take a teacher moving from M3 to M4 in September 2026. M3 was £38,400 after last year's award; applying 3.5% gives £39,744, and the move to the new M4 point takes them to £40,941. Their actual rise is about **6.6%**, not 3.5%. This stacking effect is why many teachers feel the headline number understates their own experience — and why teachers already at the top of the upper pay range feel the opposite, since they get the flat award only unless they successfully apply for UPS progression or a leadership role." },
       { kind: "p", text: "Supply teachers, and anyone paid pro-rata on the daily rate calculated from the scale, see the same percentage flow through their day rate once the STPCD updates." },
 
       { kind: "h2", text: "Recent awards in context" },
@@ -104,7 +104,7 @@ export const policyPages: PageContent[] = [
     faq: [
       { question: "When does the teacher pay rise start?", answer: "The award takes effect on 1 September, the start of the school year. Depending on your school's payroll cut-off, it may appear on your September payslip or arrive as arrears in October or November." },
       { question: "When will the next teacher pay rise be announced?", answer: "In a typical year the STRB report and government decision arrive between March and July, and the updated STPCD is published in late August. The 2026/27 round was settled earlier than usual because it formed part of a two-year deal announced in summer 2026." },
-      { question: "What is the teacher pay rise for 2026?", answer: "3.5%, applied to every point of every pay range in the 2026/27 STPCD from 1 September 2026. On the England main scale that lifts M1 to £34,068 and M6 to £46,939." },
+      { question: "What is the teacher pay rise for 2026?", answer: "The government-accepted September 2026 advisory award is 3.5%, except for a 5% Rest-of-England UQ1 increase; the Pay Order is due in October 2026. On the England main scale that lifts M1 to £34,069 and M6 to £46,940." },
       { question: "Will there be a teacher pay rise in 2027?", answer: "Yes. The 2026 settlement was a two-year deal worth around 6.6% across both years, which implies a further award of roughly 3% in September 2027. The exact figure will be confirmed in the 2027/28 STPCD." },
       { question: "Why is my pay rise bigger than 3.5%?", answer: "Because scale progression stacks on top of the award. A teacher moving up one point on the main pay range in the same September receives the 3.5% award plus the point increase — typically 6% to 7% in total." },
       { question: "Do academies have to give the pay rise?", answer: "Not legally. Academies are exempt from the STPCD's pay provisions, but most trusts adopt the national award voluntarily and many reference it in employment contracts. Check your trust's pay policy." },
@@ -119,7 +119,7 @@ export const policyPages: PageContent[] = [
       { label: "School Teachers' Review Body (STRB) — reports and remit letters", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
       { label: "NEU — Teachers' pay award advice", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/teachers-pay-award" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
   },
   // ------------------------------------------------------------ 2026/27
   {
@@ -141,59 +141,59 @@ export const policyPages: PageContent[] = [
     intro:
       "The 2026/27 teacher pay rise was confirmed at **3.5%**, applied to every point of every range in the School Teachers' Pay and Conditions Document from 1 September 2026. It forms part one of a two-year deal worth around 6.6% in total. This page gives you the exact new figures — main scale, upper scale, unqualified range and leadership spine, across England's four regional bands — plus when the money arrives and what it looks like after tax.",
     keyTakeaways: [
-      "The 2026/27 award is 3.5%, effective 1 September 2026, for maintained schools in England and Wales.",
-      "M1 rises to £34,068 and M6 to £46,939 in the rest of England; inner London M1 reaches £41,728.",
+      "England's government-accepted advisory award is 3.5% from September 2026, except for a 5% Rest-of-England UQ1 increase. Wales has a separate process.",
+      "M1 rises to £34,069 and M6 to £46,940 in the rest of England; inner London M1 reaches £41,729.",
       "The award stacks with progression: moving up a point plus 3.5% typically delivers 6% to 7%.",
       "The settlement covers two years: around 6.6% combined across 2026/27 and 2027/28.",
       "Academies do not have to apply the STPCD, though most trusts choose to mirror it.",
     ],
     blocks: [
       { kind: "h2", text: "What was confirmed, and when" },
-      { kind: "p", text: "The Department for Education accepted the School Teachers' Review Body's recommendation of a 3.5% increase and published the updated STPCD ahead of the new school year. The announcement was packaged as a multi-year deal: government communications described it as teachers benefiting from a two-year settlement worth roughly 6.6% across 2026/27 and 2027/28, which implies close to 3% more in September 2027. The legally binding figure for this year is the 3.5% printed in the current STPCD." },
+      { kind: "p", text: "The Department for Education accepted the School Teachers' Review Body's recommendation of a 3.5% increase and published government-accepted advisory pay points ahead of the new school year. The announcement was packaged as a multi-year deal: government communications described it as teachers benefiting from a two-year settlement worth roughly 6.6% across 2026/27 and 2027/28, which implies close to 3% more in September 2027. The 2026 Pay Order is due in October 2026; until it is laid, these are government-accepted advisory figures rather than points described here as in force." },
       { kind: "p", text: "If you want the mechanics behind the number — who recommends, who decides and why September rather than April — our [guide to how teacher pay rises work](/teacher-pay-rise/) covers the whole cycle." },
 
       { kind: "h2", text: "The new main pay scale for 2026/27" },
       { kind: "p", text: "Here is the full Main Pay Range for England outside London, with the previous year alongside so you can see exactly what changed." },
       { kind: "table", caption: "Main Pay Range 2025/26 vs 2026/27 (England, excluding London)", head: ["Point", "2025/26", "2026/27", "Increase"], rows: [
-        ["M1", "£32,916", "£34,068", "+£1,152"],
+        ["M1", "£32,916", "£34,069", "+£1,152"],
         ["M2", "£34,823", "£36,042", "+£1,219"],
         ["M3", "£37,101", "£38,400", "+£1,299"],
-        ["M4", "£39,556", "£40,940", "+£1,384"],
+        ["M4", "£39,556", "£40,941", "+£1,384"],
         ["M5", "£42,059", "£43,529", "+£1,470"],
-        ["M6", "£45,352", "£46,939", "+£1,587"],
+        ["M6", "£45,352", "£46,940", "+£1,587"],
       ]},
       { kind: "p", text: "Every other range received the same percentage uplift. The [full pay scale tables](/teacher-pay-scale/) list all regions, including the fringe and London allowances." },
 
       { kind: "h2", text: "Upper Pay Range and Unqualified Teacher Range 2026/27" },
       { kind: "table", caption: "Upper and unqualified ranges, rest of England", head: ["Range", "2025/26", "2026/27"], rows: [
         ["U1", "£47,474", "£49,134"],
-        ["U2", "£49,232", "£50,955"],
+        ["U2", "£49,232", "£50,956"],
         ["U3", "£51,058", "£52,835"],
-        ["Unqualified point 1", "£22,929", "£23,731"],
-        ["Unqualified point 6", "£35,258", "£36,493"],
+        ["Unqualified point 1", "£22,929", "£23,732"],
+        ["Unqualified point 6", "£35,258", "£36,494"],
       ]},
       { kind: "callout", tone: "info", title: "Top-of-scale teachers get the flat award only", text: "Teachers already on U3 receive the 3.5% uplift without any progression movement. That makes the headline feel smaller at the top of the scale — unless you add a TLR, SEN allowance or move into leadership, all of which were uplifted too." },
 
       { kind: "h2", text: "London and the fringe: regional values of the 2026 award" },
       { kind: "p", text: "Because the award is a flat percentage, its cash value grows with the regional weighting. The table shows M1 and M6 across England's pay bands after the 2026 uplift." },
       { kind: "table", caption: "M1 and M6 by region, 2026/27", head: ["Region", "M1", "M6"], rows: [
-        ["England (excluding London)", "£34,068", "£46,939"],
-        ["London fringe", "£35,602", "£48,478"],
-        ["Outer London", "£39,195", "£52,241"],
-        ["Inner London", "£41,728", "£54,131"],
+        ["England (excluding London)", "£34,069", "£46,940"],
+        ["London fringe", "£35,602", "£48,479"],
+        ["Outer London", "£39,196", "£52,241"],
+        ["Inner London", "£41,729", "£54,131"],
       ]},
 
       { kind: "h2", text: "When will the pay rise be paid?" },
       { kind: "p", text: "The new rates apply from **1 September 2026**. In practice, whether your September payslip reflects them depends on payroll cut-offs: many schools processed September before the STPCD was finalised, paying the difference as arrears in October or November instead. If your payslip still matches the old scale well into the autumn term, ask payroll which pay point you have been placed on and when arrears are scheduled — the [pay rise process guide](/teacher-pay-rise/) explains what to check." },
 
       { kind: "h2", text: "What 3.5% looks like after tax" },
-      { kind: "p", text: "Gross increases shrink through income tax, National Insurance and pension contributions. A mid-scale teacher moving from £39,556 to £40,940 keeps roughly £70–£75 a month of the £1,384 gross rise, depending on their pension tier and student loan plan. The exact figure varies because the Teachers' Pension Scheme tiers are banded: if the rise pushes your full-time equivalent salary over a tier boundary, the marginal take-home gain is smaller for that year. The [take-home pay calculator](/teacher-take-home-pay/) applies your actual deductions." },
+      { kind: "p", text: "Gross increases shrink through income tax, National Insurance and pension contributions. A mid-scale teacher moving from £39,556 to £40,941 keeps roughly £70–£75 a month of the £1,384 gross rise, depending on their pension tier and student loan plan. The exact figure varies because the Teachers' Pension Scheme tiers are banded: if the rise or pensionable allowances push annualised actual earnings over a tier boundary, the marginal take-home gain is smaller for that year. The [take-home pay calculator](/teacher-take-home-pay/) applies your actual deductions." },
 
       { kind: "h2", text: "Progression on top of the award" },
       { kind: "p", text: "Most teachers on the main range progress one point each September subject to their school's performance arrangements. Combined with the 3.5% award, that compounds: an M3-to-M4 mover in 2026 gained about £1,299 from the award component alone and finished on a point £3,839 higher than the year before once progression was included — an effective rise near 10%. Check your school's pay policy for its progression criteria, because academy trusts set their own rules even when they adopt national rates." },
 
       { kind: "h2", text: "Wales, Scotland and Northern Ireland" },
-      { kind: "p", text: "Wales applied the same 3.5% to its scale, which mirrors England's figures. Scotland negotiates separately through the SNCT, and its 2026/27 figures differ from the STPCD numbers above. Northern Ireland's negotiating machinery is separate again. If you work across borders or are comparing offers, compare against each nation's own published scale rather than assuming the English figures travel." },
+      { kind: "p", text: "Wales, Scotland and Northern Ireland each have separate pay-setting processes. Do not treat the English government-accepted advisory points as their scales. If you work across borders or are comparing offers, compare against each nation's own published scale rather than assuming the English figures travel." },
 
       { kind: "h2", text: "Does the 2026 award change allowances?" },
       { kind: "p", text: "Yes. The published ranges for teaching and learning responsibility (TLR) payments and SEN allowances were uplifted with the award: TLR1 now spans £10,530 to £17,819 and SEN allowances run from £2,885 to £5,689. Whether your personal allowance rises depends on your school applying the uplift within the range — the specific payment sits inside those boundaries and is set by the pay policy, not automatically." },
@@ -203,17 +203,17 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "The practical takeaway is to judge your own trajectory rather than any single year. A teacher who was M4 in September 2024 and progressed each year has compounded three awards with three progression moves, and their salary has grown far faster than either the awards or inflation alone. Teachers at the top of the upper range have experienced only the flat awards, which is why retention arguments increasingly focus on what happens after M6 and U3." },
 
       { kind: "h2", text: "Part-time and supply teachers" },
-      { kind: "p", text: "Part-time teachers on the national scale are paid the pro-rata point for their contracted hours, so the 3.5% uplift flows through automatically on the same terms as full-time colleagues. If you work 0.6 of a timetable on M4, your 2026/27 full-time-equivalent reference is £40,940 and your actual salary is 60% of it. One trap to watch: the TPS contribution tiers assess your full-time equivalent rate, not your actual pay, so part-time status changes your pension costs but not your tier." },
+      { kind: "p", text: "Part-time teachers on the national scale are paid the pro-rata point for their contracted hours, so the 3.5% uplift flows through automatically on the same terms as full-time colleagues. If you work 0.6 of a timetable on M4, your 2026/27 full-time-equivalent reference is £40,941 and your actual salary is 60% of it. TPS contribution tiers use the annual salary rate for the eligible employment, so actual pensionable earnings rather than the FTE reference determine the rate." },
       { kind: "p", text: "Supply teachers engaged through agencies on daily rates calculated from the STPCD should see day rates rise with the award once agencies update their systems — chasing this promptly matters, because backdated supply claims are harder to recover than salaried arrears. Directly employed cover supervisors and teachers on daily-rate contracts at maintained schools must be paid at least the statutory daily rate derived from the new scale." },
 
       { kind: "h2", text: "Planning around the next round" },
       { kind: "p", text: "With a multi-year deal in place, the 2027/28 figure is largely signposted rather than open. That makes this a good year to plan promotion moves deliberately: crossing into the upper pay range or the leadership spine compounds every future award. Our [financial planning hub](/teacher-financial-planning/) sets out how the pieces fit together, and the [leadership pay scale guide](/leadership-pay-scale/) shows what the L-spine pays." },
     ],
     faq: [
-      { question: "What is the teacher pay rise for 2026?", answer: "3.5%, applied to every pay point from 1 September 2026 under the 2026/27 STPCD. On the rest-of-England main scale, M1 becomes £34,068 and M6 becomes £46,939." },
+      { question: "What is the teacher pay rise for 2026?", answer: "3.5%, applied to every pay point from 1 September 2026 under the 2026/27 STPCD. On the rest-of-England main scale, M1 becomes £34,069 and M6 becomes £46,940." },
       { question: "When will the teacher pay rise be paid?", answer: "It takes effect from 1 September 2026. Some schools applied it to September payslips directly; others paid arrears in October or November depending on payroll cut-off dates." },
       { question: "Is there a teacher pay rise calculator for 2026/27?", answer: "Yes. Use the pay rise calculator on this site to see the 3.5% uplift applied to any pay point, including the effect on take-home pay after tax, National Insurance and pension contributions." },
-      { question: "How much is M4 after the 2026 pay rise?", answer: "£40,940 in England outside London, up £1,384 from £39,556. Fringe, outer London and inner London figures are higher." },
+      { question: "How much is M4 after the 2026 pay rise?", answer: "£40,941 in England outside London, up £1,384 from £39,556. Fringe, outer London and inner London figures are higher." },
       { question: "Will there be another pay rise in 2027?", answer: "The 2026 settlement was a two-year deal worth about 6.6% overall, implying roughly 3% for 2027/28. The exact figure will be confirmed in the next STPCD." },
       { question: "Do academies have to pay the 2026 rise?", answer: "Not legally. Academy trusts set their own pay policies, but most adopt the STPCD rates voluntarily. Check your trust's policy if your salary has not moved." },
       { question: "Did TLR and SEN allowances increase in 2026?", answer: "The published ranges were uplifted: TLR1 runs £10,530 to £17,819 and SEN allowances £2,885 to £5,689. Your individual payment depends on your school's pay policy within those ranges." },
@@ -228,7 +228,7 @@ export const policyPages: PageContent[] = [
       { label: "DfE Education Hub — teacher pay explained", url: "https://educationhub.blog.gov.uk/2026/07/teacher-pay-everything-you-need-to-know-about-the-latest-multi-year-pay-deal" },
       { label: "LGA — School teachers' pay 2026/27 and 2027/28", url: "https://www.local.gov.uk/our-support/workforce-and-hr-support/education-and-young-people/school-teachers-pay-2026-27-and-2027-28" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-09",
   },
 
   // ------------------------------------------------------------ 2025 archive
@@ -311,7 +311,7 @@ export const policyPages: PageContent[] = [
         ["Outer London", "£37,870", "£50,475"],
         ["Inner London", "£40,317", "£52,300"],
       ]},
-      { kind: "p", text: "The unqualified teacher range also rose 4%, from £22,929 to £23,731 at its lowest point and to £35,258 at the top. Higher-level teaching assistants comparing routes into teaching often used these figures as the entry benchmark for the qualified route." },
+      { kind: "p", text: "The unqualified teacher range also rose 4%, from £22,929 to £23,732 at its lowest point and to £35,258 at the top. Higher-level teaching assistants comparing routes into teaching often used these figures as the entry benchmark for the qualified route." },
 
       { kind: "h2", text: "Common payrise problems after September 2025" },
       { kind: "ul", items: [
@@ -367,19 +367,19 @@ export const policyPages: PageContent[] = [
     intro:
       "There is no single 'teacher pay UK' figure. England and Wales share a national scale set by the STPCD, Scotland negotiates its own agreements through the SNCT, and Northern Ireland runs separate machinery with the lowest rates of the four. Where you teach changes your starting salary by thousands of pounds, and where you are in England adds a London premium of up to £7,600 at M1. This guide compares all four nations with 2026/27 figures, explains how deductions change take-home pay, and answers the practical questions — holidays, summer pay, monthly cycles — that sit behind most searches.",
     keyTakeaways: [
-      "Qualified teacher pay starts at £34,068 (England/Wales outside London) but £41,728 in inner London.",
+      "Qualified teacher pay starts at £34,069 (England/Wales outside London) but £41,729 in inner London.",
       "Scotland's main scale starts at £34,539 with a different structure and negotiating body.",
       "Northern Ireland remains the lowest-paying nation, from £32,188.",
       "Teachers' annual salaries are paid across twelve months, including school holidays.",
-      "Take-home pay depends on tax, NI of 8%, pension contributions of 7.4% to 12.7%, and student loans.",
+      "Take-home pay depends on tax, NI of 8%, pension contributions of 7.4% to 12%, and student loans.",
     ],
     blocks: [
       { kind: "h2", text: "The headline numbers by nation" },
       { kind: "p", text: "Each nation sets its own scale, so the fastest way to answer 'how much do teachers get paid in the UK' is to compare starting and top-of-main-scale salaries side by side." },
       { kind: "table", caption: "Main scale starting and top points by nation, 2026/27", head: ["Nation", "M1 start", "M6 top"], rows: [
-        ["England (excl. London)", "£34,068", "£46,939"],
-        ["Wales", "£34,068", "£46,939"],
-        ["Inner London", "£41,728", "£54,131"],
+        ["England (excl. London)", "£34,069", "£46,940"],
+        ["Wales", "£34,069", "£46,940"],
+        ["Inner London", "£41,729", "£54,131"],
         ["Scotland", "£34,539", "£48,516"],
         ["Northern Ireland", "£32,188", "£44,342"],
       ]},
@@ -402,16 +402,16 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "One nuance matters for resignations: notice periods align to term-time dates under the Burgundy Book conditions of service, so leaving at February half term means your last payment covers up to that date rather than a full month. Our [resignation deadlines guide](/teacher-resignation-deadlines/) lists the exact dates." },
 
       { kind: "h2", text: "From gross salary to take-home pay" },
-      { kind: "p", text: "Gross figures overstate what lands in the bank. A mid-career M4 teacher on £40,940 loses income tax, National Insurance at 8% on earnings above the threshold, and pension contributions tiered from 7.4% to 12.7%. Student loan repayments can remove another slice depending on plan and threshold. The table shows typical monthly take-home for three common situations." },
+      { kind: "p", text: "Gross figures overstate what lands in the bank. A mid-career M4 teacher on £40,941 loses income tax, National Insurance at 8% on earnings above the threshold, and pension contributions tiered from 7.4% to 12%. Student loan repayments can remove another slice depending on plan and threshold. The table shows typical monthly take-home for three common situations." },
       { kind: "table", caption: "Indicative monthly take-home, rest of England 2026/27", head: ["Situation", "Gross salary", "Approx. monthly net"], rows: [
-        ["M1, no student loan", "£34,068", "≈£2,180"],
-        ["M4, Plan 2 loan", "£40,940", "≈£2,430"],
+        ["M1, no student loan", "£34,069", "≈£2,180"],
+        ["M4, Plan 2 loan", "£40,941", "≈£2,430"],
         ["U3, Plan 2 loan", "£52,835", "≈£2,900"],
       ]},
-      { kind: "callout", tone: "info", title: "Pension tiers create cliffs", text: "TPS contribution tiers are assessed on full-time equivalent salary and jump at fixed boundaries. Crossing a boundary can raise contributions on your entire salary, not just the extra pounds. The [take-home pay calculator](/teacher-take-home-pay/) models your exact case." },
+      { kind: "callout", tone: "info", title: "Pension tiers create cliffs", text: "TPS contribution tiers use annualised actual pensionable earnings for each eligible employment and jump at fixed boundaries. Crossing a boundary can raise contributions on your entire salary, not just the extra pounds. The [take-home pay calculator](/teacher-take-home-pay/) models your exact case." },
 
       { kind: "h2", text: "London weighting explained" },
-      { kind: "p", text: "The four-band structure exists because recruitment economics differ radically across the country. Inner London's £41,728 starting salary sounds generous until housing costs are applied; the outer and fringe bands taper the premium as distance from the centre grows. Teachers comparing a fringe job against a suburban one should compare total packages — pensionable allowances like TLRs add to the gap, and travel costs eat into it differently at each band. The [part-time pay calculator](/part-time-teacher-pay-calculator/) handles pro-rata versions of these comparisons." },
+      { kind: "p", text: "The four-band structure exists because recruitment economics differ radically across the country. Inner London's £41,729 starting salary sounds generous until housing costs are applied; the outer and fringe bands taper the premium as distance from the centre grows. Teachers comparing a fringe job against a suburban one should compare total packages — pensionable allowances like TLRs add to the gap, and travel costs eat into it differently at each band. The [part-time pay calculator](/part-time-teacher-pay-calculator/) handles pro-rata versions of these comparisons." },
 
       { kind: "h2", text: "Upper Pay Range across the nations" },
       { kind: "table", caption: "Upper range points U1 to U3 by nation, 2026/27", head: ["Nation", "U1", "U3"], rows: [
@@ -423,7 +423,7 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "Scotland has no direct equivalent: its teachers progress through main grade points automatically and access chartered teacher status instead. The absence of a performance-gated upper range is one of the structural differences union comparisons highlight most often." },
 
       { kind: "h2", text: "Supply, unqualified and independent-school pay" },
-      { kind: "p", text: "Three groups sit outside the standard tables. Unqualified teachers in maintained schools are paid from the unqualified teacher range, which runs £23,731 to £36,493 outside London after the 2026 uplift — relevant to teaching assistants considering the qualified route. Daily-rate supply cover must be paid at least 1/195th of the applicable scale point for day-to-day cover in maintained schools; long-term supply placements typically move onto the scale proper after set periods under local agreements." },
+      { kind: "p", text: "Three groups sit outside the standard tables. Unqualified teachers in maintained schools are paid from the unqualified teacher range, which runs £23,732 to £36,494 outside London after the 2026 uplift — relevant to teaching assistants considering the qualified route. Daily-rate supply cover must be paid at least 1/195th of the applicable scale point for day-to-day cover in maintained schools; long-term supply placements typically move onto the scale proper after set periods under local agreements." },
       { kind: "p", text: "Independent schools sit outside the STPCD entirely. Some publish generous scales to attract subject specialists; others pay below state rates while offering smaller classes or subsidised housing. Because there is no floor, candidates should ask for the written scale rather than relying on advertised ranges. International schools complicate the picture further with tax-free packages in some jurisdictions that outperform UK gross figures substantially." },
 
       { kind: "h2", text: "How UK teacher pay has moved recently" },
@@ -434,16 +434,16 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "Independent schools set pay freely; many match or beat the state scale, others trade salary for prestige or smaller classes. International schools quoting in sterling-equivalents frequently advertise packages 20% to 50% above UK scales, though benefits vary wildly and pension access usually differs. When comparing any offer against UK state pay, anchor on the STPCD point you currently hold and adjust for pension value — the guaranteed TPS benefit is worth far more than its headline contribution rate suggests, as our [pension guide](/teacher-pension/) quantifies." },
     ],
     faq: [
-      { question: "How much do teachers get paid in the UK?", answer: "Starting salaries run from £32,188 in Northern Ireland to £41,728 in inner London for 2026/27. Most of England and Wales starts at £34,068, rising to £46,939 at the top of the main range." },
+      { question: "How much do teachers get paid in the UK?", answer: "Starting salaries run from £32,188 in Northern Ireland to £41,729 in inner London for 2026/27. Most of England and Wales starts at £34,069, rising to £46,940 at the top of the main range." },
       { question: "Do teachers get paid during school holidays?", answer: "Yes. Salaried teachers receive their annual salary in twelve equal monthly payments, so summer and other holidays are fully paid. Only daily-rate supply work goes unpaid during breaks." },
       { question: "Which UK nation pays teachers the most?", answer: "Inner London pays the highest headline salaries, followed by outer London and the fringe. Scotland's scale edges out equivalent non-London England points at the top of the main range." },
-      { question: "How much is a qualified teacher's salary after tax?", answer: "An M1 teacher on £34,068 keeps roughly £2,180 a month after tax, National Insurance and pension contributions. Higher points and student loans shift the figure; use a take-home calculator for precision." },
+      { question: "How much is a qualified teacher's salary after tax?", answer: "An M1 teacher on £34,069 keeps roughly £2,180 a month after tax, National Insurance and pension contributions. Higher points and student loans shift the figure; use a take-home calculator for precision." },
       { question: "Is Scottish teacher pay different from England?", answer: "Yes. Scotland negotiates through the SNCT with automatic progression through main grade points and a Chartered Teacher route, separate from England's performance-related system." },
       { question: "Do teachers in Wales earn the same as England?", answer: "The Welsh scale has matched England's cash values in recent years, though Wales negotiates separately through its own committee and could diverge in future." },
       { question: "What is the highest teacher salary in the UK?", answer: "Classroom teachers top out around £52,835 to £64,683 depending on region. Leadership posts extend to £148,829 at L43 in England, with inner London heads reaching higher still." },
       { question: "Are teachers paid weekly or monthly?", answer: "Almost universally monthly, typically on the same date each month. Supply teachers engaged daily are the main exception, being paid per session worked." },
       { question: "Does the London weighting apply to pensions?", answer: "Yes. Regional weighting forms part of pensionable salary, so inner London teachers build slightly larger TPS benefits for the same service length." },
-      { question: "What do unqualified teachers earn in the UK?", answer: "In England outside London, the unqualified range runs £23,731 to £36,493 for 2026/27. Inner London versions are higher, and many academies pay above the minimum range to attract staff." },
+      { question: "What do unqualified teachers earn in the UK?", answer: "In England outside London, the unqualified range runs £23,732 to £36,494 for 2026/27. Inner London versions are higher, and many academies pay above the minimum range to attract staff." },
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -508,8 +508,8 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "Two practical consequences follow. First, changing schools mid-career usually protects your one-year count because local authority service aggregates — but moving from an LA school into an academy can break the chain, since some trusts treat prior LA service differently. Second, supply teachers frequently fall into category 3 or 4 with their agency while still qualifying through earlier permanent service." },
 
       { kind: "h2", text: "Worked example: an M4 teacher" },
-      { kind: "p", text: "Take a teacher on M4 (£40,940 in 2026/27 outside London). A week's pay works out around £787 on an indicative 1/52 basis — your payroll team applies the contractual definition, so treat these figures as illustrative rather than exact." },
-      { kind: "table", caption: "Indicative maternity pay at M4 (£40,940)", head: ["Phase", "Weekly amount", "Total"], rows: [
+      { kind: "p", text: "Take a teacher on M4 (£40,941 in 2026/27 outside London). A week's pay works out around £787 on an indicative 1/52 basis — your payroll team applies the contractual definition, so treat these figures as illustrative rather than exact." },
+      { kind: "table", caption: "Indicative maternity pay at M4 (£40,941)", head: ["Phase", "Weekly amount", "Total"], rows: [
         ["Weeks 1–4, full pay", "≈£787", "≈£3,148"],
         ["Weeks 5–6, 90%", "≈£708", "≈£1,417"],
         ["Weeks 7–18, half pay + SMP", "≈£588", "≈£7,055"],
@@ -619,7 +619,7 @@ export const policyPages: PageContent[] = [
 
       { kind: "h2", text: "What half pay looks like in cash" },
       { kind: "p", text: "The transition to half pay is the moment most people underestimate. Deductions do not halve neatly: pension contributions recalculate downward on the reduced salary, but fixed commitments stay put. These indicative monthly figures show the gap for a mid-scale teacher." },
-      { kind: "table", caption: "Indicative monthly net pay during sickness (M4 £40,940, rest of England)", head: ["Phase", "Gross monthly", "Approx. net"], rows: [
+      { kind: "table", caption: "Indicative monthly net pay during sickness (M4 £40,941, rest of England)", head: ["Phase", "Gross monthly", "Approx. net"], rows: [
         ["Full pay", "£3,412", "≈£2,430"],
         ["Half pay plus SSP", "£1,706 + £194/wk", "≈£1,560"],
         ["After entitlement ends", "£0 + ESA if eligible", "varies"],

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { hubs } from "@/content/types";
-import { lastUpdatedLabel, taxYearLabel } from "@/data/tax-rates";
+import { taxYearLabel } from "@/data/tax-rates";
 import { SITE_NAME } from "@/lib/seo";
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
           <p>
             {SITE_NAME} publishes free calculators and reference data for UK
             teachers. Figures use the {taxYearLabel} tax year and STPCD{" "}
-            {taxYearLabel} pay scales. Last reviewed {lastUpdatedLabel}.
+            {taxYearLabel} pay scales. Each guide shows its own review date.
           </p>
           <p className="mt-2">
             This site is independent guidance, not financial advice. Always

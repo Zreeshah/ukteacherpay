@@ -3,7 +3,7 @@ import JsonLd from "@/components/JsonLd";
 import TeacherPayCalculator from "@/components/calculators/TeacherPayCalculator";
 import { allPages, pillarFor } from "@/content";
 import { hubs, type HubId } from "@/content/types";
-import { lastUpdatedLabel, taxYearLabel } from "@/data/tax-rates";
+import { taxYearLabel } from "@/data/tax-rates";
 import { mainRange, upperRange } from "@/data/teacher-pay-scales";
 import { gbp } from "@/lib/format";
 import { pageMetadata, softwareAppJsonLd, SITE_NAME } from "@/lib/seo";
@@ -29,7 +29,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-10">
           <div className="max-w-3xl">
             <p className="text-sm font-medium text-accent-strong">
-              STPCD {taxYearLabel} · Updated {lastUpdatedLabel}
+              STPCD {taxYearLabel} reference figures · See each guide for its review date
             </p>
             <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">
               Teacher Pay Calculator {taxYearLabel}
@@ -89,7 +89,7 @@ export default function Home() {
               <strong>£2,169 a month</strong>.
             </p>
             <p className="mt-3 text-sm text-ink/70">
-              Your employer adds another 28.8% of salary into your pension on top.
+              Your employer adds another 28.68% of salary into your pension on top.
             </p>
             <Link href="/teacher-take-home-pay/" className="mt-3 inline-block text-sm font-medium text-accent-strong hover:underline">
               Take-home pay by pay point

@@ -58,10 +58,10 @@ export interface TakeHomeResult {
   employerPension: number;
 }
 
-/** TPS tier is set by the FTE salary rate, not actual part-time pay. */
-export function tpsRate(fteSalary: number): number {
+/** TPS tier is set by annual salary rate for the eligible employment. */
+export function tpsRate(annualSalaryRate: number): number {
   for (const tier of tpsTiers) {
-    if (tier.upTo === null || fteSalary <= tier.upTo) return tier.rate;
+    if (tier.upTo === null || annualSalaryRate <= tier.upTo) return tier.rate;
   }
   return tpsTiers[tpsTiers.length - 1].rate;
 }

@@ -1,9 +1,11 @@
 import type { PageContent } from "../types";
 
 const UPDATED = "2026-08-23";
+const PENSION_RATES_REVIEWED = "2026-10-09";
 
 const SOURCES = [
-  { label: "Teachers' Pensions — member guides and contribution tiers", url: "https://www.teacherspensions.co.uk/members.htm" },
+  { label: "Teachers' Pensions — 2026/27 member contribution tiers", url: "https://www.teacherspensions.co.uk/members/new-starter/understand-how-much-youll-pay.aspx" },
+  { label: "Teachers' Pensions — employer and member contribution calculation", url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions.aspx" },
   { label: "Teachers' Pension Scheme Regulations 2014 (CARE rules)", url: "https://www.legislation.gov.uk/uksi/2014/876" },
   { label: "MoneyHelper — pensions guidance for teachers", url: "https://www.moneyhelper.org.uk/en/pensions-and-retirement" },
   { label: "NEU — Teachers' Pension Scheme advice", url: "https://neu.org.uk/advice/your-rights-work/pensions/teachers-pension-scheme" },
@@ -30,7 +32,7 @@ export const pensionPages: PageContent[] = [
       "The Teachers' Pension Scheme is one of the most valuable parts of being a teacher — a guaranteed, inflation-linked pension for life that most private-sector workers can only imitate with risky investments. This guide explains exactly how it works, what you pay, what you get, and the decisions that make the biggest difference.",
     keyTakeaways: [
       "The TPS is a career-average (CARE) scheme: each year you build 1/57th of your pensionable pay as guaranteed annual pension.",
-      "Your contribution rate runs from 7.4% to 12.7%, set by your full-time equivalent salary — and your employer adds 28.8% on top.",
+      "Your contribution rate runs from 7.4% to 12%, based on annual salary rate for each eligible employment; the employer rate is 28.68% including the administration levy.",
       "Benefits already built are revalued every year by CPI plus 1.6% while you are working, so they hold their value in real terms.",
       "A mid-career teacher on M6 at age 40 with 27 years left is on track for roughly £45,900 a year at 67, plus a lump sum option.",
       "The scheme is not salary sacrifice: you get income tax relief on contributions but pay National Insurance on your full gross pay.",
@@ -40,12 +42,12 @@ export const pensionPages: PageContent[] = [
       { kind: "p", text: "Since 2015 the Teachers' Pension Scheme has been a **career-average revalued earnings** scheme, usually shortened to CARE. The older final salary arrangements still exist for service built up before then, and many experienced teachers have both — more on that in the [CARE vs final salary comparison](/care-vs-final-salary-pension/)." },
       { kind: "p", text: "In a CARE scheme you do not worry about your final salary, promotion timing or the classic final-salary traps. Every single year stands on its own: you build a slice of pension based on that year's pay, and it is yours forever, adjusted for inflation." },
       { kind: "h3", text: "The 1/57th rule" },
-      { kind: "p", text: "For every year of membership you earn **1/57th of your pensionable pay** as annual pension. On the 2026/27 M4 point of £40,940, one year of membership builds £40,940 ÷ 57 = **£718 a year of pension, for life**." },
+      { kind: "p", text: "For every year of membership you earn **1/57th of your pensionable pay** as annual pension. On the 2026/27 M4 point of £40,941, one year of membership builds £40,941 ÷ 57 = **£718 a year of pension, for life**." },
       { kind: "p", text: "That sounds small until you stack the years up. Twenty-five years of service at that level builds around £18,000 a year before any revaluation — on top of the State Pension." },
       { kind: "table", caption: "What one year of membership builds, by pay point (2026/27, rest of England)", head: ["Pay point", "Pensionable pay", "Annual pension earned (1/57th)"], rows: [
-        ["M1", "£34,068", "£598"],
-        ["M4", "£40,940", "£718"],
-        ["M6", "£46,939", "£823"],
+        ["M1", "£34,069", "£598"],
+        ["M4", "£40,941", "£718"],
+        ["M6", "£46,940", "£823"],
         ["U3", "£52,835", "£927"],
         ["L12 (indicative)", "≈£75,000", "≈£1,316"],
       ]},
@@ -60,19 +62,19 @@ export const pensionPages: PageContent[] = [
       { kind: "p", text: "The same £5,000 of pension grows **£2,713 more** if you stay in the scheme than if you leave it and let it sit deferred. That gap is the real cost of opting out, before you even count the employer contributions you stop receiving." },
 
       { kind: "h2", text: "What you pay in: the contribution tiers" },
-      { kind: "p", text: "Member contributions are tiered between 7.4% and 12.7% of pensionable pay. The tier is set by your **full-time equivalent** salary — the headline figure for your pay point — not what you actually receive if you work part time. This catches out a lot of part-time teachers, and it matters enough that we have a dedicated [contributions guide](/teacher-pension-contributions/)." },
-      { kind: "table", caption: "TPS member contribution tiers 2026/27", head: ["Full-time equivalent salary", "Rate", "Example annual cost"], rows: [
-        ["Up to £34,289", "7.4%", "M1 (£34,068) pays £2,521"],
-        ["£34,289 – £46,158", "8.6%", "M6 (£46,939) pays £4,506"],
-        ["£46,158 – £54,729", "9.6%", "U3 (£52,835) pays £5,072"],
-        ["£54,729 – £72,534", "10.2%", "L12 (≈£60,000) pays £6,120"],
-        ["£72,534 – £98,908", "11.7%", "L20 (≈£75,000) pays £8,775"],
-        ["Above £98,908", "12.7%", "—"],
+      { kind: "p", text: "Member contributions are tiered between 7.4% and 12% of pensionable pay. Teachers’ Pensions uses the annual salary rate for each eligible employment, based on actual pensionable earnings in the pay period, rather than the FTE pay point for part-time work. See our dedicated [contributions guide](/teacher-pension-contributions/)." },
+      { kind: "table", caption: "TPS member contribution tiers 2026/27", head: ["Annual salary rate", "Rate", "Example annual cost"], rows: [
+        ["Up to £36,198.99", "7.4%", "M1 (£34,069) pays £2,521"],
+        ["£36,199 – £48,727.99", "8.9%", "M6 (£46,940) pays £4,178"],
+        ["£48,728 – £57,776.99", "9.9%", "U3 (£52,835) pays £5,231"],
+        ["£57,777 – £76,572.99", "10.5%", "L12 (≈£60,000) pays £6,300"],
+        ["£76,573 – £104,413.99", "11.6%", "L20 (≈£75,000) pays £8,700"],
+        ["£104,414 and above", "12%", "—"],
       ]},
       { kind: "callout", tone: "warn", title: "The tiers are cliffs, not slopes", text: "Earn £1 more than a tier boundary and the higher rate applies to your entire salary, not just the extra pound. A pay rise that crosses a boundary can hand more to the pension than it adds to your take-home pay in that year. The [pay rise calculator](/teacher-pay-rise-calculator/) shows the cliff edges." },
 
       { kind: "h2", text: "What your employer pays in" },
-      { kind: "p", text: "Your employer contributes **28.8%** of pensionable pay on top of your own contribution. On M4 that is £11,791 a year — money that never touches your bank account but buys guaranteed pension that would cost far more to replicate privately." },
+      { kind: "p", text: "Your employer contributes **28.68%** of pensionable pay, including the 0.08% administration levy, on top of your own contribution. On M4 that is about £11,742 a year — money that never touches your bank account but buys guaranteed pension that would cost far more to replicate privately." },
       { kind: "p", text: "For context, the auto-enrolment minimum in a private-sector workplace pension is 3% employer contribution. The TPS employer rate is nearly ten times that. When people ask [whether the teachers' pension is any good](/is-teacher-pension-good/), this is the first number to reach for." },
 
       { kind: "h2", text: "When can you take it?" },
@@ -85,7 +87,7 @@ export const pensionPages: PageContent[] = [
       ]},
 
       { kind: "h2", text: "A worked example: what a career actually builds" },
-      { kind: "p", text: "Take a teacher who is 40 now, on M6 (£46,939), planning to teach until 67 — 27 more years. Assuming 2% annual pay growth and 2% CPI:" },
+      { kind: "p", text: "Take a teacher who is 40 now, on M6 (£46,940), planning to teach until 67 — 27 more years. Assuming 2% annual pay growth and 2% CPI:" },
       { kind: "table", caption: "Projection for an M6 teacher, age 40 to 67 (2% pay growth, 2% CPI)", head: ["Measure", "Amount"], rows: [
         ["Annual pension at 67", "≈£45,900"],
         ["Total member contributions over the period", "≈£172,500"],
@@ -109,16 +111,16 @@ export const pensionPages: PageContent[] = [
     ],
     faq: [
       { question: "How does the teachers' pension work?", answer: "It is a career-average scheme. Each year you build 1/57th of your pensionable pay as guaranteed annual pension. Already-built benefits are revalued each year by CPI plus 1.6% while you are in service. You take it from your Normal Pension Age, or earlier with an actuarial reduction, and you can exchange pension for tax-free lump sum at 12:1." },
-      { question: "How much do teachers pay into their pension?", answer: "Between 7.4% and 12.7% of pensionable pay, tiered by full-time equivalent salary. A teacher on M1 pays 7.4% (£2,521 a year), on M6 9.6% (£4,506), and on U3 9.6% (£5,072). The employer adds 28.8% on top of whatever you pay." },
+      { question: "How much do teachers pay into their pension?", answer: "The 2026/27 rates are 7.4% to 12% of pensionable pay. The rate uses annual salary rate for each eligible employment: M1 pays 7.4% (£2,521 a year), M6 pays 8.9% (£4,178), and U3 pays 9.9% (£5,231). The employer rate is 28.68%, including the administration levy." },
       { question: "What pension do teachers actually get?", answer: "It depends on service and pay history. A teacher on M6 at 40 with 27 years to retirement is on track for roughly £45,900 a year at 67 on modest assumptions, plus a lump sum option worth up to about £246,000. Your annual benefit statement shows your own accrued figure." },
       { question: "Is the teachers' pension final salary or career average?", answer: "Service from 2015 is career average (CARE). Service before 2015 remains final salary: 1/80th accrual with a 3x automatic lump sum for the NPA-60 section, or 1/60th for the 2007 section. Many teachers have both, with the McCloud remedy affecting which years sit where." },
       { question: "Do teachers pay National Insurance on their pension contributions?", answer: "Yes. The TPS is a net-pay arrangement, not salary sacrifice. Contributions come out before income tax is calculated but National Insurance is charged on your full gross pay. That is why pension contributions save you income tax but not NI." },
       { question: "What happens to my teachers' pension if I leave teaching?", answer: "It becomes deferred. It stops growing at CPI plus 1.6% and grows at CPI only until you claim it from Normal Pension Age. You can take it earlier with actuarial reductions, or in limited cases transfer it. Staying in service is worth roughly 1.6% a year extra growth on everything you have built." },
       { question: "Can I take my teachers' pension at 55?", answer: "Currently yes, from 55 — rising to 57 on 6 April 2028. Taking benefits before your Normal Pension Age applies an actuarial reduction of roughly 5% per year early, and you must usually have left scheme employment or moved to flexible retirement to draw them." },
-      { question: "Is the teachers' pension better than a private pension?", answer: "For guaranteed lifetime income, almost always yes: a 28.8% employer contribution, inflation-linked payments for life, and no investment risk. A private defined-contribution pot would typically need to be very large to buy the same guaranteed income. The trade-offs are flexibility and that you cannot pass the whole pension on — death benefits are more limited than a private pot." },
+      { question: "Is the teachers' pension better than a private pension?", answer: "For guaranteed lifetime income, almost always yes: a 28.68% employer contribution, inflation-linked payments for life, and no investment risk. A private defined-contribution pot would typically need to be very large to buy the same guaranteed income. The trade-offs are flexibility and that you cannot pass the whole pension on — death benefits are more limited than a private pot." },
     ],
     sources: SOURCES,
-    updated: UPDATED,
+    updated: PENSION_RATES_REVIEWED,
   },
 
   {
@@ -157,7 +159,7 @@ export const pensionPages: PageContent[] = [
       { kind: "callout", tone: "info", title: "Statements lag by up to 18 months", text: "Benefit statements are typically produced a year or more in arrears. If your salary has risen since your statement date, enter today's salary rather than the statement figure — the calculator projects forward from what you enter." },
 
       { kind: "h2", text: "What the calculator assumes" },
-      { kind: "p", text: "The projection mechanics are the scheme's own: 1/57th accrual each year, revaluation of the accrued pot at CPI plus 1.6% while active, and tiered member contributions on your FTE salary. What the calculator cannot know is the future — so you set:" },
+      { kind: "p", text: "The projection mechanics are the scheme's own: 1/57th accrual each year, revaluation of the accrued pot at CPI plus 1.6% while active, and tiered member contributions on annualised actual pensionable earnings. What the calculator cannot know is the future — so you set:" },
       { kind: "ul", items: [
         "**Pay growth** — 2% is a neutral assumption matching recent STPCD awards; the 2026/27 award was 3.5%.",
         "**CPI** — 2% is the Bank of England target. Higher CPI increases your projected pension because revaluation is CPI-linked.",
@@ -166,14 +168,14 @@ export const pensionPages: PageContent[] = [
       { kind: "p", text: "Because revaluation (CPI + 1.6%) exceeds typical pay growth, the projected pension holds its real value even in flat-salary scenarios. Higher CPI assumptions raise the projected figure in money-of-the-day terms." },
 
       { kind: "h2", text: "Worked example: M6 teacher, age 40" },
-      { kind: "p", text: "A teacher on M6 (£46,939), age 40, with £12,000 already accrued, retiring at 67 with 2% pay growth and 2% CPI:" },
+      { kind: "p", text: "A teacher on M6 (£46,940), age 40, with £12,000 already accrued, retiring at 67 with 2% pay growth and 2% CPI:" },
       { kind: "table", caption: "Projection output for the example inputs", head: ["Output", "Value"], rows: [
         ["Years of further accrual", "27"],
         ["Pension at 67", "≈£45,900 a year"],
         ["Of which already accrued", "≈£23,300"],
         ["Added by future service", "≈£22,600"],
         ["Member contributions over the period", "≈£172,500"],
-        ["Employer contributions (28.8%)", "≈£477,800"],
+        ["Employer contributions (28.68%)", "≈£477,800"],
       ]},
       { kind: "p", text: "Retiring three years early at 64 applies an indicative reduction of about 14.5%, taking the pension to roughly £39,200 a year — a cut that lasts for life. The [early retirement guide](/teacher-early-retirement/) has the full reduction table." },
 
@@ -186,7 +188,7 @@ export const pensionPages: PageContent[] = [
     ],
     faq: [
       { question: "How do I calculate my teachers' pension?", answer: "Multiply each year's pensionable pay by 1/57th, revalue the running total each year at CPI plus 1.6% while in service, and sum across your career. In practice, take the accrued pension from your annual benefit statement and add projected future years — which is what this calculator does." },
-      { question: "What is the teachers' pension calculator uk teachers actually need?", answer: "One that models the CARE mechanics properly: 1/57th accrual, CPI+1.6% revaluation, tiered contributions on FTE salary, and early-retirement reductions. Generic pension calculators assume a pot of money and investment returns, which is the wrong model for the TPS." },
+      { question: "What is the teachers' pension calculator uk teachers actually need?", answer: "One that models the CARE mechanics properly: 1/57th accrual, CPI+1.6% revaluation, tiered contributions on annualised actual pensionable earnings, and early-retirement reductions. Generic pension calculators assume a pot of money and investment returns, which is the wrong model for the TPS." },
       { question: "How accurate is a TPS pension projection?", answer: "The mechanics are exact to scheme rules; the assumptions are not. Pay growth and CPI are unknowns. Treat the output as a realistic range rather than a promise, and check your annual benefit statement for the definitive accrued figure." },
       { question: "Does the calculator include my final salary service?", answer: "Enter your total accrued pension from your statement, which includes final salary and CARE sections combined at their respective values. For detailed modelling of mixed service, the scheme's own official calculator handles the section split precisely." },
       { question: "What happens if I work part-time until retirement?", answer: "Set the average FTE field below 100. Each year builds 1/57th of your actual pensionable pay, so a 0.6 FTE teacher accrues 60% of the full-time figure for each of those years, with no other penalty." },
@@ -194,7 +196,7 @@ export const pensionPages: PageContent[] = [
       { question: "Where do I find the pension I have already built up?", answer: "On your annual benefit statement from Teachers' Pensions, in the online member portal. Statements are usually produced annually and can lag your current salary by up to 18 months — enter today's salary for the projection." },
     ],
     sources: SOURCES,
-    updated: UPDATED,
+    updated: PENSION_RATES_REVIEWED,
   },
 
   {
@@ -203,7 +205,7 @@ export const pensionPages: PageContent[] = [
     title: "Teacher Pension Contributions",
     metaTitle: "Teacher Pension Contributions: Tiers & Costs 2026/27",
     metaDescription:
-      "What teachers pay into the TPS in 2026/27: every contribution tier from 7.4% to 12.7%, how the FTE salary rule works for part-timers, and the 28.8% employer rate.",
+      "What teachers pay into the TPS in 2026/27: every official contribution tier, how annual salary rate works for part-timers, and the 28.68% employer rate including the levy.",
     primaryKeyword: "teacher pension contributions",
     secondaryKeywords: [
       "how much do teachers pay into pension", "teacher pension percentage",
@@ -214,84 +216,84 @@ export const pensionPages: PageContent[] = [
     ],
     calculator: "none",
     intro:
-      "Teachers pay between 7.4% and 12.7% of pensionable pay into the TPS, tiered by full-time equivalent salary — and the employer adds 28.8% on top. Here is every tier, what it costs at each pay point, and the FTE rule that surprises part-time teachers.",
+      "Teachers pay 7.4% to 12% of pensionable pay into the TPS. The rate follows the annual salary rate for each eligible employment, and the employer rate is 28.68% including the administration levy. Here are the official 2026/27 tiers and worked examples.",
     keyTakeaways: [
-      "Contribution tiers run 7.4%, 8.6%, 9.6%, 10.2%, 11.7% and 12.7% across six salary bands.",
-      "The tier is set by full-time equivalent salary, so part-time teachers pay the same percentage as full-timers on their pay point.",
+      "Contribution tiers are 7.4%, 8.9%, 9.9%, 10.5%, 11.6% and 12% across six salary bands.",
+      "The rate is set by annual salary rate for each eligible employment; it is not selected from the FTE pay point.",
       "Tiers are cliffs: crossing a boundary applies the higher rate to your whole salary for that year.",
-      "The employer pays 28.8% — on M4 that is £11,791 a year on top of your own £3,521.",
+      "The employer rate is 28.68% including the 0.08% administration levy; on M4 that is about £11,742 a year.",
       "Contributions attract income tax relief through net pay, but not National Insurance relief.",
     ],
     blocks: [
       { kind: "h2", text: "The 2026/27 contribution tiers" },
-      { kind: "p", text: "Member contributions are banded across six tiers. The band is assessed on your **annual rate of pensionable pay** — the full-time equivalent figure for your pay point, including pensionable allowances." },
-      { kind: "table", caption: "TPS member contribution tiers 2026/27", head: ["FTE salary band", "Contribution rate"], rows: [
-        ["Up to £34,289", "7.4%"],
-        ["£34,289 – £46,158", "8.6%"],
-        ["£46,158 – £54,729", "9.6%"],
-        ["£54,729 – £72,534", "10.2%"],
-        ["£72,534 – £98,908", "11.7%"],
-        ["Above £98,908", "12.7%"],
+      { kind: "p", text: "Member contributions are banded across six tiers. Teachers’ Pensions assesses the annual salary rate for each eligible employment, based on actual pensionable earnings in the pay period; it is not the FTE pay-point figure for part-time work." },
+      { kind: "table", caption: "TPS member contribution tiers 2026/27", head: ["Annual salary rate for the eligible employment", "Contribution rate"], rows: [
+        ["Up to £36,198.99", "7.4%"],
+        ["£36,199 – £48,727.99", "8.9%"],
+        ["£48,728 – £57,776.99", "9.9%"],
+        ["£57,777 – £76,572.99", "10.5%"],
+        ["£76,573 – £104,413.99", "11.6%"],
+        ["£104,414 and above", "12%"],
       ]},
-      { kind: "table", caption: "What each main pay point actually pays (rest of England, 2026/27)", head: ["Point", "FTE salary", "Tier", "Annual contribution", "Monthly"], rows: [
-        ["M1", "£34,068", "7.4%", "£2,521", "£210"],
-        ["M2", "£36,042", "8.6%", "£3,100", "£258"],
-        ["M3", "£38,400", "8.6%", "£3,302", "£275"],
-        ["M4", "£40,940", "8.6%", "£3,521", "£293"],
-        ["M5", "£43,529", "8.6%", "£3,743", "£312"],
-        ["M6", "£46,939", "9.6%", "£4,506", "£376"],
-        ["U1", "£49,134", "9.6%", "£4,717", "£393"],
-        ["U3", "£52,835", "9.6%", "£5,072", "£423"],
+      { kind: "table", caption: "What each main pay point actually pays (rest of England, 2026/27)", head: ["Point", "Salary", "Tier", "Annual contribution", "Monthly"], rows: [
+        ["M1", "£34,069", "7.4%", "£2,521", "£210"],
+        ["M2", "£36,042", "7.4%", "£2,667", "£222"],
+        ["M3", "£38,400", "8.9%", "£3,418", "£285"],
+        ["M4", "£40,941", "8.9%", "£3,644", "£304"],
+        ["M5", "£43,529", "8.9%", "£3,874", "£323"],
+        ["M6", "£46,940", "8.9%", "£4,178", "£348"],
+        ["U1", "£49,134", "9.9%", "£4,864", "£405"],
+        ["U3", "£52,835", "9.9%", "£5,231", "£436"],
       ]},
 
       { kind: "h2", text: "How much do teachers pay into their pension, in total?" },
-      { kind: "p", text: "Across a full-time classroom career the member pays in five figures a year at the top end but far more typical is the M4 figure: **£3,521 a year**, or £293 a month. Against that, the employer pays £11,791 — so for every £1 you contribute, roughly £3.35 goes in on your behalf." },
-      { kind: "table", caption: "Member vs employer contributions at key pay points", head: ["Point", "You pay", "Employer pays (28.8%)", "Total into the scheme"], rows: [
-        ["M1", "£2,521", "£9,812", "£12,333"],
-        ["M4", "£3,521", "£11,791", "£15,312"],
-        ["M6", "£4,506", "£13,518", "£18,024"],
-        ["U3", "£5,072", "£15,216", "£20,288"],
+      { kind: "p", text: "A typical M4 member contribution is **£3,644 a year**, or about £304 a month. The employer rate at that salary is about £11,742, including the administration levy." },
+      { kind: "table", caption: "Member vs employer contributions at key pay points", head: ["Point", "You pay", "Employer pays (28.68%)", "Total into the scheme"], rows: [
+        ["M1", "£2,521", "£9,771", "£12,292"],
+        ["M4", "£3,644", "£11,742", "£15,386"],
+        ["M6", "£4,178", "£13,462", "£17,640"],
+        ["U3", "£5,231", "£15,153", "£20,384"],
       ]},
-      { kind: "callout", tone: "info", title: "Why the percentages look odd", text: "The tier rates are not round numbers because they are set actuarially to fund the benefits. The 2019 valuation set the current structure, and the employer rate of 28.8% was confirmed in the 2020 valuation. Rates change only after formal scheme valuations, not annually." },
+      { kind: "callout", tone: "info", title: "Why the percentages look odd", text: "The tier rates are not round numbers because they are set actuarially to fund the benefits. The 2019 valuation set the current structure, and the employer rate of 28.68% was confirmed in the 2020 valuation. Rates change only after formal scheme valuations, not annually." },
 
-      { kind: "h2", text: "The FTE rule that catches part-time teachers" },
-      { kind: "p", text: "This is the single most misunderstood part of teacher pension contributions. The tier is set by your **full-time equivalent** salary — what your pay point pays a full-timer — regardless of how many days you actually work." },
+      { kind: "h2", text: "How part-time contribution rates work" },
+      { kind: "p", text: "For each eligible employment, Teachers’ Pensions annualises the actual pensionable earnings in the pay period to determine the tier. It does not select the tier from a part-time teacher’s FTE pay point." },
       { kind: "table", caption: "A 0.6 FTE teacher on U3: what they actually pay", head: ["Basis", "Salary", "Tier", "Annual contribution"], rows: [
-        ["What actually happens (FTE basis)", "£52,835", "9.6%", "£3,042 (9.6% of £31,701 actual pay)"],
-        ["What people expect (actual pay basis)", "£31,701", "7.4%", "£2,346"],
-        ["Difference", "", "", "£696 a year more"],
+        ["What actually happens (annualised actual pay)", "£31,701", "7.4%", "£2,346"],
+        ["Incorrect FTE-based result", "£52,835", "9.9%", "£3,138 (9.9% of £31,701)"],
+        ["Difference", "", "", "£792 a year less under the correct method"],
       ]},
-      { kind: "p", text: "The cash amount is always a percentage of what you are actually paid — the FTE figure only selects the tier. The rationale is fairness of accrual: part-time and full-time teachers on the same pay point build pension at the same rate per pound earned, so they pay the same rate per pound too. The full mechanics are in the [part-time pay guide](/part-time-teacher-pay-calculator/)." },
+      { kind: "p", text: "The cash amount is a percentage of actual pensionable earnings, and annualised actual earnings select the tier. A change in hours, pay or pensionable allowances can therefore change the rate. The full mechanics are in the [part-time pay guide](/part-time-teacher-pay-calculator/)." },
 
       { kind: "h2", text: "The tier cliff edges" },
-      { kind: "p", text: "Because the rate applies to your whole salary, crossing a boundary changes your contribution on every pound. The 2026/27 boundaries at £34,289 and £46,158 both sit inside the main pay range, which is why the jump from M1 to M2 costs more than the raw pay rise suggests." },
-      { kind: "table", caption: "Net effect of the M1 to M2 pay rise crossing the 8.6% boundary", head: ["", "M1", "M2", "Change"], rows: [
-        ["Gross salary", "£34,068", "£36,042", "+£1,974"],
-        ["Pension contribution", "£2,521", "£3,100", "+£579"],
-        ["Take-home increase", "", "", "≈+£1,050 a year"],
+      { kind: "p", text: "Because the rate applies to your whole salary, crossing a boundary changes your contribution on every pound. The first 2026/27 boundary is £36,198.99, so an M2-to-M3 move crosses from 7.4% to 8.9%." },
+      { kind: "table", caption: "Net effect of the M2 to M3 move crossing the 8.9% boundary", head: ["", "M2", "M3", "Change"], rows: [
+        ["Gross salary", "£36,042", "£38,400", "+£2,358"],
+        ["Pension contribution", "£2,667", "£3,418", "+£751"],
+        ["Take-home increase", "", "", "≈+£1,100 a year"],
       ]},
       { kind: "callout", tone: "tip", title: "Check the boundary before September", text: "If a pay award or promotion is likely to move you across a tier boundary, the extra pension you buy is substantial — the higher rate buys career-average benefits for life. The [pay rise calculator](/teacher-pay-rise-calculator/) shows the net effect of any specific rise." },
 
       { kind: "h2", text: "Tax relief: what you actually save" },
-      { kind: "p", text: "Contributions are taken under **net pay arrangements**: your pension comes out before income tax is calculated, so you never pay tax on the money you contribute. A higher-rate taxpayer on U3 effectively pays £3,043 for £5,072 of pension saving." },
+      { kind: "p", text: "Contributions are taken under **net pay arrangements**: your pension comes out before income tax is calculated, so you never pay tax on the money you contribute. A higher-rate taxpayer on U3 effectively pays £3,139 for £5,231 of pension saving." },
       { kind: "p", text: "What net pay does **not** save is National Insurance, which is charged on gross pay before the pension is deducted. This is the practical difference between the TPS and a salary-sacrifice arrangement — set out fully in the [salary sacrifice explainer](/teacher-pension-salary-sacrifice/)." },
 
       { kind: "h2", text: "Paying in more: AVCs and the 50/50 option" },
       { kind: "p", text: "Beyond the tiered contributions there are two ways to pay in more. **AVCs** — run with Prudential — build a separate invested pot on top of your guaranteed pension; the [AVC calculator](/teacher-avc-calculator/) projects one. The **50/50 section**, available in the LGPS but not the TPS, halves contributions for support staff in exchange for half accrual." },
-      { kind: "p", text: "Within the TPS itself there is no option to reduce contributions — it is the full tier or opting out entirely, and opting out forfeits the 28.8% employer contribution, which is almost never a rational trade." },
+      { kind: "p", text: "Within the TPS itself there is no option to reduce contributions — it is the full tier or opting out entirely, and opting out forfeits the 28.68% employer contribution, which is almost never a rational trade." },
     ],
     faq: [
-      { question: "How much do teachers pay into their pension?", answer: "Between 7.4% and 12.7% of pensionable pay depending on a six-tier band structure. A teacher on M1 pays £2,521 a year, on M4 £3,521, on M6 £4,506 and on U3 £5,072. The employer adds 28.8% of salary on top of every member contribution." },
-      { question: "What percentage is the teacher pension contribution?", answer: "The rate is 7.4% on FTE salaries up to £34,289, 8.6% to £46,158, 9.6% to £54,729, 10.2% to £72,534, 11.7% to £98,908 and 12.7% above. The band follows your full-time equivalent salary, not your actual pay if you work part time." },
-      { question: "Do part-time teachers pay less into the pension?", answer: "They pay a lower cash amount because the percentage applies to their actual pay, but the tier percentage is selected by their full-time equivalent salary. A 0.6 FTE teacher on U3 pays 9.6% of their actual earnings, not 7.4%." },
-      { question: "How much does the government contribute to teachers' pensions?", answer: "Employers — local authorities for maintained schools, trusts for academies — pay 28.8% of pensionable pay. On a £40,940 salary that is £11,791 a year, roughly £3.35 for every £1 the teacher contributes." },
+      { question: "How much do teachers pay into their pension?", answer: "The 2026/27 rates are 7.4% to 12%. At the current England advisory points, M1 pays £2,521 a year, M4 £3,644, M6 £4,178 and U3 £5,231. The employer rate is 28.68%, including the administration levy." },
+      { question: "What percentage is the teacher pension contribution?", answer: "The 2026/27 tiers are 7.4% to £36,198.99, 8.9% to £48,727.99, 9.9% to £57,776.99, 10.5% to £76,572.99, 11.6% to £104,413.99 and 12% above that. Teachers’ Pensions uses annual salary rate for each eligible employment, based on actual pensionable earnings for part-time work." },
+      { question: "Do part-time teachers pay less into the pension?", answer: "They pay a lower cash amount and their tier is based on annualised actual pensionable earnings for that employment. A 0.6 FTE teacher on U3 earning £31,701 is in the 7.4% tier, not the 9.9% FTE tier." },
+      { question: "How much does the government contribute to teachers’ pensions?", answer: "The employer rate is 28.68% of pensionable pay, including the 0.08% administration levy. On a £40,941 M4 salary that is about £11,742 a year." },
       { question: "Do teacher pension contributions reduce my tax?", answer: "Yes, fully, through the net-pay arrangement: contributions are deducted before income tax is calculated. They do not reduce National Insurance, which is charged on gross pay — the key difference from salary sacrifice." },
-      { question: "Why did my pension contribution jump this year?", answer: "Almost certainly a pay rise or allowance moved your full-time equivalent salary across a tier boundary. The higher rate then applies to your entire salary, so the contribution rises by more than the pay rise itself. The pension you buy for it rises too." },
+      { question: "Why did my pension contribution jump this year?", answer: "A pay rise, allowance or change in hours may have moved the annualised actual pensionable earnings for that employment across a tier boundary. The higher rate then applies to all pensionable earnings in the pay period." },
       { question: "Are TLR payments pensionable for contributions?", answer: "Yes. TLR 1, TLR 2 and SEN allowances all count as pensionable pay, increasing both the contribution you pay and the 1/57th of pension you build each year. TLR 3 is pensionable while it is paid but is fixed-term by design." },
-      { question: "Can I opt out of teacher pension contributions?", answer: "You can opt out, but it forfeits the 28.8% employer contribution and the CPI+1.6% revaluation on everything you have built. For most teachers staying in is worth several thousand pounds a year in employer money alone. Take regulated advice before leaving a defined-benefit scheme." },
+      { question: "Can I opt out of teacher pension contributions?", answer: "You can opt out, but it forfeits the 28.68% employer contribution and the CPI+1.6% revaluation on everything you have built. For most teachers staying in is worth several thousand pounds a year in employer money alone. Take regulated advice before leaving a defined-benefit scheme." },
     ],
     sources: SOURCES,
-    updated: UPDATED,
+    updated: PENSION_RATES_REVIEWED,
   },
   {
     slug: "teacher-avc-calculator",
@@ -351,7 +353,7 @@ export const pensionPages: PageContent[] = [
       ]},
 
       { kind: "h2", text: "How much should a teacher contribute?" },
-      { kind: "p", text: "A common framework: aim for total retirement saving of 12-15% of salary including your TPS contribution. With the TPS already taking 7.4-12.7%, most teachers are well inside that range without AVCs. The cases where AVCs earn their place are specific: higher-rate taxpayers with spare monthly income, teachers who opted out of the pension entirely and need to rebuild something, and late starters closing a gap in the final 10-15 years when tax relief is most valuable." },
+      { kind: "p", text: "A common framework: aim for total retirement saving of 12-15% of salary including your TPS contribution. With the TPS already taking 7.4-12%, most teachers are well inside that range without AVCs. The cases where AVCs earn their place are specific: higher-rate taxpayers with spare monthly income, teachers who opted out of the pension entirely and need to rebuild something, and late starters closing a gap in the final 10-15 years when tax relief is most valuable." },
       { kind: "callout", tone: "warn", title: "Check the annual allowance first", text: "The TPS is generous enough that senior leaders can breach the pension annual allowance through no action of their own, which triggers a tax charge. Adding AVCs on top increases the risk. If you are a head or deputy on the [leadership pay scale](/leadership-pay-scale/), check your Total Pension Input Amount before committing." },
 
       { kind: "h2", text: "Accessing the pot" },
@@ -359,7 +361,7 @@ export const pensionPages: PageContent[] = [
     ],
     faq: [
       { question: "What is a teachers' AVC?", answer: "Additional Voluntary Contributions: a personal invested pension pot running alongside your guaranteed Teachers' Pension. You choose the monthly amount, tax relief reduces the real cost, and up to 25% of the pot can be taken tax-free at retirement." },
-      { question: "How much should I pay into AVCs as a teacher?", answer: "There is no single answer, but with the TPS already taking 7.4-12.7% of salary, most teachers are saving adequately. AVCs make most sense for higher-rate taxpayers with surplus income, or teachers closing a retirement savings gap in their final 10-15 years." },
+      { question: "How much should I pay into AVCs as a teacher?", answer: "There is no single answer, but with the TPS already taking 7.4-12% of salary, most teachers are saving adequately. AVCs make most sense for higher-rate taxpayers with surplus income, or teachers closing a retirement savings gap in their final 10-15 years." },
       { question: "Is the teachers' AVC with Prudential?", answer: "Yes, Prudential administers the TPS's official AVC arrangement. You manage the pot through Prudential's online service. You can alternatively use any private pension as your top-up vehicle." },
       { question: "Can I lose money in a teachers' AVC?", answer: "Yes. Unlike your main TPS pension, AVCs are invested and the pot can fall as well as rise, particularly close to retirement. Most providers offer lifestyling that automatically reduces risk as you approach your target retirement date." },
       { question: "When can I take my teachers' AVC?", answer: "Normally from age 55, rising to 57 on 6 April 2028 — independently of when you claim your TPS pension. Up to 25% is tax-free; the rest is taxed as income when drawn." },
@@ -636,20 +638,20 @@ export const pensionPages: PageContent[] = [
       "Every year of teaching builds 1/57th of your pensionable pay as permanent annual pension.",
       "Your pot is not invested — it is a promise backed by the scheme, so there is no market risk.",
       "Already-built pension grows at CPI plus 1.6% every year you keep teaching.",
-      "The employer pays 28.8% of your salary in, on top of your 7.4-12.7%.",
+      "The employer pays 28.68% of your salary in, on top of your 7.4-12%.",
       "Five decisions shape the outcome: staying in, going part-time knowingly, allowances, retirement age and the lump sum.",
     ],
     blocks: [
       { kind: "h2", text: "The whole system in one paragraph" },
-      { kind: "p", text: "Each month, a percentage of your salary (7.4-12.7% depending on your pay band) goes to the scheme, and your employer adds 28.8%. Each year, the scheme credits you with 1/57th of your pensionable pay as an annual pension amount. Every year, everything you have earned so far is increased by inflation plus 1.6%. When you retire, the total is paid to you every year for life, rising with inflation. That is the entire engine." },
+      { kind: "p", text: "Each month, a percentage of your salary (7.4-12% depending on your pay band) goes to the scheme, and your employer adds 28.68%. Each year, the scheme credits you with 1/57th of your pensionable pay as an annual pension amount. Every year, everything you have earned so far is increased by inflation plus 1.6%. When you retire, the total is paid to you every year for life, rising with inflation. That is the entire engine." },
 
       { kind: "h2", text: "The four moving parts" },
       { kind: "h3", text: "1. Accrual: earning 1/57th each year" },
-      { kind: "p", text: "In the 2026/27 school year, a teacher on M4 (£40,940) earns £718 of annual pension. A teacher on U3 (£52,835) earns £927. A headteacher on £90,000 earns £1,579. The amount is fixed by that year's pay — no forecasts, no investment returns, no luck." },
+      { kind: "p", text: "In the 2026/27 school year, a teacher on M4 (£40,941) earns £718 of annual pension. A teacher on U3 (£52,835) earns £927. A headteacher on £90,000 earns £1,579. The amount is fixed by that year's pay — no forecasts, no investment returns, no luck." },
       { kind: "h3", text: "2. Revaluation: your earned pension grows" },
       { kind: "p", text: "Last year's pension, and every year before it, is uprated by CPI plus 1.6% while you remain in service. Earn £700 of pension in year one and by year five it has grown to around £800 without you doing anything. Leave the scheme and the uplift drops to CPI only — the quiet cost of quitting." },
       { kind: "h3", text: "3. Contributions: what it costs you" },
-      { kind: "p", text: "Your contribution is a percentage of salary, tiered from 7.4% to 12.7%. It comes out before income tax (so you get full tax relief) but after nothing else — National Insurance is charged on your full gross pay. The [contributions guide](/teacher-pension-contributions/) has every band and worked cost." },
+      { kind: "p", text: "Your contribution is a percentage of salary, tiered from 7.4% to 12%. It comes out before income tax (so you get full tax relief) but after nothing else — National Insurance is charged on your full gross pay. The [contributions guide](/teacher-pension-contributions/) has every band and worked cost." },
       { kind: "h3", text: "4. Payment: what you get out" },
       { kind: "p", text: "From your Normal Pension Age, the accumulated total is paid every year for life, rising each April with CPI. You can start earlier with reductions, exchange some pension for tax-free cash at 12:1, and pass limited benefits to a spouse or children after death." },
 
@@ -657,7 +659,7 @@ export const pensionPages: PageContent[] = [
       { kind: "p", text: "The biggest conceptual jump from private pensions: there is no pot with your name on it. Your contributions today pay current pensioners, and the promise of your future pension is backed by the scheme's long-term funding and ultimately the government. That is why there is no investment risk, no crash risk, and no sequence-of-returns problem — and why the scheme's value is measured in guaranteed income, not a balance figure." },
       { kind: "table", caption: "TPS versus a typical private workplace pension", head: ["Feature", "Teachers' Pension", "Typical DC workplace scheme"], rows: [
         ["What you build", "Guaranteed annual pension", "A pot of investments"],
-        ["Employer contribution", "28.8%", "3-6% typical"],
+        ["Employer contribution", "28.68%", "3-6% typical"],
         ["Investment risk", "None", "Entirely yours"],
         ["Inflation protection", "Automatic, CPI-linked", "Depends on how you draw"],
         ["How long it lasts", "For life", "Until the pot runs out"],
@@ -665,7 +667,7 @@ export const pensionPages: PageContent[] = [
 
       { kind: "h2", text: "The five decisions that shape your pension" },
       { kind: "ol", items: [
-        "**Staying in.** Opting out stops your 1/57ths and forfeits the 28.8% employer contribution. Almost never sensible.",
+        "**Staying in.** Opting out stops your 1/57ths and forfeits the 28.68% employer contribution. Almost never sensible.",
         "**Taking allowances.** TLR and SEN payments are pensionable — a TLR 2 of £5,000 builds an extra £88 of pension every year you hold it.",
         "**Going part-time knowingly.** You build proportionally less but the [part-time mechanics](/part-time-teacher-pay-calculator/) are fair: same tier per pound, full service credit.",
         "**When you retire.** Each year before NPA costs roughly 5% permanently; each year past it buys full-price pension. See [pension ages](/teacher-pension-age/).",
@@ -694,9 +696,9 @@ export const pensionPages: PageContent[] = [
       { kind: "p", text: "With the mechanics clear, the [teachers' pension calculator](/teacher-pension-calculator/) turns them into a number for your own career, and the [pillar guide](/teacher-pension/) covers the scheme in full depth." },
     ],
     faq: [
-      { question: "How does the teachers' pension work in simple terms?", answer: "You pay in 7.4-12.7% of salary, your employer adds 28.8%, and each year you build 1/57th of your pay as annual pension. Everything you have earned grows by inflation plus 1.6% yearly. At retirement it pays an inflation-linked income for life, with an optional lump sum." },
+      { question: "How does the teachers' pension work in simple terms?", answer: "You pay in 7.4-12% of salary, your employer adds 28.68%, and each year you build 1/57th of your pay as annual pension. Everything you have earned grows by inflation plus 1.6% yearly. At retirement it pays an inflation-linked income for life, with an optional lump sum." },
       { question: "Is the teachers' pension invested in the stock market?", answer: "No. It is a defined-benefit promise, not a pot of investments. Your benefit is defined by the 1/57th formula and backed by the scheme, so there is no market risk to your pension — the trade-off is less flexibility and limited inheritance." },
-      { question: "Do teachers get a good pension?", answer: "By the standard of workplace pensions, exceptionally: the 28.8% employer rate is roughly ten times the auto-enrolment minimum, benefits are index-linked for life, and there is no investment risk. The honest caveats are contribution costs of up to 12.7% and limited death benefits." },
+      { question: "Do teachers get a good pension?", answer: "By the standard of workplace pensions, exceptionally: the 28.68% employer rate is roughly ten times the auto-enrolment minimum, benefits are index-linked for life, and there is no investment risk. The honest caveats are contribution costs of up to 12% and limited death benefits." },
       { question: "What happens to my teachers' pension when I die?", answer: "A death grant of 3x annual pension applies in the first years of retirement (and while in service), plus a survivor's pension for spouse or nominated partner, and children's pensions. The [death in service guide](/teacher-pension-death-in-service/) has the figures and nomination steps." },
       { question: "How many years do you need to teach to get a pension?", answer: "There is no minimum service length — every year builds 1/57ths that are yours even if you leave teaching entirely after two years. Very short careers produce small pensions, but nothing is forfeited." },
       { question: "Do teachers pay into the pension automatically?", answer: "Yes, membership is automatic for most teachers in maintained schools and many academies, with a genuine opt-out available. Supply teachers engaged through agencies are the big exception — they usually are not enrolled at all unless they ask." },
@@ -807,25 +809,25 @@ export const pensionPages: PageContent[] = [
     intro:
       "Short answer: yes — the Teachers' Pension is one of the best workplace pensions in the country, and opting out is almost always a financial mistake. But 'good' deserves scrutiny: here is where the scheme genuinely wins, where the criticisms are fair, and the narrow cases where leaving is defensible.",
     keyTakeaways: [
-      "The 28.8% employer contribution is roughly ten times the auto-enrolment minimum — the single strongest argument.",
+      "The 28.68% employer contribution is roughly ten times the auto-enrolment minimum — the single strongest argument.",
       "Guaranteed, CPI-linked income for life with zero investment risk is something private pots cannot replicate cheaply.",
-      "The fair criticisms: contributions up to 12.7% are expensive, death benefits are limited, and flexibility is poor.",
+      "The fair criticisms: contributions up to 12% are expensive, death benefits are limited, and flexibility is poor.",
       "Opting out forfeits employer money and downgrades revaluation on everything already built — almost never rational.",
       "The scheme's generosity is why senior leaders must watch the pension annual allowance tax charge.",
     ],
     blocks: [
       { kind: "h2", text: "The case for: four numbers that settle it" },
       { kind: "table", caption: "TPS versus a typical private workplace pension", head: ["Measure", "Teachers' Pension", "Typical private DC"], rows: [
-        ["Employer contribution", "28.8%", "3-6%"],
+        ["Employer contribution", "28.68%", "3-6%"],
         ["What £100/month buys at 67 (30y)", "≈£6,300/yr guaranteed, index-linked", "A pot of ≈£60-75k, no guarantee"],
         ["Investment risk", "None", "Entirely yours"],
         ["Running out of money", "Impossible", "A real risk in drawdown"],
       ]},
-      { kind: "p", text: "The employer contribution alone is decisive. A teacher on M4 receives £11,791 of employer money into the scheme every year. Replicating a guaranteed £20,000-a-year index-linked pension through a private pot would typically need a fund of £400,000-£500,000 at current annuity rates — and you would carry all the investment risk getting there." },
+      { kind: "p", text: "The employer contribution alone is decisive. A teacher on M4 receives £11,742 of employer money into the scheme every year. Replicating a guaranteed £20,000-a-year index-linked pension through a private pot would typically need a fund of £400,000-£500,000 at current annuity rates — and you would carry all the investment risk getting there." },
 
       { kind: "h2", text: "The fair criticisms" },
       { kind: "h3", text: "Contributions are expensive" },
-      { kind: "p", text: "Paying up to 12.7% of salary is a real cost, particularly for part-time teachers whose tier is set on FTE pay. The counter-argument is that the contribution buys benefits worth far more than a private equivalent — but the cash-flow reality on a tight month is genuine, and the [tier cliff edges](/teacher-pension-contributions/) can swallow an entire pay rise." },
+      { kind: "p", text: "Paying up to 12% of salary is a real cost, particularly for part-time teachers whose rate is based on actual pensionable earnings. The counter-argument is that the contribution buys benefits worth far more than a private equivalent — but the cash-flow reality on a tight month is genuine, and the [tier cliff edges](/teacher-pension-contributions/) can swallow an entire pay rise." },
       { kind: "h3", text: "Death benefits are limited" },
       { kind: "p", text: "A private pot passes to your family whole. The TPS pays a death grant (3x pension in early retirement years), a survivor's pension typically around half of yours, and children's pensions. For a teacher who dies shortly after retiring with no spouse, the scheme can return far less than was contributed. Families for whom inheritance matters should hold [AVCs](/teacher-avc-calculator/) or ISAs alongside." },
       { kind: "h3", text: "Flexibility is poor" },
@@ -835,12 +837,12 @@ export const pensionPages: PageContent[] = [
 
       { kind: "h2", text: "The cases where opting out is argued — and why they usually fail" },
       { kind: "table", caption: "Common opt-out arguments examined", head: ["The argument", "The reality"], rows: [
-        ["'I need the money now'", "Opting out on M4 gives £3,521/yr gross — about £230/month net. It also forfeits £11,791 of employer money and CPI+1.6% growth on everything built."],
-        ["'I'll invest it myself'", "To match the guarantee you must beat a 28.8% head start, then replicate index-linked income for life. Historically implausible for most savers."],
+        ["'I need the money now'", "Opting out on M4 gives £3,644/yr gross — about £230/month net. It also forfeits £11,742 of employer money and CPI+1.6% growth on everything built."],
+        ["'I'll invest it myself'", "To match the guarantee you must beat a 28.68% head start, then replicate index-linked income for life. Historically implausible for most savers."],
         ["'I won't live long enough'", "True for some; unknowable in advance. The survivor's pension partially covers it. Longevity insurance is exactly what you cannot buy cheaply at 65."],
         ["'I'm leaving teaching anyway'", "Deferred benefits still grow at CPI. Leaving the scheme entirely is different from leaving teaching — deferred membership costs nothing and keeps the guarantee."],
       ]},
-      { kind: "callout", tone: "warn", title: "If you have opted out, look at rejoining", text: "Rejoining restarts 1/57ths and restores the employer contribution. There are limits on how much can be built in any year, but for most members under NPA the arithmetic strongly favours rejoining. Take regulated advice, but take it soon — every year out is a year of 28.8% forfeited." },
+      { kind: "callout", tone: "warn", title: "If you have opted out, look at rejoining", text: "Rejoining restarts 1/57ths and restores the employer contribution. There are limits on how much can be built in any year, but for most members under NPA the arithmetic strongly favours rejoining. Take regulated advice, but take it soon — every year out is a year of 28.68% forfeited." },
 
       { kind: "h2", text: "Who the scheme is genuinely not ideal for" },
       { kind: "ul", items: [
@@ -853,12 +855,12 @@ export const pensionPages: PageContent[] = [
       { kind: "p", text: "Measured on guaranteed retirement income per pound of member contribution, the Teachers' Pension beats essentially every alternative available to UK workers. Its weaknesses — cost, rigidity, limited inheritance — are real but are the standard trade-offs of defined-benefit security. For the overwhelming majority of teachers the question is not whether the scheme is good, but how to [maximise what you get from it](/teacher-pension/): allowances, buy-backs, retirement timing and the lump sum decision." },
     ],
     faq: [
-      { question: "Are teachers' pensions good?", answer: "Yes — among the best workplace pensions available. The 28.8% employer contribution, guaranteed CPI-linked income for life and absence of investment risk outweigh the genuine downsides of high contributions, poor flexibility and limited death benefits for most members." },
-      { question: "Is the teachers' pension worth it compared to investing myself?", answer: "For almost everyone, yes. You start with a 28.8% employer contribution, take no investment risk, and receive index-linked income for life. Replicating a £20,000 guaranteed pension privately typically needs a £400,000-£500,000 pot at current annuity rates." },
-      { question: "Should I opt out of the teachers' pension?", answer: "Almost never. Opting out on M4 gains about £230 a month net but forfeits £11,791 a year of employer contribution and downgrades revaluation on your entire accrued pension. Take regulated advice before leaving a defined-benefit scheme." },
-      { question: "What are the downsides of the teachers' pension?", answer: "Contributions reach 12.7% of salary with no partial option, benefits cannot be accessed before minimum pension age, death benefits are limited compared with a private pot, and the rules have changed repeatedly — NPA is linked to State Pension age, so it can move." },
+      { question: "Are teachers' pensions good?", answer: "Yes — among the best workplace pensions available. The 28.68% employer contribution, guaranteed CPI-linked income for life and absence of investment risk outweigh the genuine downsides of high contributions, poor flexibility and limited death benefits for most members." },
+      { question: "Is the teachers' pension worth it compared to investing myself?", answer: "For almost everyone, yes. You start with a 28.68% employer contribution, take no investment risk, and receive index-linked income for life. Replicating a £20,000 guaranteed pension privately typically needs a £400,000-£500,000 pot at current annuity rates." },
+      { question: "Should I opt out of the teachers' pension?", answer: "Almost never. Opting out on M4 gains about £230 a month net but forfeits £11,742 a year of employer contribution and downgrades revaluation on your entire accrued pension. Take regulated advice before leaving a defined-benefit scheme." },
+      { question: "What are the downsides of the teachers' pension?", answer: "Contributions reach 12% of salary with no partial option, benefits cannot be accessed before minimum pension age, death benefits are limited compared with a private pot, and the rules have changed repeatedly — NPA is linked to State Pension age, so it can move." },
       { question: "Do teachers get their pension contributions back if they leave?", answer: "Not as a refund in the normal case — leaving teaching makes you a deferred member with the pension intact, growing at CPI. Refunds of contributions exist only for very short service periods under specific rules, and are almost always worth less than keeping the deferred pension." },
-      { question: "Is the teachers' pension better than a private pension?", answer: "For guaranteed lifetime income, substantially better. Private pots win on flexibility, inheritance and access age. The strongest private-pension argument — employer matching — is dwarfed by the TPS's 28.8% rate. Most advisers recommend treating the TPS as the foundation and private savings as the flexible layer." },
+      { question: "Is the teachers' pension better than a private pension?", answer: "For guaranteed lifetime income, substantially better. Private pots win on flexibility, inheritance and access age. The strongest private-pension argument — employer matching — is dwarfed by the TPS's 28.68% rate. Most advisers recommend treating the TPS as the foundation and private savings as the flexible layer." },
       { question: "Why do some financial advisers say to leave the teachers' pension?", answer: "Be careful: advice to exit defined-benefit schemes is a known scam pattern and the FCA has acted on it repeatedly. There are narrow cases (very large pension inputs triggering annual allowance charges, specific inheritance needs) where restructuring is defensible — those require FCA-regulated, specialist advice, never a cold call." },
     ],
     sources: [
@@ -981,9 +983,9 @@ export const pensionPages: PageContent[] = [
       { kind: "h2", text: "The death grant: 3x pensionable pay" },
       { kind: "p", text: "For members who die in service, the scheme pays a lump sum of **three times the annual rate of pensionable pay**. The figures at 2026/27 pay points:" },
       { kind: "table", caption: "Death in service grant by pay point (rest of England, 2026/27)", head: ["Pay point", "Pensionable pay", "Death grant"], rows: [
-        ["M1", "£34,068", "£102,204"],
-        ["M4", "£40,940", "£122,820"],
-        ["M6", "£46,939", "£140,817"],
+        ["M1", "£34,069", "£102,204"],
+        ["M4", "£40,941", "£122,820"],
+        ["M6", "£46,940", "£140,817"],
         ["U3", "£52,835", "£158,505"],
         ["L12 (indicative ≈£75,000)", "≈£75,000", "≈£225,000"],
       ]},

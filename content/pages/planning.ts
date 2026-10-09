@@ -22,7 +22,7 @@ export const planningPages: PageContent[] = [
       "Teaching gives you something most careers never will: a guaranteed, inflation-linked pension plus unusually strong protection against life's worst events — generous maternity terms, long occupational sick pay, and statutory redundancy calculated on age-weighted weeks. Good **teacher financial planning** starts by understanding those structural advantages properly, then builds ordinary discipline on top: knowing your true hourly rate, budgeting against twelve equal monthly payments, and timing big decisions like resignation or part-time working around the rules that govern them. This pillar page maps the whole landscape and hands you off to the detailed guides and calculators for each decision, in order.",
     keyTakeaways: [
       "The Teachers' Pension Scheme is the core asset: 1/57th accrual with CPI-plus-1.6% revaluation while you work.",
-      "Your payslip runs through tax, 8% National Insurance, tiered pension contributions of 7.4% to 12.7%, and any student loan.",
+      "Your payslip runs through tax, 8% National Insurance, tiered pension contributions of 7.4% to 12%, and any student loan.",
       "Burgundy Book conditions give teachers stronger maternity and sick pay than almost any comparable profession.",
       "Twelve equal monthly payments mean summer holidays are paid — but resignation dates still control when income actually stops.",
       "Every major financial decision in teaching has a rule-bound best time; this guide shows where each one lives.",
@@ -31,25 +31,25 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "Start with what teaching already gives you" },
       { kind: "p", text: "Most financial advice assumes you must manufacture security from scratch: build an emergency fund, buy insurance, invest for retirement. Teaching pre-installs much of that architecture. The [Teachers' Pension Scheme](/teacher-pension/) replaces investment risk with a statutory guarantee; the Burgundy Book replaces income-risk during maternity and illness with contractual entitlements; and national pay scales replace negotiation anxiety with published numbers. Sound financial planning for teachers therefore begins with an audit of what you already hold." },
       { kind: "table", caption: "The built-in financial architecture of a teaching career", head: ["Layer", "What it provides", "Where to verify"], rows: [
-        ["Teachers' Pension Scheme", "Career-average pension, CPI+1.6% active revaluation, 28.8% employer rate", "TPS annual benefit statement"],
+        ["Teachers' Pension Scheme", "Career-average pension, CPI+1.6% active revaluation, 28.68% employer rate", "TPS annual benefit statement"],
         ["STPCD pay scale", "Published salary points, annual awards, progression framework", "Current STPCD"],
         ["Burgundy Book conditions", "Maternity scheme, sick pay scale, resignation dates", "Your contract and trust policy"],
         ["Statutory floor", "SMP/SSP minimums if occupational terms ever lapse", "GOV.UK guidance"],
       ]},
 
       { kind: "h2", text: "Know exactly what arrives in your bank account" },
-      { kind: "p", text: "Gross salary overstates your resources by more than most teachers realise. From the 2026/27 M4 point of £40,940, three layers come out before spending money exists: income tax above the £12,570 personal allowance, National Insurance at 8% between £12,570 and £50,270, and pension contributions tiered from 7.4% upward based on full-time-equivalent salary. A student loan can take another slice depending on plan. The stack looks like this." },
-      { kind: "table", caption: "Deduction stack at two common pay points (2026/27, rest of England)", head: ["Item", "M4 (£40,940)", "U3 (£52,835)"], rows: [
+      { kind: "p", text: "Gross salary overstates your resources by more than most teachers realise. From the 2026/27 M4 point of £40,941, three layers come out before spending money exists: income tax above the £12,570 personal allowance, National Insurance at 8% between £12,570 and £50,270, and pension contributions tiered from 7.4% upward based on full-time-equivalent salary. A student loan can take another slice depending on plan. The stack looks like this." },
+      { kind: "table", caption: "Deduction stack at two common pay points (2026/27, rest of England)", head: ["Item", "M4 (£40,941)", "U3 (£52,835)"], rows: [
         ["Income tax (approx.)", "≈£5,674", "≈£10,106"],
         ["National Insurance at 8%/2%", "≈£2,270", "≈£3,325"],
-        ["Pension contribution (tier)", "≈£3,521 (8.6%)", "≈£5,072 (9.6%)"],
+        ["Pension contribution (tier)", "≈£3,521 (8.9%)", "≈£5,072 (9.9%)"],
         ["Plan 2 student loan (if any)", "≈£1,122", "≈£2,193"],
         ["Approximate monthly net", "≈£2,360", "≈£2,680"],
       ]},
       { kind: "p", text: "Run your own numbers in the [take-home pay calculator](/teacher-take-home-pay/) rather than relying on averages — tier cliffs and loan thresholds move individuals around far more than people expect. Part-time colleagues should use the [part-time version](/part-time-teacher-pay-calculator/) because TPS tiers assess full-time-equivalent salary, not actual pay." },
 
       { kind: "h2", text: "Treat the pension as your core investment" },
-      { kind: "p", text: "Each year of membership banks 1/57th of pensionable pay as a guaranteed, inflation-linked annuity — and while you keep contributing, everything already banked grows at CPI plus 1.6%. No retail investment combines those guarantees. The arithmetic beats almost anything: a mid-career M6 teacher accruing roughly £823 a year of pension for a personal cost near £4,500 receives an employer top-up of 28.8% on top. Before directing spare cash anywhere else, confirm you are opted in, check whether past service includes final-salary segments via our [CARE versus final salary guide](/care-vs-final-salary-pension/), and model outcomes in the [pension calculator](/teacher-pension-calculator/)." },
+      { kind: "p", text: "Each year of membership banks 1/57th of pensionable pay as a guaranteed, inflation-linked annuity — and while you keep contributing, everything already banked grows at CPI plus 1.6%. No retail investment combines those guarantees. The arithmetic beats almost anything: a mid-career M6 teacher accruing roughly £823 a year of pension for a personal cost near £4,500 receives an employer top-up of 28.68% on top. Before directing spare cash anywhere else, confirm you are opted in, check whether past service includes final-salary segments via our [CARE versus final salary guide](/care-vs-final-salary-pension/), and model outcomes in the [pension calculator](/teacher-pension-calculator/)." },
 
       { kind: "h2", text: "Plan the predictable life events before they arrive" },
       { kind: "p", text: "Teaching's protections are generous but rule-bound, and each has a qualifying clock worth starting early." },
@@ -84,7 +84,7 @@ export const planningPages: PageContent[] = [
       ]},
 
       { kind: "h2", text: "Can you build wealth on a teacher's salary?" },
-      { kind: "p", text: "The most common money questions teachers search are blunt: how much do teachers actually make, and can you build anything on it? The honest answer starts with the monthly figure, not the annual one. A mid-scale M4 teacher clears roughly £2,360 a month after all deductions, rising towards £2,700 at U3, and the stability of that number is itself an asset — twelve identical payments make automation (standing orders into savings on payday) unusually reliable compared with variable-income careers. Wealth then compounds through the scheme rather than speculation: the pension contributions you barely notice are, in employer-matching terms, a 28.8% instant return no portfolio offers. See what your salary is really worth per hour in the [true hourly rate guide](/teacher-true-hourly-rate/), and remember that teachers also access ordinary tools — lifetime ISAs, fee-free index funds, and specialist teacher-friendly mortgage lenders that accept pro-rata and supply income." },
+      { kind: "p", text: "The most common money questions teachers search are blunt: how much do teachers actually make, and can you build anything on it? The honest answer starts with the monthly figure, not the annual one. A mid-scale M4 teacher clears roughly £2,360 a month after all deductions, rising towards £2,700 at U3, and the stability of that number is itself an asset — twelve identical payments make automation (standing orders into savings on payday) unusually reliable compared with variable-income careers. Wealth then compounds through the scheme rather than speculation: the pension contributions you barely notice are, in employer-matching terms, a 28.68% instant return no portfolio offers. See what your salary is really worth per hour in the [true hourly rate guide](/teacher-true-hourly-rate/), and remember that teachers also access ordinary tools — lifetime ISAs, fee-free index funds, and specialist teacher-friendly mortgage lenders that accept pro-rata and supply income." },
 
       { kind: "h2", text: "When to get professional advice" },
       { kind: "p", text: "Most of this page needs no paid adviser — only documents and arithmetic. But three situations genuinely justify regulated advice, and recognising them early saves both money and mistakes." },
@@ -95,12 +95,12 @@ export const planningPages: PageContent[] = [
       { question: "Is the teachers' pension enough to retire on?", answer: "For a full career it provides substantial inflation-linked income — a teacher accruing £800+ a year of pension over 30 years reaches a six-figure annual entitlement alongside the State Pension. Use the pension calculators to model your own trajectory rather than relying on rules of thumb." },
       { question: "Do teachers earn enough to save money?", answer: "Many do once deductions are understood accurately. Mid-scale teachers outside London typically clear £2,300 to £2,600 a month; regional costs decide the rest. London weightings raise both pay and costs." },
       { question: "What financial protections do teachers have that other jobs don't?", answer: "Burgundy Book maternity and sick pay schemes exceed statutory minimums substantially, redundancy follows age-weighted statutory formulas, and the TPS guarantees benefits most private employers stopped offering decades ago." },
-      { question: "Should I ever opt out of the teachers' pension?", answer: "Rarely. Opting out stops guaranteed CPI-linked accrual and forfeits the 28.8% employer contribution. Independent advice is essential before opting out, and for classroom salaries it is almost always a poor trade." },
+      { question: "Should I ever opt out of the teachers' pension?", answer: "Rarely. Opting out stops guaranteed CPI-linked accrual and forfeits the 28.68% employer contribution. Independent advice is essential before opting out, and for classroom salaries it is almost always a poor trade." },
       { question: "How does going part-time affect my finances?", answer: "Pay becomes pro-rata but TPS contribution tiers are assessed on full-time-equivalent salary, and accrual follows actual pensionable pay. Service continues, so the pension impact is smaller than the pay cut suggests." },
       { question: "When is the best time to resign from teaching?", answer: "Contractually you must hit one of three Burgundy Book notice dates — 30 November, 30 April or 31 August in most cases — with notice submitted up to three months earlier. Financially, avoid resigning mid-year unless you have modelled the income gap." },
       { question: "What happens to my pension if I leave teaching?", answer: "Benefits stay in the scheme and grow with CPI only, instead of CPI plus 1.6% while actively contributing. You can rejoin later and deferred benefits remain yours." },
       { question: "Do I need a financial adviser as a teacher?", answer: "Only for specific events: transfers involving final-salary service, divorce settlements, or senior salaries nearing tax taper territory. Routine budgeting, pension monitoring and scenario planning are all well served by free tools like ours plus the published documents cited at the foot of each guide." },
-      { question: "How much do teachers make a month after deductions?", answer: "It depends on scale, location and loans, but typical 2026/27 figures are roughly £2,360 net per month at M4 (£40,940) and around £2,680 at U3 (£52,835) outside London, after tax, National Insurance, pension contributions and any Plan 2 loan. Calculate your own exact figure rather than relying on averages — tier cliffs move individuals significantly." },
+      { question: "How much do teachers make a month after deductions?", answer: "It depends on scale, location and loans, but typical 2026/27 figures are roughly £2,360 net per month at M4 (£40,941) and around £2,680 at U3 (£52,835) outside London, after tax, National Insurance, pension contributions and any Plan 2 loan. Calculate your own exact figure rather than relying on averages — tier cliffs move individuals significantly." },
       { question: "Can teachers be rich?", answer: "Teaching will not make anyone wealthy quickly, but it reliably builds six-figure pension entitlements over a full career, pays twelve stable months a year for disciplined saving and investing, and offers leadership pay up to £99,000+ for those who pursue it. The realistic path is pension-first wealth plus steady ISA investing, not windfalls." },
     ],
     sources: [
@@ -256,7 +256,7 @@ export const planningPages: PageContent[] = [
     keyTakeaways: [
       "Repayment depends on income above your plan's threshold: 9% for Plans 1, 2, 4 and 5; 6% for the postgraduate loan.",
       "2026/27 thresholds: Plan 1 £26,065; Plan 2 £28,470; Plan 4 £32,745; Plan 5 £25,000; postgraduate £21,000.",
-      "A teacher on M4 (£40,940) repays roughly £94 a month on Plan 2, or £193 with a combined undergraduate plus postgraduate loan — see the [pay scale context](/teacher-pay-scale/) for where those salaries sit.",
+      "A teacher on M4 (£40,941) repays roughly £94 a month on Plan 2, or £193 with a combined undergraduate plus postgraduate loan — see the [pay scale context](/teacher-pay-scale/) for where those salaries sit.",
       "Write-off periods range from 25 years (Plan 1) to 40 years (Plan 5); many teachers never clear the balance.",
       "Overpayments happen when salary changes go unreported — reconcile against your own calculation once a year.",
     ],
@@ -276,10 +276,10 @@ export const planningPages: PageContent[] = [
       { kind: "p", text: "Select your plan or plans, enter your gross annual salary, and see the weekly, monthly and annual deduction. The tool applies the same thresholds and rates shown above, including the combined case where a postgraduate loan sits alongside your undergraduate plan." },
 
       { kind: "h2", text: "What teachers earn versus what they repay" },
-      { kind: "p", text: "Teacher salaries now start high enough (£34,068 at M1 outside London for 2026/27) that nearly everyone with an outstanding loan repays something. The table shows annual repayment at three common scale points." },
+      { kind: "p", text: "Teacher salaries now start high enough (£34,069 at M1 outside London for 2026/27) that nearly everyone with an outstanding loan repays something. The table shows annual repayment at three common scale points." },
       { kind: "table", caption: "Annual repayment by plan at teacher pay points (rest of England, 2026/27)", head: ["Pay point", "Plan 2", "Plan 5", "PGL"], rows: [
-        ["M1 £34,068", "£503.82", "£816.12", "£784.08"],
-        ["M4 £40,940", "£1,122.30", "£1,434.60", "£1,196.40"],
+        ["M1 £34,069", "£503.82", "£816.12", "£784.08"],
+        ["M4 £40,941", "£1,122.30", "£1,434.60", "£1,196.40"],
         ["U3 £52,835", "£2,192.85", "£2,505.15", "£1,910.10"],
       ]},
       { kind: "p", text: "Notice how Plan 5 always out-bills Plan 2 at identical salaries because its threshold sits £3,470 lower. For PGCE graduates carrying both an undergraduate loan and a postgraduate loan, deductions stack without offsetting: an M4 teacher with both plans pays £2,318.70 a year, about **£193 a month** — often the single largest discretionary-looking item on a young teacher's payslip after pension contributions. The [take-home pay calculator](/teacher-take-home-pay/) folds all of this into a full net figure." },
@@ -290,7 +290,7 @@ export const planningPages: PageContent[] = [
 
       { kind: "h2", text: "How the repayment is actually calculated" },
       { kind: "p", text: "Every plan uses the same three-line calculation, which explains why debt size never appears in it. Take your gross pay for the pay period, subtract that plan's annual threshold divided across the period, then apply the percentage to what remains." },
-      { kind: "table", caption: "Worked line-by-line: Plan 2 teacher on £3,411.67 gross per month (M4 £40,940)", head: ["Step", "Arithmetic", "Result"], rows: [
+      { kind: "table", caption: "Worked line-by-line: Plan 2 teacher on £3,411.67 gross per month (M4 £40,941)", head: ["Step", "Arithmetic", "Result"], rows: [
         ["1. Monthly threshold allowance", "£28,470 ÷ 12", "£2,372.50"],
         ["2. Income above threshold", "£3,411.67 − £2,372.50", "£1,039.17"],
         ["3. Apply 9% rate", "£1,039.17 × 0.09", "£93.53 this month"],
@@ -326,7 +326,7 @@ export const planningPages: PageContent[] = [
       ]},
     ],
     faq: [
-      { question: "How much will I repay on a postgraduate loan?", answer: "6% of everything you earn above £21,000. On the 2026/27 M4 salary of £40,940 that is £1,196.40 a year, about £99.70 a month, regardless of how much you originally borrowed." },
+      { question: "How much will I repay on a postgraduate loan?", answer: "6% of everything you earn above £21,000. On the 2026/27 M4 salary of £40,941 that is £1,196.40 a year, about £99.70 a month, regardless of how much you originally borrowed." },
       { question: "What is the Plan 2 repayment threshold?", answer: "£28,470 for the 2026/27 tax year. You repay 9% of gross income above that figure, taken through PAYE automatically once your employer is notified." },
       { question: "Do teachers pay both student loans after a PGCE?", answer: "Usually yes if they hold an undergraduate loan plus a postgraduate loan. The 9% and 6% deductions stack on the same salary without offsetting — an M4 teacher with both pays around £193 a month combined." },
       { question: "Is a student loan worth repaying early?", answer: "Often no. With 30- to 40-year write-off periods, many teachers never clear the balance, so voluntary overpayment can be money that would otherwise be forgiven. Model your specific career trajectory before overpaying." },
@@ -377,7 +377,7 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "Before resigning, price what you are giving up" },
       { kind: "p", text: "The instinctive comparison is salary versus salary: £40,000 teaching against a £42,000 offer elsewhere feels like a gain. The honest comparison includes three components the new job probably lacks." },
       { kind: "table", caption: "The hidden package most offers don't match", head: ["Component", "Teaching value"], rows: [
-        ["Employer pension contribution", "28.8% of salary into a guaranteed scheme"],
+        ["Employer pension contribution", "28.68% of salary into a guaranteed scheme"],
         ["Active revaluation", "Accrued pension grows CPI + 1.6% while you work"],
         ["Occupational protections", "Enhanced maternity, sick pay and notice terms"],
         ["Holiday structure", "13+ weeks of school holidays within salaried time"],
@@ -590,7 +590,7 @@ export const planningPages: PageContent[] = [
     intro:
       "Generic budget advice fails teachers twice over: it ignores what teaching actually pays after deductions, and it ignores when in the year teachers actually spend money. A good **teacher budget planner** starts from your verified take-home pay at your exact scale point, then bends around the school calendar — September uniform and equipment costs, December's double event of Christmas and the longest stretch to payday, and summer months where salaries continue but childcare costs spike. This guide gives you the verified numbers first, then a working three-account structure, then the calendar traps that catch even experienced staff.",
     keyTakeaways: [
-      "Budget from net pay, not gross: an M4 teacher keeps roughly £2,430 of £40,940 after all deductions.",
+      "Budget from net pay, not gross: an M4 teacher keeps roughly £2,430 of £40,941 after all deductions.",
       "Twelve equal monthly payments mean holidays are paid — but only if you resist treating them as bonus months.",
       "Term-start months run 10–20% hotter than average; pre-fund them in August rather than absorbing the shock.",
       "Pension contributions are tiered on cliffs, so a small pay rise can raise contributions disproportionately.",
@@ -600,9 +600,9 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "Start from verified take-home pay" },
       { kind: "p", text: "Every workable budget begins with one number: what actually lands in the bank. The deduction stack runs income tax above £12,570, National Insurance at 8% up to £50,270, tiered TPS pension contributions from 7.4%, and any student loan plan. Because tiers and thresholds create jumps, two teachers one point apart can keep noticeably different amounts." },
       { kind: "table", caption: "Approximate monthly net pay by scale point (2026/27, rest of England)", head: ["Pay point", "Gross annual", "Approx. monthly net*"], rows: [
-        ["M1 (£34,068)", "£34,068", "≈£2,180"],
-        ["M4 (£40,940)", "£40,940", "≈£2,430"],
-        ["M6 (£46,939)", "£46,939", "≈£2,660"],
+        ["M1 (£34,069)", "£34,069", "≈£2,180"],
+        ["M4 (£40,941)", "£40,941", "≈£2,430"],
+        ["M6 (£46,940)", "£46,940", "≈£2,660"],
         ["U3 (£52,835)", "£52,835", "≈£2,900"],
         ["U3 with Plan 2 + PGL loans", "£52,835", "≈£2,740"],
       ]},
@@ -709,9 +709,9 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "Version one: the contractual hourly rate" },
       { kind: "p", text: "The STPCD limits directed time to 1,265 hours across roughly 195 days a year. Dividing salary by that contracted commitment gives the fairest like-for-like comparison with other salaried professions." },
       { kind: "table", caption: "Contractual hourly rate by pay point (2026/27, rest of England)", head: ["Pay point", "Annual salary", "Rate per directed hour"], rows: [
-        ["M1", "£34,068", "£26.93"],
-        ["M4", "£40,940", "£32.36"],
-        ["M6", "£46,939", "£37.11"],
+        ["M1", "£34,069", "£26.93"],
+        ["M4", "£40,941", "£32.36"],
+        ["M6", "£46,940", "£37.11"],
         ["U3", "£52,835", "£41.77"],
         ["L12 (indicative ≈£75,000)", "≈£75,000", "≈£59.29"],
       ]},
@@ -746,14 +746,14 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "Part-time and pro-rata hourly rates" },
       { kind: "p", text: "Reduced timetables change the divisor more than the numerator in ways that surprise people. A 0.8 M4 teacher earns £32,752 but typically sheds whole days rather than 20% of every day's workload, so marking and planning compress into fewer sessions while meetings stay fixed. Whether part-time raises or lowers your effective hourly rate depends entirely on which activities disappear — model both patterns before negotiating, because schools rarely volunteer which tasks come off your list." },
       { kind: "table", caption: "M4 hourly rate by working pattern (illustrative)", head: ["Pattern", "Salary", "Assumed weekly hours", "Effective rate"], rows: [
-        ["Full time", "£40,940", "50", "≈£21"],
+        ["Full time", "£40,941", "50", "≈£21"],
         ["0.8 with full days shed", "£32,752", "40", "≈£21"],
         ["0.8 with duties compressed", "£32,752", "44", "≈£19"],
       ]},
       { kind: "p", text: "The lesson generalises: ask exactly which responsibilities reduce under any flexible-working proposal. Two offers with identical salaries can differ by several pounds per hour depending on what came off the timetable." },
 
       { kind: "h2", text: "How teaching compares when you adjust properly" },
-      { kind: "p", text: "Fair comparisons use fully-loaded figures: salary plus employer pension contributions against realistic hours. On that basis an M4 teacher earning £40,940 with a 28.8% employer pension rate represents over £52,000 of annual compensation — against perhaps 1,900 genuine hours, close to £27 an hour all-in. A private-sector role paying £48,000 with 5% pension and 45-hour weeks across 47 working weeks lands near £23. Neither answer settles the career question, but both belong in it. Our [salary guides](/teacher-salary-uk/) break the comparison down by subject and phase." },
+      { kind: "p", text: "Fair comparisons use fully-loaded figures: salary plus employer pension contributions against realistic hours. On that basis an M4 teacher earning £40,941 with a 28.68% employer pension rate represents over £52,000 of annual compensation — against perhaps 1,900 genuine hours, close to £27 an hour all-in. A private-sector role paying £48,000 with 5% pension and 45-hour weeks across 47 working weeks lands near £23. Neither answer settles the career question, but both belong in it. Our [salary guides](/teacher-salary-uk/) break the comparison down by subject and phase." },
 
       { kind: "h2", text: "The leadership exception" },
       { kind: "p", text: "Leadership spines invert the usual pattern: salaries rise sharply but so do expectations, and headship famously consumes whatever hours exist. An L12 leader's £59 contractual hourly rate can evaporate against 60-hour realities — though leaders also control more of their own workload architecture than classroom teachers do, which changes what the honest-hours table shows. If promotion is on your radar, model both versions through our [leadership pay scale guide](/leadership-pay-scale/) and [financial planning hub](/teacher-financial-planning/) before accepting the extra responsibility." },
@@ -769,7 +769,7 @@ export const planningPages: PageContent[] = [
       { question: "How many hours do teachers actually work?", answer: "Government workload surveys consistently find classroom teachers averaging around 50 hours weekly, with variations by phase, subject and career stage. Early-career teachers typically report the longest hours." },
       { question: "Is teaching good value per hour compared with other jobs?", answer: "On contracted hours, yes — the rate beats most graduate roles. Against realistic hours the advantage narrows substantially for early-career staff and reverses at some workload levels. Total compensation including pensions improves teaching's position." },
       { question: "Does the hourly rate differ in London?", answer: "London weightings raise salaries by up to £7,600 at M1, lifting hourly rates proportionally — inner London M1 earns about £33 per directed hour versus £26.93 elsewhere." },
-      { question: "What is the unqualified teacher hourly rate?", answer: "Unqualified teachers earn from the unqualified range (£23,731 to £36,493 outside London), worth roughly £18.76 to £28.85 per directed hour at 2026/27 values." },
+      { question: "What is the unqualified teacher hourly rate?", answer: "Unqualified teachers earn from the unqualified range (£23,732 to £36,494 outside London), worth roughly £18.76 to £28.85 per directed hour at 2026/27 values." },
       { question: "Can I negotiate a higher hourly rate as a teacher?", answer: "Not within national scale terms — points are fixed. Your levers are progression speed, allowance posts such as TLRs, moving region, or supply and tutoring rates negotiated independently of scale." },
       { question: "Why does my hourly rate matter if I'm salaried?", answer: "Because effective hourly rate is the clearest lens on workload decisions: declining one unpaid initiative saves more per hour than most pay awards add, and part-time or exit decisions should be priced per hour too." },
     ],

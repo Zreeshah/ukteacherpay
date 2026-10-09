@@ -25,7 +25,7 @@ export const utilityPages: PageContent[] = [
       { kind: "p", text: "This order matters, and getting it wrong is the most common reason a homemade spreadsheet disagrees with a payslip." },
       { kind: "ol", items: [
         "**Gross pay** is the pay-point salary multiplied by your FTE fraction, plus any pro-rated TLR and SEN allowances.",
-        "**Pension** is deducted first, at the tier rate set by your full-time equivalent salary.",
+        "**Pension** is deducted first, at the tier rate based on annualised actual pensionable earnings for the eligible employment.",
         "**Income tax** is charged on gross pay minus the pension contribution, minus your personal allowance.",
         "**National Insurance** is charged on **gross** pay — the pension is not deducted first, because the TPS is a net-pay arrangement, not salary sacrifice.",
         "**Student loan** repayments are charged on gross pay above the plan threshold.",
@@ -36,7 +36,7 @@ export const utilityPages: PageContent[] = [
       { kind: "h2", text: "National Insurance" },
       { kind: "p", text: "Class 1 employee National Insurance at 8% between £12,570 and £50,270, then 2% above the upper earnings limit." },
       { kind: "h2", text: "Teachers' Pension" },
-      { kind: "p", text: "The contribution tier is set by the full-time equivalent salary including allowances, not by actual part-time earnings. Employer contributions are 28.8%. Pension built up each year is 1/57th of pensionable pay, revalued at CPI plus 1.6% while you remain in active service." },
+      { kind: "p", text: "Contribution rate is based on annualised actual pensionable earnings for each eligible employment, including pensionable allowances. The employer rate is 28.68%, including the administration levy. Pension built up each year is 1/57th of pensionable pay, revalued at CPI plus 1.6% while you remain in active service." },
       { kind: "h2", text: "Known limitations" },
       { kind: "ul", items: [
         "We assume the standard 1257L tax code unless stated otherwise.",

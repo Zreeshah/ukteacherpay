@@ -371,7 +371,7 @@ export default function TeacherPayCalculator({
             <p className="mt-2 text-sm text-ink/75">
               You pay {gbp(result.pensionContribution)} a year at the{" "}
               {pct(result.pensionRate)} tier. Your employer adds{" "}
-              <strong>{gbp(result.employerPension)}</strong> at 28.8%, so the
+              <strong>{gbp(result.employerPension)}</strong> at 28.68%, so the
               total going into your pension is{" "}
               <strong>
                 {gbp(result.pensionContribution + result.employerPension)}

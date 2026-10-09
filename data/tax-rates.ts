@@ -72,16 +72,16 @@ export const studentLoanPlans: Record<
 
 /**
  * Teachers' Pension Scheme member contribution tiers.
- * Tiers are assessed on the ANNUAL FULL-TIME EQUIVALENT salary rate,
- * not on actual part-time earnings.
+ * Tiers are assessed on annual salary rate for each eligible employment.
+ * For part-time work, that is based on actual pensionable earnings, not FTE.
  */
 export const tpsTiers: { upTo: number | null; rate: number }[] = [
-  { upTo: 34289, rate: 0.074 },
-  { upTo: 46158, rate: 0.086 },
-  { upTo: 54729, rate: 0.096 },
-  { upTo: 72534, rate: 0.102 },
-  { upTo: 98908, rate: 0.117 },
-  { upTo: null, rate: 0.127 },
+  { upTo: 36198.99, rate: 0.074 },
+  { upTo: 48727.99, rate: 0.089 },
+  { upTo: 57776.99, rate: 0.099 },
+  { upTo: 76572.99, rate: 0.105 },
+  { upTo: 104413.99, rate: 0.116 },
+  { upTo: null, rate: 0.12 },
 ];
 
 export const tpsScheme = {
@@ -89,7 +89,7 @@ export const tpsScheme = {
   accrualRate: 1 / 57,
   /** Revaluation of accrued CARE benefits: CPI + 1.6% while in active service */
   activeRevaluation: 0.016,
-  employerContribution: 0.288,
+  employerContribution: 0.2868,
   normalPensionAgeNote:
     "Normal Pension Age in the career average (CARE) scheme is linked to your State Pension age.",
 };
@@ -102,7 +102,7 @@ export const rateRows: { label: string; value: string }[] = [
   { label: "Employee NI main rate", value: "8%" },
   { label: "NI primary threshold", value: "£12,570" },
   { label: "NI upper earnings limit", value: "£50,270" },
-  { label: "TPS employee tiers", value: "7.4% – 12.7%" },
-  { label: "TPS employer contribution", value: "28.8%" },
+  { label: "TPS employee tiers", value: "7.4% – 12%" },
+  { label: "TPS employer contribution", value: "28.68%" },
   { label: "CARE accrual rate", value: "1/57th" },
 ];

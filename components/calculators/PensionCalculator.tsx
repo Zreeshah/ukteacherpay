@@ -139,7 +139,7 @@ export default function PensionCalculator({ region = "england" }: { region?: Reg
             <h3 className="text-sm font-semibold">What you and your employer pay in</h3>
             <ul className="mt-2 space-y-1 text-sm text-ink/75">
               <li>Your contributions over {years} years: <strong>{gbp(result.totalContributions)}</strong></li>
-              <li>Employer contributions at 28.8%: <strong>{gbp(result.employerContributions)}</strong></li>
+              <li>Employer contributions at 28.68%: <strong>{gbp(result.employerContributions)}</strong></li>
             </ul>
           </div>
         )}

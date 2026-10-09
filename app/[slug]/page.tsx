@@ -8,11 +8,21 @@ import RelatedContent from "@/components/RelatedContent";
 import InlineLinks from "@/components/InlineLinks";
 import HubIndex from "@/components/HubIndex";
 import TableOfContents from "@/components/TableOfContents";
-import { allPages, getPage, inlineLinksFor, relatedFor, spokesFor } from "@/content";
-import { hubs } from "@/content/types";
-import { lastUpdatedLabel } from "@/data/tax-rates";
+import PayAwardNotice from "@/components/PayAwardNotice";
 import {
-  articleJsonLd, faqPageJsonLd, pageMetadata, softwareAppJsonLd,
+  allPages,
+  getPage,
+  inlineLinksFor,
+  relatedFor,
+  spokesFor,
+} from "@/content";
+import { hubs } from "@/content/types";
+
+import {
+  articleJsonLd,
+  faqPageJsonLd,
+  pageMetadata,
+  softwareAppJsonLd,
 } from "@/lib/seo";
 import type { CalcPreset } from "@/components/calculators/TeacherPayCalculator";
 
@@ -58,11 +68,19 @@ export default async function ContentPage({
 
   // Split the article so contextual links land mid-content rather than
   // being stranded at the bottom where they carry less weight.
-  const h2s = page.blocks.map((b, i) => (b.kind === "h2" ? i : -1)).filter((i) => i >= 0);
+  const h2s = page.blocks
+    .map((b, i) => (b.kind === "h2" ? i : -1))
+    .filter((i) => i >= 0);
   const splitAt = h2s.length >= 3 ? h2s[2] : -1;
   const head = splitAt > 0 ? page.blocks.slice(0, splitAt) : page.blocks;
   const tail = splitAt > 0 ? page.blocks.slice(splitAt) : [];
   const hasCalc = page.calculator !== "none";
+  const reviewedDate = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(page.updated + "T00:00:00Z"));
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -71,10 +89,10 @@ export default async function ContentPage({
       <header className="mt-5 max-w-3xl">
         <h1 className="text-3xl font-semibold sm:text-4xl">{page.title}</h1>
         <p className="mt-3 text-lg text-ink/75">{page.intro}</p>
-        <p className="mt-3 text-sm text-ink/55">
-          Updated {lastUpdatedLabel} · STPCD 2026/27 pay scales · 2026/27 tax year
-        </p>
+        <p className="mt-3 text-sm text-ink/55">Reviewed {reviewedDate}</p>
       </header>
+
+      <PayAwardNotice slug={page.slug} />
 
       {hasCalc && (
         <section className="mt-8" aria-label="Calculator">
@@ -93,7 +111,10 @@ export default async function ContentPage({
           <ul className="mt-3 space-y-2 text-ink/80">
             {page.keyTakeaways.map((t) => (
               <li key={t} className="flex gap-2.5">
-                <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-strong" />
+                <span
+                  aria-hidden="true"
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-strong"
+                />
                 <span>{t}</span>
               </li>
             ))}

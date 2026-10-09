@@ -277,7 +277,7 @@ export const pensionExtras2Pages: PageContent[] = [
       { kind: "p", text: "The cost depends on your salary, how much pension you have already built, how long the break is, and how many years remain to retirement. Here are three representative scenarios:" },
       { kind: "table", caption: "Pension impact of career breaks at different career stages (2% CPI, 2.5% salary growth)", head: ["Scenario", "Break", "Pension without break", "Pension with break", "Annual gap"], rows: [
         ["ECT on M2 (£35,674), £2,000 accrued, 35 yrs to NPA", "2 years", "£41,200", "£38,900", "£2,300"],
-        ["Mid-career on M6 (£46,939), £8,000 accrued, 25 yrs to NPA", "3 years", "£36,800", "£33,100", "£3,700"],
+        ["Mid-career on M6 (£46,940), £8,000 accrued, 25 yrs to NPA", "3 years", "£36,800", "£33,100", "£3,700"],
         ["Experienced on UPS 2 (£50,587), £12,000 accrued, 20 yrs to NPA", "5 years", "£33,500", "£27,600", "£5,900"],
       ]},
       { kind: "callout", tone: "info", title: "The gap is not just lost accrual", text: "Lost accrual (the 1/57th you miss each year) typically accounts for about 40% of the pension gap. The remaining 60% comes from the lower revaluation rate on your existing pot during the break years. This is why the impact grows steeply for teachers with more accrued pension." },
@@ -308,7 +308,7 @@ export const pensionExtras2Pages: PageContent[] = [
       { kind: "h2", text: "Career break vs part-time working: the pension comparison" },
       { kind: "p", text: "Some teachers consider reducing to part-time rather than taking a full break, precisely because of the pension impact. The comparison is worth making explicit:" },
       { kind: "table", caption: "Pension impact: 3-year break vs 3 years at 0.5 FTE (M6, £8,000 accrued, 25 yrs to NPA)", head: ["Metric", "Full break", "0.5 FTE for 3 years"], rows: [
-        ["Accrual during period", "None", "3 × (£46,939 × 0.5 × 1/57) = £1,235 total"],
+        ["Accrual during period", "None", "3 × (£46,940 × 0.5 × 1/57) = £1,235 total"],
         ["Revaluation rate", "CPI only (2%)", "CPI + 1.6% (3.6%) — still active"],
         ["Contributions saved", "~£12,100", "~£6,050 saved vs full-time"],
         ["Pension gap vs full-time", "~£3,700/yr", "~£1,400/yr"],
@@ -335,7 +335,7 @@ export const pensionExtras2Pages: PageContent[] = [
       { question: "Can I buy back the pension I missed during a career break?", answer: "You cannot buy back service directly, but you can purchase Added Pension (up to £8,366.52/yr in 2026/27) to boost your benefits. The cost depends on your age at purchase." },
       { question: "How long can I be on a career break and still rejoin the TPS?", answer: "There is no time limit. Whether you leave for 2 years or 20, you can rejoin the TPS immediately on returning to a TPS-eligible post." },
       { question: "Does unpaid leave affect my pension?", answer: "Yes. Any unpaid leave — whether a career break, unpaid parental leave, or unpaid sick leave — stops pension accrual and switches your pot to deferred revaluation." },
-      { question: "Should I opt out of the TPS to save money?", answer: "Almost never. The employer contribution alone (28.8%) makes the TPS extremely valuable. Even if cashflow is tight, staying in part-time is almost always better than opting out entirely." },
+      { question: "Should I opt out of the TPS to save money?", answer: "Almost never. The employer contribution alone (28.68%) makes the TPS extremely valuable. Even if cashflow is tight, staying in part-time is almost always better than opting out entirely." },
       { question: "What about supply teaching during a career break?", answer: "If you work as a supply teacher through an agency, you may not be enrolled in the TPS — many agencies use other pension schemes. Direct supply work for a school that offers TPS membership would maintain your active status." },
     ],
     sources: SOURCES,
