@@ -61,7 +61,7 @@ export default function TeacherPayCalculator({
 
   const scotlandOrNi = region === "scotland" || region === "northern-ireland";
   const regime = region === "scotland" ? "scotland" : "ruk";
-  const interpolatedScale = scale === "leadership" || scale === "lead-practitioner";
+  const interpolatedScale = scale === "lead-practitioner";
 
   const result = useMemo(() => {
     if (!active) return null;

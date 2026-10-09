@@ -71,7 +71,7 @@ export const salaryPages: PageContent[] = [
         ["U3", "£52,835", "Top of classroom scale"],
       ]},
       { kind: "p", text: "Two points on that table generate a disproportionate share of search traffic because they mark real milestones. An **M6 teacher salary** of £46,940 is the ceiling of the main range — if your school has not moved you past it after six or seven years, you are leaving money on the table. A **UPS3 teacher salary** of £52,835 is the maximum any classroom teacher can earn outside London without a TLR, leadership post or specialist role. Both are covered in depth in the [main pay range](/main-pay-range/) and [upper pay range](/upper-pay-range/) guides." },
-      { kind: "p", text: "Beyond U3, three routes exist: the Lead Practitioner range (£53,847 to £81,860 outside London) for teachers who stay classroom-focused, the Leadership Group (£53,585 to £148,829) for heads and deputies, and TLR payments layered onto your existing point. The [leadership pay scale guide](/leadership-pay-scale/) covers both ranges." },
+      { kind: "p", text: "Beyond U3, three routes exist: the Lead Practitioner range (£53,847 to £81,860 outside London) for teachers who stay classroom-focused, the Leadership Group (£53,586 to £148,829) for heads and deputies, and TLR payments layered onto your existing point. The [leadership pay scale guide](/leadership-pay-scale/) covers both ranges." },
       { kind: "callout", tone: "info", title: "Academies can depart from this", text: "Academies and free schools set their own pay scales. Most mirror the STPCD closely because they recruit from the same pool, but some pay more for shortage subjects and a few pay less. Your contract and the school's published pay policy always beat the national document." },
 
       { kind: "h2", text: "London weighting: the biggest regional difference in UK teaching" },
@@ -92,7 +92,7 @@ export const salaryPages: PageContent[] = [
       { kind: "h3", text: "Experienced classroom teachers" },
       { kind: "p", text: "Crossing to the Upper Pay Range requires evidence of sustained high competence through a threshold application. Once through, U1 to U3 progression depends on your school's pay policy — some guarantee annual movement, others tie it to appraisal outcomes." },
       { kind: "h3", text: "Middle and senior leadership" },
-      { kind: "p", text: "A head teacher salary spans an enormous range because leadership pay is school-sized dependent: the leadership spine runs from £53,585 (L1) to £148,829 (L43) outside London. Most large secondary heads sit in the top third of that spine; a small primary head might sit near the bottom. Middle leadership usually means staying on the classroom scale and adding a TLR instead." },
+      { kind: "p", text: "A head teacher salary spans an enormous range because leadership pay is school-sized dependent: the leadership spine runs from £53,586 (L1) to £148,829 (L43) outside London. Most large secondary heads sit in the top third of that spine; a small primary head might sit near the bottom. Middle leadership usually means staying on the classroom scale and adding a TLR instead." },
 
       { kind: "h2", text: "Allowances on top of base salary" },
       { kind: "table", caption: "STPCD allowances 2026/27", head: ["Allowance", "Range", "Typically for"], rows: [
@@ -363,7 +363,7 @@ export const salaryPages: PageContent[] = [
       { question: "Can a primary teacher earn over £50,000?", answer: "Yes. Reaching U3 gives £52,835 outside London and £58,119+ in London without any management duties. With a TLR 1 or a leadership post, £60,000-£75,000+ is achievable while remaining school-based." },
       { question: "Is a reception teacher paid differently?", answer: "No. Reception is taught by teachers on the same pay scale as Year 6 staff. Some schools attach TLRs to early years leadership, but the base salary is identical." },
       { question: "How does part-time primary pay work?", answer: "Your pay point is multiplied by your FTE fraction. A 0.6 FTE teacher on M4 receives £24,564. Progression, threshold access and pension accrual all continue proportionally without penalty." },
-      { question: "What do primary headteachers earn?", answer: "Anywhere from about £55,000 at a very small school to £90,000+ at a large primary, set within the £53,585-£148,829 leadership spine according to school size and the governing body's chosen range." },
+      { question: "What do primary headteachers earn?", answer: "Anywhere from about £55,000 at a very small school to £90,000+ at a large primary, set within the £53,586-£148,829 leadership spine according to school size and the governing body's chosen range." },
       { question: "Do primary teachers in Wales and Scotland earn differently?", answer: "Wales currently mirrors England's STPCD figures exactly. Scotland uses the SNCT scale: £34,539 start, £48,516 top of main grade, £52,539 for Chartered Teachers. Northern Ireland starts lowest at £32,188." },
     ],
     updated: "2026-08-23",

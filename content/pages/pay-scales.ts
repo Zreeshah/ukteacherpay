@@ -13,13 +13,14 @@ export const payScalePages: PageContent[] = [
     slug: "teacher-pay-scale",
     isPillar: true,
     hub: "pay-scales",
-    title: "Teacher Pay Scale UK: Every 2026/27 Pay Point",
-    metaTitle: "Teacher Pay Scale 2026/27: Every UK Pay Point & Region",
+    title: "Teacher Pay Scales 26/27: Every UK Pay Point",
+    metaTitle: "Teacher Pay Scales 26/27: All UK Pay Points & Regions",
     metaDescription:
-      "Every UK teacher pay scale point for 2026/27: main, upper and unqualified ranges across England, London, Wales, Scotland and NI, with progression rules.",
+      "Teacher pay scales for 2026/27: M1–M6, U1–U3 and unqualified points for England, London, Wales, Scotland and NI. Compare pay and calculate take-home.",
     primaryKeyword: "teacher pay scale",
     secondaryKeywords: [
       "teacher pay scales", "teachers pay scale", "teacher pay scale uk",
+      "teacher pay scales 26/27", "teachers pay scale 26/27", "teacher payscale 26/27",
       "uk teacher pay scale", "teacher pay scale 2026", "teaching pay scales",
       "teacher payscale", "pay scale teachers", "new teacher pay scale",
       "school teacher pay scale", "m6 teacher salary", "teacher salary uk",
@@ -27,7 +28,7 @@ export const payScalePages: PageContent[] = [
     ],
     calculator: "pay-scale",
     intro:
-      "England's government-accepted 2026/27 advisory points are shown here alongside the separate Scottish SNCT scale and Northern Ireland's own ranges. The STPCD 2026 Pay Order is due in October 2026, so the England points are not described here as in force before it is laid. Pick your region below, or run any pay point through the calculator to see take-home pay.",
+      "Teacher pay scales for 2026/27 run from £34,069 at M1 to £52,835 at U3 outside London, and £41,729 to £64,684 in inner London. The England figures are government-accepted advisory points pending the October 2026 Pay Order; Scotland and Northern Ireland use separate scales. Pick your region below or calculate your take-home pay.",
     keyTakeaways: [
       "The government accepted a 3.5% September 2026 advisory award for all points other than Rest-of-England UQ1, which has a 5% increase; the Pay Order is due in October.",
       "Classroom teacher pay in England runs from £34,069 (M1, rest of England) to £64,684 (U3, inner London).",
@@ -123,7 +124,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "If you want the wider picture beyond scale points — average actual earnings, subject and phase differences — see our [UK teacher salary guide](/teacher-salary-uk/)." },
     ],
     faq: [
-      { question: "What is the teacher pay scale for 2026/27?", answer: "In England the main pay range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, rising to £41,729–£54,131 in inner London. The upper pay range runs £49,134–£52,835 outside London. All advisory points rose 3.5% from September 2026, except Rest-of-England UQ1, which rose 5%; the 2026 Pay Order is due in October." },
+      { question: "What are the teacher pay scales for 2026/27?", answer: "In England the main pay range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, rising to £41,729–£54,131 in inner London. The upper pay range runs £49,134–£52,835 outside London. All advisory points rose 3.5% from September 2026, except Rest-of-England UQ1, which rose 5%; the 2026 Pay Order is due in October." },
       { question: "What is an M6 teacher salary?", answer: "A full-time M6 teacher earns £46,940 in the rest of England, £48,479 on the London fringe, £52,241 in outer London and £54,131 in inner London for 2026/27. Scotland's top main-scale point is equivalent at £48,516 and Northern Ireland's at £44,342." },
       { question: "Do academies have to follow the teacher pay scale?", answer: "No. The STPCD ranges are statutory for maintained schools; academies and free schools can set their own pay policies. In practice most academies continue to track the statutory points, but some use them as reference points rather than fixed steps." },
       { question: "How often do teachers move up the pay scale?", answer: "Qualified teachers normally progress one main-range point per year for six years (M1 to M6), subject to passing appraisal. Movement onto and within the upper pay range is discretionary and performance-based, so many teachers stay longer on a single upper point." },

@@ -110,19 +110,19 @@ export const leadPractitionerRange: Partial<Record<Region, PayRange>> = {
 export const LEADERSHIP_POINTS = 43;
 
 /**
- * The leadership group is a 43-point spine. The STPCD publishes the L1 and L43
- * endpoints; individual points sit on a broadly even percentage progression
- * between them. These interpolated points are indicative — your school's pay
- * policy sets the actual individual school range within the spine.
+ * Government-accepted 2026/27 advisory leadership points, transcribed from the
+ * NEU's table of joint-union advice. The school pay policy still determines the
+ * individual school range, but calculators must use published point values.
  */
+const leadershipPoints: Partial<Record<Region, number[]>> = {
+  england: [53586, 54927, 56298, 57699, 59137, 60619, 62251, 63688, 65278, 66956, 68691, 70275, 72032, 73827, 75664, 77676, 79460, 81457, 83478, 85547, 87664, 89842, 92065, 94349, 96694, 99086, 101540, 104059, 106637, 109291, 111990, 114774, 117624, 120532, 123528, 126587, 129733, 132943, 136184, 139581, 143069, 146653, 148829],
+  fringe: [55060, 56404, 57776, 59185, 60624, 62102, 63738, 65166, 66758, 68435, 70169, 71759, 73517, 75310, 77141, 79158, 80953, 82939, 84957, 87036, 89153, 91326, 93545, 95836, 98174, 100571, 103021, 105536, 108119, 110764, 113475, 116260, 119111, 122018, 125014, 128068, 131218, 134426, 137662, 141070, 144551, 148138, 150301],
+  "outer-london": [57837, 59182, 60545, 61955, 63393, 64871, 66509, 67940, 69529, 71207, 72940, 74530, 76288, 78074, 79912, 81928, 83715, 85715, 87736, 89801, 91921, 94088, 96314, 98602, 100945, 103335, 105791, 108311, 110884, 113539, 116247, 119021, 121880, 124786, 127778, 130834, 133988, 137197, 140432, 143839, 147322, 150901, 153042],
+  "inner-london": [63709, 65057, 66434, 67832, 69278, 70754, 72390, 73824, 75409, 77086, 78820, 80411, 82164, 83960, 85790, 87811, 89596, 91594, 93612, 95683, 97799, 99975, 102193, 104485, 106824, 109215, 111668, 114189, 116772, 119421, 122125, 124902, 127759, 130666, 133661, 136716, 139871, 143074, 146313, 149719, 153209, 156785, 158863],
+};
+
 export function leadershipSpine(region: Region): number[] {
-  const range = leadershipRange[region];
-  if (!range) return [];
-  const steps = LEADERSHIP_POINTS - 1;
-  const ratio = Math.pow(range.max / range.min, 1 / steps);
-  return Array.from({ length: LEADERSHIP_POINTS }, (_, i) =>
-    Math.round(range.min * Math.pow(ratio, i)),
-  );
+  return leadershipPoints[region] ?? [];
 }
 
 /** Allowances 2026/27 */

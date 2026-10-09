@@ -32,7 +32,7 @@ export const calculatorPages: PageContent[] = [
       "Pick your pay scale, region and hours to see exactly what lands in your bank account each month. This calculator uses the STPCD 2026/27 pay scales and 2026/27 tax rates, and shows every deduction line by line — pension, income tax, National Insurance and student loan.",
     keyTakeaways: [
       "A teacher on M1 outside London earns £34,069 in 2026/27 and takes home roughly £2,169 a month after pension, tax and National Insurance.",
-      "Your Teachers' Pension contribution rate is set by your full-time equivalent salary, not by what you actually get paid part-time.",
+      "Your Teachers' Pension contribution rate is set by annualised actual pensionable earnings for each eligible employment, not the full-time-equivalent pay point.",
       "Pension contributions reduce your income tax but not your National Insurance, because the TPS uses a net-pay arrangement rather than salary sacrifice.",
       "TLR and SEN allowances are pro-rated for part-time teachers in the same way as your base salary.",
       "Your employer pays 28.68% of your salary into the pension on top of what you contribute.",
@@ -54,7 +54,7 @@ export const calculatorPages: PageContent[] = [
       { kind: "p", text: "Four things come out of a teacher's gross pay before it reaches your account. They are taken in a specific order, and that order matters because it changes how much tax you pay." },
       { kind: "h3", text: "1. Teachers' Pension contributions" },
       { kind: "p", text: "This is taken first and it is tiered. Teachers’ Pensions bases the tier on annualised actual pensionable earnings for each eligible employment, not the FTE pay point. A teacher on U3 working 0.5 FTE normally has annualised earnings of £26,418 and is in the 7.4% tier." },
-      { kind: "table", caption: "Teachers' Pension Scheme contribution tiers 2026/27", head: ["Full-time equivalent salary", "Contribution rate"], rows: [
+      { kind: "table", caption: "Teachers' Pension Scheme contribution tiers 2026/27", head: ["Annual pensionable earnings", "Contribution rate"], rows: [
         ["Up to £36,198.99", "7.4%"],
         ["£36,199 to £48,727.99", "8.9%"],
         ["£48,728 to £57,776.99", "9.9%"],
@@ -92,7 +92,7 @@ export const calculatorPages: PageContent[] = [
 
       { kind: "h2", text: "Part-time and pro rata teacher pay" },
       { kind: "p", text: "Part-time teacher pay is worked out as a straight fraction of the full-time figure for your pay point. A 0.6 contract on M4 in the rest of England pays 60% of £40,941, which is £24,564." },
-      { kind: "p", text: "Two things trip people up. First, your pension tier is still based on the full-time figure. Second, directed time and non-contact time should be pro-rated too — a 0.6 teacher should not be doing five days of meetings. See the [part-time teacher pay calculator](/part-time-teacher-pay-calculator/) for the full breakdown." },
+      { kind: "p", text: "Two things trip people up. First, the pension tier uses your annualised actual pensionable earnings for that employment, so part-time work can place you in a lower percentage tier. Second, directed time and non-contact time should be pro-rated too — a 0.6 teacher should not be doing five days of meetings. See the [part-time teacher pay calculator](/part-time-teacher-pay-calculator/) for the full breakdown." },
       { kind: "table", caption: "Common part-time fractions on M4 (rest of England, £40,941)", head: ["Fraction", "Typical days", "Gross salary"], rows: [
         ["1.0", "5 days", "£40,941"],
         ["0.8", "4 days", "£32,752"],
@@ -104,10 +104,10 @@ export const calculatorPages: PageContent[] = [
       { kind: "h2", text: "TLR and SEN allowances" },
       { kind: "p", text: "Teaching and Learning Responsibility payments and SEN allowances sit on top of your pay point. They are paid as annual pound amounts and they are pensionable, so they increase both your take-home pay and the pension you build up." },
       { kind: "table", caption: "STPCD allowance ranges 2026/27", head: ["Allowance", "Minimum", "Maximum"], rows: [
-        ["TLR 1", "£10,530", "£17,819"],
-        ["TLR 2", "£3,650", "£8,912"],
+        ["TLR 1", "£10,531", "£17,819"],
+        ["TLR 2", "£3,651", "£8,913"],
         ["TLR 3 (fixed term)", "£727", "£3,600"],
-        ["SEN allowance", "£2,885", "£5,689"],
+        ["SEN allowance", "£2,885", "£5,690"],
       ]},
       { kind: "callout", tone: "warn", title: "TLR 3 is not pensionable in the same way", text: "TLR 3 payments are fixed-term and time-limited. They count for pension while you receive them but they stop when the project ends, so do not build long-term plans around one." },
 
@@ -317,12 +317,12 @@ export const calculatorPages: PageContent[] = [
       { kind: "h2", text: "Take-home pay on leadership salaries" },
       { kind: "p", text: "Leadership salaries change the picture in two ways: the pension contribution tier climbs steeply, and income starts crossing into the 40% band once taxable pay passes £37,700 above the allowance — roughly £56,000 of gross for a scheme member." },
       { kind: "table", caption: "Leadership take-home examples, rest of England, full time in pension, no student loan", head: ["Post (typical)", "Salary", "Pension", "Income tax", "NI", "Monthly take-home"], rows: [
-        ["L1 (entry assistant head)", "£53,585", "£5,144", "£7,174", "£3,082", "£3,182"],
-        ["L12 (secondary deputy)", "£70,022", "£7,142", "£12,584", "£3,411", "£3,907"],
-        ["L15 (experienced deputy)", "£75,000", "£8,775", "£13,922", "£3,511", "£4,066"],
-        ["L20+ (large school head)", "£85,063", "£9,952", "£17,476", "£3,712", "£4,494"],
+        ["L1 (entry assistant head)", "£53,586", "£5,305", "£7,142", "£3,082", "£3,171"],
+        ["L12 (secondary deputy)", "£70,275", "£7,379", "£12,590", "£3,416", "£3,907"],
+        ["L15 (experienced deputy)", "£75,664", "£7,945", "£14,520", "£3,524", "£4,140"],
+        ["L20 (large school head)", "£85,547", "£9,923", "£17,681", "£3,722", "£4,518"],
       ]},
-      { kind: "p", text: "Note how the L15 example pays £8,775 into the pension because it sits just past the £76,572.99 boundary where the tier jumps to 11.6%. The full spine values and role mapping are in the [leadership pay scale guide](/leadership-pay-scale/)." },
+      { kind: "p", text: "L15 remains in the 10.5% pension tier; the rate rises to 11.6% above £76,572.99. The full spine values and role mapping are in the [leadership pay scale guide](/leadership-pay-scale/)." },
 
       { kind: "h2", text: "Take-home pay across the regions" },
       { kind: "p", text: "The same pay point produces different net figures depending on where you teach, because the gross salary differs while the deduction structure stays similar. Scotland also applies its own income tax bands with a slightly lower higher-rate threshold." },

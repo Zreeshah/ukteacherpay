@@ -41,7 +41,7 @@ export const utilityPages: PageContent[] = [
       { kind: "ul", items: [
         "We assume the standard 1257L tax code unless stated otherwise.",
         "Salary sacrifice arrangements for childcare, cycle schemes or cars are not modelled.",
-        "Leadership pay points between the published L1 and L43 endpoints are interpolated and shown as indicative.",
+        "Leadership pay points use the published 2026/27 advisory table; the individual school range in your pay policy determines the points available for your post.",
         "Pension projections use assumptions you control; they are not a statement of entitlement.",
         "Actuarial reduction factors shown are indicative. The scheme publishes the definitive factors.",
       ]},
