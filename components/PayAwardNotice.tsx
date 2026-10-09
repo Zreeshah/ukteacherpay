@@ -113,7 +113,7 @@ export default function PayAwardNotice({ slug }: { slug: string }) {
         Source:{" "}
         <a
           className="text-accent-strong underline"
-          href="https://www.gov.uk/government/publications/school-teachers-review-body-thirty-sixth-report-2026"
+          href="https://www.gov.uk/government/publications/school-teachers-review-body-36th-report-2026"
           target="_blank"
           rel="noopener noreferrer"
         >
