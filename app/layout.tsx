@@ -45,6 +45,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
           strategy="beforeInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TZTB6BR17B"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TZTB6BR17B');`}
+        </Script>
       </body>
     </html>
   );
