@@ -39,6 +39,7 @@ const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
 const { planningPages } = require(path.join(root, "content/pages/planning.ts"));
 const { pensionExtras2Pages } = require(path.join(root, "content/pages/pension-extras-2.ts"));
 const { salaryPages } = require(path.join(root, "content/pages/salaries.ts"));
+const { calculatorPages } = require(path.join(root, "content/pages/calculators.ts"));
 
 const rateCases = [
   [36198.99, 0.074], [36199, 0.089], [48727.99, 0.089], [48728, 0.099],
@@ -118,6 +119,11 @@ for (const slug of ["maths-teacher-salary", "music-teacher-salary", "pe-teacher-
   assert.match(page?.intro ?? "", /do not have a separate statutory classroom pay scale/, `${slug} keeps only the shared pay framework`);
   assert.match(page?.keyTakeaways.join(" ") ?? "", /does not estimate tutoring rates/, `${slug} does not publish unsupported market-rate claims`);
 }
+
+const partTimePage = calculatorPages.find((page) => page.slug === "part-time-teacher-pay-calculator");
+const partTimeContent = partTimePage?.blocks.map((block) => [block.text ?? "", ...(block.rows ?? []).flat()].join(" ")).join(" ") ?? "";
+assert.match(partTimeContent, /annualised actual pensionable earnings for that eligible employment/, "part-time TPS guidance must use actual pensionable earnings");
+assert.doesNotMatch(partTimeContent, /contribution rate is determined by your \*\*full-time equivalent\*\* salary/, "part-time TPS guidance must not use FTE as the tier basis");
 
 for (const [region, expected] of Object.entries({
   england: [53586, 70275, 148829],

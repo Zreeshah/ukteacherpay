@@ -92,16 +92,16 @@ export const planningPages: PageContent[] = [
     ],
     faq: [
       { question: "How should a teacher start financial planning?", answer: "Begin with three checks: confirm your place on the current pay scale, read your latest TPS benefit statement, and calculate your true monthly net pay after tax, National Insurance, pension and student loan. Then build a budget on that verified figure rather than gross salary." },
-      { question: "Is the teachers' pension enough to retire on?", answer: "For a full career it provides substantial inflation-linked income — a teacher accruing £800+ a year of pension over 30 years reaches a six-figure annual entitlement alongside the State Pension. Use the pension calculators to model your own trajectory rather than relying on rules of thumb." },
+      { question: "Is the teachers' pension enough to retire on?", answer: "For a full career it can provide substantial inflation-linked income. For example, accruing £800 a year of pension for 30 years would build about £24,000 a year before revaluation and any early-retirement reduction. Use the pension calculators to model your own trajectory rather than relying on rules of thumb." },
       { question: "Do teachers earn enough to save money?", answer: "Many do once deductions are understood accurately. Mid-scale teachers outside London typically clear £2,300 to £2,600 a month; regional costs decide the rest. London weightings raise both pay and costs." },
       { question: "What financial protections do teachers have that other jobs don't?", answer: "Burgundy Book maternity and sick pay schemes exceed statutory minimums substantially, redundancy follows age-weighted statutory formulas, and the TPS guarantees benefits most private employers stopped offering decades ago." },
       { question: "Should I ever opt out of the teachers' pension?", answer: "Rarely. Opting out stops guaranteed CPI-linked accrual and forfeits the 28.68% employer contribution. Independent advice is essential before opting out, and for classroom salaries it is almost always a poor trade." },
-      { question: "How does going part-time affect my finances?", answer: "Pay becomes pro-rata but TPS contribution tiers are assessed on full-time-equivalent salary, and accrual follows actual pensionable pay. Service continues, so the pension impact is smaller than the pay cut suggests." },
+      { question: "How does going part-time affect my finances?", answer: "Pay becomes pro-rata, and TPS contribution tiers and accrual follow actual pensionable earnings for the eligible employment. Service continues, so the pension impact is smaller than the pay cut suggests." },
       { question: "When is the best time to resign from teaching?", answer: "Contractually you must hit one of three Burgundy Book notice dates — 30 November, 30 April or 31 August in most cases — with notice submitted up to three months earlier. Financially, avoid resigning mid-year unless you have modelled the income gap." },
       { question: "What happens to my pension if I leave teaching?", answer: "Benefits stay in the scheme and grow with CPI only, instead of CPI plus 1.6% while actively contributing. You can rejoin later and deferred benefits remain yours." },
       { question: "Do I need a financial adviser as a teacher?", answer: "Only for specific events: transfers involving final-salary service, divorce settlements, or senior salaries nearing tax taper territory. Routine budgeting, pension monitoring and scenario planning are all well served by free tools like ours plus the published documents cited at the foot of each guide." },
       { question: "How much do teachers make a month after deductions?", answer: "It depends on scale, location and loans, but typical 2026/27 figures are roughly £2,360 net per month at M4 (£40,941) and around £2,680 at U3 (£52,835) outside London, after tax, National Insurance, pension contributions and any Plan 2 loan. Calculate your own exact figure rather than relying on averages — tier cliffs move individuals significantly." },
-      { question: "Can teachers be rich?", answer: "Teaching will not make anyone wealthy quickly, but it reliably builds six-figure pension entitlements over a full career, pays twelve stable months a year for disciplined saving and investing, and offers leadership pay up to £99,000+ for those who pursue it. The realistic path is pension-first wealth plus steady ISA investing, not windfalls." },
+      { question: "Can teachers be rich?", answer: "Teaching does not usually produce wealth quickly, but a full career can build valuable pension benefits and provides twelve stable monthly payments for disciplined saving. Your own pay scale, household costs and financial goals matter more than a generic rule of thumb." },
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
@@ -109,7 +109,7 @@ export const planningPages: PageContent[] = [
       { label: "NEU — Burgundy Book conditions of service", url: "https://neu.org.uk/advice/your-rights-work/pay/burgundy-book" },
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-19",
   },
 
   // ------------------------------------------------------------ redundancy
@@ -228,9 +228,9 @@ export const planningPages: PageContent[] = [
       { label: "GOV.UK — Redundancy pay and rights", url: "https://www.gov.uk/redundancy-your-rights" },
       { label: "GOV.UK — Calculate your statutory redundancy pay", url: "https://www.gov.uk/calculate-your-redundancy-pay" },
       { label: "ACAS — Redundancy pay and procedures", url: "https://www.acas.org.uk/redundancy" },
-      { label: "NASUWT — Teachers and redundancy", url: "https://www.nasuwt.org.uk/advice/pay-pensions/" },
+      { label: "NASUWT — Redundancy (England, Northern Ireland and Wales)", url: "https://www.nasuwt.org.uk/advice/conditions-of-service/redundancy-england-northern-ireland-wales.html" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-19",
   },
 
   // ------------------------------------------------------------ student loan
@@ -340,7 +340,7 @@ export const planningPages: PageContent[] = [
     ],
     sources: [
       { label: "GOV.UK — Repaying your student loan", url: "https://www.gov.uk/repaying-your-student-loan" },
-      { label: "Student Loans Company — repayment thresholds", url: "https://www.slc.co.uk/" },
+      { label: "GOV.UK — student-loan repayment thresholds", url: "https://www.gov.uk/repaying-your-student-loan/what-you-pay" },
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
       { label: "Get Into Teaching — fees and financial support", url: "https://getintoteaching.education.gov.uk/funding-and-support" },
     ],
@@ -564,11 +564,11 @@ export const planningPages: PageContent[] = [
     ],
     sources: [
       { label: "NEU — Notice periods and resignation advice", url: "https://neu.org.uk/advice/your-rights-work/contracts" },
-      { label: "NASUWT — Resignation dates", url: "https://www.nasuwt.org.uk/advice/conditions-of-service/" },
+      { label: "NASUWT — teachers' notice periods and resigning", url: "https://www.nasuwt.org.uk/advice/conditions-of-service/teachers-notice-periods-resigning-from-your-job.html" },
       { label: "Burgundy Book — Conditions of Service for School Teachers (NEU library)", url: "https://neu.org.uk/latest/library/burgundy-book" },
       { label: "ACAS — Resignation and notice", url: "https://www.acas.org.uk/" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-19",
   },
 
   // ------------------------------------------------------------ budget
@@ -606,7 +606,7 @@ export const planningPages: PageContent[] = [
         ["U3 (£52,835)", "£52,835", "≈£2,900"],
         ["U3 with Plan 2 + PGL loans", "£52,835", "≈£2,740"],
       ]},
-      { kind: "p", text: "*Indicative figures assuming no additional allowances; London weightings raise both gross and net. Run your own case through the [take-home pay calculator](/teacher-take-home-pay/) — the budget only works if the top line is right. Part-time colleagues should use the [part-time version](/part-time-teacher-pay-calculator/) because pension tiers assess full-time-equivalent pay." },
+      { kind: "p", text: "*Indicative figures assuming no additional allowances; London weightings raise both gross and net. Run your own case through the [take-home pay calculator](/teacher-take-home-pay/) — the budget only works if the top line is right. Part-time colleagues should use the [part-time version](/part-time-teacher-pay-calculator/) because pension tiers use actual pensionable earnings for the eligible employment." },
 
       { kind: "h2", text: "Use the planner" },
       { kind: "p", text: "Enter your net monthly income and your fixed costs, and the planner splits what remains into committed spending, flexible spending and savings targets using a structure designed around the school year rather than the tax year. Re-run it each September when your pay point changes, and after any allowance, loan or pension tier change — budgets are living documents, not one-time exercises." },
@@ -668,16 +668,16 @@ export const planningPages: PageContent[] = [
       { question: "How much should teachers save each month?", answer: "Target 5–10% of net pay once an emergency fund covers three months of essentials. With guaranteed pensions already building, teachers can direct savings toward liquidity rather than long-term investment." },
       { question: "Do TLR payments count in my budget?", answer: "Treat them cautiously. Allowances are pensionable and usually stable, but individual payments sit within published ranges that schools can adjust, so budget core spending from scale salary alone." },
       { question: "What happens to my budget when I get a pay rise?", answer: "Check the pension tier first: crossing a boundary raises contributions on your entire salary, shrinking the net gain. Otherwise, allocate rises in advance — half to savings, half to living costs — before lifestyle absorbs them." },
-      { question: "How do part-time teachers budget?", answer: "Pro-rata pay scales everything down but pension tiers assess full-time-equivalent salary, so deductions bite harder proportionally. Model the actual offer with a part-time calculator before accepting reduced days." },
+      { question: "How do part-time teachers budget?", answer: "Pro-rata pay scales everything down and pension tiers use actual pensionable earnings for the eligible employment. Model the actual offer with a part-time calculator before accepting reduced days." },
       { question: "Is a teacher's salary enough to live on?", answer: "Outside London and the South East, mid-scale salaries support comfortable budgets for most household shapes. Inner London requires the weighting plus careful housing choices; the calculators on this site quantify both scenarios." },
     ],
     sources: [
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-      { label: "Student Loans Company — repayment thresholds", url: "https://www.slc.co.uk/" },
+      { label: "GOV.UK — student-loan repayment thresholds", url: "https://www.gov.uk/repaying-your-student-loan/what-you-pay" },
       { label: "Teachers' Pension Scheme — contribution tiers", url: "https://www.teacherspensions.co.uk/" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-19",
   },
 
   // ------------------------------------------------------------ hourly rate
@@ -775,10 +775,10 @@ export const planningPages: PageContent[] = [
     ],
     sources: [
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
-      { label: "DfE — Teacher workload survey findings", url: "https://www.gov.uk/government/collections/research-and-statistics" },
+      { label: "DfE — Teacher workload survey 2019", url: "https://assets.publishing.service.gov.uk/media/5e12fcb7e5274a0f9e82e4fd/teacher_workload_survey_2019_main_report_amended.pdf" },
       { label: "NEU — Pay scales England", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales/pay-scales-england" },
-      { label: "NASUWT — Working hours and directed time", url: "https://www.nasuwt.org.uk/advice/conditions-of-service/teachers-working-hours/" },
+      { label: "NASUWT — directed time (England)", url: "https://www.nasuwt.org.uk/advice/conditions-of-service/teachers-working-hours/directed-time-england.html" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-19",
   },
 ];

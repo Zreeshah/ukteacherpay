@@ -3,6 +3,7 @@ import type { PageContent } from "../types";
 
 const UPDATED = "2026-08-23";
 const PAY_AWARD_REVIEWED = "2026-10-09";
+const CONTENT_SAFETY_REVIEWED = "2026-10-19";
 
 export const payScalePages: PageContent[] = [
   // ─────────────────────────────────────────────────────────────────────────
@@ -235,7 +236,7 @@ export const payScalePages: PageContent[] = [
 
       { kind: "h2", text: "Common mistakes with the 26/27 figures" },
       { kind: "ul", items: [
-        "**Using 25/26 blog posts** — dozens of ranking pages still show last year's numbers. Anything quoting an M1 start below £34,000 is out of date.",
+        "**Using 25/26 information** — older articles and saved copies may still show last year's numbers. Anything quoting an M1 start below £34,000 is out of date.",
         "**Assuming the award applies pro-rata across the year mid-term** — it applies to annual rate from 1 September, not blended.",
         "**Confusing the pay award with progression** — moving from M3 to M4 adds roughly £2,540 in the rest of England, far more than the 3.5% award itself. See our pay rise guide for the combined effect.",
         "**Forgetting the pension effect** — higher pensionable pay buys more CARE pension every year the higher rate applies.",
@@ -275,7 +276,7 @@ export const payScalePages: PageContent[] = [
       { label: "Education Hub — teacher pay announcement (DfE)", url: "https://educationhub.blog.gov.uk/" },
       { label: "Local Government Association — school teachers' pay guidance", url: "https://www.local.gov.uk/our-support/workforce-and-hr-support/education-and-young-people/school-teachers-pay-2026-27-and-2027-28" },
     ],
-    updated: PAY_AWARD_REVIEWED,
+    updated: CONTENT_SAFETY_REVIEWED,
   },
  // ─────────────────────────────────────────────────────────────────────────
   // 3. MAIN PAY RANGE

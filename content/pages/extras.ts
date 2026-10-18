@@ -96,11 +96,11 @@ export const extraPages: PageContent[] = [
       { question: "Is the Scottish teachers' pension still final salary?", answer: "No — post-2015 service is CARE (1/57th) in Scotland too, with pre-2015 service holding final salary protections broadly parallel to England, subject to the Scottish remedy implementation." },
     ],
     sources: [
-      { label: "Scottish Public Pensions Agency — teachers' scheme", url: "https://www.gov.scot/policies/public-sector-pensions/" },
+      { label: "Scottish Public Pensions Agency — teachers' scheme", url: "https://pensions.gov.scot/teachers" },
       { label: "SNCT Handbook — Scottish teachers' pay and conditions", url: "https://www.snct.org.uk/" },
       { label: "Teachers' Pensions — for comparison with the E&W scheme", url: "https://www.teacherspensions.co.uk/" },
     ],
-    updated: UPDATED,
+    updated: "2026-10-19",
   },
 
   {
@@ -427,10 +427,10 @@ export const extraPages: PageContent[] = [
     ],
     sources: [
       { label: "LGPS member site — scheme guides and fund finder", url: "https://www.lgpsmember.org/" },
-      { label: "LGPS 2026/27 contribution bands", url: "https://www.lgpsmember.org/members/paying.php" },
+      { label: "LGPS 2026/27 contribution bands", url: "https://www.lgpsmember.org/2026/01/21/new-contribution-bands-2026" },
       { label: "MoneyHelper — Local Government Pension Scheme", url: "https://www.moneyhelper.org.uk/en/pensions-and-retirement" },
     ],
-    updated: UPDATED,
+    updated: "2026-10-19",
   },
 
   {

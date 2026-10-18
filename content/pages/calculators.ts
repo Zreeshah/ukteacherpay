@@ -239,12 +239,12 @@ export const calculatorPages: PageContent[] = [
       { kind: "p", text: "Notice that dropping from full time to 0.8 cuts gross by £8,188 but take-home by only about £5,332 a year. Fixed elements — the personal allowance and the NI threshold — do not shrink with your hours, so each part-time pound you give up costs you less net than gross. The same logic in reverse is why allowances such as TLRs are worth slightly more net on a part-time contract than their headline pro-rated figure suggests." },
 
       { kind: "h2", text: "The pension tier trap for part-time teachers" },
-      { kind: "p", text: "This is the single biggest source of confusion on part-time payslips. Your Teachers' Pension contribution rate is determined by your **full-time equivalent** salary, not your actual pay." },
-      { kind: "p", text: "Take a teacher on U3 in the rest of England working 0.5 FTE. Their actual salary is £26,418. Annualising actual pensionable earnings puts them in the 7.4% band." },
-      { kind: "table", caption: "Same teacher, different tier basis", head: ["Basis", "Salary used", "Tier", "Annual contribution"], rows: [
+      { kind: "p", text: "This is a common source of confusion on part-time payslips. Your Teachers' Pension contribution rate is determined by your **annualised actual pensionable earnings for that eligible employment**, not the full-time-equivalent pay point." },
+      { kind: "p", text: "Take a teacher on U3 in the rest of England working 0.5 FTE. Their actual salary is £26,418. Annualising those actual pensionable earnings puts them in the 7.4% band." },
+      { kind: "table", caption: "Why FTE pay is not the TPS tier basis", head: ["Basis", "Salary used", "Tier", "Annual contribution"], rows: [
         ["Correct annualised actual-pay basis", "£26,418", "7.4%", "£1,955"],
-        ["What people expect (actual pay basis)", "£26,418", "7.4%", "£1,955"],
-        ["Difference", "", "", "£581 a year"],
+        ["Full-time-equivalent U3 (not the tier basis)", "£52,835", "9.9%", "Not applicable"],
+        ["If 9.9% were incorrectly applied to actual pay", "£26,418", "9.9%", "£2,615"],
       ]},
       { kind: "callout", tone: "info", title: "Why it works this way", text: "Teachers’ Pensions annualises actual pensionable earnings in the pay period for each eligible employment. The result determines the tier, so reduced hours can put a part-time teacher in a lower tier." },
 

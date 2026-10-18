@@ -4,12 +4,12 @@ import { gbp, pct } from "@/lib/format";
 import { calculateTakeHome } from "@/lib/payroll";
 import type { PageContent } from "../types";
 
-const PAY_AWARD_REVIEWED = "2026-10-09";
+const PAY_AWARD_REVIEWED = "2026-10-19";
 
 const SOURCES = [
   teacherPaySources.stpcd,
   teacherPaySources.neuEngland2026,
-  { label: "NAHT — leadership pay guidance", url: "https://www.naht.org.uk/Advice-Support/Pay-and-conditions" },
+  { label: "NAHT — pay, pensions and conditions", url: "https://www.naht.org.uk/Advice-support/Topics/Pay-pensions-and-conditions" },
   teacherPaySources.tpsMemberContributions2026,
 ];
 

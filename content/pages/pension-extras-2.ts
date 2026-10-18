@@ -1,12 +1,12 @@
 import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-26";
+const UPDATED = "2026-10-19";
 
 const SOURCES = [
-  { label: "Teachers' Pensions — phased retirement guidance", url: "https://www.teacherspensions.co.uk/members/working-life/phased-retirement.htm" },
-  { label: "Teachers' Pensions — deferred members hub", url: "https://www.teacherspensions.co.uk/members/deferred-members.htm" },
-  { label: "Teachers' Pensions — breaks in service", url: "https://www.teacherspensions.co.uk/members/working-life/break-in-service.htm" },
+  { label: "Teachers' Pensions — phased retirement guidance", url: "https://www.teacherspensions.co.uk/members/planning-retirement/types-of-retirement/phased-retirement.aspx" },
+  { label: "Teachers' Pensions — deferred member guide", url: "https://www.teacherspensions.co.uk/members/resources/guides.aspx" },
+  { label: "Teachers' Pensions — breaks in service factsheet", url: "https://www.teacherspensions.co.uk/-/media/documents/member/factsheets/managing-your-pension/breaks-in-service-factsheet.ashx?rev=79ace026316e48f3af237c0516019f57&hash=3EDD9447EF3E7DE3F36D267C2464FB0B" },
   { label: "Teachers' Pension Scheme Regulations 2014", url: "https://www.legislation.gov.uk/uksi/2014/876" },
   { label: "NEU — Teachers' Pension Scheme advice", url: "https://neu.org.uk/advice/your-rights-work/pensions/teachers-pension-scheme" },
 ];
