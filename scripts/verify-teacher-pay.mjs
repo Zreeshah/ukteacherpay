@@ -32,6 +32,7 @@ require.extensions[".ts"] = function compileTypeScript(module, filename) {
 const { leadershipSpine, pointsForScale } = require(path.join(root, "data/teacher-pay-scales.ts"));
 const { studentLoanPlans, tpsScheme } = require(path.join(root, "data/tax-rates.ts"));
 const { calculateTakeHome, tpsRate } = require(path.join(root, "lib/payroll.ts"));
+const { projectTakeHome } = require(path.join(root, "lib/take-home-scenarios.ts"));
 const { calculateMaternityPay, SMP_STANDARD_WEEKLY_2026 } = require(path.join(root, "lib/maternity.ts"));
 const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts"));
 const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
@@ -63,6 +64,14 @@ assert.equal(partTimeWithAllowance.grossAnnual, 26400, "part-time allowance must
 assert.equal(partTimeWithAllowance.pensionableEarnings, 26400, "pensionable allowance must be included in TPS earnings");
 assert.equal(partTimeWithAllowance.pensionRate, 0.074, "allowance scenario TPS tier");
 assert.equal(partTimeWithAllowance.pensionContribution, 1953.6, "pension contribution must include the pro-rated allowance");
+
+const projection = projectTakeHome({ fteSalary: 34069, fraction: 1, studentLoan: "plan2" }, 0.035);
+assert.equal(projection.length, 3, "three-year scenario length");
+assert.ok(projection[0].fteSalary > 34069, "scenario applies a user-supplied base-pay assumption");
+assert.ok(
+  Math.abs(projection[0].result.studentLoanRepayment - 528.87735) < 0.000001,
+  "scenario keeps the shared current-year loan rules",
+);
 
 assert.deepEqual(
   Object.fromEntries(Object.entries(studentLoanPlans).map(([plan, config]) => [plan, config.threshold])),

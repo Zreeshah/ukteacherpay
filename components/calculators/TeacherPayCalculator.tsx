@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   allRegions,
   pointsForScale,
@@ -10,7 +10,8 @@ import {
   type ScaleId,
 } from "@/data/teacher-pay-scales";
 import { studentLoanPlans, type StudentLoanPlan } from "@/data/tax-rates";
-import { calculateTakeHome } from "@/lib/payroll";
+import { calculateTakeHome, type TakeHomeInput } from "@/lib/payroll";
+import { projectTakeHome } from "@/lib/take-home-scenarios";
 import { gbp, gbp2, pct } from "@/lib/format";
 
 const SCALES: ScaleId[] = [
@@ -52,6 +53,11 @@ export default function TeacherPayCalculator({
   const [loan, setLoan] = useState<StudentLoanPlan>("none");
   const [postgrad, setPostgrad] = useState(false);
   const [avc, setAvc] = useState("");
+  const [comparisonSalary, setComparisonSalary] = useState("");
+  const [comparisonFtePercent, setComparisonFtePercent] = useState("100");
+  const [annualBasePayChange, setAnnualBasePayChange] = useState("0");
+  const [shareNotice, setShareNotice] = useState("");
+  const hasLoadedShareState = useRef(false);
 
   const points = useMemo(() => pointsForScale(scale, region), [scale, region]);
 
@@ -63,20 +69,95 @@ export default function TeacherPayCalculator({
   const regime = region === "scotland" ? "scotland" : "ruk";
   const interpolatedScale = scale === "lead-practitioner" && region !== "wales";
 
-  const result = useMemo(() => {
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const sharedRegion = params.get("region") as Region | null;
+      const sharedScale = params.get("scale") as ScaleId | null;
+      const nextRegion = sharedRegion && allRegions.includes(sharedRegion) && !preset.lockRegion ? sharedRegion : region;
+      const nextScale = sharedScale && SCALES.includes(sharedScale) && !preset.lockScale ? sharedScale : scale;
+      const sharedPoint = params.get("point");
+      if (nextRegion !== region) setRegion(nextRegion);
+      if (nextScale !== scale) setScale(nextScale);
+      if (sharedPoint && pointsForScale(nextScale, nextRegion).some((point) => point.id === sharedPoint)) setPointId(sharedPoint);
+      const fields: Array<[string, (value: string) => void]> = [
+        ["fte", setFtePercent], ["tlr", setTlr], ["sen", setSen], ["avc", setAvc],
+        ["compareSalary", setComparisonSalary], ["compareFte", setComparisonFtePercent], ["growth", setAnnualBasePayChange],
+      ];
+      fields.forEach(([name, setValue]) => {
+        const value = params.get(name);
+        if (value !== null) setValue(value);
+      });
+      const sharedLoan = params.get("loan") as StudentLoanPlan | null;
+      if (sharedLoan && (sharedLoan === "none" || LOAN_PLANS.includes(sharedLoan as Exclude<StudentLoanPlan, "none">))) setLoan(sharedLoan);
+      if (params.has("pension")) setInPension(params.get("pension") !== "false");
+      if (params.has("postgrad")) setPostgrad(params.get("postgrad") === "true");
+      hasLoadedShareState.current = true;
+    }, 0);
+    return () => window.clearTimeout(timeout);
+  // This only restores a link once; subsequent changes update it below.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (!hasLoadedShareState.current) return;
+    const timeout = window.setTimeout(() => {
+      const params = new URLSearchParams();
+      params.set("region", region);
+      params.set("scale", scale);
+      params.set("point", pointId);
+      params.set("fte", ftePercent);
+      if (tlr) params.set("tlr", tlr);
+      if (sen) params.set("sen", sen);
+      if (avc) params.set("avc", avc);
+      params.set("pension", String(inPension));
+      params.set("loan", loan);
+      params.set("postgrad", String(postgrad));
+      if (comparisonSalary) params.set("compareSalary", comparisonSalary);
+      if (comparisonFtePercent !== "100") params.set("compareFte", comparisonFtePercent);
+      if (annualBasePayChange !== "0") params.set("growth", annualBasePayChange);
+      window.history.replaceState(null, "", `${window.location.pathname}?${params.toString()}${window.location.hash}`);
+    }, 0);
+    return () => window.clearTimeout(timeout);
+  }, [region, scale, pointId, ftePercent, tlr, sen, avc, inPension, loan, postgrad, comparisonSalary, comparisonFtePercent, annualBasePayChange]);
+
+  const calculatorInput = useMemo<TakeHomeInput | null>(() => {
     if (!active) return null;
-    const fraction = Math.max(0, Math.min(150, Number(ftePercent) || 0)) / 100;
-    return calculateTakeHome({
+    return {
       fteSalary: active.salary,
-      fraction,
+      fraction: Math.max(0, Math.min(150, Number(ftePercent) || 0)) / 100,
       allowances: (Number(tlr) || 0) + (Number(sen) || 0),
       regime,
       inPension,
       studentLoan: loan,
       postgradLoan: postgrad,
       avcAnnual: (Number(avc) || 0) * 12,
-    });
+    };
   }, [active, ftePercent, tlr, sen, regime, inPension, loan, postgrad, avc]);
+
+  const result = useMemo(() => calculatorInput && calculateTakeHome(calculatorInput), [calculatorInput]);
+  const comparison = useMemo(() => {
+    if (!calculatorInput || !(Number(comparisonSalary) > 0)) return null;
+    return calculateTakeHome({
+      ...calculatorInput,
+      fteSalary: Number(comparisonSalary),
+      fraction: Math.max(0, Math.min(150, Number(comparisonFtePercent) || 0)) / 100,
+    });
+  }, [calculatorInput, comparisonSalary, comparisonFtePercent]);
+  const projection = useMemo(() => {
+    if (!calculatorInput) return [];
+    return projectTakeHome(calculatorInput, (Number(annualBasePayChange) || 0) / 100);
+  }, [calculatorInput, annualBasePayChange]);
+
+  async function copyShareLink() {
+    try {
+      if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(window.location.href);
+      setShareNotice("Link copied");
+    } catch {
+      setShareNotice("Copy the link from your browser address bar");
+    }
+  }
 
   if (!active || !result) {
     return (
@@ -195,7 +276,7 @@ export default function TeacherPayCalculator({
               onChange={(e) => setFtePercent(e.target.value)}
             />
             <p className="mt-1 text-xs text-ink/55">
-              0.6 FTE = 60. Three days a week is usually 0.6.
+              0.6 FTE = 60. Three days a week is usually 0.6. Your pension tier uses this actual pay, not the full-time point.
             </p>
           </div>
 
@@ -209,6 +290,7 @@ export default function TeacherPayCalculator({
               value={tlr}
               onChange={(e) => setTlr(e.target.value)}
             />
+            <p className="mt-1 text-xs text-ink/55">Enter the full-time annual amount. It is pro-rated with your FTE.</p>
           </div>
 
           <div>
@@ -238,6 +320,7 @@ export default function TeacherPayCalculator({
                 </option>
               ))}
             </select>
+            <p className="mt-1 text-xs text-ink/55">Repayment uses gross pay. Teachers’ Pensions net-pay contributions do not reduce it.</p>
           </div>
 
           <div>
@@ -250,6 +333,22 @@ export default function TeacherPayCalculator({
               value={avc}
               onChange={(e) => setAvc(e.target.value)}
             />
+          </div>
+
+          <div>
+            <label className="field-label" htmlFor="tp-compare-salary">Compare FTE salary (£/yr)</label>
+            <input id="tp-compare-salary" className="field-input" inputMode="decimal" placeholder="Optional" value={comparisonSalary} onChange={(e) => setComparisonSalary(e.target.value)} />
+          </div>
+
+          <div>
+            <label className="field-label" htmlFor="tp-compare-fte">Compare employment (% FTE)</label>
+            <input id="tp-compare-fte" className="field-input" inputMode="decimal" value={comparisonFtePercent} onChange={(e) => setComparisonFtePercent(e.target.value)} />
+          </div>
+
+          <div>
+            <label className="field-label" htmlFor="tp-growth">3-year base-pay change (%/yr)</label>
+            <input id="tp-growth" className="field-input" inputMode="decimal" value={annualBasePayChange} onChange={(e) => setAnnualBasePayChange(e.target.value)} />
+            <p className="mt-1 text-xs text-ink/55">Your assumption, not a published pay award.</p>
           </div>
         </div>
 
@@ -282,6 +381,13 @@ export default function TeacherPayCalculator({
           </p>
         )}
 
+        <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-ink/10 pt-4">
+          <button type="button" onClick={copyShareLink} className="rounded-lg border border-ink/15 px-3 py-2 text-sm font-medium hover:border-accent-strong">
+            Copy share link
+          </button>
+          {shareNotice && <span className="text-xs text-ink/60" role="status">{shareNotice}</span>}
+        </div>
+
         {interpolatedScale && (
           <p className="mt-4 rounded-lg bg-amber-50 p-3 text-xs text-ink/75">
             The STPCD publishes the first and last points of this range. The
@@ -303,6 +409,9 @@ export default function TeacherPayCalculator({
           <p className="mt-1 text-sm text-white/70">
             per month · {gbp(result.netAnnual)} a year ·{" "}
             {gbp(result.netWeekly)} a week
+          </p>
+          <p className="mt-2 text-xs text-white/60">
+            Based on {gbp(result.grossAnnual)} gross pay and {gbp(result.pensionableEarnings)} pensionable earnings for this employment.
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3 border-t border-white/15 pt-4 text-sm">
             <div>
@@ -364,6 +473,50 @@ export default function TeacherPayCalculator({
             </ul>
           </div>
         )}
+
+        {comparison && (
+          <div className="card p-5">
+            <h3 className="text-sm font-semibold">Scenario comparison</h3>
+            <p className="mt-2 text-sm text-ink/75">
+              At {gbp(Number(comparisonSalary))} FTE salary and {comparisonFtePercent}% FTE, estimated take-home is <strong>{gbp(comparison.netMonthly)} a month</strong>.
+              That is <strong>{comparison.netMonthly >= result.netMonthly ? "+" : "−"}{gbp(Math.abs(comparison.netMonthly - result.netMonthly))}</strong> a month versus your current scenario.
+            </p>
+          </div>
+        )}
+
+        <div className="card overflow-hidden">
+          <div className="p-5 pb-0">
+            <h3 className="text-sm font-semibold">Three-year planning scenario</h3>
+            <p className="mt-1 text-sm text-ink/75">
+              This applies your {annualBasePayChange || "0"}% annual base-pay assumption. It keeps 2026/27 tax, loan and pension rules in place, so it is a comparison tool, not a forecast.
+            </p>
+          </div>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="bg-paper text-left">
+                <tr>
+                  <th className="px-4 py-2.5 font-semibold">Scenario</th>
+                  <th className="px-4 py-2.5 text-right font-semibold">FTE salary</th>
+                  <th className="px-4 py-2.5 text-right font-semibold">Monthly take-home</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-ink/10">
+                <tr>
+                  <td className="px-4 py-2.5 text-ink/80">Today</td>
+                  <td className="px-4 py-2.5 text-right tabular">{gbp(active.salary)}</td>
+                  <td className="px-4 py-2.5 text-right tabular font-semibold">{gbp(result.netMonthly)}</td>
+                </tr>
+                {projection.map((item) => (
+                  <tr key={item.year}>
+                    <td className="px-4 py-2.5 text-ink/80">Year {item.year}</td>
+                    <td className="px-4 py-2.5 text-right tabular">{gbp(item.fteSalary)}</td>
+                    <td className="px-4 py-2.5 text-right tabular font-semibold">{gbp(item.result.netMonthly)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         {inPension && (
           <div className="card p-5">
