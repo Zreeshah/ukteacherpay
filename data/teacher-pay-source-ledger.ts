@@ -38,6 +38,17 @@ export const teacherPaySources = {
     sourceChecked: "2026-10-19",
     affectedPages: ["teacher-pay-calculator", "teacher-take-home-pay", "student-loan-repayment-calculator"],
   },
+  tpsRegulationsConsultation2027: {
+    label: "DfE — Teachers’ Pension Scheme regulations: 2027 proposed amendments",
+    url: "https://www.gov.uk/government/consultations/teachers-pension-scheme-regulations-2027-proposed-amendments",
+    jurisdiction: "England and Wales TPS",
+    effectiveFrom: "proposed from 2027-04-01",
+    status: "consultation proposal, not current rules",
+    sourceChecked: "2026-10-19",
+    consultationOpened: "2026-08-07",
+    consultationCloses: "2026-10-30T23:59:00+00:00",
+    affectedPages: ["teachers-pension-contribution-changes-2027"],
+  },
   tpsEmployerContributions2026: {
     label: "Teachers' Pensions — calculating contributions",
     url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions",

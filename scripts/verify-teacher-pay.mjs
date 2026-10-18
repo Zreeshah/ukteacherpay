@@ -37,6 +37,7 @@ const { calculateMaternityPay, SMP_STANDARD_WEEKLY_2026 } = require(path.join(ro
 const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts"));
 const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
 const { planningPages } = require(path.join(root, "content/pages/planning.ts"));
+const { pensionExtras2Pages } = require(path.join(root, "content/pages/pension-extras-2.ts"));
 
 const rateCases = [
   [36198.99, 0.074], [36199, 0.089], [48727.99, 0.089], [48728, 0.099],
@@ -98,6 +99,17 @@ assert.deepEqual(studentLoanThresholdTable?.rows, [
 ], "student-loan guide thresholds must match the calculator data");
 const studentLoanFaq = studentLoanPage?.faq.find((item) => item.question === "Does my pension contribution reduce my student loan repayment?");
 assert.match(studentLoanFaq?.answer ?? "", /^No for ordinary Teachers’ Pensions net-pay contributions/, "student-loan guide must not treat net-pay pension contributions as reducing repayment");
+
+const consultationPage = pensionExtras2Pages.find((page) => page.slug === "teachers-pension-contribution-changes-2027");
+const proposedTierTable = consultationPage?.blocks.find(
+  (block) => block.kind === "table" && block.caption === "Proposed England and Wales TPS member contribution tiers from 1 April 2027",
+);
+assert.deepEqual(proposedTierTable?.rows, [
+  ["Up to £36,198.99", "7.4%"], ["£36,199 to £48,727.99", "8.7%"],
+  ["£48,728 to £57,776.99", "9.7%"], ["£57,777 to £76,572.99", "10.3%"],
+  ["£76,573 to £104,413.99", "11.4%"], ["£104,414 and above", "11.8%"],
+], "consultation page must reproduce the published proposed tiers");
+assert.match(consultationPage?.intro ?? "", /proposals, not current rules/, "consultation page must keep proposals separate from current calculator rules");
 
 for (const [region, expected] of Object.entries({
   england: [53586, 70275, 148829],

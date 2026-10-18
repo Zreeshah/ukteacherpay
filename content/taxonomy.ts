@@ -245,6 +245,12 @@ export const bridges: Bridge[] = [
     to: "teacher-tax-calculator",
     reason: "Check your tax code is right",
   },
+  // Current pension consultation: keep proposals clearly separated from current rules.
+  {
+    from: ["teacher-pension", "teacher-pension-contributions", "teacher-pay-calculator"],
+    to: "teachers-pension-contribution-changes-2027",
+    reason: "See the proposed 2027 TPS contribution changes",
+  },
   // Trust pages
   {
     from: ["teacher-pay-calculator", "teacher-pension-calculator", "teacher-pay-scale"],

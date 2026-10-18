@@ -1,3 +1,4 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
 const UPDATED = "2026-08-26";
@@ -340,5 +341,61 @@ export const pensionExtras2Pages: PageContent[] = [
     ],
     sources: SOURCES,
     updated: UPDATED,
+  },
+  {
+    slug: "teachers-pension-contribution-changes-2027",
+    hub: "pensions",
+    title: "Teachers’ Pension Contribution Changes 2027: Consultation Guide",
+    metaTitle: "Teachers’ Pension Contribution Changes 2027: Proposed Rates",
+    metaDescription: "The proposed 2027 Teachers’ Pension contribution tiers, consultation deadline and what remains unchanged until regulations are finalised.",
+    primaryKeyword: "teachers pension contribution changes 2027",
+    secondaryKeywords: [
+      "teachers pension consultation 2027", "TPS contribution rates 2027", "teachers pension proposed rates",
+    ],
+    calculator: "none",
+    intro: "The Department for Education is consulting on proposed changes to Teachers’ Pension Scheme member contribution rates from 1 April 2027. These are proposals, not current rules: the calculator and all 2026/27 figures on this site continue to use the rates currently in force.",
+    keyTakeaways: [
+      "The consultation opened on 7 August 2026 and closes at 11:59pm on 30 October 2026.",
+      "The DfE proposes keeping the lowest tier at 7.4% and reducing the other five member rates by 0.2 percentage points from 1 April 2027.",
+      "The proposals apply to the England and Wales Teachers’ Pension Scheme, subject to the regulations being finalised.",
+      "They do not change the 2026/27 calculator outputs or current contribution tiers.",
+    ],
+    blocks: [
+      { kind: "callout", tone: "warn", title: "Proposal only", text: "This page reports an open consultation. It is not a statement of current TPS rules or a promise that the draft rates will take effect. Check the official consultation and the final regulations before making a decision." },
+      { kind: "h2", text: "What is being proposed" },
+      { kind: "p", text: "The DfE says the latest scheme valuation found that retaining the current member structure would collect more than the required aggregate 9.6% member contribution yield. It is consulting on a revised six-tier structure proposed to run from 1 April 2027 to 31 March 2029." },
+      { kind: "table", caption: "Proposed England and Wales TPS member contribution tiers from 1 April 2027", head: ["Annual salary band", "Proposed member rate"], rows: [
+        ["Up to £36,198.99", "7.4%"],
+        ["£36,199 to £48,727.99", "8.7%"],
+        ["£48,728 to £57,776.99", "9.7%"],
+        ["£57,777 to £76,572.99", "10.3%"],
+        ["£76,573 to £104,413.99", "11.4%"],
+        ["£104,414 and above", "11.8%"],
+      ]},
+      { kind: "h2", text: "What remains current today" },
+      { kind: "p", text: "For 2026/27, member contributions remain on the current published tiers. Nothing in this consultation changes a current payslip, the figures in the teacher pay calculator or an existing entitlement. We will only update current-year calculator data when final, authoritative rules are published with an effective date." },
+      { kind: "h2", text: "Other consultation topics" },
+      { kind: "p", text: "The consultation also proposes amendments concerning Bereaved Partner’s Paternity Leave, automatic re-enrolment for people already active in another qualifying pension scheme, ill-health pensions and short-term survivor pensions. These are technical regulatory proposals; read the consultation document for the precise wording and scope." },
+      { kind: "h2", text: "Dates and next steps" },
+      { kind: "p", text: "The consultation opened on 7 August 2026 and closes at 11:59pm on 30 October 2026. The DfE says it will consider responses, publish a response document and expects final regulations to be in force by spring 2027. That timetable is not the same as a confirmed rule change." },
+      { kind: "h2", text: "How to use this information" },
+      { kind: "ul", items: [
+        "Use the current [teacher pay calculator](/teacher-pay-calculator/) for 2026/27 take-home estimates.",
+        "Treat the table above as a consultation scenario only, not a payroll instruction.",
+        "If you want to respond, use the official DfE consultation portal before the deadline.",
+      ]},
+    ],
+    faq: [
+      { question: "Are Teachers’ Pension contributions changing in 2027?", answer: "The DfE is consulting on proposed changes from 1 April 2027. They are not current TPS rules and will depend on the regulations being finalised." },
+      { question: "Will the 2027 proposals change my current payslip?", answer: "No. Current 2026/27 TPS contribution tiers remain the basis for current payroll and this site’s calculator until final rules with a future effective date are published." },
+      { question: "When does the TPS 2027 consultation close?", answer: "The official consultation closes at 11:59pm on 30 October 2026." },
+      { question: "Do the proposed rates apply in Scotland?", answer: "No. This DfE consultation concerns the England and Wales Teachers’ Pension Scheme. Scottish teacher pension arrangements should be checked against Scottish sources." },
+    ],
+    sources: [
+      teacherPaySources.tpsRegulationsConsultation2027,
+      { label: "DfE consultation document — draft 2027 amendments", url: "https://consult.education.gov.uk/teachers-pension-scheme-team/the-teachers-pension-scheme-miscellaneous-regulati/supporting_documents/tps-miscellaneous-regulations-2027-consultation-documentpdf" },
+      { label: "DfE consultation portal", url: "https://consult.education.gov.uk/teachers-pension-scheme-team/the-teachers-pension-scheme-miscellaneous-regulati/" },
+    ],
+    updated: "2026-10-19",
   },
 ];
