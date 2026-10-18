@@ -1,11 +1,12 @@
+import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
-const PENSION_RATES_REVIEWED = "2026-10-09";
+const UPDATED = "2026-10-19";
+const PENSION_RATES_REVIEWED = "2026-10-19";
 
 const SOURCES = [
-  { label: "Teachers' Pensions — 2026/27 member contribution tiers", url: "https://www.teacherspensions.co.uk/members/new-starter/understand-how-much-youll-pay.aspx" },
-  { label: "Teachers' Pensions — employer and member contribution calculation", url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions.aspx" },
+  teacherPaySources.tpsMemberContributions2026,
+  teacherPaySources.tpsEmployerContributions2026,
   { label: "Teachers' Pension Scheme Regulations 2014 (CARE rules)", url: "https://www.legislation.gov.uk/uksi/2014/876" },
   { label: "MoneyHelper — pensions guidance for teachers", url: "https://www.moneyhelper.org.uk/en/pensions-and-retirement" },
   { label: "NEU — Teachers' Pension Scheme advice", url: "https://neu.org.uk/advice/your-rights-work/pensions/teachers-pension-scheme" },

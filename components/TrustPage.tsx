@@ -96,10 +96,11 @@ function EditorialPolicyPage() {
         <p>We review pay scales when new rates take effect, normally in September, and tax thresholds at the start of each tax year. We also update a page when an authoritative source changes or a material error is identified.</p>
       </Section>
       <Section title="Authorship and independence">
-        <p>Content is published under the UK Teacher Pay Editorial Team. We do not invent author, reviewer or credential claims. This site is independent and is not affiliated with the Department for Education, HMRC, Teachers&apos; Pensions, a school, a union or an employer.</p>
+        <p>Content is published under the UK Teacher Pay Editorial Team, which is responsible for the site&apos;s source checking, calculator maintenance and correction record. We do not invent author, reviewer or credential claims, and we do not imply that a page has been written or reviewed by a teacher or adviser unless that is specifically evidenced on the page.</p>
+        <p>This site is independent and is not affiliated with the Department for Education, HMRC, Teachers&apos; Pensions, a school, a union or an employer.</p>
       </Section>
       <Section title="Corrections">
-        <p>Readers can report a possible error through our <Link href="/contact/">contact page</Link>. Material corrections are recorded on the <Link href="/corrections/">Corrections &amp; Changelog</Link> page with the date and a concise description of the change.</p>
+        <p>Readers can report a possible error through our <Link href="/contact/">contact page</Link>. We assess the cited source, correct a substantiated material issue and add a dated entry to the <Link href="/corrections/">Corrections &amp; Changelog</Link>. If a claim is ambiguous or no longer supportable, we qualify or remove it rather than silently preserving it.</p>
       </Section>
     </>
   );
@@ -151,6 +152,7 @@ function CorrectionsPage() {
       </Section>
       <Section title="Correction record">
         <ul>
+          <li><strong>19 October 2026:</strong> Corrected 2026/27 student-loan thresholds across the teacher-pay and loan calculators, the take-home table and the supporting guide: Plan 1 £26,900, Plan 2 £29,385 and Plan 4 £33,795. Recalculated the affected examples and clarified that ordinary Teachers&apos; Pensions net-pay contributions do not reduce student-loan repayment.</li>
           <li><strong>9 October 2026:</strong> Published the editorial policy, corrections process, contact, privacy, disclaimer and terms pages.</li>
           <li><strong>28 August 2026:</strong> Added Scotland-specific safeguards and limitations to the pension calculator so England and Wales contribution assumptions are not presented as Scottish figures.</li>
           <li><strong>26 August 2026:</strong> Corrected page metadata lengths where rendered descriptions could exceed the intended snippet budget.</li>
@@ -158,7 +160,7 @@ function CorrectionsPage() {
         </ul>
       </Section>
       <Section title="What we log">
-        <p>We log corrections that materially affect an official figure, calculation, legal or policy explanation, source attribution, indexability or a reader&apos;s likely decision. Routine typography, layout and minor wording edits are not normally listed.</p>
+        <p>We log corrections that materially affect an official figure, calculation, legal or policy explanation, source attribution, indexability or a reader&apos;s likely decision. Each entry identifies the date, what changed and the affected subject. Routine typography, layout and minor wording edits are not normally listed.</p>
       </Section>
     </>
   );
@@ -208,7 +210,7 @@ export default function TrustPage({ slug }: { slug: TrustSlug }) {
     <div className="mx-auto max-w-6xl px-4 py-8">
       <header className="mt-5 max-w-3xl">
         <h1 className="text-3xl font-semibold sm:text-4xl">{page.title}</h1>
-        <p className="mt-3 text-sm text-ink/55">Last updated 9 October 2026</p>
+        <p className="mt-3 text-sm text-ink/55">Last updated {slug === "editorial-policy" || slug === "corrections" ? "19 October 2026" : "9 October 2026"}</p>
       </header>
       <article className="max-w-3xl">{content[slug]}</article>
     </div>

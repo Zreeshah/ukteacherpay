@@ -2,6 +2,7 @@ import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
 const UPDATED = "2026-10-09";
+const ABOUT_UPDATED = "2026-10-19";
 
 export const utilityPages: PageContent[] = [
   {
@@ -81,6 +82,9 @@ export const utilityPages: PageContent[] = [
       { kind: "h2", text: "Why this site exists" },
       { kind: "p", text: "Teacher pay is more complicated than it should be. Four regional pay bands in England alone, separate systems in Scotland and Northern Ireland, a tiered pension whose rate depends on a salary you might not actually earn, and allowances that are pro-rated in ways nobody explains clearly." },
       { kind: "p", text: "Most salary calculators are built for the private sector and get the teacher-specific parts wrong — particularly the pension tier and the order deductions are applied. This site is built specifically around the STPCD." },
+      { kind: "h2", text: "Who is responsible" },
+      { kind: "p", text: "UK Teacher Pay is published by the UK Teacher Pay Editorial Team. We are accountable for maintaining the calculator data, source links and corrections process. We do not claim that articles are written or reviewed by teachers, advisers or other professionals unless that is specifically evidenced on the page." },
+      { kind: "p", text: "For a correction, source update or general question, use the [contact page](/contact/). Privacy-contact details are set out in the [Privacy & Cookie Policy](/privacy/)." },
       { kind: "h2", text: "How we keep it accurate" },
       { kind: "ul", items: [
         "Pay scales are taken directly from the published STPCD each year.",
@@ -98,7 +102,7 @@ export const utilityPages: PageContent[] = [
       { question: "Who is it for?", answer: "Classroom teachers, leadership, unqualified teachers, supply teachers and support staff across England, Wales, Scotland and Northern Ireland." },
     ],
     sources: [],
-    updated: UPDATED,
+    updated: ABOUT_UPDATED,
   },
   {
     slug: "sources",

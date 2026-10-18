@@ -40,7 +40,11 @@ export const teacherPaySources = {
   },
   tpsEmployerContributions2026: {
     label: "Teachers' Pensions — calculating contributions",
-    url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions.aspx",
+    url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions",
+    jurisdiction: "England and Wales TPS eligible employments",
+    effectiveFrom: "2026-04-01",
+    status: "in force",
+    sourceChecked: "2026-10-19",
   },
   niPayCirculars: {
     label: "Department of Education NI — pay circulars",
