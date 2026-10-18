@@ -38,6 +38,7 @@ const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts
 const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
 const { planningPages } = require(path.join(root, "content/pages/planning.ts"));
 const { pensionExtras2Pages } = require(path.join(root, "content/pages/pension-extras-2.ts"));
+const { salaryPages } = require(path.join(root, "content/pages/salaries.ts"));
 
 const rateCases = [
   [36198.99, 0.074], [36199, 0.089], [48727.99, 0.089], [48728, 0.099],
@@ -110,6 +111,13 @@ assert.deepEqual(proposedTierTable?.rows, [
   ["£76,573 to £104,413.99", "11.4%"], ["£104,414 and above", "11.8%"],
 ], "consultation page must reproduce the published proposed tiers");
 assert.match(consultationPage?.intro ?? "", /proposals, not current rules/, "consultation page must keep proposals separate from current calculator rules");
+
+for (const slug of ["maths-teacher-salary", "music-teacher-salary", "pe-teacher-salary", "english-teacher-salary", "art-teacher-salary"]) {
+  const page = salaryPages.find((candidate) => candidate.slug === slug);
+  assert.ok(page, `${slug} exists`);
+  assert.match(page?.intro ?? "", /do not have a separate statutory classroom pay scale/, `${slug} keeps only the shared pay framework`);
+  assert.match(page?.keyTakeaways.join(" ") ?? "", /does not estimate tutoring rates/, `${slug} does not publish unsupported market-rate claims`);
+}
 
 for (const [region, expected] of Object.entries({
   england: [53586, 70275, 148829],

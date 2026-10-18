@@ -18,6 +18,11 @@ const SOURCES_WITH_NJC = [
   { label: "NJC for Local Government Services — pay agreements", url: "https://www.local.gov.uk/pay-and-conditions" },
 ];
 
+const SUBJECT_SOURCES = [
+  ...SOURCES,
+  teacherPaySources.initialTeacherTrainingFunding,
+];
+
 export const salaryPages: PageContent[] = [
     {
     slug: "teacher-salary-uk",
@@ -1997,3 +2002,51 @@ export const salaryPages: PageContent[] = [
     sources: SOURCES,
   },
 ];
+
+
+// Subject-specific market claims require current, traceable evidence. Until each
+// subject page has that evidence, retain only the shared published pay framework.
+const subjectNames: Record<string, string> = {
+  "maths-teacher-salary": "Maths",
+  "music-teacher-salary": "Music",
+  "pe-teacher-salary": "PE",
+  "english-teacher-salary": "English",
+  "art-teacher-salary": "Art",
+};
+
+for (const page of salaryPages) {
+  const subject = subjectNames[page.slug];
+  if (!subject) continue;
+  page.metaTitle = `${subject} Teacher Salary UK 2026/27: Pay Scale Guide`;
+  page.metaDescription = `${subject} teacher pay in 2026/27: the published UK pay-scale framework, allowances that must be confirmed in writing, and current funding checks.`;
+  page.intro = `${subject} teachers do not have a separate statutory classroom pay scale. Pay depends on the published range for the jurisdiction, region, role and pay point; any responsibility allowance or local payment must be confirmed for the specific post.`;
+  page.keyTakeaways = [
+    "A classroom teacher’s published pay range is set by jurisdiction, region, role and pay point, not by subject.",
+    "A TLR, SEN allowance, recruitment payment or local premium is post-specific and should be confirmed in the advert and contract.",
+    "Teacher-training funding changes by cycle; check the current Department for Education funding page rather than relying on historic bursary figures.",
+    "This page does not estimate tutoring rates, recruitment premiums or retention payments without a current traceable source.",
+  ];
+  page.blocks = [
+    { kind: "h2", text: `${subject} teacher base pay` },
+    { kind: "p", text: `For a maintained-school teaching post, start with the relevant [teacher pay scale](/teacher-pay-scale/) and then check the correct nation and London band where relevant. The subject you teach does not by itself create a separate statutory classroom salary.` },
+    { kind: "h2", text: "Allowances and leadership responsibilities" },
+    { kind: "p", text: "A role may include a Teaching and Learning Responsibility payment or another published allowance, but it must be attached to the post and stated in the employer’s documentation. Do not assume that a head-of-department, coordinator or extracurricular role carries a particular allowance based only on its subject label." },
+    { kind: "h2", text: "Training, recruitment and work outside school" },
+    { kind: "p", text: "Funding for initial teacher training, recruitment incentives, retention schemes and freelance tutoring markets changes regularly and may have eligibility conditions. Check the current official funding guidance, the vacancy pack and your contract before using any figure in a financial plan." },
+    { kind: "h2", text: "Check the offer in context" },
+    { kind: "ul", items: [
+      "Confirm the pay scale, point, jurisdiction and FTE fraction.",
+      "Ask whether any allowance or payment is pensionable, time-limited or subject to repayment.",
+      "Use the [teacher pay calculator](/teacher-pay-calculator/) to model the stated salary after current deductions.",
+      "Keep written confirmation of every salary element before accepting a post.",
+    ]},
+  ];
+  page.faq = [
+    { question: `Do ${subject.toLowerCase()} teachers have a separate pay scale?`, answer: "No. Published classroom pay ranges are set by the relevant jurisdiction, region, role and pay point rather than by subject." },
+    { question: "Can a subject role include an allowance?", answer: "It can, but an allowance or payment is specific to the post and employer. Confirm it in the vacancy documentation and contract." },
+    { question: "Are teacher-training bursaries guaranteed?", answer: "No. Funding changes by recruitment cycle and can have eligibility conditions. Check the current Department for Education funding guidance." },
+    { question: "Can I use this page to price private tutoring?", answer: "No. Tutoring rates are market and location dependent, so use current local evidence and check contractual, tax and safeguarding requirements." },
+  ];
+  page.sources = SUBJECT_SOURCES;
+  page.updated = "2026-10-19";
+}

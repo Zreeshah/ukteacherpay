@@ -49,6 +49,15 @@ export const teacherPaySources = {
     consultationCloses: "2026-10-30T23:59:00+00:00",
     affectedPages: ["teachers-pension-contribution-changes-2027"],
   },
+  initialTeacherTrainingFunding: {
+    label: "DfE — Get Into Teaching funding and support",
+    url: "https://getintoteaching.education.gov.uk/funding-and-support",
+    jurisdiction: "England teacher training",
+    effectiveFrom: "varies by recruitment cycle",
+    status: "check current published eligibility and amounts",
+    sourceChecked: "2026-10-19",
+    affectedPages: ["maths-teacher-salary", "music-teacher-salary", "pe-teacher-salary", "english-teacher-salary", "art-teacher-salary"],
+  },
   tpsEmployerContributions2026: {
     label: "Teachers' Pensions — calculating contributions",
     url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions",
