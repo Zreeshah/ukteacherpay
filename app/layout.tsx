@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ContentBottomAd from "@/components/ContentBottomAd";
 import ContentTopAd from "@/components/ContentTopAd";
 import JsonLd from "@/components/JsonLd";
 import {
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main id="main" className="flex-1">
           <ContentTopAd />
           {children}
+          <ContentBottomAd />
         </main>
         <Footer />
         <JsonLd data={organizationJsonLd()} />
