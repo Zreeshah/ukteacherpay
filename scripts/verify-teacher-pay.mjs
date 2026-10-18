@@ -30,11 +30,12 @@ require.extensions[".ts"] = function compileTypeScript(module, filename) {
 };
 
 const { leadershipSpine, pointsForScale } = require(path.join(root, "data/teacher-pay-scales.ts"));
-const { tpsScheme } = require(path.join(root, "data/tax-rates.ts"));
+const { studentLoanPlans, tpsScheme } = require(path.join(root, "data/tax-rates.ts"));
 const { calculateTakeHome, tpsRate } = require(path.join(root, "lib/payroll.ts"));
 const { calculateMaternityPay, SMP_STANDARD_WEEKLY_2026 } = require(path.join(root, "lib/maternity.ts"));
 const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts"));
 const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
+const { planningPages } = require(path.join(root, "content/pages/planning.ts"));
 
 const rateCases = [
   [36198.99, 0.074], [36199, 0.089], [48727.99, 0.089], [48728, 0.099],
@@ -56,6 +57,38 @@ assert.ok(
   Math.abs(partTime.employerPension - (partTime.pensionableEarnings * tpsScheme.employerContribution)) < 0.000001,
   "employer contribution must use the published TPS rate",
 );
+
+const partTimeWithAllowance = calculateTakeHome({ fteSalary: 40000, allowances: 4000, fraction: 0.6 });
+assert.equal(partTimeWithAllowance.grossAnnual, 26400, "part-time allowance must be pro-rated with salary");
+assert.equal(partTimeWithAllowance.pensionableEarnings, 26400, "pensionable allowance must be included in TPS earnings");
+assert.equal(partTimeWithAllowance.pensionRate, 0.074, "allowance scenario TPS tier");
+assert.equal(partTimeWithAllowance.pensionContribution, 1953.6, "pension contribution must include the pro-rated allowance");
+
+assert.deepEqual(
+  Object.fromEntries(Object.entries(studentLoanPlans).map(([plan, config]) => [plan, config.threshold])),
+  { plan1: 26900, plan2: 29385, plan4: 33795, plan5: 25000, postgrad: 21000 },
+  "2026/27 student-loan thresholds",
+);
+const m1Plan2 = calculateTakeHome({ fteSalary: 34069, studentLoan: "plan2" });
+assert.equal(m1Plan2.studentLoanRepayment, 421.56, "M1 Plan 2 annual repayment");
+assert.ok(
+  Math.abs(m1Plan2.netAnnual - 25610.8352) < 0.000001,
+  "M1 Plan 2 take-home must include the current repayment threshold",
+);
+
+const studentLoanPage = planningPages.find((page) => page.slug === "student-loan-repayment-calculator");
+const studentLoanThresholdTable = studentLoanPage?.blocks.find(
+  (block) => block.kind === "table" && block.caption === "Repayment thresholds and rates, 2026/27 tax year",
+);
+assert.deepEqual(studentLoanThresholdTable?.rows, [
+  ["Plan 1", "£26,900", "9%"],
+  ["Plan 2", "£29,385", "9%"],
+  ["Plan 4 (Scotland)", "£33,795", "9%"],
+  ["Plan 5", "£25,000", "9%"],
+  ["Postgraduate Loan (PGL)", "£21,000", "6%"],
+], "student-loan guide thresholds must match the calculator data");
+const studentLoanFaq = studentLoanPage?.faq.find((item) => item.question === "Does my pension contribution reduce my student loan repayment?");
+assert.match(studentLoanFaq?.answer ?? "", /^No for ordinary Teachers’ Pensions net-pay contributions/, "student-loan guide must not treat net-pay pension contributions as reducing repayment");
 
 for (const [region, expected] of Object.entries({
   england: [53586, 70275, 148829],

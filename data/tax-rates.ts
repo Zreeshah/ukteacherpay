@@ -9,8 +9,8 @@
 
 export const taxYearLabel = "2026/27";
 export const stpcdYearLabel = "2026/27";
-export const lastUpdated = "2026-08-23";
-export const lastUpdatedLabel = "August 2026";
+export const lastUpdated = "2026-10-19";
+export const lastUpdatedLabel = "19 October 2026";
 
 export type TaxRegime = "ruk" | "scotland";
 
@@ -63,9 +63,9 @@ export const studentLoanPlans: Record<
   Exclude<StudentLoanPlan, "none">,
   { label: string; threshold: number; rate: number }
 > = {
-  plan1: { label: "Plan 1", threshold: 26065, rate: 0.09 },
-  plan2: { label: "Plan 2", threshold: 28470, rate: 0.09 },
-  plan4: { label: "Plan 4 (Scotland)", threshold: 32745, rate: 0.09 },
+  plan1: { label: "Plan 1", threshold: 26900, rate: 0.09 },
+  plan2: { label: "Plan 2", threshold: 29385, rate: 0.09 },
+  plan4: { label: "Plan 4 (Scotland)", threshold: 33795, rate: 0.09 },
   plan5: { label: "Plan 5", threshold: 25000, rate: 0.09 },
   postgrad: { label: "Postgraduate Loan", threshold: 21000, rate: 0.06 },
 };

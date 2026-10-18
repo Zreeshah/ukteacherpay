@@ -84,7 +84,7 @@ export default function Home() {
           <div className="card p-5">
             <h3 className="font-semibold">Where the money goes</h3>
             <p className="mt-3 text-sm text-ink/70">
-              On M1 (£34,068) a teacher pays £2,521 in pension, £3,795 in income
+              On M1 ({gbp(mainRange.england[0])}) a teacher pays £2,521 in pension, £3,795 in income
               tax and £1,720 in National Insurance — taking home about{" "}
               <strong>£2,169 a month</strong>.
             </p>

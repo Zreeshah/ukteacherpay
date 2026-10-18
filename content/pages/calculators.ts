@@ -1,7 +1,33 @@
+import { mainRange, upperRange } from "@/data/teacher-pay-scales";
+import { studentLoanPlans, type StudentLoanPlan } from "@/data/tax-rates";
+import { calculateTakeHome, studentLoanFor } from "@/lib/payroll";
 import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-10-09";
+const UPDATED = "2026-10-19";
+const gbp = (amount: number, digits = 0) => `£${amount.toLocaleString("en-GB", { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
+const loanPlans: StudentLoanPlan[] = ["plan1", "plan2", "plan4", "plan5", "postgrad"];
+const loanThresholdRows = loanPlans.map((plan) => [
+  studentLoanPlans[plan].label,
+  gbp(studentLoanPlans[plan].threshold),
+  `${studentLoanPlans[plan].rate * 100}%`,
+]);
+const m1Salary = mainRange.england[0];
+const m1TakeHome = calculateTakeHome({ fteSalary: m1Salary });
+const m4Salary = mainRange.england[3];
+const m4LoanRows = ["none", "plan1", "plan2", "plan4", "plan5", "postgrad"].map((plan) => {
+  const repayment = plan === "none" ? 0 : studentLoanFor(m4Salary, plan as StudentLoanPlan);
+  const label = plan === "none" ? "No loan" : plan === "postgrad" ? "Postgraduate Loan (on top of any plan)" : studentLoanPlans[plan as Exclude<StudentLoanPlan, "none">].label;
+  const netMonthly = plan === "postgrad" ? -repayment / 12 : calculateTakeHome({ fteSalary: m4Salary, studentLoan: plan as StudentLoanPlan }).netMonthly;
+  return [label, plan === "none" ? "—" : gbp(studentLoanPlans[plan as Exclude<StudentLoanPlan, "none">].threshold), gbp(repayment), gbp(repayment / 12), plan === "postgrad" ? `−${gbp(repayment / 12)}` : gbp(netMonthly)];
+});
+const takeHomeByPointRows = [
+  ...mainRange.england.map((salary, index) => [`M${index + 1}`, salary]),
+  ...upperRange.england.map((salary, index) => [`U${index + 1}`, salary]),
+].map(([point, salary]) => {
+  const result = calculateTakeHome({ fteSalary: salary as number });
+  return [point as string, gbp(salary as number), gbp(result.pensionContribution), gbp(result.incomeTax + result.nationalInsurance), gbp(result.netMonthly)];
+});
 
 const SOURCES = [
   teacherPaySources.stpcd,
@@ -72,24 +98,20 @@ export const calculatorPages: PageContent[] = [
       { kind: "h3", text: "4. Student loan" },
       { kind: "p", text: "If you have a student loan, repayments are 9% of everything you earn above your plan's threshold — or 6% for a Postgraduate Loan. Most teachers who trained recently are on Plan 2 or Plan 5. PAYE rounds each monthly deduction down to the nearest pound." },
       { kind: "table", caption: "Student loan repayment thresholds 2026/27", head: ["Plan", "Annual threshold", "Rate"], rows: [
-        ["Plan 1", "£26,065", "9%"],
-        ["Plan 2", "£28,470", "9%"],
-        ["Plan 4 (Scotland)", "£32,745", "9%"],
-        ["Plan 5", "£25,000", "9%"],
-        ["Postgraduate Loan", "£21,000", "6%"],
+        ...loanThresholdRows,
       ]},
 
       { kind: "h2", text: "A worked example: M1 teacher outside London" },
       { kind: "p", text: "Here is the full calculation for a newly qualified teacher starting on M1 in the rest of England in 2026/27, in the Teachers' Pension Scheme with no student loan." },
       { kind: "table", caption: "M1, rest of England, full time, 2026/27", head: ["Line", "Working", "Annual"], rows: [
-        ["Gross salary", "STPCD M1", "£34,069.00"],
-        ["Pension", "£34,069 × 7.4%", "−£2,521.03"],
-        ["Taxable pay", "£34,069 − £2,521.03 − £12,570 allowance", "£18,976.97"],
-        ["Income tax", "£18,976.97 × 20%", "−£3,795.39"],
-        ["National Insurance", "(£34,069 − £12,570) × 8%", "−£1,719.84"],
-        ["Take-home pay", "", "£26,031.74"],
+        ["Gross salary", "STPCD M1", gbp(m1Salary, 2)],
+        ["Pension", `${gbp(m1Salary)} × 7.4%`, `−${gbp(m1TakeHome.pensionContribution, 2)}`],
+        ["Taxable pay", `${gbp(m1Salary)} − ${gbp(m1TakeHome.pensionContribution, 2)} − ${gbp(m1TakeHome.personalAllowance)} allowance`, gbp(m1TakeHome.taxableIncome, 2)],
+        ["Income tax", `${gbp(m1TakeHome.taxableIncome, 2)} × 20%`, `−${gbp(m1TakeHome.incomeTax, 2)}`],
+        ["National Insurance", `(${gbp(m1Salary)} − ${gbp(12570)}) × 8%`, `−${gbp(m1TakeHome.nationalInsurance, 2)}`],
+        ["Take-home pay", "", gbp(m1TakeHome.netAnnual, 2)],
       ]},
-      { kind: "p", text: "That is **£2,169.31 a month**. Notice that National Insurance is charged on the full £34,069, not on the £31,547 left after the pension came out. Every pay point from M1 to U3 is tabulated on the dedicated [teacher take-home pay](/teacher-take-home-pay/) page." },
+      { kind: "p", text: `That is **${gbp(m1TakeHome.netMonthly, 2)} a month**. Notice that National Insurance is charged on the full ${gbp(m1Salary)}, not on the ${gbp(m1Salary - m1TakeHome.pensionContribution)} left after the pension came out. Every pay point from M1 to U3 is tabulated on the dedicated [teacher take-home pay](/teacher-take-home-pay/) page.` },
 
       { kind: "h2", text: "Part-time and pro rata teacher pay" },
       { kind: "p", text: "Part-time teacher pay is worked out as a straight fraction of the full-time figure for your pay point. A 0.6 contract on M4 in the rest of England pays 60% of £40,941, which is £24,564." },
@@ -302,27 +324,14 @@ export const calculatorPages: PageContent[] = [
       { kind: "h2", text: "Teacher take-home pay by pay point" },
       { kind: "p", text: "These figures assume the standard 1257L tax code, membership of the Teachers' Pension Scheme, no student loan and no other taxable income. Change any of those in the calculator above." },
       { kind: "table", caption: "Monthly take-home pay, rest of England, 2026/27, full time, in pension", head: ["Point", "Gross salary", "Pension", "Tax + NI", "Monthly take-home"], rows: [
-        ["M1", "£34,069", "£2,521", "£5,515", "£2,169"],
-        ["M2", "£36,042", "£3,100", "£5,952", "£2,249"],
-        ["M3", "£38,400", "£3,302", "£6,572", "£2,377"],
-        ["M4", "£40,941", "£3,521", "£7,239", "£2,515"],
-        ["M5", "£43,529", "£3,743", "£7,920", "£2,655"],
-        ["M6", "£46,940", "£4,506", "£8,722", "£2,809"],
-        ["U1", "£49,134", "£4,717", "£9,295", "£2,927"],
-        ["U2", "£50,956", "£4,892", "£9,728", "£3,028"],
-        ["U3", "£52,835", "£5,072", "£10,106", "£3,138"],
+        ...takeHomeByPointRows,
       ]},
       { kind: "callout", tone: "info", title: "Why the jump between M5 and M6 looks odd", text: "M6 crosses into the 9.9% pension tier at £48,727.99, so the pension deduction rises faster than salary at that step. The same happens again at £57,776.99 for the next tier." },
 
       { kind: "h2", text: "Teacher take-home pay with a student loan" },
       { kind: "p", text: "Student loan repayments are calculated on gross pay and collected through PAYE, so they reduce your take-home pound for pound. The plan you are on matters more than most people realise: on the same M4 salary the difference between Plan 4 and Plan 5 is over £700 a year." },
       { kind: "table", caption: "Monthly take-home for an M4 teacher (£40,941) by student loan plan, 2026/27", head: ["Plan", "Threshold", "Annual repayment", "Monthly repayment", "Monthly take-home"], rows: [
-        ["No loan", "—", "£0", "£0", "£2,515"],
-        ["Plan 1", "£26,065", "£1,339", "£112", "£2,403"],
-        ["Plan 2", "£28,470", "£1,122", "£94", "£2,421"],
-        ["Plan 4 (Scotland)", "£32,745", "£738", "£62", "£2,454"],
-        ["Plan 5", "£25,000", "£1,435", "£120", "£2,395"],
-        ["Postgraduate Loan (on top of any plan)", "£21,000", "£1,196", "£100", "−£100"],
+        ...m4LoanRows,
       ]},
       { kind: "p", text: "The pattern surprises people: Plan 2 costs less than Plan 1 or Plan 5 at this salary because its threshold is the highest of the undergraduate plans. Repayment terms also differ by plan — check which plan you are actually on before assuming the standard advice holds, because the write-off periods are not the same. If you are unsure what you would repay at a different salary, the [teacher tax calculator](/teacher-tax-calculator/) shows how each deduction line moves with pay." },
 

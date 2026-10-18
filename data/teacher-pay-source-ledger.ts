@@ -23,7 +23,20 @@ export const teacherPaySources = {
   },
   tpsMemberContributions2026: {
     label: "Teachers' Pensions — member contribution tiers 2026/27",
-    url: "https://www.teacherspensions.co.uk/members/new-starter/understand-how-much-youll-pay.aspx",
+    url: "https://www.teacherspensions.co.uk/employers/managing-members/contributions/calculating-contributions",
+    jurisdiction: "England and Wales TPS eligible employments",
+    effectiveFrom: "2026-04-01",
+    status: "in force",
+    sourceChecked: "2026-10-19",
+  },
+  studentLoanRepayment2026: {
+    label: "HMRC — student loan and postgraduate loan repayment guidance for employers",
+    url: "https://www.gov.uk/guidance/special-rules-for-student-loans",
+    jurisdiction: "UK payroll",
+    effectiveFrom: "2026-04-06",
+    status: "in force",
+    sourceChecked: "2026-10-19",
+    affectedPages: ["teacher-pay-calculator", "teacher-take-home-pay", "student-loan-repayment-calculator"],
   },
   tpsEmployerContributions2026: {
     label: "Teachers' Pensions — calculating contributions",

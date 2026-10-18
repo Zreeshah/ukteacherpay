@@ -252,11 +252,11 @@ export const planningPages: PageContent[] = [
     ],
     calculator: "student-loan",
     intro:
-      "Student loans behave like an extra 6% to 9% tax for most working teachers, and the postgraduate loan stacks on top of the undergraduate one. What you actually pay depends entirely on your plan's threshold — not your debt size — so a mid-scale teacher on Plan 2 pays around **£94 a month** while a colleague on the same salary repaying a postgraduate loan pays about **£100**, even if the latter borrowed a fraction as much. This guide sets out every plan's 2026/27 threshold, shows the exact monthly deduction at common teacher salaries, and explains write-off rules that decide whether you ever repay it all.",
+      "Student loans behave like an extra 6% to 9% tax for most working teachers, and the postgraduate loan stacks on top of the undergraduate one. What you actually pay depends entirely on your plan's threshold — not your debt size — so a mid-scale teacher on Plan 2 pays around **£87 a month** while a colleague on the same salary repaying a postgraduate loan pays about **£100**, even if the latter borrowed a fraction as much. This guide sets out every plan's 2026/27 threshold, shows the exact monthly deduction at common teacher salaries, and explains write-off rules that decide whether you ever repay it all.",
     keyTakeaways: [
       "Repayment depends on income above your plan's threshold: 9% for Plans 1, 2, 4 and 5; 6% for the postgraduate loan.",
-      "2026/27 thresholds: Plan 1 £26,065; Plan 2 £28,470; Plan 4 £32,745; Plan 5 £25,000; postgraduate £21,000.",
-      "A teacher on M4 (£40,941) repays roughly £94 a month on Plan 2, or £193 with a combined undergraduate plus postgraduate loan — see the [pay scale context](/teacher-pay-scale/) for where those salaries sit.",
+      "2026/27 thresholds: Plan 1 £26,900; Plan 2 £29,385; Plan 4 £33,795; Plan 5 £25,000; postgraduate £21,000.",
+      "A teacher on M4 (£40,941) repays roughly £87 a month on Plan 2, or £186 with a combined undergraduate plus postgraduate loan — see the [pay scale context](/teacher-pay-scale/) for where those salaries sit.",
       "Write-off periods range from 25 years (Plan 1) to 40 years (Plan 5); many teachers never clear the balance.",
       "Overpayments happen when salary changes go unreported — reconcile against your own calculation once a year.",
     ],
@@ -264,9 +264,9 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "The five plans and their 2026/27 thresholds" },
       { kind: "p", text: "Your plan is set by where and when you studied, not by choice. English undergraduates who started from August 2023 sit on Plan 5; earlier starters are mostly on Plan 2; older or Northern Irish loans can be Plan 1; Scottish borrowers may hold Plan 4; and anyone taking a master's-funded postgraduate loan has a separate PGL running alongside." },
       { kind: "table", caption: "Repayment thresholds and rates, 2026/27 tax year", head: ["Plan", "Annual threshold", "Rate above threshold"], rows: [
-        ["Plan 1", "£26,065", "9%"],
-        ["Plan 2", "£28,470", "9%"],
-        ["Plan 4 (Scotland)", "£32,745", "9%"],
+        ["Plan 1", "£26,900", "9%"],
+        ["Plan 2", "£29,385", "9%"],
+        ["Plan 4 (Scotland)", "£33,795", "9%"],
         ["Plan 5", "£25,000", "9%"],
         ["Postgraduate Loan (PGL)", "£21,000", "6%"],
       ]},
@@ -278,23 +278,23 @@ export const planningPages: PageContent[] = [
       { kind: "h2", text: "What teachers earn versus what they repay" },
       { kind: "p", text: "Teacher salaries now start high enough (£34,069 at M1 outside London for 2026/27) that nearly everyone with an outstanding loan repays something. The table shows annual repayment at three common scale points." },
       { kind: "table", caption: "Annual repayment by plan at teacher pay points (rest of England, 2026/27)", head: ["Pay point", "Plan 2", "Plan 5", "PGL"], rows: [
-        ["M1 £34,069", "£503.82", "£816.12", "£784.08"],
-        ["M4 £40,941", "£1,122.30", "£1,434.60", "£1,196.40"],
-        ["U3 £52,835", "£2,192.85", "£2,505.15", "£1,910.10"],
+        ["M1 £34,069", "£421.56", "£816.21", "£784.14"],
+        ["M4 £40,941", "£1,040.04", "£1,434.69", "£1,196.46"],
+        ["U3 £52,835", "£2,110.50", "£2,505.15", "£1,910.10"],
       ]},
-      { kind: "p", text: "Notice how Plan 5 always out-bills Plan 2 at identical salaries because its threshold sits £3,470 lower. For PGCE graduates carrying both an undergraduate loan and a postgraduate loan, deductions stack without offsetting: an M4 teacher with both plans pays £2,318.70 a year, about **£193 a month** — often the single largest discretionary-looking item on a young teacher's payslip after pension contributions. The [take-home pay calculator](/teacher-take-home-pay/) folds all of this into a full net figure." },
+      { kind: "p", text: "Notice how Plan 5 always out-bills Plan 2 at identical salaries because its threshold sits £4,385 lower. For PGCE graduates carrying both an undergraduate loan and a postgraduate loan, deductions stack without offsetting: an M4 teacher with both plans pays £2,236.50 a year, about **£186 a month** — often the single largest discretionary-looking item on a young teacher's payslip after pension contributions. The [take-home pay calculator](/teacher-take-home-pay/) folds all of this into a full net figure." },
 
       { kind: "h2", text: "Combined loans: the PGCE double hit" },
-      { kind: "p", text: "This is the scenario most PGCE graduates search for, and the one generic calculators handle worst. The two loans run independently: 9% above £28,470 for the degree, 6% above £21,000 for the master's component, both calculated on the same gross salary with no interaction between them." },
-      { kind: "p", text: "Career changers who completed a salaried or fee-funded PGCE frequently hold Plan 2 plus PGL simultaneously. The two run independently: 9% above £28,470 for the degree, 6% above £21,000 for the master's component, calculated on the same gross salary. Because neither threshold offsets the other, combined repayments feel punitive early in teaching careers — but they also burn balances faster, which matters given the write-off clocks discussed below. If you are weighing whether a master's pays back at all, remember the question splits in two: the qualification's salary effect versus the loan levy attached to it. For most classroom teachers the write-off clock answers the second part before retirement." },
+      { kind: "p", text: "This is the scenario most PGCE graduates search for, and the one generic calculators handle worst. The two loans run independently: 9% above £29,385 for the degree, 6% above £21,000 for the master's component, both calculated on the same gross salary with no interaction between them." },
+      { kind: "p", text: "Career changers who completed a salaried or fee-funded PGCE frequently hold Plan 2 plus PGL simultaneously. The two run independently: 9% above £29,385 for the degree, 6% above £21,000 for the master's component, calculated on the same gross salary. Because neither threshold offsets the other, combined repayments feel punitive early in teaching careers — but they also burn balances faster, which matters given the write-off clocks discussed below. If you are weighing whether a master's pays back at all, remember the question splits in two: the qualification's salary effect versus the loan levy attached to it. For most classroom teachers the write-off clock answers the second part before retirement." },
 
       { kind: "h2", text: "How the repayment is actually calculated" },
       { kind: "p", text: "Every plan uses the same three-line calculation, which explains why debt size never appears in it. Take your gross pay for the pay period, subtract that plan's annual threshold divided across the period, then apply the percentage to what remains." },
-      { kind: "table", caption: "Worked line-by-line: Plan 2 teacher on £3,411.67 gross per month (M4 £40,941)", head: ["Step", "Arithmetic", "Result"], rows: [
-        ["1. Monthly threshold allowance", "£28,470 ÷ 12", "£2,372.50"],
-        ["2. Income above threshold", "£3,411.67 − £2,372.50", "£1,039.17"],
-        ["3. Apply 9% rate", "£1,039.17 × 0.09", "£93.53 this month"],
-        ["PGL line (if held)", "(£3,411.67 − £1,750) × 0.06", "£99.70 this month"],
+      { kind: "table", caption: "Worked line-by-line: Plan 2 teacher on £3,411.75 gross per month (M4 £40,941)", head: ["Step", "Arithmetic", "Result"], rows: [
+        ["1. Monthly threshold allowance", "£29,385 ÷ 12", "£2,448.75"],
+        ["2. Income above threshold", "£3,411.75 − £2,448.75", "£963.00"],
+        ["3. Apply 9% rate", "£963.00 × 0.09", "£86.67 this month"],
+        ["PGL line (if held)", "(£3,411.75 − £1,750) × 0.06", "£99.71 this month"],
       ]},
       { kind: "p", text: "Two consequences follow from this structure. Repayments flex automatically with overtime, TLR changes and part-time working because each payslip is assessed independently; and no payment is ever due in a month where gross pay falls below the threshold — there is nothing to catch up later. The same arithmetic runs annually for self-assessment taxpayers." },
 
@@ -319,23 +319,23 @@ export const planningPages: PageContent[] = [
 
       { kind: "h2", text: "Planning moves around student loans" },
       { kind: "ul", items: [
-        "**Salary sacrifice beats bonus.** Pension contributions reduce the income used for repayment calculations, so extra pension saving effectively earns a 9% or 6% discount via reduced loan deductions.",
+        "**Distinguish pension arrangements.** Teachers’ Pensions net-pay contributions reduce income tax but do not reduce student-loan repayment. A separate genuine salary-sacrifice arrangement can change contractual pay, but check its terms before relying on it.",
         "**Time promotions knowingly.** Crossing thresholds raises deductions immediately but not proportionally — a U3 promotion adds hundreds to annual repayment, worth knowing before accepting.",
         "**Keep plan evidence forever.** Repayment records feed write-off dates; lost history complicates final settlement claims.",
         "**Check bursary interactions.** Initial teacher training bursaries are generally not classed as earned income, so they do not trigger repayments during training.",
       ]},
     ],
     faq: [
-      { question: "How much will I repay on a postgraduate loan?", answer: "6% of everything you earn above £21,000. On the 2026/27 M4 salary of £40,941 that is £1,196.40 a year, about £99.70 a month, regardless of how much you originally borrowed." },
-      { question: "What is the Plan 2 repayment threshold?", answer: "£28,470 for the 2026/27 tax year. You repay 9% of gross income above that figure, taken through PAYE automatically once your employer is notified." },
-      { question: "Do teachers pay both student loans after a PGCE?", answer: "Usually yes if they hold an undergraduate loan plus a postgraduate loan. The 9% and 6% deductions stack on the same salary without offsetting — an M4 teacher with both pays around £193 a month combined." },
+      { question: "How much will I repay on a postgraduate loan?", answer: "6% of everything you earn above £21,000. On the 2026/27 M4 salary of £40,941 that is £1,196.46 a year, about £99.71 a month, regardless of how much you originally borrowed." },
+      { question: "What is the Plan 2 repayment threshold?", answer: "£29,385 for the 2026/27 tax year. You repay 9% of gross income above that figure, taken through PAYE automatically once your employer is notified." },
+      { question: "Do teachers pay both student loans after a PGCE?", answer: "Usually yes if they hold an undergraduate loan plus a postgraduate loan. The 9% and 6% deductions stack on the same salary without offsetting — an M4 teacher with both pays around £186 a month combined." },
       { question: "Is a student loan worth repaying early?", answer: "Often no. With 30- to 40-year write-off periods, many teachers never clear the balance, so voluntary overpayment can be money that would otherwise be forgiven. Model your specific career trajectory before overpaying." },
       { question: "When is my student loan written off?", answer: "Plan 1 ends 25 years after first repayment, Plans 2 and 4 after 30 years, the postgraduate loan after 30 years, and Plan 5 after 40 years — counted from the first April you were due to repay." },
       { question: "What is the Plan 5 threshold?", answer: "£25,000 for 2026/27, with 9% charged above it. Plan 5 applies to English undergraduates who started their course from August 2023." },
       { question: "Do bursaries count as income for student loan repayment?", answer: "Initial teacher training bursaries are generally not treated as earned income, so they do not generate repayments during training. Tax treatment differs, so confirm with the DfE funding provider." },
       { question: "Why was I repaid on the wrong plan?", answer: "Payroll relies on HMRC notification, which lags course completion and plan changes. Compare your payslip deduction against the correct threshold calculation and reclaim misdeductions from the Student Loans Company." },
-      { question: "Does my pension contribution reduce my student loan repayment?", answer: "Yes indirectly — repayment uses gross salary after pension contributions are deducted, so higher pension saving lowers the income assessed. Salary-sacrifice arrangements maximise this effect." },
-      { question: "Do Scottish teachers use different plans?", answer: "Scottish-domiciled students may hold Plan 4 with its higher £32,745 threshold. Where you work later does not change the plan — a Plan 4 holder teaching in England keeps Plan 4 terms." },
+      { question: "Does my pension contribution reduce my student loan repayment?", answer: "No for ordinary Teachers’ Pensions net-pay contributions: they reduce income tax but student-loan repayment uses gross earnings. A separate genuine salary-sacrifice arrangement can work differently, so check the employer’s terms." },
+      { question: "Do Scottish teachers use different plans?", answer: "Scottish-domiciled students may hold Plan 4 with its higher £33,795 threshold. Where you work later does not change the plan — a Plan 4 holder teaching in England keeps Plan 4 terms." },
       { question: "When do I start repaying my student loan as a teacher?", answer: "From the first payslip after your course ends where gross earnings for the period exceed your plan's threshold — typically the start of your NQT/ECT year for PGCE graduates. The formal obligation begins the April after you leave the course, and deductions only apply while income sits above the line." },
     ],
     sources: [
@@ -344,7 +344,7 @@ export const planningPages: PageContent[] = [
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
       { label: "Get Into Teaching — fees and financial support", url: "https://getintoteaching.education.gov.uk/funding-and-support" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-19",
   },
 
   // ------------------------------------------------------------ leaving
