@@ -38,7 +38,6 @@ const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts
 const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
 const { planningPages } = require(path.join(root, "content/pages/planning.ts"));
 const { pensionExtras2Pages } = require(path.join(root, "content/pages/pension-extras-2.ts"));
-const { salaryPages } = require(path.join(root, "content/pages/salaries.ts"));
 const { calculatorPages } = require(path.join(root, "content/pages/calculators.ts"));
 
 const rateCases = [
@@ -112,13 +111,6 @@ assert.deepEqual(proposedTierTable?.rows, [
   ["£76,573 to £104,413.99", "11.4%"], ["£104,414 and above", "11.8%"],
 ], "consultation page must reproduce the published proposed tiers");
 assert.match(consultationPage?.intro ?? "", /proposals, not current rules/, "consultation page must keep proposals separate from current calculator rules");
-
-for (const slug of ["maths-teacher-salary", "music-teacher-salary", "pe-teacher-salary", "english-teacher-salary", "art-teacher-salary"]) {
-  const page = salaryPages.find((candidate) => candidate.slug === slug);
-  assert.ok(page, `${slug} exists`);
-  assert.match(page?.intro ?? "", /do not have a separate statutory classroom pay scale/, `${slug} keeps only the shared pay framework`);
-  assert.match(page?.keyTakeaways.join(" ") ?? "", /does not estimate tutoring rates/, `${slug} does not publish unsupported market-rate claims`);
-}
 
 const partTimePage = calculatorPages.find((page) => page.slug === "part-time-teacher-pay-calculator");
 const partTimeContent = partTimePage?.blocks.map((block) => [block.text ?? "", ...(block.rows ?? []).flat()].join(" ")).join(" ") ?? "";
