@@ -1,6 +1,6 @@
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
+const UPDATED = "2026-10-20";
 
 const SOURCES = [
   { label: "Teachers' Pensions — member guides and contribution tiers", url: "https://www.teacherspensions.co.uk/" },

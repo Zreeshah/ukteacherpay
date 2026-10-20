@@ -75,9 +75,8 @@ export default function PayAwardNotice({ slug }: { slug: string }) {
       <p className="mt-2 text-sm text-ink/80">
         The government has accepted advisory pay points:{" "}
         <strong>3.5% from September 2026</strong>, except for a{" "}
-        <strong>5% increase to Rest-of-England UQ1</strong>. The STPCD 2026 Pay
-        Order is due in October 2026. These are government-accepted advisory
-        points, not described here as “in force” before that order is laid.
+        <strong>5% increase to Rest-of-England UQ1</strong>. The STPCD 2026 and the School Teachers’ Pay and Conditions (England)
+        Order 2026 now set the statutory framework for maintained schools.
       </p>
       <p className="mt-2 text-sm text-ink/80">
         The accepted 2027 award is 3%, with an indicative 3% for September 2028
