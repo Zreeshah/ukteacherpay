@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ContentBottomAd from "@/components/ContentBottomAd";
+import ContentTopAd from "@/components/ContentTopAd";
 import JsonLd from "@/components/JsonLd";
 import {
   organizationJsonLd, websiteJsonLd, SITE_NAME, SITE_URL, THEME_COLOR,
@@ -35,7 +37,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to main content
         </a>
         <Header />
-        <main id="main" className="flex-1">{children}</main>
+        <main id="main" className="flex-1">
+          <ContentTopAd />
+          {children}
+          <ContentBottomAd />
+        </main>
         <Footer />
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />
