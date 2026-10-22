@@ -34,6 +34,7 @@ const { studentLoanPlans, tpsScheme } = require(path.join(root, "data/tax-rates.
 const { calculateTakeHome, tpsRate } = require(path.join(root, "lib/payroll.ts"));
 const { projectTakeHome } = require(path.join(root, "lib/take-home-scenarios.ts"));
 const { calculateMaternityPay, SMP_STANDARD_WEEKLY_2026 } = require(path.join(root, "lib/maternity.ts"));
+const { STAT_WEEKLY_CAP, statutoryRedundancy } = require(path.join(root, "lib/pension.ts"));
 const { leadershipPages } = require(path.join(root, "content/pages/leadership.ts"));
 const { policyPages } = require(path.join(root, "content/pages/policy.ts"));
 const { planningPages } = require(path.join(root, "content/pages/planning.ts"));
@@ -100,6 +101,13 @@ assert.deepEqual(studentLoanThresholdTable?.rows, [
 ], "student-loan guide thresholds must match the calculator data");
 const studentLoanFaq = studentLoanPage?.faq.find((item) => item.question === "Does my pension contribution reduce my student loan repayment?");
 assert.match(studentLoanFaq?.answer ?? "", /^No for ordinary Teachers’ Pensions net-pay contributions/, "student-loan guide must not treat net-pay pension contributions as reducing repayment");
+
+assert.equal(STAT_WEEKLY_CAP, 751, "2026 statutory redundancy weekly cap");
+assert.deepEqual(
+  statutoryRedundancy({ age: 45, yearsService: 10, weeklyPay: 900 }),
+  { weeks: 12, cappedWeekly: 751, statutoryTotal: 9012, uncappedTotal: 10800, serviceCounted: 10 },
+  "statutory redundancy must apply the 2026 weekly cap",
+);
 
 const consultationPage = pensionExtras2Pages.find((page) => page.slug === "teachers-pension-contribution-changes-2027");
 const proposedTierTable = consultationPage?.blocks.find(

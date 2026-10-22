@@ -25,7 +25,7 @@ export const policyPages: PageContent[] = [
     intro:
       "A teacher pay rise does not arrive by accident or negotiation. It follows a fixed annual cycle: an independent review body takes evidence and recommends, the Secretary of State decides, and the new figures are published in the School Teachers' Pay and Conditions Document (STPCD), effective from 1 September. For 2026/27 that award was **3.5%**, applied to every pay point on the national scale. This guide explains who decides what, when the money actually lands in your payslip, why your personal increase is often bigger than the headline percentage, and what the award means in cash at each point of the [teacher pay scale](/teacher-pay-scale/).",
     keyTakeaways: [
-      "The government accepted a 3.5% September 2026 award for advisory pay points, except for a 5% Rest-of-England UQ1 increase; the Pay Order is due in October 2026.",
+      "The STPCD 2026 applies a 3.5% September 2026 award, except for a 5% Rest-of-England UQ1 increase.",
       "Teacher pay awards run with the school year (1 September), not with the April tax year.",
       "Your own increase is usually larger than the headline figure because scale progression is applied on top of the award.",
       "The School Teachers' Review Body (STRB) recommends, but the Secretary of State makes the final decision and can depart from it.",
@@ -55,7 +55,7 @@ export const policyPages: PageContent[] = [
       { kind: "callout", tone: "info", title: "School year, not tax year", text: "Unlike almost every other public sector award, teacher pay rises take effect on 1 September rather than 1 April. That means the award crosses two financial years, and your P60 for any given tax year blends two different salaries." },
 
       { kind: "h2", text: "The 2026/27 award: 3.5% from 1 September" },
-      { kind: "p", text: "For 2026/27 the government accepted the STRB's recommendation of **3.5%** for all advisory points other than Rest-of-England UQ1, which receives **5%**. The Pay Order is due in October 2026, so these are government-accepted advisory points, not described here as in force before it is laid. Because the award is percentage-based, the cash value grows as you move up the scale. Here is what it means at the points most teachers occupy." },
+      { kind: "p", text: "For 2026/27 the STPCD 2026 applies the STRB's **3.5%** award for all listed points other than Rest-of-England UQ1, which receives **5%**. The School Teachers’ Pay and Conditions (England) Order 2026 was made in October 2026 and supplies the statutory framework for maintained schools. Because the award is percentage-based, the cash value grows as you move up the scale. Here is what it means at the points most teachers occupy." },
       { kind: "table", caption: "What the 3.5% award is worth in cash (England, excluding London)", head: ["Pay point", "2025/26 salary", "2026/27 salary", "Cash increase"], rows: [
         ["M1", "£32,916", "£34,069", "+£1,152"],
         ["M4", "£39,556", "£40,941", "+£1,384"],
@@ -105,7 +105,7 @@ export const policyPages: PageContent[] = [
     faq: [
       { question: "When does the teacher pay rise start?", answer: "The award takes effect on 1 September, the start of the school year. Depending on your school's payroll cut-off, it may appear on your September payslip or arrive as arrears in October or November." },
       { question: "When will the next teacher pay rise be announced?", answer: "In a typical year the STRB report and government decision arrive between March and July, and the updated STPCD is published in late August. The 2026/27 round was settled earlier than usual because it formed part of a two-year deal announced in summer 2026." },
-      { question: "What is the teacher pay rise for 2026?", answer: "The government-accepted September 2026 advisory award is 3.5%, except for a 5% Rest-of-England UQ1 increase; the Pay Order is due in October 2026. On the England main scale that lifts M1 to £34,069 and M6 to £46,940." },
+      { question: "What is the teacher pay rise for 2026?", answer: "The STPCD 2026 award is 3.5%, except for a 5% Rest-of-England UQ1 increase. On the England main scale that lifts M1 to £34,069 and M6 to £46,940." },
       { question: "Will there be a teacher pay rise in 2027?", answer: "Yes. The 2026 settlement was a two-year deal worth around 6.6% across both years, which implies a further award of roughly 3% in September 2027. The exact figure will be confirmed in the 2027/28 STPCD." },
       { question: "Why is my pay rise bigger than 3.5%?", answer: "Because scale progression stacks on top of the award. A teacher moving up one point on the main pay range in the same September receives the 3.5% award plus the point increase — typically 6% to 7% in total." },
       { question: "Do academies have to give the pay rise?", answer: "Not legally. Academies are exempt from the STPCD's pay provisions, but most trusts adopt the national award voluntarily and many reference it in employment contracts. Check your trust's pay policy." },
@@ -150,7 +150,7 @@ export const policyPages: PageContent[] = [
     ],
     blocks: [
       { kind: "h2", text: "What was confirmed, and when" },
-      { kind: "p", text: "The Department for Education accepted the School Teachers' Review Body's recommendation of a 3.5% increase and published government-accepted advisory pay points ahead of the new school year. The announcement was packaged as a multi-year deal: government communications described it as teachers benefiting from a two-year settlement worth roughly 6.6% across 2026/27 and 2027/28, which implies close to 3% more in September 2027. The 2026 Pay Order is due in October 2026; until it is laid, these are government-accepted advisory figures rather than points described here as in force." },
+      { kind: "p", text: "The Department for Education accepted the School Teachers' Review Body's recommendation of a 3.5% increase, and the STPCD 2026 and School Teachers’ Pay and Conditions (England) Order 2026 now provide the maintained-school statutory framework. The announcement was packaged as a multi-year deal: government communications described it as teachers benefiting from a two-year settlement worth roughly 6.6% across 2026/27 and 2027/28, which implies close to 3% more in September 2027. The Order was made in October 2026, after the award took effect on 1 September." },
       { kind: "p", text: "If you want the mechanics behind the number — who recommends, who decides and why September rather than April — our [guide to how teacher pay rises work](/teacher-pay-rise/) covers the whole cycle." },
 
       { kind: "h2", text: "The new main pay scale for 2026/27" },
@@ -211,7 +211,7 @@ export const policyPages: PageContent[] = [
       { kind: "p", text: "With a multi-year deal in place, the 2027/28 figure is largely signposted rather than open. That makes this a good year to plan promotion moves deliberately: crossing into the upper pay range or the leadership spine compounds every future award. Our [financial planning hub](/teacher-financial-planning/) sets out how the pieces fit together, and the [leadership pay scale guide](/leadership-pay-scale/) shows what the L-spine pays." },
     ],
     faq: [
-      { question: "What is the teacher pay rise for 2026?", answer: "The Government accepted a 3.5% award for England from 1 September 2026. The published England points are advisory until the relevant Pay Order is in force. On the rest-of-England main scale, M1 is £34,069 and M6 is £46,940." },
+      { question: "What is the teacher pay rise for 2026?", answer: "The STPCD 2026 applies a 3.5% award for England from 1 September 2026; the School Teachers’ Pay and Conditions (England) Order 2026 was made in October 2026. On the rest-of-England main scale, M1 is £34,069 and M6 is £46,940." },
       { question: "When will the teacher pay rise be paid?", answer: "It takes effect from 1 September 2026. Some schools applied it to September payslips directly; others paid arrears in October or November depending on payroll cut-off dates." },
       { question: "Is there a teacher pay rise calculator for 2026/27?", answer: "Yes. Use the pay rise calculator on this site to see the 3.5% uplift applied to any pay point, including the effect on take-home pay after tax, National Insurance and pension contributions." },
       { question: "How much is M4 after the 2026 pay rise?", answer: "£40,941 in England outside London, up £1,384 from £39,556. Fringe, outer London and inner London figures are higher." },
@@ -344,7 +344,7 @@ export const policyPages: PageContent[] = [
       { label: "School Teachers' Review Body (STRB) — reports and remit letters", url: "https://www.gov.uk/government/organisations/school-teachers-review-body" },
       { label: "NEU — Teachers' pay award advice", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/teachers-pay-award" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-20",
   },
 
   // ------------------------------------------------------------ four nations
@@ -452,7 +452,7 @@ export const policyPages: PageContent[] = [
       { label: "NEU — Pay scales England", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/pay-scales/pay-scales-england" },
       { label: "HMRC — Rates and thresholds for employers 2026 to 2027", url: "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-20",
   },
 
   // ------------------------------------------------------------ maternity
@@ -663,7 +663,7 @@ export const policyPages: PageContent[] = [
       { label: "GOV.UK — Statutory Sick Pay", url: "https://www.gov.uk/statutory-sick-pay" },
       { label: "Burgundy Book — Conditions of Service for School Teachers (NEU library)", url: "https://neu.org.uk/latest/library/burgundy-book" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-20",
   },
 
   // ------------------------------------------------------------ STRB
@@ -777,6 +777,6 @@ export const policyPages: PageContent[] = [
       { label: "NEU — Teachers' pay award advice", url: "https://neu.org.uk/advice/your-rights-work/pay-advice/teachers-pay-award" },
       { label: "NASUWT — Pay Award England", url: "https://www.nasuwt.org.uk/advice/pay-pensions/pay-award/pay-award-england.html" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-20",
   },
 ];
