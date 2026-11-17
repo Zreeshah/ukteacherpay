@@ -28,5 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.3,
     })),
+    {
+      url: `${SITE_URL}/our-partners/`,
+      lastModified: "2026-11-17",
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
   ];
 }
