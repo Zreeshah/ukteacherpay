@@ -9,6 +9,7 @@ import InlineLinks from "@/components/InlineLinks";
 import HubIndex from "@/components/HubIndex";
 import TableOfContents from "@/components/TableOfContents";
 import PayAwardNotice from "@/components/PayAwardNotice";
+import PlannerCta from "@/components/PlannerCta";
 import {
   allPages,
   getPage,
@@ -163,6 +164,8 @@ export default async function ContentPage({
           </div>
         </aside>
       </div>
+
+      {hasCalc && <PlannerCta variant="sticky" />}
 
       <JsonLd
         data={articleJsonLd({

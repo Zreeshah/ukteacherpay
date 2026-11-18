@@ -13,6 +13,7 @@ import { studentLoanPlans, type StudentLoanPlan } from "@/data/tax-rates";
 import { calculateTakeHome, type TakeHomeInput } from "@/lib/payroll";
 import { projectTakeHome } from "@/lib/take-home-scenarios";
 import { gbp, gbp2, pct } from "@/lib/format";
+import PlannerCta from "@/components/PlannerCta";
 
 const SCALES: ScaleId[] = [
   "main",
@@ -426,6 +427,8 @@ export default function TeacherPayCalculator({
             </div>
           </div>
         </div>
+
+        <PlannerCta variant="result" />
 
         <div className="card overflow-hidden">
           <div className="overflow-x-auto">

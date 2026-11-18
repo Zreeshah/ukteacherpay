@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import TeacherPayCalculator from "@/components/calculators/TeacherPayCalculator";
+import PlannerCta from "@/components/PlannerCta";
 import { allPages, pillarFor } from "@/content";
 import { hubs, type HubId } from "@/content/types";
 import { taxYearLabel } from "@/data/tax-rates";
@@ -47,6 +48,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PlannerCta variant="banner" />
 
       {/* Quick pay reference */}
       <section className="mx-auto max-w-6xl px-4 py-12">
