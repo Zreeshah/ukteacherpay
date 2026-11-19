@@ -56,7 +56,7 @@ export const planningPages: PageContent[] = [
       { kind: "ul", items: [
         "**Maternity.** One year's aggregated service unlocks the full [Burgundy Book maternity scheme](/teacher-maternity-pay/) — 18 weeks of enhanced pay worth thousands over statutory alone.",
         "**Illness.** Sick pay scales from 25 working days at full pay in year one to 100 plus 100 half-pay days after four years; see the [sick pay guide](/teacher-sick-pay/) for the April-to-March mechanics.",
-        "**Redundancy.** Statutory pay is age-weighted (0.5, 1, then 1.5 weeks per year of service) and capped at £780 a week; model scenarios in the [redundancy calculator](/teacher-redundancy-calculator/).",
+        "**Redundancy.** Statutory pay is age-weighted (0.5, 1, then 1.5 weeks per year of service) and capped at £751 a week; model scenarios in the [redundancy calculator](/teacher-redundancy-calculator/).",
         "**Career breaks and exits.** Resignation deadlines fall three times a year under Burgundy Book notice rules, and leaving costs pension growth more than salary.",
       ]},
 
@@ -130,10 +130,10 @@ export const planningPages: PageContent[] = [
     ],
     calculator: "redundancy",
     intro:
-      "Teachers get **statutory redundancy pay** like any other employee: a formula based on age, length of service and weekly pay, with a 20-year service cap and a £780-a-week ceiling on the weekly figure. The formula rewards long service heavily — a 58-year-old with 20 years of service walks away with more than six months of capped salary — while an early-career teacher gets comparatively little. Use the calculator on this page for your own numbers, then read the guide below for how the formula works line by line, three worked examples at realistic salaries and service lengths, where enhancements above statutory minimums come from, and what to check before signing any settlement.",
+      "Teachers get **statutory redundancy pay** like any other employee: a formula based on age, length of service and weekly pay, with a 20-year service cap and a £751-a-week ceiling on the weekly figure. The formula rewards long service heavily — a 58-year-old with 20 years of service walks away with more than six months of capped salary — while an early-career teacher gets comparatively little. Use the calculator on this page for your own numbers, then read the guide below for how the formula works line by line, three worked examples at realistic salaries and service lengths, where enhancements above statutory minimums come from, and what to check before signing any settlement.",
     keyTakeaways: [
       "Statutory redundancy pays 0.5 week per year of service under age 22, 1 week for ages 22–40, and 1.5 weeks for 41+.",
-      "Service counts only up to 20 years, and weekly pay is capped at £780.",
+      "Service counts only up to 20 years, and weekly pay is capped at £751.",
       "The calculation works backwards through your service using your age in each year, so older long-servers gain most.",
       "Many maintained-school staff receive enhancements under discretionary payment regulations — check your employer's scheme.",
       "Notice pay is separate from redundancy pay and follows your contractual notice period.",
@@ -149,7 +149,7 @@ export const planningPages: PageContent[] = [
         ["22 to 40", "1.0"],
         ["41 and over", "1.5"],
       ]},
-      { kind: "p", text: "Two caps apply on top. Service beyond **20 years** contributes nothing further, and the weekly pay figure used in the multiplication cannot exceed **£780** regardless of salary. Both caps mean very senior teachers' entitlements plateau rather than grow indefinitely." },
+      { kind: "p", text: "Two caps apply on top. Service beyond **20 years** contributes nothing further, and the weekly pay figure used in the multiplication cannot exceed **£751** regardless of salary. Both caps mean very senior teachers' entitlements plateau rather than grow indefinitely." },
       { kind: "callout", tone: "info", title: "Why the backwards walk matters", text: "Because the formula looks at your age during each past service year, an older worker's most recent years score 1.5 weeks each. The practical effect is that age-weighting systematically favours experienced staff: two teachers with identical service length receive different totals purely because of when those years were accumulated." },
 
       { kind: "h2", text: "Worked example 1: mid-career teacher" },
@@ -158,8 +158,8 @@ export const planningPages: PageContent[] = [
         ["Years at 1.5 weeks (aged 41–44)", "4 years → 6 weeks"],
         ["Years at 1 week (aged 35–40)", "6 years → 6 weeks"],
         ["Total weeks", "12 weeks"],
-        ["Capped weekly pay", "£780 (actual £900 exceeds cap)"],
-        ["Statutory redundancy pay", "£9,360"],
+        ["Capped weekly pay", "£751 (actual £900 exceeds cap)"],
+        ["Statutory redundancy pay", "£9,012"],
       ]},
       { kind: "p", text: "Without the weekly cap this teacher would receive £10,800, so the cap costs them £1,440 here. At lower salaries the cap never bites: someone earning £700 a week keeps their full weekly figure." },
 
@@ -172,10 +172,10 @@ export const planningPages: PageContent[] = [
         ["Years at 1.5 weeks (ages 41–57)", "17 years → 25.5 weeks"],
         ["Years at 1 week (ages 38–40)", "3 years → 3 weeks"],
         ["Total weeks", "28.5 weeks"],
-        ["Capped weekly pay", "£780"],
-        ["Statutory redundancy pay", "£22,230"],
+        ["Capped weekly pay", "£751"],
+        ["Statutory redundancy pay", "£21,403.50"],
       ]},
-      { kind: "p", text: "Five of this teacher's service years vanish entirely against the 20-year cap, and £220 of their actual weekly pay is ignored. Uncapped arithmetic would have paid £28,500; the statutory answer is £22,230." },
+      { kind: "p", text: "Five of this teacher's service years vanish entirely against the 20-year cap, and £220 of their actual weekly pay is ignored. Uncapped arithmetic would have paid £28,500; the statutory answer is £21,403.50." },
 
       { kind: "h2", text: "The process around the payment" },
       { kind: "p", text: "The lump sum is only one part of a lawful redundancy. Employers must consult collectively when proposing 20 or more dismissals within 90 days, select fairly using published criteria, and consider suitable alternative roles — declining reasonable alternatives can forfeit the payment entirely. Teachers facing restructuring should watch for three markers of good process: written selection criteria circulated in advance, genuine offers of vacancies elsewhere in the trust or authority, and a right to appeal against selection with reasons given in writing. ACAS guidance sets the procedural floor; union reps handle everything beyond it." },
@@ -213,9 +213,9 @@ export const planningPages: PageContent[] = [
     ],
     faq: [
       { question: "Do teachers get redundancy pay?", answer: "Yes. Teachers employed by maintained schools qualify for statutory redundancy pay on the same formula as other employees, and many authorities add contractual enhancements. Academy trusts set their own terms." },
-      { question: "How much is teacher redundancy pay?", answer: "It depends on age, service and pay. The formula awards 0.5 week per year under age 22, 1 week for ages 22–40 and 1.5 weeks for 41+, subject to a 20-year service cap and £780 weekly pay cap. A 45-year-old with 10 years' service on £900 a week receives £9,360." },
+      { question: "How much is teacher redundancy pay?", answer: "It depends on age, service and pay. The formula awards 0.5 week per year under age 22, 1 week for ages 22–40 and 1.5 weeks for 41+, subject to a 20-year service cap and £751 weekly pay cap. A 45-year-old with 10 years' service on £900 a week receives £9,012." },
       { question: "Is there a government teacher redundancy calculator?", answer: "GOV.UK provides a general statutory redundancy calculator covering any employee, including teachers. This page's calculator reproduces the same statutory formula with the same caps." },
-      { question: "Does the £780 weekly cap apply to teachers?", answer: "Yes. Weekly pay above £780 counts only as £780 when calculating statutory redundancy, whatever your salary point. Enhanced local schemes may remove this cap." },
+      { question: "Does the £751 weekly cap apply to teachers?", answer: "Yes. Weekly pay above £751 counts only as £751 when calculating statutory redundancy, whatever your salary point. Enhanced local schemes may remove this cap." },
       { question: "How many years of service count for teacher redundancy pay?", answer: "All continuous service counts up to a maximum of 20 years. Service beyond two decades adds nothing further to the statutory calculation." },
       { question: "Is teacher redundancy pay taxed?", answer: "Termination payments are free of income tax and National Insurance up to £30,000 combined. Notice pay and holiday pay are treated as normal earnings and count toward that limit." },
       { question: "Do I get notice pay as well as redundancy pay?", answer: "Yes. Contractual notice is paid separately from the redundancy lump sum, and untaken holiday must also be settled with your final pay." },
@@ -460,7 +460,7 @@ export const planningPages: PageContent[] = [
       { label: "GOV.UK — Redundancy pay and rights", url: "https://www.gov.uk/redundancy-your-rights" },
       { label: "STPCD 2026 — School Teachers' Pay and Conditions Document (DfE)", url: "https://www.gov.uk/government/publications/school-teachers-pay-and-conditions" },
     ],
-    updated: "2026-08-23",
+    updated: "2026-10-20",
   },
 
   // ------------------------------------------------------------ resignation

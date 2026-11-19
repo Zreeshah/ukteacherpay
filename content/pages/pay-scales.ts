@@ -1,7 +1,7 @@
 import { teacherPaySources } from "@/data/teacher-pay-source-ledger";
 import type { PageContent } from "../types";
 
-const UPDATED = "2026-08-23";
+const UPDATED = "2026-10-20";
 const PAY_AWARD_REVIEWED = "2026-10-09";
 const CONTENT_SAFETY_REVIEWED = "2026-10-19";
 
@@ -32,7 +32,7 @@ export const payScalePages: PageContent[] = [
     intro:
       "Teacher pay scales for 2026/27 run from £34,069 at M1 to £52,835 at U3 outside London, and £41,729 to £64,684 in inner London. The England figures are government-accepted advisory points pending the October 2026 Pay Order; Scotland and Northern Ireland use separate scales. Pick your region below or calculate your take-home pay.",
     keyTakeaways: [
-      "The government accepted a 3.5% September 2026 advisory award for all points other than Rest-of-England UQ1, which has a 5% increase; the Pay Order is due in October.",
+      "The STPCD 2026 applies a 3.5% September 2026 award for all points other than Rest-of-England UQ1, which has a 5% increase.",
       "Classroom teacher pay in England runs from £34,069 (M1, rest of England) to £64,684 (U3, inner London).",
       "England has four pay bands: rest of England, London fringe, outer London and inner London — worth up to £7,660 more at M1.",
       "Scotland uses the separate SNCT scale (£34,539 to £48,516 on the main scale) with no upper pay range; Northern Ireland runs lower at £32,188 to £44,342.",
@@ -126,7 +126,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "If you want the wider picture beyond scale points — average actual earnings, subject and phase differences — see our [UK teacher salary guide](/teacher-salary-uk/)." },
     ],
     faq: [
-      { question: "What are the teacher pay scales for 2026/27?", answer: "In England the main pay range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, rising to £41,729–£54,131 in inner London. The upper pay range runs £49,134–£52,835 outside London. All advisory points rose 3.5% from September 2026, except Rest-of-England UQ1, which rose 5%; the 2026 Pay Order is due in October." },
+      { question: "What are the teacher pay scales for 2026/27?", answer: "In England the main pay range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, rising to £41,729–£54,131 in inner London. The upper pay range runs £49,134–£52,835 outside London. All listed points rose 3.5% from September 2026, except Rest-of-England UQ1, which rose 5% under the STPCD 2026." },
       { question: "What is an M6 teacher salary?", answer: "A full-time M6 teacher earns £46,940 in the rest of England, £48,479 on the London fringe, £52,241 in outer London and £54,131 in inner London for 2026/27. Scotland's top main-scale point is equivalent at £48,516 and Northern Ireland's at £44,342." },
       { question: "Do academies have to follow the teacher pay scale?", answer: "No. The STPCD ranges are statutory for maintained schools; academies and free schools can set their own pay policies. In practice most academies continue to track the statutory points, but some use them as reference points rather than fixed steps." },
       { question: "How often do teachers move up the pay scale?", answer: "Qualified teachers normally progress one main-range point per year for six years (M1 to M6), subject to passing appraisal. Movement onto and within the upper pay range is discretionary and performance-based, so many teachers stay longer on a single upper point." },
@@ -261,7 +261,7 @@ export const payScalePages: PageContent[] = [
       { kind: "callout", tone: "tip", title: "Keep every September payslip", text: "A folder of annual payslips reconstructs your entire salary history for mortgages, references and pension reconciliation. Digital copies suffice; consistency does not." },
     ],
     faq: [
-      { question: "What is the teacher pay scale for 26/27?", answer: "England's published 2026/27 advisory main range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, with inner London at £41,729 to £54,131. The upper range runs £49,134 to £52,835 outside London. The government accepted a 3.5% award from September 2026, except for a 5% Rest-of-England UQ1 increase; the points remain advisory until the relevant Pay Order is in force." },
+      { question: "What is the teacher pay scale for 26/27?", answer: "England's 2026/27 main range runs from £34,069 (M1) to £46,940 (M6) in the rest of England, with inner London at £41,729 to £54,131. The upper range runs £49,134 to £52,835 outside London. The government accepted a 3.5% award from September 2026, except for a 5% Rest-of-England UQ1 increase; the STPCD 2026 and the School Teachers’ Pay and Conditions (England) Order 2026 provide the statutory framework for maintained schools." },
       { question: "How much is the teacher pay rise for 2026?", answer: "The award is 3.5%. In cash that is roughly £1,152 a year at M1, £1,587 at M6 and £1,787 at U3 in the rest of England, with proportionally larger gains in London. Previous-year comparisons shown alongside are derived by dividing by 1.035." },
       { question: "When will the 2026/27 teacher pay rise be paid?", answer: "It takes effect on 1 September 2026. Most teachers see it in their September or October payslip depending on the payroll cycle. Any delay must be backdated to September — the entitlement does not lapse." },
       { question: "Does the 3.5% award apply to Wales?", answer: "Yes in practice: the Independent Welsh Pay Review Body's current recommendation mirrors the STPCD figures exactly, so Welsh teachers are on identical points. Scotland and Northern Ireland negotiate separate settlements and their scales differ." },
@@ -1045,7 +1045,7 @@ export const payScalePages: PageContent[] = [
       { kind: "p", text: "The same three narratives recur in fringe mailbag correspondence. First, the stalled U2 teacher whose outer-London neighbour crossed to U3 two years earlier purely through school discretion differences — portability solved it via a well-timed application across the boundary. Second, the Dartford instructor who assumed fringe rates applied county-wide, accepted an underplacement, and recovered years of arrears once district rules were cited in writing. Third, the returning returner — career break, then re-entry — who feared losing threshold status and had preserved it all along without realising. Each resolves through documentation and statute, not negotiation luck. The pattern behind all three: fringe teachers underestimate how portable and protected their positions are, and overestimate how much local discretion can erode them. Read your policy, keep your papers, and the band does exactly what it says." },
     ],
     faq: [
-      { question: "What is the London fringe teacher pay scale for 2026/27?", answer: "The main range runs £35,602 (M1) to £48,479 (M6), the upper range £50,625 to £54,328, and unqualified points £24,909 to £38,004. The figures reflect the government-accepted 3.5% September 2026 advisory award; Rest-of-England UQ1 rises by 5%, and the Pay Order is due in October." },
+      { question: "What is the London fringe teacher pay scale for 2026/27?", answer: "The main range runs £35,602 (M1) to £48,479 (M6), the upper range £50,625 to £54,328, and unqualified points £24,909 to £38,004. The figures reflect the STPCD 2026 3.5% September 2026 award; Rest-of-England UQ1 rises by 5%." },
       { question: "Where does the London fringe pay band apply?", answer: "To listed commuting-belt districts outside inner and outer London — including much of Essex and Hertfordshire, Dartford and Gravesham in Kent, Slough, Spelthorne, Crawley and other named districts in the STPCD. District boundaries, not postcodes or the M25, decide inclusion." },
       { question: "How much is the fringe premium?", answer: "About £1,500 a year across the main range — £1,534 at M1 rising to £1,539 at M6 over rest-of-England rates. Outer London pays roughly £3,600 more than the fringe at the bottom of the range." },
       { question: "Is Dartford in the London fringe for teacher pay?", answer: "Yes. Dartford and Gravesham are the two Kent districts in the fringe band, which is why searches about Gravesend's status appear so often. Neighbouring Kent districts remain on the national rates." },
@@ -1793,7 +1793,7 @@ export const payScalePages: PageContent[] = [
         ["M6", "≈£45,352", "£46,940", "+3.5%"],
         ["Inner London U3", "≈£62,496", "£64,684", "+3.5%"],
       ]},
-      { kind: "p", text: "The government has accepted advisory points after the STRB settlement; the STPCD 2026 Pay Order is due in October." },
+      { kind: "p", text: "The STPCD 2026 and the School Teachers’ Pay and Conditions (England) Order 2026 set the maintained-school framework after the STRB settlement." },
 
       { kind: "h2", text: "Common mistakes when using union pay tables" },
       { kind: "ul", items: [

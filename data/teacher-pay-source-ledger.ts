@@ -72,7 +72,7 @@ export const teacherPaySources = {
 } as const;
 
 export const teacherPayDataStatus = {
-  england2026: "Government accepted 3.5% award from 1 September 2026; published England points are advisory until the relevant Pay Order is in force.",
+  england2026: "The School Teachers’ Pay and Conditions (England) Order 2026 was made in October 2026; the STPCD 2026 points apply from 1 September 2026.",
   walesLeadership2026: "NASUWT publishes advisory 2026/27 Welsh leadership points. Use those point-by-point figures, never England's spine.",
   tps2026: "Member tiers apply from 1 April 2026 and use the annual salary rate for each eligible employment, including pro-rated pensionable earnings.",
 } as const;

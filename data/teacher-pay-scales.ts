@@ -1,7 +1,7 @@
 // Teachers' pay scales — government-accepted advisory points for England from
-// September 2026. Source: STRB 36th Report (2026). The STPCD 2026 Pay Order is
-// due in October 2026, so do not describe these figures as "in force" until it
-// has been laid. The 3.5% award applies to every point except Rest-of-England
+// September 2026. Sources: STPCD 2026 and the School Teachers’ Pay and
+// Conditions (England) Order 2026, made in October 2026. The 3.5% award applies
+// to every point except Rest-of-England
 // UQ1, which receives 5%.
 //
 // Wales negotiates via the IWPRB. Only use Wales figures that are separately

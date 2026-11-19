@@ -120,7 +120,7 @@ export interface RedundancyInput {
 }
 
 /** Statutory redundancy pay — capped week and 20-year service limit. */
-export const STAT_WEEKLY_CAP = 780;
+export const STAT_WEEKLY_CAP = 751;
 
 export function statutoryRedundancy(input: RedundancyInput) {
   const cappedWeekly = Math.min(input.weeklyPay, STAT_WEEKLY_CAP);
