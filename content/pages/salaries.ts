@@ -24,7 +24,7 @@ export const salaryPages: PageContent[] = [
     isPillar: true,
     hub: "salaries",
     title: "Teacher Salary UK 2026/27",
-    metaTitle: "Teacher Salary UK 2026/27: Every Pay Scale Compared",
+    metaTitle: "How Much Does a Teacher Make a Year? £34,069–£52,835 (2026/27)",
     metaDescription:
       "What teachers earn across the UK in 2026/27: England, Wales, Scotland and NI salary scales by career stage, region and role, plus what reaches your bank account.",
     primaryKeyword: "teacher salary uk",
@@ -47,6 +47,8 @@ export const salaryPages: PageContent[] = [
       "Take-home is roughly 76% of gross on M1, falling to about 71% by U3 as pension tiers and higher-rate tax bite.",
     ],
     blocks: [
+      { kind: "h2", text: "How much does a teacher make a year?" },
+      { kind: "p", text: "A teacher in England makes £34,069 a year at the start of their career (M1) and up to £52,835 a year at the top of the classroom scale (U3) outside London in 2026/27 — £41,729 to £64,683 in inner London. That is gross, full-time pay before pension, tax and National Insurance; take-home is roughly £26,000 to £37,700 a year. TLRs and leadership posts lift earnings above those figures, as the tables below set out." },
       { kind: "h2", text: "Teacher salary UK at a glance" },
       { kind: "p", text: "There is no single UK teacher salary. Pay is set by four separate systems: England and Wales follow the School Teachers' Pay and Conditions Document (STPCD), Scotland negotiates through the SNCT, and Northern Ireland runs its own scale. The same job, done to the same standard, pays materially different amounts depending on which side of a border you teach." },
       { kind: "table", caption: "Qualified teacher salary range by nation, 2026/27", head: ["Nation", "Starting salary", "Top of classroom scale", "Gap"], rows: [
@@ -125,6 +127,7 @@ export const salaryPages: PageContent[] = [
       { kind: "p", text: "If you are weighing teaching against another career, count the pension alongside the salary: the [teachers' pension guide](/teacher-pension/) shows how 1/57th of pay accrues every year, inflation-linked, which few private-sector packages match." },
     ],
     faq: [
+      { question: "How much does a teacher make a year?", answer: "£34,069 a year at entry (M1) rising to £52,835 at the top of the classroom scale (U3) outside London in 2026/27, or £41,729 to £64,683 in inner London. Take-home is roughly £26,032 to £37,657 a year full-time after pension, tax and National Insurance." },
       { question: "What is the average teacher salary in the UK?", answer: "England's published 2026/27 advisory classroom points run from £34,069 to £52,835 outside London, with the average near £45,000. Inner London runs £41,729 to £64,683. Job-board averages differ because they mix roles and include allowances inconsistently." },
       { question: "How much does a teacher earn per month in the UK?", answer: "Roughly £2,169 net per month on M1 outside London, £2,809 on M6, and £3,138 on U3, assuming full-time work and membership of the Teachers' Pension Scheme. Inner London adds several hundred pounds a month at every point." },
       { question: "What is an M6 teacher salary?", answer: "£46,940 outside London in 2026/27 — the top of the Main Pay Range, normally reached after about six years. Inner London pays £54,131 at M6, outer London £52,241. M6 matters because moving to the Upper Pay Range requires a threshold application from there." },
@@ -252,7 +255,7 @@ export const salaryPages: PageContent[] = [
     slug: "primary-school-teacher-salary",
     hub: "salaries",
     title: "Primary School Teacher Salary",
-    metaTitle: "Primary School Teacher Salary UK 2026/27 Guide",
+    metaTitle: "How Much Does a Primary School Teacher Earn? £34,069–£52,835 (2026/27)",
     metaDescription:
       "What primary school teachers earn in 2026/27: full pay scale by career stage, London rates, TLR reality in primaries, part-time pay and how the average compares.",
     primaryKeyword: "primary school teacher salary uk",
@@ -265,7 +268,7 @@ export const salaryPages: PageContent[] = [
     ],
     calculator: "take-home",
     intro:
-      "A primary school teacher earns exactly what a secondary teacher earns on paper — the national scale is identical — yet primary careers play out very differently in practice. Fewer TLRs, more part-time posts, and headships that arrive earlier at smaller schools all reshape what primary staff actually take home. Here is the complete 2026/27 picture.",
+      "A primary school teacher earns £34,069 to £52,835 outside London in 2026/27 — exactly what a secondary teacher earns on paper, because the national scale is identical — yet primary careers play out very differently in practice. Fewer TLRs, more part-time posts, and headships that arrive earlier at smaller schools all reshape what primary staff actually take home. Here is the complete 2026/27 picture.",
     keyTakeaways: [
       "Primary teachers are paid on the same STPCD scales as everyone else: £34,069 to £52,835 outside London in 2026/27.",
       "Inner London primary teachers start at £41,729 and can reach £64,683 without leaving the classroom.",
@@ -375,7 +378,7 @@ export const salaryPages: PageContent[] = [
     slug: "secondary-school-teacher-salary",
     hub: "salaries",
     title: "Secondary School Teacher Salary",
-    metaTitle: "Secondary School Teacher Salary UK 2026/27",
+    metaTitle: "How Much Does a Secondary School Teacher Earn? £34,069–£52,835 (2026/27)",
     metaDescription:
       "Secondary school teacher pay in 2026/27: scale points by career stage, London rates, how TLRs lift earnings past £60k, and where shortage-subject premiums fit.",
     primaryKeyword: "secondary school teacher salary uk",
@@ -387,7 +390,7 @@ export const salaryPages: PageContent[] = [
     ],
     calculator: "take-home",
     intro:
-      "Secondary teachers start on exactly the same national scale as every other state-school teacher — but their earning ceiling is the most flexible in teaching. Dense TLR structures, sixth-form responsibilities and shortage-subject premiums mean an experienced secondary classroom teacher can legitimately earn more than some assistant heads. Here is what that looks like across 2026/27.",
+      "A secondary school teacher earns £34,069 to £52,835 outside London in 2026/27, starting on exactly the same national scale as every other state-school teacher — but their earning ceiling is the most flexible in teaching. Dense TLR structures, sixth-form responsibilities and shortage-subject premiums mean an experienced secondary classroom teacher can legitimately earn more than some assistant heads. Here is what that looks like across 2026/27.",
     keyTakeaways: [
       "Base pay runs £34,069 to £52,835 outside London and £41,729 to £64,683 inner London — identical to all phases.",
       "TLRs are far denser in secondaries: heads of department commonly hold TLR 1s worth £10,531 to £17,819.",
@@ -480,6 +483,7 @@ export const salaryPages: PageContent[] = [
       { question: "Do maths and science teachers get paid more?", answer: "Not on the national scale — everyone earns the same points. But trusts increasingly add one-off recruitment and retention payments worth thousands to maths, physics, computing and chemistry staff, and shortage subjects see faster progression in practice." },
       { question: "Is there a different rate for sixth form teaching?", answer: "No. A-level teaching sits inside the normal contract. Schools often reward sixth-form coordination roles through TLRs instead." },
       { question: "What does a head of department earn?", answer: "Their scale point plus a TLR 1. An M6 head of department outside London earns roughly £57,500-£64,800 depending on the allowance size set by the school within the £10,531-£17,819 band." },
+      { question: "How much does a head of year earn in a secondary school?", answer: "A head of year is a classroom teacher on the main or upper pay range plus a TLR, typically a TLR 2. That works out at roughly £54,500 to £61,700 outside London in 2026/27, depending on the teacher's pay point and the allowance the school sets within the £3,651 to £8,913 TLR 2 band." },
       { question: "Is secondary teacher pay higher in London?", answer: "By scale yes: inner London pays £41,729 at entry against £34,069 elsewhere, widening to an £11,848 gap at U3. Whether it outpaces London living costs is a separate judgement covered in our regional comparisons." },
       { question: "How quickly does a secondary teacher progress up the scale?", answer: "Main range progression is normally annual subject to performance appraisal — six years from M1 to M6. Moving to the upper range then requires a threshold application judged against the post-threshold standards." },
       { question: "Do supply and agency secondary teachers earn the same?", answer: "Daily rates often match or exceed pro-rated scale pay, but without holiday retention, sick pay or pension contributions unless arranged separately. Day-to-day supply income varies hugely across the year." },
@@ -492,7 +496,7 @@ export const salaryPages: PageContent[] = [
     slug: "teacher-starting-salary",
     hub: "salaries",
     title: "Teacher Starting Salary UK",
-    metaTitle: "Teacher Starting Salary UK 2026/27: ECT Pay Explained",
+    metaTitle: "What Is the Starting Salary for a Teacher? £34,069 (2026/27)",
     metaDescription:
       "What new teachers earn in 2026/27: ECT salaries of £34,069+, London rates, how bursaries differ from salary, and what a first-year teacher actually takes home.",
     primaryKeyword: "teacher starting salary uk",
@@ -597,6 +601,7 @@ export const salaryPages: PageContent[] = [
     ],
     faq: [
       { question: "What is the starting salary for a teacher in the UK?", answer: "£34,069 in England and Wales outside London in 2026/27, rising to £41,729 in inner London. Scotland pays probationers £34,539; Northern Ireland starts at £32,188. All figures are full-time gross." },
+      { question: "How much does a newly qualified teacher earn?", answer: "A newly qualified teacher earns £34,069 in England outside London in 2026/27 (M1), rising to £36,042 in year two (M2). Inner London NQTs start at £41,729. Take-home is roughly £2,169 net per month outside London." },
       { question: "Do ECTs earn less than qualified teachers?", answer: "No. ECTs are fully qualified and paid at the standard M1 and M2 points, £34,069 then £36,042. The reduced timetable they receive is funded separately and does not reduce salary." },
       { question: "How much does a newly qualified teacher take home per month?", answer: "Roughly £2,169 net per month outside London on M1, or about £2,560 inner London, assuming full-time work and Teachers' Pension Scheme membership." },
       { question: "Is the teacher training bursary paid on top of a salary?", answer: "No. Bursaries replace employment income during the training year for fee-funded routes. Salaried routes pay a salary instead of a bursary. You never receive both." },
@@ -1455,7 +1460,7 @@ export const salaryPages: PageContent[] = [
     slug: "music-teacher-salary",
     hub: "salaries",
     title: "Music Teacher Salary UK",
-    metaTitle: "Music Teacher Salary UK 2026/27: School & Private Rates",
+    metaTitle: "How Much Does a Music Teacher Make a Year? £34,069–£52,835 (2026/27)",
     metaDescription:
       "Music teacher pay in 2026/27: classroom scale salaries, peripatetic hourly rates, Musicians' Union benchmarks and how portfolio careers out-earn the payslip.",
     primaryKeyword: "music teacher salary uk",
@@ -1578,7 +1583,7 @@ export const salaryPages: PageContent[] = [
     slug: "pe-teacher-salary",
     hub: "salaries",
     title: "PE Teacher Salary UK",
-    metaTitle: "PE Teacher Salary UK 2026/27: Pay & Extra Income",
+    metaTitle: "How Much Do PE Teachers Make a Year? £34,069–£52,835 (2026/27)",
     metaDescription:
       "PE teacher pay in 2026/27: standard scale salaries, why no shortage premium exists, TLR opportunities in sport, and coaching income that lifts total earnings.",
     primaryKeyword: "pe teacher salary uk",
@@ -1591,7 +1596,7 @@ export const salaryPages: PageContent[] = [
     ],
     calculator: "take-home",
     intro:
-      "PE teachers earn exactly what the national scale says — and unlike maths or science colleagues, they get no bursary, no retention payments and rarely any recruitment premium, because PE applications outnumber vacancies. What the subject does offer is the richest extra-income ecosystem in schools: coaching badges, holiday camps, exam-group intervention work. Here is the full financial picture for 2026/27.",
+      "PE teachers earn £34,069 to £52,835 outside London in 2026/27 — exactly what the national scale says — and unlike maths or science colleagues, they get no bursary, no retention payments and rarely any recruitment premium, because PE applications outnumber vacancies. What the subject does offer is the richest extra-income ecosystem in schools: coaching badges, holiday camps, exam-group intervention work. Here is the full financial picture for 2026/27.",
     keyTakeaways: [
       "Scale pay is identical to all teachers: £34,069-£52,835 outside London in 2026/27.",
       "No training bursary exists for PE — one of the most oversubscribed ITT subjects.",

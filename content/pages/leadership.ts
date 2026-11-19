@@ -221,7 +221,7 @@ const headTeacherPage: PageContent = {
   slug: "head-teacher-salary",
   hub: "leadership",
   title: "Headteacher Salary UK 2026/27",
-  metaTitle: "Headteacher Salary UK 2026/27: Pay by School Group Size",
+  metaTitle: "How Much Does a Head Teacher Earn? £53,586–£148,829 (2026/27)",
   metaDescription:
     "Headteacher salaries in 2026/27 run from £53,586 to £148,829 in England. See school-group pay ranges, primary and secondary examples and how governors set the range.",
   primaryKeyword: "head teacher salary uk",
@@ -246,7 +246,7 @@ const headTeacherPage: PageContent = {
   ],
   blocks: [
     { kind: "h2", text: "How much do headteachers earn in 2026/27?" },
-    { kind: "p", text: "There is no single headteacher salary. Pay depends almost entirely on the size and complexity of the school, and the spread is enormous — a head of a small rural primary and the head of a large London secondary are both on the leadership spine, but they can be more than £80,000 apart." },
+    { kind: "p", text: "There is no single headteacher salary. Pay depends almost entirely on the size and complexity of the school, and the spread is enormous — a head of a small rural primary and the head of a large London secondary are both on the leadership spine, but they can be more than £80,000 apart. A primary headteacher typically earns £60,619 to £85,547 and a secondary headteacher £81,457 to £120,532 in the rest of England, with inner London adding roughly £10,000 to £11,000." },
     { kind: "p", text: "The published 2026/27 advisory floor for an England headteacher post is L1, £53,586 in the rest of England, and the top published point is L43, £148,829. The group-size framework does most of the work between them." },
     { kind: "table", caption: "Headteacher pay boundaries 2026/27", head: ["Region", "Minimum (L1)", "Maximum (L43)"], rows: [
       ["Rest of England", "£53,586", "£148,829"],
@@ -344,7 +344,7 @@ const deputyHeadPage: PageContent = {
   slug: "deputy-head-teacher-salary",
   hub: "leadership",
   title: "Deputy Head Teacher Salary UK 2026/27",
-  metaTitle: "Deputy Head Teacher Salary 2026/27 — Primary & Secondary",
+  metaTitle: "How Much Does a Deputy Head Teacher Earn? £63,688–£89,842 (2026/27)",
   metaDescription:
     "Deputy headteacher pay for 2026/27. Typical leadership spine points for primary and secondary deputies, regional figures and how the range works.",
   primaryKeyword: "deputy head teacher salary",
@@ -360,7 +360,7 @@ const deputyHeadPage: PageContent = {
   calculator: "pay-scale",
   calculatorPreset: { scale: "leadership" },
   intro:
-    "Deputy headteachers sit in the middle of the leadership spine, typically between L8 and L20 depending on phase and school size. This page sets out the realistic ranges for 2026/27, how the deputy range is anchored to the headteacher's, and what the step up actually pays.",
+    "Deputy headteachers earn £63,688 to £89,842 in the rest of England in 2026/27, sitting in the middle of the leadership spine, typically between L8 and L20 depending on phase and school size. This page sets out the realistic ranges for 2026/27, how the deputy range is anchored to the headteacher's, and what the step up actually pays.",
   keyTakeaways: [
     "Primary deputies typically sit between L8 and L16, roughly £63,688 to £77,676 in the rest of England.",
     "Secondary deputies typically sit between L12 and L20, roughly £70,275 to £85,547.",
@@ -449,7 +449,7 @@ const assistantHeadPage: PageContent = {
   slug: "assistant-head-teacher-salary",
   hub: "leadership",
   title: "Assistant Head Teacher Salary UK 2026/27",
-  metaTitle: "Assistant Head Teacher Salary 2026/27 — Leadership Pay",
+  metaTitle: "How Much Does an Assistant Head Teacher Earn? £57,699–£73,827 (2026/27)",
   metaDescription:
     "Assistant headteacher pay for 2026/27. Typical L-points for primary and secondary AHTs, how the range is set, and whether the step up from a TLR is worth it.",
   primaryKeyword: "assistant head teacher salary",
@@ -469,7 +469,7 @@ const assistantHeadPage: PageContent = {
   calculator: "pay-scale",
   calculatorPreset: { scale: "leadership" },
   intro:
-    "Assistant headteacher is the entry point to the leadership group for most teachers. Ranges typically start around L4 and rarely exceed L14. This page sets out the realistic figures for 2026/27 and compares the move against staying on a TLR.",
+    "Assistant headteachers earn £57,699 to £73,827 in the rest of England in 2026/27. Assistant headteacher is the entry point to the leadership group for most teachers. Ranges typically start around L4 and rarely exceed L14. This page sets out the realistic figures for 2026/27 and compares the move against staying on a TLR.",
   keyTakeaways: [
     "Primary assistant heads typically sit between L4 and L10, roughly £57,699 to £66,956 in the rest of England.",
     "Secondary assistant heads typically sit between L6 and L14, roughly £60,619 to £73,827.",
